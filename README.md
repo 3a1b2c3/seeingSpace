@@ -1,7 +1,9 @@
 ##  Der sehende Raum / Seeing Space
 # Notes about capturing, rendering and digitally reconstruction the world
 When I learned about computer graphics I think i missed the big picture about how all the pieces connect and what is possible. 
-Some notes on how they do. None of theses ideas are new or specifically my idea but its a useful framework to think about graphics and how "traditional approach" fit with newer research like Nerfs.
+Some notes on how they do. 
+
+None of theses ideas are new or specifically my idea but its a useful framework to think about graphics and how "traditional approach" fit with newer research like Nerfs.
 
 
 # Recommeded reading
@@ -10,3 +12,4 @@ Some notes on how they do. None of theses ideas are new or specifically my idea 
 * Nerf
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
 * https://cseweb.ucsd.edu/~viscomp/projects/LF/
+* 
