@@ -9,14 +9,14 @@ A minimal framework how to think about graphics and how "traditional approach" f
 ##### 3D Tiles for game engines and web browser 
 3D Tiles is an open specification for sharing, visualizing, fusing, and interacting with massive heterogenous 3D geospatial content across desktop, web, and mobile applications.
 
-### Beyond traditional graphics and capture techology
+### Beyond traditional computer graphics and capture technology
 
 #### Plenoptic function and camera, light fields
 
 #### Neural Radiance Fields (NeRF) 
 
 
-## Recommeded reading
+## Recommended reading
 ### Rendering the world as tiles
 * 3D Tiles https://github.com/CesiumGS/3d-tiles/blob/main/README.md
 * 
