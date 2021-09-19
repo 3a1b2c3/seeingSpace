@@ -2,7 +2,7 @@
 ## Notes about capturing, rendering and digitally reconstruction the world
 When I learned about (traditional) computer graphics I think i missed the big picture about how all the pieces connect and what is possible. 
 It makes it harder to understand recent research and its meaning for the field.
-None of theses ideas are new or specifically my idea but its a useful framework to think about graphics and how "traditional approach" fit with newer research like Nerfs.
+A minimal framework how to think about graphics and how "traditional approach" fit with newer research like Nerfs.
 
 ### Rendering the world as tiles
 
