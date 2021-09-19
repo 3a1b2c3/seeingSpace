@@ -4,9 +4,7 @@ When I learned about (traditional) computer graphics I think i missed the big pi
 It makes it harder to understand recent research and its meaning for the field.
 A minimal framework how to think about graphics and how "traditional approach" fit with newer research like Nerfs.
 
-### Rendering the world as tiles
-
-#### Large scenes
+### Rendering large scenes
 ##### 3D Tiles for game engines and web browser 
 3D Tiles is an open specification for sharing, visualizing, fusing, and interacting with massive heterogenous 3D geospatial content across desktop, web, and mobile applications.
 
