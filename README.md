@@ -9,7 +9,7 @@ None of theses ideas are new or specifically my idea but its a useful framework 
 # Recommeded reading
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com/
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org/
-* Nerf
+* Neural Radiance Fields (NeRF) turns 2D pictures into navigable models:
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
 * https://cseweb.ucsd.edu/~viscomp/projects/LF/
-* 
+* https://dellaert.github.io/NeRF
