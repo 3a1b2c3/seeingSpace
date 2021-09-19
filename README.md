@@ -1,17 +1,19 @@
 #  Sehender Raum / Seeing Space
 ## Notes about capturing, rendering and digitally reconstruction the world
-When I learned about computer graphics I think i missed the big picture about how all the pieces connect and what is possible. 
-Some notes on how they do. 
-
+When I learned about (traditional) computer graphics I think i missed the big picture about how all the pieces connect and what is possible. 
+It makes it harder to understand recent research and its meaning for the field.
 None of theses ideas are new or specifically my idea but its a useful framework to think about graphics and how "traditional approach" fit with newer research like Nerfs.
 
 ### Rendering the world as tiles
+
 ##### 3D Tiles for game engines and web browser 
 3D Tiles is an open specification for sharing, visualizing, fusing, and interacting with massive heterogenous 3D geospatial content across desktop, web, and mobile applications.
 
 ### Beyond traditional graphics and capture techology
+
 #### Plenoptic function and camera
-##### Neural Radiance Fields (NeRF) 
+
+#### Neural Radiance Fields (NeRF) 
 
 
 ## Recommeded reading
