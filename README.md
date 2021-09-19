@@ -6,11 +6,17 @@ Some notes on how they do.
 None of theses ideas are new or specifically my idea but its a useful framework to think about graphics and how "traditional approach" fit with newer research like Nerfs.
 
 ## Rendering the world as tiles
+# 3D Tiles
 
 ## Beyond traditional graphics and capture techology
+# Plenoptic function and camera
+# Neural Radiance Fields (NeRF) 
+
 
 ## Recommeded reading
 # Rendering the world as tiles
+* https://github.com/CesiumGS/3d-tiles/blob/main/README.md
+* 
 ## Beyond traditional graphics and capture techology
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com/
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org/
