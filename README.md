@@ -11,7 +11,7 @@ A minimal framework how to think about graphics and how "traditional approach" f
 
 ### Beyond traditional graphics and capture techology
 
-#### Plenoptic function and camera
+#### Plenoptic function and camera, light fields
 
 #### Neural Radiance Fields (NeRF) 
 
