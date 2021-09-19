@@ -1,23 +1,24 @@
-##  Sehender Raum / Seeing Space
-# Notes about capturing, rendering and digitally reconstruction the world
+#  Sehender Raum / Seeing Space
+## Notes about capturing, rendering and digitally reconstruction the world
 When I learned about computer graphics I think i missed the big picture about how all the pieces connect and what is possible. 
 Some notes on how they do. 
 
 None of theses ideas are new or specifically my idea but its a useful framework to think about graphics and how "traditional approach" fit with newer research like Nerfs.
 
-## Rendering the world as tiles
-# 3D Tiles
+### Rendering the world as tiles
+##### 3D Tiles for game engines and web browser 
+3D Tiles is an open specification for sharing, visualizing, fusing, and interacting with massive heterogenous 3D geospatial content across desktop, web, and mobile applications.
 
-## Beyond traditional graphics and capture techology
-# Plenoptic function and camera
-# Neural Radiance Fields (NeRF) 
+### Beyond traditional graphics and capture techology
+#### Plenoptic function and camera
+##### Neural Radiance Fields (NeRF) 
 
 
 ## Recommeded reading
-# Rendering the world as tiles
+### Rendering the world as tiles
 * https://github.com/CesiumGS/3d-tiles/blob/main/README.md
 * 
-## Beyond traditional graphics and capture techology
+### Beyond traditional graphics and capture techology
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com/
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org/
 * Neural Radiance Fields (NeRF) turns 2D pictures into navigable models:
