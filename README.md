@@ -1,7 +1,7 @@
 ##  Sehende Raum / Seeing Space
 # Notes about capturing, rendering and reconstruction the world
 When i learned about computer graphics I think i missed the big picture about how all the pieces connect. 
-Some noyes on how they do.
+Some notes on how they do.
 
 # Recommeded reading
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics
