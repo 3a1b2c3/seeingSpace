@@ -18,7 +18,7 @@ A minimal framework how to think about graphics and how "traditional approach" f
 
 ## Recommeded reading
 ### Rendering the world as tiles
-* https://github.com/CesiumGS/3d-tiles/blob/main/README.md
+* 3D Tiles https://github.com/CesiumGS/3d-tiles/blob/main/README.md
 * 
 ### Beyond traditional graphics and capture techology
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com/
