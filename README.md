@@ -1,5 +1,5 @@
 ##  Sehende Raum / Seeing Space
-# Notes about capturing, rendering and reconstruction the world
+# Notes about capturing, rendering and digitally reconstruction the world
 When I learned about computer graphics I think i missed the big picture about how all the pieces connect and what is possible. 
 Some notes on how they do. None of theses ideas are new or specifically my idea but its a useful framework to think about graphics.
 
