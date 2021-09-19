@@ -5,8 +5,6 @@ Some notes on how they do.
 
 None of theses ideas are new or specifically my idea but its a useful framework to think about graphics and how "traditional approach" fit with newer research like Nerfs.
 
-# Plenoptic function and camera
-The concept of a plenoptic camera that records many images from many perspectives simultaneously has existed since 1908, it took 100 years to produce commercially viable products.
 
 # Recommeded reading
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com/
