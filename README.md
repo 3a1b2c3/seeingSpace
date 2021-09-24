@@ -10,7 +10,7 @@ A minimal framework how to think about graphics and how "traditional approach" f
 
 ### Beyond traditional computer graphics and capture technology
 
-#### image-based rendering: Plenoptic function and camera, light fields
+#### Image-based rendering: Plenoptic function and camera, light fields
 
 #### Neural Radiance Fields (NeRF) 
 
