@@ -20,11 +20,11 @@ A minimal framework how to think about graphics and how "traditional approach" f
 ### Rendering the world as tiles
 * 3D Tiles https://github.com/CesiumGS/3d-tiles/blob/main/README.md
  
-### Beyond traditional graphics and capture techology
+### Data-Driven Computational Imaging
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com/
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
-* 
+* Data-Driven Computational Imaging http://ciml.media.mit.edu
 * Neural Radiance Fields (NeRF) turns 2D pictures into navigable models:
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
 * https://cseweb.ucsd.edu/~viscomp/projects/LF/
