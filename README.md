@@ -4,21 +4,17 @@ When I learned about (traditional) computer graphics I think i missed the big pi
 It makes it harder to understand recent research and its meaning for the field.
 A minimal framework how to think about graphics and how "traditional approach" fit with newer research like Nerfs.
 
-### Rendering large scenes
-##### 3D Tiles for game engines and web browser 
-3D Tiles is an open specification for sharing, visualizing, fusing, and interacting with massive heterogenous 3D geospatial content across desktop, web, and mobile applications.
+## Beyond traditional computer graphics and capture technology: Data-Driven Computational Imaging
 
-### Beyond traditional computer graphics and capture technology: Data-Driven Computational Imaging
+#### Image-based rendering: Plenoptic function and cameras, light fields
+![image](https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png)
 
-#### Image-based rendering: Plenoptic function and camera, light fields
 ### 3d scene reconstruction and inverse rendering
 #### Visual Sensing Using Machine Learning
 ##### Neural Radiance Fields (NeRF) 
 
 
 ## Recommended reading
-### Rendering the world as tiles
-* 3D Tiles https://github.com/CesiumGS/3d-tiles/blob/main/README.md
  
 ### Data-Driven Computational Imaging
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com/
