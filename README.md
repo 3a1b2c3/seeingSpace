@@ -8,7 +8,7 @@ A minimal framework how to think about graphics and how "traditional approach" f
 ##### 3D Tiles for game engines and web browser 
 3D Tiles is an open specification for sharing, visualizing, fusing, and interacting with massive heterogenous 3D geospatial content across desktop, web, and mobile applications.
 
-### Beyond traditional computer graphics and capture technology
+### Beyond traditional computer graphics and capture technology: Data-Driven Computational Imaging
 
 #### Image-based rendering: Plenoptic function and camera, light fields
 ### 3d scene reconstruction and inverse rendering
