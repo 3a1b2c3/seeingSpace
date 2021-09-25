@@ -11,11 +11,10 @@ A minimal framework how to think about graphics and how "traditional approach" f
 ### Beyond traditional computer graphics and capture technology
 
 #### Image-based rendering: Plenoptic function and camera, light fields
-
+### 3d scene reconstruction and inverse rendering
 #### Visual Sensing Using Machine Learning
 ##### Neural Radiance Fields (NeRF) 
 
-### 3d scene reconstruction and inverse rendering
 
 ## Recommended reading
 ### Rendering the world as tiles
