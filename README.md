@@ -9,11 +9,11 @@ A minimal framework how to think about graphics and how "traditional approach" f
 #### Image-based rendering: Plenoptic function and cameras, light fields
 #### Plenoptic function
 The rendering equation describes light transport for a single camera or the human eyes
-![image](https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png)
-![image](https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png)
+![image](https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png | width=300)
+![image](https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png  | width=300)
 
 Inspired by insect eyes or camera arrays the plenoptic function generalizes this idea:
-![image](https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png)
+![image](https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png  | width=300)
 #### View interpolation 
 ### 3d scene reconstruction and inverse rendering
 #### Visual Sensing Using Machine Learning
