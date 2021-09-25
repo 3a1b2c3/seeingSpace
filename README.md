@@ -12,7 +12,8 @@ A minimal framework how to think about graphics and how "traditional approach" f
 
 #### Image-based rendering: Plenoptic function and camera, light fields
 
-#### Neural Radiance Fields (NeRF) 
+#### Visual Sensing Using Machine Learning
+##### Neural Radiance Fields (NeRF) 
 
 ### 3d scene reconstruction and inverse rendering
 
