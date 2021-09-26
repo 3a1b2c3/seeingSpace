@@ -16,7 +16,7 @@ The rendering equation describes light transport for a single camera or the huma
 
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
 
-While it is a useful model for graphics some propblems are easier to understand with a more general model.
+While it is a useful model for graphics some problems are easier to understand with a more general model.
 Inspired by insect eyes or camera arrays the plenoptic function generalizes this idea:
 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=300>
