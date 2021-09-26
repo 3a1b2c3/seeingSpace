@@ -27,8 +27,7 @@ A TLDR on how **traditional computer graphics** fits with some **newer research,
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and cameras, light fields
 #### Photogrammetry
-Photogrammetry is the science of reconstructing objects and environments in the physical world through photographs. The technique involves stitching together large collections of overlapping photographs to create topographical maps, meshes, and 2D and 3D digital models. First mentioned in 1867 it predates digital photography significantly.
-Data is usually captured with a single conventional camera.
+Photogrammetry is the science of reconstructing objects and environments that exist in the physical world through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. Photogrametry data is usually captured with a single conventional still camera.
  
 #### The 7D Plenoptic function
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
@@ -41,9 +40,8 @@ The **rendering equation** describes physical light transport for a single camer
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
 <small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</small>
 
-
-While it is a useful model for graphics some problems are easier to understand with an integration of the model.
-Inspired by insect eyes or camera arrays the **plenoptic function** generalizes this idea:
+While it is a useful model for computer graphics some problems are easier to solve by integrating the model.
+Alo inspired by **insect eyes or camera arrays** the **plenoptic function** generalizes this idea:
 
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
 <small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</small>
@@ -55,13 +53,14 @@ Inspired by insect eyes or camera arrays the **plenoptic function** generalizes 
 
 
 #### Lightfields capture and rendering
-A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function under certain assumptions and relaxations simplifies to a **4D light field**, which is easier to sample and operate on.
-The 4D lightfield, 2D spatial (x,y) and 2D angular (u,v), is captured by a plenoptic sensor.
+A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplifies to a **4D light field**, which is easier to sample and operate on.
+ 
+The 4D lightfield has 2D spatial (x,y) and 2D angular (u,v) imformation that is captured by a plenoptic sensor.
 • the **incident light field** Li(u, v, alpha, beta) describing the **irradiance** of light incident on objects in space
 • the **radiant light field** Lr (u, v, alpha, beta) quantifying the irradiance created by an object
 * **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
 
-##### Capture
+##### Capturing static and dynamic light fields
 Compared to a traditional camera that only captures the intensity of the incident light, a light-field camera provides angular information for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
 While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
 
@@ -71,17 +70,13 @@ _Stanford light field camera; Right: Adobe (large) lens array, source https://cs
 _Lytro Illum, a discontinued commercially available light field camera_
  
 ##### Novel view synthesis
-Can be approached by either explicit estimation of scene geometry and color [21,72,4], or
-using coarser estimates of geometry to guide interpolation between captured
-views [2,10,55]. Light field rendering [33,17,3] pushes the latter strategy to
-an extreme by using dense structured sampling of the light eld to make re-
-construction guarantees independent of specic scene geometry. most IBR algorithms are designed to
-model static appearance, DeepMPI, which further captures viewing condition{dependent
-appearance. 
+Can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured
+views. Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the light eld to make re-construction guarantees independent of specic scene geometry. Most IBR algorithms are designed to model static appearance, DeepMPI, which further captures viewing condition dependent appearance. 
 
 ##### Relighting with 4D Incident Light Fields
 #### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
-
+![image](https://user-images.githubusercontent.com/74843139/134803482-e283e016-a50e-4ae9-aca7-d35128ba9554.png)
+Source:  CVPR 2019 Data-Driven Computational Imaging
 
  
 ### 3d scene reconstruction and inverse and differential rendering
@@ -104,7 +99,7 @@ Also called **Differentiable Rendering** it promises to close the loop between c
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
-* Data-Driven Computational Imaging http://ciml.media.mit.edu
+* Data-Driven Computational Imaging http://ciml.media.mit.edu, CVPR 2019
 * https://cseweb.ucsd.edu/~viscomp/projects/LF/
 * https://dellaert.github.io/NeRF
 
