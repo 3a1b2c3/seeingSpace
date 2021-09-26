@@ -39,14 +39,15 @@ source: http://www.aamspi.com/services/aerial-photogrammetry/
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
+ 
 <small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</small>
  
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
 <small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish 2019</small>
-Path-Tracing is a way of sampling method to estimate integral in rendering equation.
+**Path-Tracing** is a sampling method to estimate integral in rendering equation.
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
-Also inspired by **insect eyes or camera arrays** the **plenoptic function** generalizes this idea:
+Also inspired by multi-faceted **insect eyes or camera arrays** the **plenoptic function** generalizes this idea:
 
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
 <small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish 2019</small>
