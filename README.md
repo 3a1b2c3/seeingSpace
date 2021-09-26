@@ -5,24 +5,25 @@ Some 20 years after i first got interested in Photogrammetry we see amazing prog
 
 A TLDR on how computer graphics fits with newer research, computer vision, machine learning and hardware.
 
-- [Sehender Raum / Seeing Space (WIP)](#sehender-raum---seeing-space--wip-)
+- [Sehender Raum / Seeing Space](#sehender-raum---seeing-space--wip-)
   * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
   * [Data-Driven Computational Imaging](#data-driven-computational-imaging)
     + [Image-based rendering: Plenoptic function and cameras, light fields](#image-based-rendering--plenoptic-function-and-cameras--light-fields)
       - [Plenoptic function](#plenoptic-function)
       - [Lightfields: View interpolation](#lightfields--view-interpolation)
-      - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
+        * [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
       - [Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging](#time-resolved-imaging--tri--or-time-of-flight--tof--imaging)
       - [Photogrammetry](#photogrammetry)
-    + [3d scene reconstruction and inverse rendering](#3d-scene-reconstruction-and-inverse-rendering)
+    + [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
       - [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
         * [Neural Radiance Fields (NeRF)](#neural-radiance-fields--nerf-)
           + [[Crowdsampling the Plenoptic Function]<a name="crowdsampling">](#-crowdsampling-the-plenoptic-function--a-name--crowdsampling--)
-      - [Inverse rendering: Analysis by Synthesis](#inverse-rendering--analysis-by-synthesis)
+      - [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
   * [Recommended reading](#recommended-reading)
     + [Image-based rendering](#image-based-rendering)
     + [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning-1)
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 ## Data-Driven Computational Imaging
@@ -62,21 +63,23 @@ While special cameras and cameras arrangements have been build to capture light 
 ![image](https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png)
 _Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields_
 
-#### Relighting with 4D Incident Light Fields
+##### Relighting with 4D Incident Light Fields
 #### Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
 #### Photogrammetry
 Photogrammetry is the science and technology of obtaining reliable information about physical objects and the environment through the process of recording, measuring and interpreting photographic images and patterns of electromagnetic radiant imagery and other phenomena.
 
-### 3d scene reconstruction and inverse rendering
+### 3d scene reconstruction and inverse and differential rendering
 #### Visual Sensing Using Machine Learning
 ##### Neural Radiance Fields (NeRF) 
 Neural Radiance Fields (NeRF) turns 2D pictures into navigable models.
  
 ###### [Crowdsampling the Plenoptic Function]<a name="crowdsampling">
-Given a large number of tourist photos taken at different times of day, this machine learning based system learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
-
+Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
+![image](https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png)
+https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian
  
-#### Inverse rendering: Analysis by Synthesis
+#### Inverse rendering and differential rendering: Analysis by Synthesis
+Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
 **Differentiable Rendering** promises to close the loop between computer vision and graphics.
 
 ## Recommended reading
