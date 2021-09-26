@@ -37,7 +37,7 @@ The full equation is also time dependent.
 
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function under certain assumptions and relaxations simplifies to a **4D light field**, which is easier to sample and operate on.
 
-While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera in some cases (see Crowdsampling the Plenoptic Function).
+While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera or smart phone in some cases (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
 
 
 #### Photogrammetry
@@ -45,7 +45,12 @@ While special cameras and cameras arrangements have been build to capture light 
 ### 3d scene reconstruction and inverse rendering
 #### Visual Sensing Using Machine Learning
 ##### Neural Radiance Fields (NeRF) 
-###### Crowdsampling the Plenoptic Function
+Neural Radiance Fields (NeRF) turns 2D pictures into navigable models.
+ 
+###### [Crowdsampling the Plenoptic Function]<a name="crowdsampling">
+Given a large number of tourist photos taken at different times of day, this machine learning based system learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
+
+ 
 #### Inverse rendering: Analysis by Synthesis
 **Differentiable Rendering** promises to close the loop between computer vision and graphics.
 
@@ -62,5 +67,4 @@ While special cameras and cameras arrangements have been build to capture light 
  ### Visual Sensing Using Machine Learning
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
 * https://github.com/tensorflow/graphics
-* * Neural Radiance Fields (NeRF) turns 2D pictures into navigable models:
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
