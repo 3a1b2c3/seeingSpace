@@ -20,6 +20,7 @@ Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 
+
 While it is a useful model for graphics some problems are easier to understand with an integration of the model.
 Inspired by insect eyes or camera arrays the **plenoptic function** generalizes this idea:
 
