@@ -20,7 +20,8 @@ While it is a useful model for graphics some problems are easier to understand w
 Inspired by insect eyes or camera arrays the plenoptic function generalizes this idea:
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
-Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
+The full equation is also time dependent.
+
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 
