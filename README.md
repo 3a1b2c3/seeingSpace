@@ -1,7 +1,6 @@
 #  Sehender Raum / Seeing Space (WIP)
 ## Notes about capturing, rendering and digitally reconstruction the world
-When I learned about (traditional) computer graphics and some computer vision I think i missed the big picture about how all the pieces connect with hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field.
-Some 20 years after i first got interested in Photogrammetry we see amazing progress but the concepts are still not widely known.
+When I learned about (traditional) computer graphics and photogrammetry I missed the big picture about how all the pieces connect: with capture hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field.
 
 A TLDR on how computer graphics fits with newer research, computer vision, machine learning and hardware.
 
@@ -29,25 +28,25 @@ A TLDR on how computer graphics fits with newer research, computer vision, machi
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and cameras, light fields
 #### Photogrammetry
-Photogrammetry is the science and technology of obtaining reliable information about physical objects and the environment through the process of recording, measuring and interpreting photographic images and patterns of electromagnetic radiant imagery and other phenomena. It predates digital photography. A 3D visualization can be created by georeferencing the aerial photos and LiDAR data in the same reference frame, orthorectifying the aerial photos, and then draping the orthorectified images on top of the LiDAR grid. It is also possible to create digital terrain models and thus 3D visualisations using pairs (or multiples) of aerial photographs or satellite (e.g. SPOT satellite imagery).
+Photogrammetry is the science and technology of obtaining reliable information about physical objects and the environment through the process of recording, measuring and interpreting photographic images and patterns of electromagnetic radiant imagery and other phenomena. First mentioned in 1867 it predates digital photography significantly. A 3D visualization can be created by georeferencing the aerial photos and LiDAR data in the same reference frame, orthorectifying the aerial photos, and then draping the orthorectified images on top of the LiDAR grid. It is also possible to create digital terrain models and thus 3D visualisations using pairs (or multiples) of aerial photographs or satellite (e.g. SPOT satellite imagery).
  
 #### Plenoptic function
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300>
-*Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
+<small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</small>
 
 <img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
 
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
-*Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
+<small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</small>
 
 
 While it is a useful model for graphics some problems are easier to understand with an integration of the model.
 Inspired by insect eyes or camera arrays the **plenoptic function** generalizes this idea:
 
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
-*Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
+<small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</small>
 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
 *Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
@@ -65,6 +64,8 @@ While special cameras and cameras arrangements have been build to capture light 
 
 ![image](https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png)
 _Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields
+ ![image](https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png)
+Lytro Illum, dicontinued commercially available light field camera
  
 ##### Novel view synthesis
 Can be approached by either explicit estimation of scene geometry and color [21,72,4], or
