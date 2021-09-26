@@ -26,7 +26,8 @@ The full equation is also time dependent. The radiance represents the ray streng
 
 Light field is a mathematical function of one or more variables whose range is a set of multidimensional
 vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function.
-While special camera and camers arrangements have been build to capture light fields it is also possible them with a conventional camera in some cases.
+
+While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera in some cases (see Crowdsampling the Plenoptic Function).
 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
