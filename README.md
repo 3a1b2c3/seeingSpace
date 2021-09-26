@@ -4,7 +4,8 @@ When I learned about (traditional) computer graphics I think i missed the big pi
 It makes it harder to understand recent research and its meaning for the field.
 A minimal framework how to think about graphics and how "traditional approach" fit with newer research like Nerfs.
 
-## Beyond traditional computer graphics and capture technology: Data-Driven Computational Imaging
+
+## Data-Driven Computational Imaging
 
 #### Image-based rendering: Plenoptic function and cameras, light fields
 #### Plenoptic function
@@ -32,9 +33,8 @@ Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 
 
 ## Recommended reading
- 
-### Data-Driven Computational Imaging
-* *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com/
+
+* *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
 * Data-Driven Computational Imaging http://ciml.media.mit.edu
