@@ -30,15 +30,14 @@ Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 The full equation is also time dependent. 
 **Radiance** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
 
+<img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
+Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 
 #### Lightfields: View interpolation 
 
-A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function under certain assumptions and relaxations simplifies to a 4D light field, which is easier to sample and operate on.
+A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function under certain assumptions and relaxations simplifies to a **4D light field**, which is easier to sample and operate on.
 
 While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera in some cases (see Crowdsampling the Plenoptic Function).
-
-<img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
-Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 
 
 #### Photogrammetry
@@ -48,9 +47,10 @@ Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 ##### Neural Radiance Fields (NeRF) 
 ###### Crowdsampling the Plenoptic Function
 #### Inverse rendering: Analysis by Synthesis
-Differentiable Rendering promises to close the loop between computer vision and graphics.
+**Differentiable Rendering** promises to close the loop between computer vision and graphics.
 
 ## Recommended reading
+
 ### Image-based rendering
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org
@@ -58,6 +58,7 @@ Differentiable Rendering promises to close the loop between computer vision and 
 * Data-Driven Computational Imaging http://ciml.media.mit.edu
 * https://cseweb.ucsd.edu/~viscomp/projects/LF/
 * https://dellaert.github.io/NeRF
+* 
  ### Visual Sensing Using Machine Learning
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
 * https://github.com/tensorflow/graphics
