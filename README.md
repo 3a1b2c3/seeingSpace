@@ -62,7 +62,7 @@ The 4D lightfield has 2D spatial (x,y) and 2D angular (u,v) imformation that is 
 
 
 ##### Capturing static and dynamic light fields
-Compared to a traditional camera that only captures the intensity of the incident light, a light-field camera provides angular information for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
+Compared to a traditional camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
 While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
 
 ![image](https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png)
@@ -70,7 +70,13 @@ _Stanford light field camera; Right: Adobe (large) lens array, source https://cs
 ![image](https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png)
 _Lytro Illum, a discontinued commercially available light field camera_
  
+
+ 
 ##### Novel view synthesis
+ The raw samples are saved as disks. resolution large amouts of data
+ ![image](https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png)
+ A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality
+ 
 Can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured
 views. Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the light eld to make re-construction guarantees independent of specic scene geometry. Most IBR algorithms are designed to model static appearance, DeepMPI, which further captures viewing condition dependent appearance. 
 
