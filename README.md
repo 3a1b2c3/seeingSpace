@@ -11,18 +11,19 @@ A minimal framework how to think about graphics and how "traditional approach" f
 The rendering equation describes light transport for a single camera or the human vision. 
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300>
-Rendering for Data Driven Computational Imaging, Tristan Swedish
+Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 <img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
-Rendering for Data Driven Computational Imaging, Tristan Swedish
 
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
-Rendering for Data Driven Computational Imaging, Tristan Swedish
-While it is a useful model for graphics some problems are easier to understand with a more general model.
+Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
+While it is a useful model for graphics some problems are easier to understand with an integration of the model.
 Inspired by insect eyes or camera arrays the plenoptic function generalizes this idea:
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
-Rendering for Data Driven Computational Imaging, Tristan Swedish
+Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
+Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
-Rendering for Data Driven Computational Imaging, Tristan Swedish
+Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
+
 #### View interpolation 
 ### 3d scene reconstruction and inverse rendering
 #### Visual Sensing Using Machine Learning
