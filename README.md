@@ -25,9 +25,9 @@ A TLDR on how **traditional computer graphics** fits with some **newer research,
 
 
 ## Data-Driven Computational Imaging
-### Image-based rendering: Plenoptic function and cameras, light fields
+### Image-based rendering: Plenoptic function and capture
 #### Photogrammetry
-Photogrammetry is the science of reconstructing objects and environments that exist in the physical world through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. Photogrametry data is usually captured with a single conventional still camera.
+Photogrammetry is the science of reconstructing objects and environments that exist in the physical world through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. Photogrametry data is usually captured with a single moving conventional still frame camera.
  
 #### The 7D Plenoptic function
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
@@ -48,17 +48,18 @@ Alo inspired by **insect eyes or camera arrays** the **plenoptic function** gene
 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
 *Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
+ 
 * The plenoptic function which describes the degrees of freedom of a light ray. The full equation is also time dependent. 
-* **Radiance** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.* **
-
-
+Light has the properties of waves. Like ocean waves, light waves have crests and troughs. The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. The **frequency** of a wave is the number of crests (or troughs) that pass a point in one second. The wavelength multiplied by the frequency equals the speed at which the wave travels.
+* **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
+ 
 #### Lightfields capture and rendering
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplifies to a **4D light field**, which is easier to sample and operate on.
  
 The 4D lightfield has 2D spatial (x,y) and 2D angular (u,v) imformation that is captured by a plenoptic sensor.
 • the **incident light field** Li(u, v, alpha, beta) describing the **irradiance** of light incident on objects in space
 • the **radiant light field** Lr (u, v, alpha, beta) quantifying the irradiance created by an object
-* **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
+
 
 ##### Capturing static and dynamic light fields
 Compared to a traditional camera that only captures the intensity of the incident light, a light-field camera provides angular information for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
