@@ -55,12 +55,15 @@ Also inspired by multi-faceted **insect eyes or camera arrays** the **plenoptic 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
-The plenoptic function which describes the degrees of freedom of a light ray. 
-* The full equation is also **time dependent**. 
-* Light has the properties of waves. Like ocean waves, light waves have crests and troughs. The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. The **frequency** of a wave is the number of crests (or troughs) that pass a point in one second. The wavelength multiplied by the frequency equals the speed at which the wave travels.
+    
+The plenoptic function describes the degrees of freedom of a light ray with the paramters: Irradiance, position, wavelength, time, angle, polarization, and bounce. 
+* Light has the properties of waves. Like ocean waves, light waves have crests and troughs. The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. 
+* **Wave phase** is the offset of a wave from a given point. When two waves cross paths, they either cancel each other out or compliment each other, depending on their phase. 
 * **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
- 
-#### Lightfields capture and rendering
+* The full equation is also **time dependent**.
+* Polarization
+    
+#### Lightfields: capture and rendering
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
  
 The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that is captured by a plenoptic sensor.
@@ -73,6 +76,7 @@ Compared to a traditional photo camera that only captures the intensity of the i
 While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
 
 <img src="https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png" width=250><img src="https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png" width=250><img src="https://user-images.githubusercontent.com/74843139/134805766-295077e7-81ef-405b-9ad7-38e8c583a55f.png" width=250>
+    
 <small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
  
@@ -91,8 +95,8 @@ ToF applications create "depth maps" based on light detection, usually with a st
 
 <img src="https://user-images.githubusercontent.com/74843139/134803482-e283e016-a50e-4ae9-aca7-d35128ba9554.png" width=500>
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+    
 <img src="(https://user-images.githubusercontent.com/74843139/134806495-5d40deff-328c-42b5-ada4-2035399abf1f.png" width=200>
-
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
 
  
@@ -101,10 +105,10 @@ ToF applications create "depth maps" based on light detection, usually with a st
 ##### Neural Radiance Fields (NeRF) 
 Neural Radiance Fields (NeRF) turns 2D pictures into navigable models.
  
-###### [Crowdsampling the Plenoptic Function]<a name="crowdsampling">
+###### Crowdsampling the Plenoptic Function
 Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
  
-<img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
  
