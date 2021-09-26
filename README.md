@@ -4,7 +4,7 @@ When I learned about (traditional) computer graphics I think i missed the big pi
 It makes it harder to understand recent research and its meaning for the field.
 20 years after Photogrammetry got popular we see amazing progress.
 
-A minimal framework on how graphics fits with newer research and hardware.
+A TLDR on how computer graphics fits with newer research, computer vision, machine learning and hardware.
 
 
 ## Data-Driven Computational Imaging
