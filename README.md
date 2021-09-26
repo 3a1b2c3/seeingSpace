@@ -1,7 +1,7 @@
 #  Sehender Raum / Seeing Space (WIP)
 ## Notes about capturing, rendering and digitally reconstruction the world
 When I learned about (traditional) computer graphics and some computer vision I think i missed the big picture about how all the pieces connect with hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field.
-20 years after i first got interested in Photogrammetry we see amazing progress despite the concepts no being widely known.
+Some 20 years after i first got interested in Photogrammetry we see amazing progress but the concepts are still not widely known.
 
 A TLDR on how computer graphics fits with newer research, computer vision, machine learning and hardware.
 
@@ -35,9 +35,12 @@ The full equation is also time dependent.
 #### Lightfields: View interpolation 
 
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function under certain assumptions and relaxations simplifies to a **4D light field**, which is easier to sample and operate on.
-![image](https://user-images.githubusercontent.com/74843139/134797988-0ea6b5d5-62d9-48ff-a818-561909fa0757.png)
+• the **incident light field** Li(u, v, , ) describing the irradiance of light incident on objects in space
+• the **radiant light field** Lr (u, v, , ) quantifying the irradiance created by an object
 
 While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
+![image](https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png)
+_Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields+
 
 #### Relighting with 4D Incident Light Fields
 #### Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
