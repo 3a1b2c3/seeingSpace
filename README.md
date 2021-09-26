@@ -30,8 +30,7 @@ A TLDR on how **traditional computer graphics** fits with some **newer research,
 #### Photogrammetry
 Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. 
 
-Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**.
-Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
+Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
  
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
 source: http://www.aamspi.com/services/aerial-photogrammetry/
@@ -62,9 +61,9 @@ The plenoptic function which describes the degrees of freedom of a light ray.
 * **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
  
 #### Lightfields capture and rendering
-A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplifies to a **4D light field**, which is easier to sample and operate on.
+A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
  
-The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** imformation that is captured by a plenoptic sensor.
+The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that is captured by a plenoptic sensor.
 • the **incident light field** Li(u, v, alpha, beta) describing the **irradiance** of light incident on objects in space
 • the **radiant light field** Lr (u, v, alpha, beta) quantifying the irradiance created by an object
 
@@ -78,13 +77,12 @@ _Stanford light field camera; Right: Adobe (large) lens array, source https://cs
  
  
 ##### Novel (virtual) view synthesis
-The raw samples of a light field are saved as disks. resolution large amouts of data
+The raw samples of a light field are saved as disks. resolution large amounts of data
  
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>
  _Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality_
  
-View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured
-views. Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the light eld to make re-construction guarantees independent of specic scene geometry. Most IBR algorithms are designed to model static appearance, DeepMPI, which further captures viewing condition dependent appearance. 
+View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most IBR algorithms are designed to model static appearance, DeepMPI, which further captures viewing condition dependent appearance 
 
 ##### Relighting with 4D Incident Light Fields
 #### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
@@ -113,7 +111,9 @@ Inverse rendering aims to estimate physical attributes of a scene, e.g., reflect
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
 ## Important concepts
- * Radiance<a name="radiance"> The radiance represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
+ * *DeepMPI*<a name="deepmpi"> 
+ * *Light field* is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***
+ * *Radiance*<a name="radiance"> represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
  
 ## Recommended reading
 
