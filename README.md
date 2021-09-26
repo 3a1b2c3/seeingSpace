@@ -5,6 +5,25 @@ Some 20 years after i first got interested in Photogrammetry we see amazing prog
 
 A TLDR on how computer graphics fits with newer research, computer vision, machine learning and hardware.
 
+- [Sehender Raum / Seeing Space (WIP)](#sehender-raum---seeing-space--wip-)
+  * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
+  * [Data-Driven Computational Imaging](#data-driven-computational-imaging)
+    + [Image-based rendering: Plenoptic function and cameras, light fields](#image-based-rendering--plenoptic-function-and-cameras--light-fields)
+      - [Plenoptic function](#plenoptic-function)
+      - [Lightfields: View interpolation](#lightfields--view-interpolation)
+      - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
+      - [Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging](#time-resolved-imaging--tri--or-time-of-flight--tof--imaging)
+      - [Photogrammetry](#photogrammetry)
+    + [3d scene reconstruction and inverse rendering](#3d-scene-reconstruction-and-inverse-rendering)
+      - [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
+        * [Neural Radiance Fields (NeRF)](#neural-radiance-fields--nerf-)
+          + [[Crowdsampling the Plenoptic Function]<a name="crowdsampling">](#-crowdsampling-the-plenoptic-function--a-name--crowdsampling--)
+      - [Inverse rendering: Analysis by Synthesis](#inverse-rendering--analysis-by-synthesis)
+  * [Recommended reading](#recommended-reading)
+    + [Image-based rendering](#image-based-rendering)
+    + [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning-1)
+
+
 
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and cameras, light fields
@@ -28,8 +47,8 @@ Inspired by insect eyes or camera arrays the **plenoptic function** generalizes 
 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
 *Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
-The full equation is also time dependent. 
-**Radiance** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
+* The full equation is also time dependent. 
+* **Radiance** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
 
 
 #### Lightfields: View interpolation 
@@ -39,8 +58,9 @@ A **Light field** is a mathematical function of one or more variables whose rang
 • the **radiant light field** Lr (u, v, , ) quantifying the irradiance created by an object
 
 While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
+
 ![image](https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png)
-_Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields+
+_Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields_
 
 #### Relighting with 4D Incident Light Fields
 #### Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
