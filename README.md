@@ -10,7 +10,7 @@ A TLDR on how computer graphics fits with newer research, computer vision, machi
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and cameras, light fields
 #### Plenoptic function
-The rendering equation describes physical light transport for a single camera or the human vision. 
+The **rendering equation** describes physical light transport for a single camera or the human vision. 
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300>
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
@@ -21,12 +21,13 @@ Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 
 While it is a useful model for graphics some problems are easier to understand with an integration of the model.
-Inspired by insect eyes or camera arrays the plenoptic function generalizes this idea:
+Inspired by insect eyes or camera arrays the **plenoptic function** generalizes this idea:
 
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 
-The full equation is also time dependent. The **radiance** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
+The full equation is also time dependent. 
+**Radiance** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
 
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional
 vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function.
