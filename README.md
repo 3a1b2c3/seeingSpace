@@ -33,7 +33,7 @@ Photogrammetry is the science of **reconstructing objects and environments that 
 Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
  
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
-source: http://www.aamspi.com/services/aerial-photogrammetry/
+<small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
  
 #### The 7D Plenoptic function
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
@@ -43,7 +43,7 @@ The **rendering equation** describes physical light transport for a single camer
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
-<small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish 2019</small>
+<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish 2019</i></small>
 **Path-Tracing** is a sampling method to estimate integral in rendering equation.
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
@@ -73,14 +73,14 @@ Compared to a traditional photo camera that only captures the intensity of the i
 While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
 
 <img src="https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png" width=250><img src="https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png" width=250><img src="https://user-images.githubusercontent.com/74843139/134805766-295077e7-81ef-405b-9ad7-38e8c583a55f.png" width=250>
-_Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, _Lytro Illum, a discontinued commercially available light field camera_
+<small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
  
 ##### Novel (virtual) view synthesis
 The raw samples of a light field are saved as disks. resolution large amounts of data
  
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>
- _Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality_
+<small><i>Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
  
 View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most IBR algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
 
@@ -93,7 +93,7 @@ ToF applications create "depth maps" based on light detection, usually with a st
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 <img src="(https://user-images.githubusercontent.com/74843139/134806495-5d40deff-328c-42b5-ada4-2035399abf1f.png" width=200>
 
-Source: CVPR 2019 Data-Driven Computational Imaging
+<small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
 
  
 ### 3d scene reconstruction and inverse and differential rendering
