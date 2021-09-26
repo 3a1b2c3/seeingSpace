@@ -35,7 +35,9 @@ Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 ### 3d scene reconstruction and inverse rendering
 #### Visual Sensing Using Machine Learning
 ##### Neural Radiance Fields (NeRF) 
+###### Crowdsampling the Plenoptic Function
 #### Inverse rendering: Analysis by Synthesis
+Differentiable Rendering promises to close the loop between computer vision and graphics.
 
 ## Recommended reading
 ### Image-based rendering
