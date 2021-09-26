@@ -1,8 +1,7 @@
 #  Sehender Raum / Seeing Space (WIP)
 ## Notes about capturing, rendering and digitally reconstruction the world
-When I learned about (traditional) computer graphics I think i missed the big picture about how all the pieces connect with hardware, physics and machine learning aspects. 
-It makes it harder to understand recent research and its meaning for the field.
-20 years after Photogrammetry got popular we see amazing progress.
+When I learned about (traditional) computer graphics and some computer vision I think i missed the big picture about how all the pieces connect with hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field.
+20 years after i first got interested in Photogrammetry we see amazing progress despite the concepts no being widely known.
 
 A TLDR on how computer graphics fits with newer research, computer vision, machine learning and hardware.
 
@@ -36,11 +35,14 @@ The full equation is also time dependent.
 #### Lightfields: View interpolation 
 
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function under certain assumptions and relaxations simplifies to a **4D light field**, which is easier to sample and operate on.
+![image](https://user-images.githubusercontent.com/74843139/134797988-0ea6b5d5-62d9-48ff-a818-561909fa0757.png)
 
-While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera or smart phone in some cases (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
+While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
 
-
+#### Relighting with 4D Incident Light Fields
+#### Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
 #### Photogrammetry
+Photogrammetry is the science and technology of obtaining reliable information about physical objects and the environment through the process of recording, measuring and interpreting photographic images and patterns of electromagnetic radiant imagery and other phenomena.
 
 ### 3d scene reconstruction and inverse rendering
 #### Visual Sensing Using Machine Learning
