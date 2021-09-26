@@ -27,7 +27,7 @@ A TLDR on how **traditional computer graphics** fits with some **newer research,
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and capture
 #### Photogrammetry
-Photogrammetry is the science of reconstructing objects and environments that exist in the physical world through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. Photogrametry data is usually captured with a single moving conventional still frame camera.
+Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. Photogrametry data is usually captured with a single moving conventional still frame camera.
  
 #### The 7D Plenoptic function
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
@@ -47,10 +47,11 @@ Alo inspired by **insect eyes or camera arrays** the **plenoptic function** gene
 <small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</small>
 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
-* Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
+ *Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
  
 * The plenoptic function which describes the degrees of freedom of a light ray. The full equation is also time dependent. 
-Light has the properties of waves. Like ocean waves, light waves have crests and troughs. The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. The **frequency** of a wave is the number of crests (or troughs) that pass a point in one second. The wavelength multiplied by the frequency equals the speed at which the wave travels.
+
+ Light has the properties of waves. Like ocean waves, light waves have crests and troughs. The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. The **frequency** of a wave is the number of crests (or troughs) that pass a point in one second. The wavelength multiplied by the frequency equals the speed at which the wave travels.
 * **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
  
 #### Lightfields capture and rendering
@@ -62,28 +63,28 @@ The 4D lightfield has 2D spatial (x,y) and 2D angular (u,v) imformation that is 
 
 
 ##### Capturing static and dynamic light fields
-Compared to a traditional camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
+Compared to a traditional photo camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
 While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
 
 <img src="https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png" width=300>
-_Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields
-<img src="https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png " width=300>
-_Lytro Illum, a discontinued commercially available light field camera_
- 
 
+<img src="https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png " width=300>
+_Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, _Lytro Illum, a discontinued commercially available light field camera_
+ 
  
 ##### Novel view synthesis
- The raw samples are saved as disks. resolution large amouts of data
+ The raw samples of a light field are saved as disks. resolution large amouts of data
+ 
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>
- Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality
+ _Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality_
  
 Can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured
 views. Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the light eld to make re-construction guarantees independent of specic scene geometry. Most IBR algorithms are designed to model static appearance, DeepMPI, which further captures viewing condition dependent appearance. 
 
 ##### Relighting with 4D Incident Light Fields
 #### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
-<img src="https://user-images.githubusercontent.com/74843139/134803482-e283e016-a50e-4ae9-aca7-d35128ba9554.png" width=300>
-Source:  CVPR 2019 Data-Driven Computational Imaging
+<img src="https://user-images.githubusercontent.com/74843139/134803482-e283e016-a50e-4ae9-aca7-d35128ba9554.png" width=500>
+Source: CVPR 2019 Data-Driven Computational Imaging
 
  
 ### 3d scene reconstruction and inverse and differential rendering
@@ -93,7 +94,8 @@ Neural Radiance Fields (NeRF) turns 2D pictures into navigable models.
  
 ###### [Crowdsampling the Plenoptic Function]<a name="crowdsampling">
 Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
-![image](https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png)
+ 
+<img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=300>
 https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian
  
 #### Inverse rendering and differential rendering: Analysis by Synthesis
