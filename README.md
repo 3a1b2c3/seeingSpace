@@ -19,9 +19,9 @@ Rendering for Data Driven Computational Imaging, Tristan Swedish
 Rendering for Data Driven Computational Imaging, Tristan Swedish
 While it is a useful model for graphics some problems are easier to understand with a more general model.
 Inspired by insect eyes or camera arrays the plenoptic function generalizes this idea:
-<img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
 Rendering for Data Driven Computational Imaging, Tristan Swedish
-<img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
 Rendering for Data Driven Computational Imaging, Tristan Swedish
 #### View interpolation 
 ### 3d scene reconstruction and inverse rendering
