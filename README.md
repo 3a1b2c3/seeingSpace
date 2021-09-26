@@ -7,7 +7,7 @@ A TLDR on how **traditional computer graphics** fits with some **newer research,
     + [Image-based rendering: Plenoptic function and capture](#image-based-rendering--plenoptic-function-and-capture)
       - [Photogrammetry](#photogrammetry)
       - [The 7D Plenoptic function](#the-7d-plenoptic-function)
-      - [Lightfields capture and rendering](#lightfields-capture-and-rendering)
+      - [Lightfields: capture and rendering](#lightfields-capture-and-rendering)
         * [Capturing static and dynamic light fields](#capturing-static-and-dynamic-light-fields)
         * [Novel (virtual) view synthesis](#novel--virtual--view-synthesis)
         * [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
@@ -15,7 +15,7 @@ A TLDR on how **traditional computer graphics** fits with some **newer research,
     + [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
       - [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
         * [Neural Radiance Fields (NeRF)](#neural-radiance-fields--nerf-)
-          + [[Crowdsampling the Plenoptic Function]<a name="crowdsampling">](#-crowdsampling-the-plenoptic-function--a-name--crowdsampling--)
+          + [[Crowdsampling the Plenoptic Function](#-crowdsampling-the-plenoptic-function--a-name--crowdsampling--)
       - [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
   * [Important concepts](#important-concepts)
   * [Recommended reading](#recommended-reading)
@@ -33,6 +33,7 @@ Photogrammetry is the science of **reconstructing objects and environments that 
 Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
  
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
+    
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
  
 #### The 7D Plenoptic function
@@ -47,8 +48,7 @@ The **rendering equation** describes physical light transport for a single camer
 **Path-Tracing** is a sampling method to estimate integral in rendering equation.
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
-Also inspired by multi-faceted **insect eyes or camera arrays** the **plenoptic function** generalizes this idea:
-
+Tthe **plenoptic function** is also inspired by multi-faceted **insect eyes or camera arrays**.
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
@@ -56,8 +56,9 @@ Also inspired by multi-faceted **insect eyes or camera arrays** the **plenoptic 
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
     
-The plenoptic function describes the degrees of freedom of a light ray with the paramters: Irradiance, position, wavelength, time, angle, polarization, and bounce. 
-* Light has the properties of waves. Like ocean waves, light waves have crests and troughs. The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. 
+The plenoptic function describes the degrees of freedom of a light ray with the paramters: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
+Light has the properties of waves. Like ocean waves, light waves have crests and troughs.
+* The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. 
 * **Wave phase** is the offset of a wave from a given point. When two waves cross paths, they either cancel each other out or compliment each other, depending on their phase. 
 * **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
 * The full equation is also **time dependent**.
@@ -73,7 +74,7 @@ The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that
 
 ##### Capturing static and dynamic light fields
 Compared to a traditional photo camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
-While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
+While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#-crowdsampling-the-plenoptic-function--a-name--crowdsampling--)).
 
 <img src="https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png" width=250><img src="https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png" width=250><img src="https://user-images.githubusercontent.com/74843139/134805766-295077e7-81ef-405b-9ad7-38e8c583a55f.png" width=250>
     
