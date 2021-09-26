@@ -27,7 +27,8 @@ A TLDR on how **traditional computer graphics** fits with some **newer research,
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and cameras, light fields
 #### Photogrammetry
-Photogrammetry is the science and technology of obtaining reliable information about physical objects and the environment through the process of recording, measuring and interpreting photographic images and patterns of electromagnetic radiant imagery and other phenomena. First mentioned in 1867 it predates digital photography significantly. A 3D visualization can be created by georeferencing the aerial photos and LiDAR data in the same reference frame, orthorectifying the aerial photos, and then draping the orthorectified images on top of the LiDAR grid. It is also possible to create digital terrain models and thus 3D visualisations using pairs (or multiples) of aerial photographs or satellite (e.g. SPOT satellite imagery).
+Photogrammetry is the science of reconstructing objects and environments in the physical world through photographs. The technique involves stitching together large collections of overlapping photographs to create topographical maps, meshes, and 2D and 3D digital models. First mentioned in 1867 it predates digital photography significantly.
+Data is usually captured with a single conventional camera.
  
 #### The 7D Plenoptic function
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
@@ -61,12 +62,13 @@ The 4D lightfield, 2D spatial (x,y) and 2D angular (u,v), is captured by a pleno
 * **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
 
 ##### Capture
-While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
+Compared to a traditional camera that only captures the intensity of the incident light, a light-field camera provides angular information for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
+While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
 
 ![image](https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png)
 _Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields
- ![image](https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png)
-Lytro Illum, a discontinued commercially available light field camera
+![image](https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png)
+_Lytro Illum, a discontinued commercially available light field camera_
  
 ##### Novel view synthesis
 Can be approached by either explicit estimation of scene geometry and color [21,72,4], or
