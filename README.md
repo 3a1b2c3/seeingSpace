@@ -27,6 +27,8 @@ The full equation is also time dependent.
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 
 #### View interpolation 
+#### Photgrammetry
+
 ### 3d scene reconstruction and inverse rendering
 #### Visual Sensing Using Machine Learning
 ##### Neural Radiance Fields (NeRF) 
