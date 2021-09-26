@@ -27,7 +27,9 @@ A TLDR on how **traditional computer graphics** fits with some **newer research,
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and capture
 #### Photogrammetry
-Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**.
+Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. 
+
+Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**.
 Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
  
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
@@ -43,9 +45,9 @@ The **rendering equation** describes physical light transport for a single camer
 
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
 <small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</small>
-Path-Tracing is a sampling method to estimate integral in rendering equation
+Path-Tracing is a way of sampling method to estimate integral in rendering equation.
  
-While it is a useful model for computer graphics some problems are easier to solve by generalize the light model.
+While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
 Also inspired by **insect eyes or camera arrays** the **plenoptic function** generalizes this idea:
 
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
