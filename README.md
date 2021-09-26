@@ -14,14 +14,17 @@ The rendering equation describes physical light transport for a single camera or
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300>
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
+
 <img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
 
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
+
 While it is a useful model for graphics some problems are easier to understand with an integration of the model.
 Inspired by insect eyes or camera arrays the plenoptic function generalizes this idea:
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
+
 The full equation is also time dependent. The radiance represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
 
 Light field is a mathematical function of one or more variables whose range is a set of multidimensional
