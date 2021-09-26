@@ -1,8 +1,8 @@
 #  Sehender Raum / Seeing Space (WIP)
 ## Notes about capturing, rendering and digitally reconstruction the world
-When I learned about (traditional) computer graphics and photogrammetry I missed the big picture about how all the pieces connect: with capture hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field.
+When I learned about (traditional) computer graphics and photogrammetry I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field.
 
-A TLDR on how computer graphics fits with newer research, computer vision, machine learning and hardware.
+A TLDR on how **traditional computer graphics** fits with some **newer research, computer vision, machine learning and capture hardware**.
 
 
 ## Data-Driven Computational Imaging
@@ -10,7 +10,7 @@ A TLDR on how computer graphics fits with newer research, computer vision, machi
 #### Photogrammetry
 Photogrammetry is the science and technology of obtaining reliable information about physical objects and the environment through the process of recording, measuring and interpreting photographic images and patterns of electromagnetic radiant imagery and other phenomena. First mentioned in 1867 it predates digital photography significantly. A 3D visualization can be created by georeferencing the aerial photos and LiDAR data in the same reference frame, orthorectifying the aerial photos, and then draping the orthorectified images on top of the LiDAR grid. It is also possible to create digital terrain models and thus 3D visualisations using pairs (or multiples) of aerial photographs or satellite (e.g. SPOT satellite imagery).
  
-#### Plenoptic function
+#### The 7D Plenoptic function
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300>
@@ -31,14 +31,16 @@ Inspired by insect eyes or camera arrays the **plenoptic function** generalizes 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
 *Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
 * The plenoptic function which describes the degrees of freedom of a light ray. The full equation is also time dependent. 
-* **Radiance** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
+* **Radiance** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.* **
 
 
 #### Lightfields capture and rendering
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function under certain assumptions and relaxations simplifies to a **4D light field**, which is easier to sample and operate on.
 The 4D lightfield, 2D spatial (x,y) and 2D angular (u,v), is captured by a plenoptic sensor.
-• the **incident light field** Li(u, v, alpha, beta) describing the irradiance of light incident on objects in space
+• the **incident light field** Li(u, v, alpha, beta) describing the **irradiance** of light incident on objects in space
 • the **radiant light field** Lr (u, v, alpha, beta) quantifying the irradiance created by an object
+* **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
+
 ##### Capture
 While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
 
