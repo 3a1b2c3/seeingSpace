@@ -47,7 +47,7 @@ Alo inspired by **insect eyes or camera arrays** the **plenoptic function** gene
 <small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</small>
 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
-*Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
+* Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
  
 * The plenoptic function which describes the degrees of freedom of a light ray. The full equation is also time dependent. 
 Light has the properties of waves. Like ocean waves, light waves have crests and troughs. The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. The **frequency** of a wave is the number of crests (or troughs) that pass a point in one second. The wavelength multiplied by the frequency equals the speed at which the wave travels.
@@ -65,24 +65,24 @@ The 4D lightfield has 2D spatial (x,y) and 2D angular (u,v) imformation that is 
 Compared to a traditional camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
 While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#crowdsampling)).
 
-![image](https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png)
+<img src="https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png" width=300>
 _Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields
-![image](https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png)
+<img src="https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png " width=300>
 _Lytro Illum, a discontinued commercially available light field camera_
  
 
  
 ##### Novel view synthesis
  The raw samples are saved as disks. resolution large amouts of data
- ![image](https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png)
- A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality
+<img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>
+ Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality
  
 Can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured
 views. Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the light eld to make re-construction guarantees independent of specic scene geometry. Most IBR algorithms are designed to model static appearance, DeepMPI, which further captures viewing condition dependent appearance. 
 
 ##### Relighting with 4D Incident Light Fields
 #### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
-![image](https://user-images.githubusercontent.com/74843139/134803482-e283e016-a50e-4ae9-aca7-d35128ba9554.png)
+<img src="https://user-images.githubusercontent.com/74843139/134803482-e283e016-a50e-4ae9-aca7-d35128ba9554.png" width=300>
 Source:  CVPR 2019 Data-Driven Computational Imaging
 
  
