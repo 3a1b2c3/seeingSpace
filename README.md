@@ -27,10 +27,10 @@ A TLDR on how **traditional computer graphics** fits with some **newer research,
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and capture
 #### Photogrammetry
-Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. Photogrametry data is usually captured with a single moving conventional still frame camera or uses aerial data.
+Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**.
 Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
  
- ![image](https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png)
+<img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
 source: http://www.aamspi.com/services/aerial-photogrammetry/
  
 #### The 7D Plenoptic function
