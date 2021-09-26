@@ -29,15 +29,16 @@ Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 The full equation is also time dependent. 
 **Radiance** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
 
-A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional
-vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function.
+
+#### Lightfields: View interpolation 
+
+A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the amount of light flowing in every direction through every point in space. The magnitude of each ray is given by the radiance and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function under certain assumptions and relaxations simplifies to a 4D light field, which is easier to sample and operate on.
 
 While special cameras and cameras arrangements have been build to capture light fields it is also possible them with a conventional camera in some cases (see Crowdsampling the Plenoptic Function).
 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
 Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 
-#### Lightfields: View interpolation 
 
 #### Photogrammetry
 
