@@ -3,6 +3,25 @@
 When I learned about (traditional) computer graphics and photogrammetry I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field.
 
 A TLDR on how **traditional computer graphics** fits with some **newer research, computer vision, machine learning and capture hardware**.
+- [Sehender Raum / Seeing Space (WIP)](#sehender-raum---seeing-space--wip-)
+  * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
+  * [Data-Driven Computational Imaging](#data-driven-computational-imaging)
+    + [Image-based rendering: Plenoptic function and cameras, light fields](#image-based-rendering--plenoptic-function-and-cameras--light-fields)
+      - [Photogrammetry](#photogrammetry)
+      - [The 7D Plenoptic function](#the-7d-plenoptic-function)
+      - [Lightfields capture and rendering](#lightfields-capture-and-rendering)
+        * [Capture](#capture)
+        * [Novel view synthesis](#novel-view-synthesis)
+        * [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
+      - [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging)
+    + [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
+      - [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
+        * [Neural Radiance Fields (NeRF)](#neural-radiance-fields--nerf-)
+          + [[Crowdsampling the Plenoptic Function]<a name="crowdsampling">](#-crowdsampling-the-plenoptic-function--a-name--crowdsampling--)
+      - [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
+  * [Recommended reading](#recommended-reading)
+    + [Image-based rendering](#image-based-rendering)
+    + [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning-1)
 
 
 ## Data-Driven Computational Imaging
@@ -59,7 +78,7 @@ model static appearance, DeepMPI, which further captures viewing condition{depen
 appearance. 
 
 ##### Relighting with 4D Incident Light Fields
-#### Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
+#### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
 
 
  
