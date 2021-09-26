@@ -6,8 +6,7 @@ A minimal framework how to think about graphics and how "traditional approach" f
 
 
 ## Data-Driven Computational Imaging
-
-#### Image-based rendering: Plenoptic function and cameras, light fields
+### Image-based rendering: Plenoptic function and cameras, light fields
 #### Plenoptic function
 The rendering equation describes physical light transport for a single camera or the human vision. 
 
@@ -39,13 +38,15 @@ Source: Rendering for Data Driven Computational Imaging, Tristan Swedish
 #### Inverse rendering: Analysis by Synthesis
 
 ## Recommended reading
-
+### Image-based rendering
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
 * Data-Driven Computational Imaging http://ciml.media.mit.edu
-* Neural Radiance Fields (NeRF) turns 2D pictures into navigable models:
-* https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
 * https://cseweb.ucsd.edu/~viscomp/projects/LF/
 * https://dellaert.github.io/NeRF
+ ### Visual Sensing Using Machine Learning
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
+* https://github.com/tensorflow/graphics
+* * Neural Radiance Fields (NeRF) turns 2D pictures into navigable models:
+* https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
