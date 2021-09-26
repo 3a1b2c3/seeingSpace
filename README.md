@@ -30,7 +30,7 @@ A TLDR on how **traditional computer graphics** fits with some **newer research,
 #### Photogrammetry
 Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. 
 
-Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
+Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
  
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
 source: http://www.aamspi.com/services/aerial-photogrammetry/
@@ -40,7 +40,7 @@ The **rendering equation** describes physical light transport for a single camer
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
  
-<small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</small>
+<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
 <small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish 2019</small>
@@ -50,10 +50,10 @@ While the rendering equation is a useful model for computer graphics some proble
 Also inspired by multi-faceted **insect eyes or camera arrays** the **plenoptic function** generalizes this idea:
 
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
-<small>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish 2019</small>
-
+<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+ 
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
- *Source: Rendering for Data Driven Computational Imaging, Tristan Swedish*
+<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
 The plenoptic function which describes the degrees of freedom of a light ray. 
 * The full equation is also **time dependent**. 
@@ -90,6 +90,7 @@ ToF refers to the use of the speed of light or even sound to determine distance,
 ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
 
 <img src="https://user-images.githubusercontent.com/74843139/134803482-e283e016-a50e-4ae9-aca7-d35128ba9554.png" width=500>
+<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 <img src="(https://user-images.githubusercontent.com/74843139/134806495-5d40deff-328c-42b5-ada4-2035399abf1f.png" width=200>
 
 Source: CVPR 2019 Data-Driven Computational Imaging
@@ -104,7 +105,8 @@ Neural Radiance Fields (NeRF) turns 2D pictures into navigable models.
 Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
  
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=300>
-https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian
+<small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
+ 
  
 #### Inverse rendering and differential rendering: Analysis by Synthesis
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
