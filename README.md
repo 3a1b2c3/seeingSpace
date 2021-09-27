@@ -1,8 +1,9 @@
 #  Sehender Raum / Seeing Space (WIP)
 ## Notes about capturing, rendering and digitally reconstruction the world
-When I learned about (traditional) computer graphics and photogrammetry I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field.
+When I learned about (traditional) computer graphics and photogrammetry I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but huge progress has been made since I first became intersted in the opic 20 years ago.
 
 A TLDR on how **traditional computer graphics** fits with some **newer research, computer vision, machine learning and capture hardware**.
+
 - [Data-Driven Computational Imaging](#data-driven-computational-imaging)
     + [Image-based rendering: Plenoptic function and capture](#image-based-rendering--plenoptic-function-and-capture)
       - [Photogrammetry](#photogrammetry)
@@ -102,10 +103,9 @@ ToF applications create "depth maps" based on light detection, usually with a st
  
 ### 3d scene reconstruction and inverse and differential rendering
 #### Visual Sensing Using Machine Learning
-##### Neural Radiance Fields (NeRF) 
-Neural Radiance Fields (NeRF) turns 2D pictures into navigable models.
- 
-###### Crowdsampling the Plenoptic Function
+##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis
+Neural Radiance Fields (NeRF) turns 2D pictures into navigable models. in 2020  neural volume rendering exploded onto the scene, triggered by the impressive NeRF paper by Mildenhall et al.
+###### Crowdsampling the Plenoptic Function (published 2020)
 Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
  
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
@@ -130,9 +130,10 @@ Also called **Differentiable Rendering** it promises to close the loop between c
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
 * Data-Driven Computational Imaging http://ciml.media.mit.edu, CVPR 2019
 * https://cseweb.ucsd.edu/~viscomp/projects/LF/
-* https://dellaert.github.io/NeRF
+
 
  ### Visual Sensing Using Machine Learning
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
 * https://github.com/tensorflow/graphics
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
+    * https://dellaert.github.io/NeRF
