@@ -47,7 +47,8 @@ The **rendering equation** describes physical light transport for a single camer
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
 The **plenoptic function** is also inspired by multi-faceted **insect eyes or camera arrays**.
-<img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
+<img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=550>
+    
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
