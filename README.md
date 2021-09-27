@@ -37,7 +37,8 @@ Photogrametry data is usually captured with a **single moving conventional still
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
  
 #### The 7D Plenoptic function
-Theworld as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene. A point in the scene is imaged by measuring the emitted/reflected light that converges on the sensor plane.
+The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene. A point in the scene is imaged by measuring the emitted/reflected light that converges on the sensor plane.
+*Radiance (L)*<a name="radiance"> represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
@@ -46,10 +47,11 @@ The **rendering equation** describes physical light transport for a single camer
  
 <img src="https://user-images.githubusercontent.com/74843139/134788646-69861df7-4656-449e-adb4-210c8e0307ff.png" width=300>
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish 2019</i></small>
+    
 **Path-Tracing** is a sampling method to estimate integral in rendering equation.
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
-Tthe **plenoptic function** is also inspired by multi-faceted **insect eyes or camera arrays**.
+The **plenoptic function** is also inspired by multi-faceted **insect eyes or camera arrays**.
 <img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=450>
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
@@ -122,7 +124,8 @@ Also called **Differentiable Rendering** it promises to close the loop between c
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
  * *Light field* is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***
  * *Radiance*<a name="radiance"> represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
- 
+ * The irradiance E of a surface is defined as the incident radiant flux density, and has units of W· m−2. Meanwhile, radiance L of a surface is emitted flux per unit of foreshortened area (from Lambert’s Law) per unit solid angle W· m−2 · sr−1.
+    
 ## Recommended reading
 
 ### Image-based rendering
