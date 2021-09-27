@@ -37,6 +37,7 @@ Photogrametry data is usually captured with a **single moving conventional still
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
  
 #### The 7D Plenoptic function
+Theworld as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene. A point in the scene is imaged by measuring the emitted/reflected light that converges on the sensor plane.
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
