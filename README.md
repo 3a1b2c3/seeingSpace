@@ -65,7 +65,7 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 * Polarization
     
 #### 4D Lightfields: capture and rendering
-A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
+A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
  
 The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that is captured by a plenoptic sensor.
 • the **incident light field** Li(u, v, alpha, beta) describing the **irradiance** of light incident on objects in space
@@ -81,8 +81,9 @@ While **special cameras and cameras arrangements** have been build to capture li
 <small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
  
-##### Novel (virtual) view synthesis
-Unfortunately, it is not feasible in practice to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis (NVS) aims to approximate such a de . The raw samples of a light field are saved as disks. resolution large amounts of data
+##### Novel (virtual) 2D view synthesis
+Unfortunately, it is not feasible in practice to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only sparse observations, such as a small set of images captured from diverse viewpoints. Multiple methods for novel view synthesis exists. One approach aims to explicitly reconstruct the surface geometry and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly model the appearance of the entire space and use volumetric rendering techniques to generate images. 
+The raw samples of a light field are saved as disks. resolution large amounts of data
  
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>
 <small><i>Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
