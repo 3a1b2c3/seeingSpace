@@ -38,7 +38,7 @@ Photogrametry data is usually captured with a **single moving conventional still
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
  
 #### The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)
-To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting from sophisticated light transport phenomena. The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene. A point in the scene is imaged by measuring the emitted/reflected light that converges on the sensor plane.
+To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting from sophisticated light transport phenomena. The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene. A point in the scene is imaged by measuring the emitted and reflected light that converges on the sensor plane.
 *Radiance (L)*<a name="radiance"> represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
 
@@ -103,7 +103,7 @@ ToF applications create "depth maps" based on light detection, usually with a st
  
 ### 3d scene reconstruction and inverse and differential rendering
 #### Visual Sensing Using Machine Learning
-##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis
+##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020)
 Neural Radiance Fields (NeRF) turns 2D pictures into navigable models. in 2020  neural volume rendering exploded onto the scene, triggered by the impressive NeRF paper by Mildenhall et al.
 ###### Crowdsampling the Plenoptic Function (published 2020)
 Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
@@ -135,6 +135,6 @@ Also called **Differentiable Rendering** it promises to close the loop between c
  ### Visual Sensing Using Machine Learning
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
 * https://github.com/tensorflow/graphics
-* https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera ParametersZirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
+* https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera Parameters Zirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
-    * https://dellaert.github.io/NeRF
+* https://dellaert.github.io/NeRF
