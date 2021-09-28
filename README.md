@@ -28,7 +28,7 @@ Catching up with newer research in image based rendering: A TLDR on how computer
 
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and capture
-#### Photogrammetry
+#### Photogrammetry (first mentioned in 1867)
 Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. 
 
 Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
