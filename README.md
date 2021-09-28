@@ -36,6 +36,8 @@ Photogrametry data is usually captured with a **single moving conventional still
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
     
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
+####  Simultaneous localization and mapping: SLAM
+A seminal work in SLAM is the research of R.C. Smith and P. Cheeseman on the representation and estimation of spatial uncertainty in 1986.[26][27] Other pioneering work in this field was conducted by the research group of Hugh F. Durrant-Whyte in the early 1990s.[28] which showed that solutions to SLAM exist in the infinite data limit. This finding motivates the search for algorithms which are computationally tractable and approximate the solution. 
  
 #### The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)
 To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting from sophisticated light transport phenomena. The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene. A point in the scene is imaged by measuring the emitted and reflected light that converges on the sensor plane.
@@ -101,9 +103,6 @@ ToF applications create "depth maps" based on light detection, usually with a st
 <img src="(https://user-images.githubusercontent.com/74843139/134806495-5d40deff-328c-42b5-ada4-2035399abf1f.png" width=200>
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
 
- 
-### 3d scene reconstruction and inverse and differential rendering
-#### Visual Sensing Using Machine Learning
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020)
 Neural Radiance Fields (NeRF) turns 2D pictures into navigable models. in 2020  neural volume rendering exploded onto the scene, triggered by the impressive NeRF paper by Mildenhall et al.
 ###### Crowdsampling the Plenoptic Function (published 2020)
@@ -112,7 +111,9 @@ Given a large number of tourist photos taken at different times of day, this mac
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
- 
+     
+### 3d scene reconstruction and inverse and differential rendering
+#### Visual Sensing Using Machine Learning 
 #### Inverse rendering and differential rendering: Analysis by Synthesis
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
