@@ -6,8 +6,6 @@ Catching up with newer research in image based rendering: A TLDR on how **tradit
 
 - [Data-Driven Computational Imaging](#data-driven-computational-imaging)
   * [Image-based rendering: Plenoptic function and capture](#image-based-rendering--plenoptic-function-and-capture)
-    + [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
-    + [Simultaneous localization and mapping: SLAM (1986)](#simultaneous-localization-and-mapping--slam--1986-)
     + [The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)](#the-5d-and-7d-plenoptic-function--adelson-and-bergen--1991-)
     + [4D Lightfields: capture and rendering (Adelson and Bergen, 1991)](#4d-lightfields--capture-and-rendering--adelson-and-bergen--1991-)
       - [Capturing static and dynamic light fields](#capturing-static-and-dynamic-light-fields)
@@ -16,6 +14,8 @@ Catching up with newer research in image based rendering: A TLDR on how **tradit
       - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
     + [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging)
   * [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
+    + [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
+    + [Simultaneous localization and mapping: SLAM (1986)](#simultaneous-localization-and-mapping--slam--1986-)
     + [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
     + [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
 - [Important concepts](#important-concepts)
@@ -28,17 +28,6 @@ Catching up with newer research in image based rendering: A TLDR on how **tradit
 
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and capture
-#### Photogrammetry (first mentioned in 1867)
-Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. 
-
-Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
- 
-<img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
-    
-<small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
-####  Simultaneous localization and mapping: SLAM (1986)
-A seminal work in SLAM is the research of R.C. Smith and P. Cheeseman on the representation and estimation of spatial uncertainty in 1986.[26][27] Other pioneering work in this field was conducted by the research group of Hugh F. Durrant-Whyte in the early 1990s.[28] which showed that solutions to SLAM exist in the infinite data limit. This finding motivates the search for algorithms which are computationally tractable and approximate the solution. 
- 
 #### The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)
 To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting from sophisticated light transport phenomena. The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene. A point in the scene is imaged by measuring the emitted and reflected light that converges on the sensor plane.
 *Radiance (L)*<a name="radiance"> represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
@@ -115,6 +104,17 @@ ToF applications create "depth maps" based on light detection, usually with a st
  
      
 ### 3d scene reconstruction and inverse and differential rendering 
+#### Photogrammetry (first mentioned in 1867)
+Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. 
+
+Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlussion or dense vegetation cover can block the camera's line of sight or limit light required for good results.
+ 
+<img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
+    
+<small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
+####  Simultaneous localization and mapping: SLAM (1986)
+A seminal work in SLAM is the research of R.C. Smith and P. Cheeseman on the representation and estimation of spatial uncertainty in 1986.[26][27] Other pioneering work in this field was conducted by the research group of Hugh F. Durrant-Whyte in the early 1990s.[28] which showed that solutions to SLAM exist in the infinite data limit. This finding motivates the search for algorithms which are computationally tractable and approximate the solution. 
+ 
 #### Visual Sensing Using Machine Learning 
 #### Inverse rendering and differential rendering: Analysis by Synthesis
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
