@@ -73,7 +73,7 @@ While **special cameras and cameras arrangements** have been build to capture li
  
  
 ##### Novel (virtual) 2D view synthesis
-Unfortunately, it is not feasible in practice to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only sparse observations, such as a small set of images captured from diverse viewpoints. Multiple methods for novel view synthesis exists. One approach aims to explicitly reconstruct the surface geometry and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly model the appearance of the entire space and use volumetric rendering techniques to generate images. 
+Unfortunately, it is not feasible in practice to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only sparse observations, such as a small set of images captured from diverse viewpoints. Multiple methods for novel view synthesis exists. One approach aims to explicitly reconstruct the surface geometry and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
 The raw samples of a light field are saved as disks. resolution large amounts of data
  
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>
