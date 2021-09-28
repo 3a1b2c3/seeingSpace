@@ -82,7 +82,7 @@ While **special cameras and cameras arrangements** have been build to capture li
  
  
 ##### Novel (virtual) view synthesis
-The raw samples of a light field are saved as disks. resolution large amounts of data
+Unfortunately, it is not feasible in practice to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis (NVS) aims to approximate such a de . The raw samples of a light field are saved as disks. resolution large amounts of data
  
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>
 <small><i>Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
