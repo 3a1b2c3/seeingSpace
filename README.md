@@ -4,25 +4,26 @@ When I learned about (traditional) computer graphics and photogrammetry I missed
 
 Catching up with newer research in image based rendering: A TLDR on how computer graphics fits with newer research, computer vision, machine learning and hardware.A TLDR on how **traditional computer graphics** fits with some **newer research, computer vision, machine learning and capture hardware**.
 
-  * [Data-Driven Computational Imaging](#data-driven-computational-imaging)
-    + [Image-based rendering: Plenoptic function and capture](#image-based-rendering--plenoptic-function-and-capture)
-      - [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
-      - [Simultaneous localization and mapping: SLAM](#simultaneous-localization-and-mapping--slam)
-      - [The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)](#the-5d-and-7d-plenoptic-function--adelson-and-bergen--1991-)
-      - [4D Lightfields: capture and rendering](#4d-lightfields--capture-and-rendering)
-        * [Capturing static and dynamic light fields](#capturing-static-and-dynamic-light-fields)
-        * [Novel (virtual) 2D view synthesis](#novel--virtual--2d-view-synthesis)
-        * [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
-      - [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging)
+- [Data-Driven Computational Imaging](#data-driven-computational-imaging)
+  * [Image-based rendering: Plenoptic function and capture](#image-based-rendering--plenoptic-function-and-capture)
+    + [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
+    + [Simultaneous localization and mapping: SLAM](#simultaneous-localization-and-mapping--slam)
+    + [The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)](#the-5d-and-7d-plenoptic-function--adelson-and-bergen--1991-)
+    + [4D Lightfields: capture and rendering](#4d-lightfields--capture-and-rendering)
+      - [Capturing static and dynamic light fields](#capturing-static-and-dynamic-light-fields)
+      - [Novel (virtual) 2D view synthesis](#novel--virtual--2d-view-synthesis)
         * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-)
-          + [Crowdsampling the Plenoptic Function (published 2020)](#crowdsampling-the-plenoptic-function--published-2020-)
-    + [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
-      - [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
-      - [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
-  * [Important concepts](#important-concepts)
-  * [Recommended reading](#recommended-reading)
-    + [Image-based rendering](#image-based-rendering)
-    + [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning-1)
+      - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
+    + [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging)
+  * [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
+    + [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
+    + [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
+- [Important concepts](#important-concepts)
+- [Recommended reading](#recommended-reading)
+  * [Image-based rendering](#image-based-rendering)
+  * [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning-1)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -93,6 +94,15 @@ The raw samples of a light field are saved as disks. resolution large amounts of
  
 View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most IBR algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
 
+ 
+###### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020)
+Neural Radiance Fields (NeRF) turns 2D pictures into navigable models. in 2020  neural volume rendering exploded onto the scene, triggered by the impressive NeRF paper by Mildenhall et al.
+####### Crowdsampling the Plenoptic Function (published 2020)
+Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
+ 
+<img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
+<small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
+ 
 ##### Relighting with 4D Incident Light Fields
 #### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
@@ -103,14 +113,6 @@ ToF applications create "depth maps" based on light detection, usually with a st
     
 <img src="(https://user-images.githubusercontent.com/74843139/134806495-5d40deff-328c-42b5-ada4-2035399abf1f.png" width=200>
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
-
-##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020)
-Neural Radiance Fields (NeRF) turns 2D pictures into navigable models. in 2020  neural volume rendering exploded onto the scene, triggered by the impressive NeRF paper by Mildenhall et al.
-###### Crowdsampling the Plenoptic Function (published 2020)
-Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
- 
-<img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
-<small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
      
 ### 3d scene reconstruction and inverse and differential rendering
