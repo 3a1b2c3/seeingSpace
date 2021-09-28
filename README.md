@@ -2,17 +2,17 @@
 ## Notes about capturing, rendering and digitally reconstruction the world
 When I learned about (traditional) computer graphics and photogrammetry I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but huge progress has been made since I first became intersted in the opic 20 years ago.
 
-Catching up with newer research in image based rendering: A TLDR on how computer graphics fits with newer research, computer vision, machine learning and hardware.A TLDR on how **traditional computer graphics** fits with some **newer research, computer vision, machine learning and capture hardware**.
+Catching up with newer research in image based rendering: A TLDR on how **traditional computer graphics** fits with some **newer research, computer vision, machine learning and capture hardware**.
 
 - [Data-Driven Computational Imaging](#data-driven-computational-imaging)
   * [Image-based rendering: Plenoptic function and capture](#image-based-rendering--plenoptic-function-and-capture)
     + [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
-    + [Simultaneous localization and mapping: SLAM](#simultaneous-localization-and-mapping--slam)
+    + [Simultaneous localization and mapping: SLAM (1986)](#simultaneous-localization-and-mapping--slam--1986-)
     + [The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)](#the-5d-and-7d-plenoptic-function--adelson-and-bergen--1991-)
     + [4D Lightfields: capture and rendering (Adelson and Bergen, 1991)](#4d-lightfields--capture-and-rendering--adelson-and-bergen--1991-)
       - [Capturing static and dynamic light fields](#capturing-static-and-dynamic-light-fields)
       - [Novel (virtual) 2D view synthesis](#novel--virtual--2d-view-synthesis)
-        * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-)
+        * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
       - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
     + [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging)
   * [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
@@ -36,7 +36,7 @@ Photogrametry data is usually captured with a **single moving conventional still
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
     
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
-####  Simultaneous localization and mapping: SLAM
+####  Simultaneous localization and mapping: SLAM (1986)
 A seminal work in SLAM is the research of R.C. Smith and P. Cheeseman on the representation and estimation of spatial uncertainty in 1986.[26][27] Other pioneering work in this field was conducted by the research group of Hugh F. Durrant-Whyte in the early 1990s.[28] which showed that solutions to SLAM exist in the infinite data limit. This finding motivates the search for algorithms which are computationally tractable and approximate the solution. 
  
 #### The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)
