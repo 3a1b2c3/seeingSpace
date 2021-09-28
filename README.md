@@ -113,7 +113,7 @@ Photogrametry data is usually captured with a **single moving conventional still
     
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
 ####  Simultaneous localization and mapping: SLAM (1986)
-Real-time 3D reconstruction for navigation.
+Achieving real-time perception is critical to developing a fully autonomous system that can sense, navigate, and interact with its environment. Perception tasks such as online 3D reconstruction and mapping 
  
 #### Visual Sensing Using Machine Learning 
 #### Inverse rendering and differential rendering: Analysis by Synthesis
