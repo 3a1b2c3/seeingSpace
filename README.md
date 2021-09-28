@@ -1,8 +1,8 @@
 #  Sehender Raum / Seeing Space (WIP)
 ## Notes about capturing, rendering and digitally reconstruction the world
-When I learned about (traditional) computer graphics and photogrammetry I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but huge progress has been made since I first became intersted in the opic 20 years ago.
+When I learned about (traditional) computer graphics and photogrammetry I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It makes it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but huge progress has been made since I first became interested in the opic 20 years ago.
 
-Catching up with newer research in image based rendering: A TLDR on how **traditional computer graphics** fits with some **newer research, computer vision, machine learning and capture hardware**.
+Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
 
 - [Data-Driven Computational Imaging](#data-driven-computational-imaging)
   * [Image-based rendering: Plenoptic function and capture](#image-based-rendering--plenoptic-function-and-capture)
