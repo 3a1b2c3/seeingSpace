@@ -113,7 +113,7 @@ Photogrametry data is usually captured with a **single moving conventional still
     
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
 ####  Simultaneous localization and mapping: SLAM (1986)
-A seminal work in SLAM is the research of R.C. Smith and P. Cheeseman on the representation and estimation of spatial uncertainty in 1986.[26][27] Other pioneering work in this field was conducted by the research group of Hugh F. Durrant-Whyte in the early 1990s.[28] which showed that solutions to SLAM exist in the infinite data limit. This finding motivates the search for algorithms which are computationally tractable and approximate the solution. 
+Real-time 3D reconstruction 
  
 #### Visual Sensing Using Machine Learning 
 #### Inverse rendering and differential rendering: Analysis by Synthesis
