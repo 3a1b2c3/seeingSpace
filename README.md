@@ -37,8 +37,8 @@ Photogrametry data is usually captured with a **single moving conventional still
     
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
  
-#### The 7D Plenoptic function
-The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene. A point in the scene is imaged by measuring the emitted/reflected light that converges on the sensor plane.
+#### The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)
+To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting from sophisticated light transport phenomena. The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene. A point in the scene is imaged by measuring the emitted/reflected light that converges on the sensor plane.
 *Radiance (L)*<a name="radiance"> represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
 The **rendering equation** describes physical light transport for a single camera or the human vision. 
 
@@ -64,7 +64,7 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 * The full equation is also **time dependent**.
 * Polarization
     
-#### Lightfields: capture and rendering
+#### 4D Lightfields: capture and rendering
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
  
 The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that is captured by a plenoptic sensor.
@@ -135,5 +135,6 @@ Also called **Differentiable Rendering** it promises to close the loop between c
  ### Visual Sensing Using Machine Learning
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
 * https://github.com/tensorflow/graphics
+* https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera ParametersZirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
     * https://dellaert.github.io/NeRF
