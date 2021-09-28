@@ -9,7 +9,7 @@ Catching up with newer research in image based rendering: A TLDR on how computer
     + [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
     + [Simultaneous localization and mapping: SLAM](#simultaneous-localization-and-mapping--slam)
     + [The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)](#the-5d-and-7d-plenoptic-function--adelson-and-bergen--1991-)
-    + [4D Lightfields: capture and rendering](#4d-lightfields--capture-and-rendering)
+    + [4D Lightfields: capture and rendering (Adelson and Bergen, 1991)](#4d-lightfields--capture-and-rendering--adelson-and-bergen--1991-)
       - [Capturing static and dynamic light fields](#capturing-static-and-dynamic-light-fields)
       - [Novel (virtual) 2D view synthesis](#novel--virtual--2d-view-synthesis)
         * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-)
@@ -22,8 +22,6 @@ Catching up with newer research in image based rendering: A TLDR on how computer
 - [Recommended reading](#recommended-reading)
   * [Image-based rendering](#image-based-rendering)
   * [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning-1)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -68,7 +66,7 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 * The full equation is also **time dependent**.
 * Polarization
     
-#### 4D Lightfields: capture and rendering
+#### 4D Lightfields: capture and rendering (Adelson and Bergen, 1991)
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
  
 The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that is captured by a plenoptic sensor.
@@ -93,10 +91,11 @@ The raw samples of a light field are saved as disks. resolution large amounts of
 <small><i>Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
  
 View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most IBR algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
-
+camera calibration is often assumed to be prerequisite, while in practise, this information is rarely accessible, and requires to be pre-computed with conventional techniques, such as SfM.
  
-###### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020)
-Neural Radiance Fields (NeRF) turns 2D pictures into navigable models. in 2020  neural volume rendering exploded onto the scene, triggered by the impressive NeRF paper by Mildenhall et al.
+###### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
+A popular volumetric rendering technique to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a multi-layer perceptron (MLP), bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
+ 
 ####### Crowdsampling the Plenoptic Function (published 2020)
 Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
  
@@ -115,7 +114,7 @@ ToF applications create "depth maps" based on light detection, usually with a st
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
      
-### 3d scene reconstruction and inverse and differential rendering
+### 3d scene reconstruction and inverse and differential rendering 
 #### Visual Sensing Using Machine Learning 
 #### Inverse rendering and differential rendering: Analysis by Synthesis
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
