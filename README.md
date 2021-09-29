@@ -28,10 +28,12 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 
 ## Data-Driven Computational Imaging
 ### Image-based rendering: Plenoptic function and capture
-#### The 5D and 7D Plenoptic function (Adelson and Bergen, 1991)
-To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting from sophisticated light transport phenomena. The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene. A point in the scene is imaged by measuring the emitted and reflected light that converges on the sensor plane.
-*Radiance (L)*<a name="radiance"> represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
-The **rendering equation** describes physical light transport for a single camera or the human vision. 
+#### The Plenoptic function (Adelson and Bergen, 1991)
+The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene.
+
+A point in the scene is imaged by measuring the emitted and reflected light that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
+
+The **rendering equation** (publisheed in 1986) describes physical light transport for a single camera or the human vision
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
  
