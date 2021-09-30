@@ -86,7 +86,7 @@ camera calibration is often assumed to be prerequisite, while in practise, this 
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
 A popular volumetric rendering technique to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a multi-layer perceptron (MLP), bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
  
-####### Crowdsampling the Plenoptic Function (published 2020)
+###### Crowdsampling the Plenoptic Function (published 2020)
 Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
  
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
