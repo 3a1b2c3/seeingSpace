@@ -28,7 +28,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 
 
 # Data-Driven Computational Imaging
-## Image-based rendering: Plenoptic function and capture
+## Image-based rendering (IBR): Plenoptic function and capture
 ### The Plenoptic function (Adelson and Bergen, 1991)
 The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene.
 
@@ -76,22 +76,25 @@ While **special cameras and cameras arrangements** have been build to capture li
  
  
 #### Novel (virtual) 2D view synthesis
-Unfortunately, it is not feasible in practice to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only sparse observations, such as a small set of images captured from diverse viewpoints. Multiple methods for novel view synthesis exists. One approach aims to explicitly reconstruct the surface geometry and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
+Unfortunately, it is not feasible in practice to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only sparse observations, such as a small set of images captured from diverse viewpoints. Multiple methods for novel view synthesis exists. 
+
+View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. 
+One approach aims to explicitly reconstruct the surface geometry and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly to model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
 The raw samples of a light field are saved as disks. resolution large amounts of data
  
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>
 <small><i>Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
  
-View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most IBR algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
-camera calibration is often assumed to be prerequisite, while in practise, this information is rarely accessible, and requires to be pre-computed with conventional techniques, such as SfM.
+Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most image based renering algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
+
+**Camera calibration** is often assumed to be prerequisite, while in practise, this information is rarely accessible, and requires to be pre-computed with conventional techniques, such as SfM.
  
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
-A popular volumetric rendering technique to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a multi-layer perceptron (MLP), bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
+A popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
  
 ###### Crowdsampling the Plenoptic Function (published 2020)
-Given a large number of tourist photos taken at different times of day, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across
-A variety of times of day and lighting conditions.
-mask out transient objects such as people and cars during training and evaluation, we adopt state-of-the-art semantic and
+Given a large number of **tourist photos taken at different times of day**, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across a variety of times of day and lighting conditions.
+mask out transient objects such as people and cars during training and evaluation
 
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
