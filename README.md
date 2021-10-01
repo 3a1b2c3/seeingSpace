@@ -142,6 +142,7 @@ Also called **Differentiable Rendering** it promises to close the loop between c
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
 * Data-Driven Computational Imaging http://ciml.media.mit.edu, CVPR 2019
 * https://cseweb.ucsd.edu/~viscomp/projects/LF/
+* EUROGRAPHICS 2006 TutorialInverse Rendering: From Concept to Applications, https://diglib.eg.org/bitstream/handle/10.2312/egt.20061062.0399-0547/0399-0547.pdf
 
 
  ## Visual Sensing Using Machine Learning
