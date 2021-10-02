@@ -15,6 +15,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
         * [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
           + [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
       - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
+    + [Lensless cameras](#lensless-cameras)
     + [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging)
   * [Related fields](#related-fields)
     + [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
@@ -110,6 +111,10 @@ Inverse rendering aims to estimate physical attributes of a scene, e.g., reflect
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
 #### Relighting with 4D Incident Light Fields
+
+### Lensless cameras (mid-1990s): ptical images for a computer—not for a human
+Cathey and Dowski, Jr., realized one could intentionally design optics to produce blurry, “degraded” optical images, but degraded in such a way that special digital processing would produce a final digital image as good as, or even better than, those captured using traditional optics. Specifically, they addressed a property of all traditional cameras: limited depth of field.
+
 ### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
 ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
@@ -154,6 +159,7 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 * https://en.wikipedia.org/wiki/Light_field 
  
  ## Visual Sensing Using Machine Learning
+* https://www.americanscientist.org/article/imaging-without-lenses
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
 * https://github.com/tensorflow/graphics
 * https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera Parameters Zirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
