@@ -45,8 +45,7 @@ The **rendering equation** (published in 1986) describes physical light transpor
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
 The **plenoptic function** is also inspired by multi-faceted **insect eyes or lens arrays**.
-<img src="https://user-images.githubusercontent.com/74843139/135701984-e05e5277-6ea3-4230-95be-cfa3a04375cd.png" width=150><img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=550>
-    
+<img src="https://user-images.githubusercontent.com/74843139/135706284-64636f81-b20d-429d-ba5c-2d55c5c6df02.png" width=150><img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=550>
 <small><i>Source: https://en.wikipedia.org/wiki/Compound_eye, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
 <img src="https://user-images.githubusercontent.com/74843139/135706173-d8753d03-949a-4f0e-9022-36986dc2e0d0.png" width=250>
