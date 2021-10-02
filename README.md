@@ -6,6 +6,8 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 - [Sehender Raum / Seeing Space (WIP)](#sehender-raum---seeing-space--wip-)
   * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
 - [Data-Driven Computational Imaging](#data-driven-computational-imaging)
+- Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
+knowledge about the class of objects or scenes being imaged, deliver estimates of a specific object or scene presented to the imaging system.
   * [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
     + [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
     + [4D Lightfields: capture and rendering (Adelson and Bergen, 1991)](#4d-lightfields--capture-and-rendering--adelson-and-bergen--1991-)
