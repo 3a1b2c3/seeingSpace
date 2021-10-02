@@ -44,12 +44,12 @@ The **rendering equation** (published in 1986) describes physical light transpor
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
-The **plenoptic function** is also inspired by multi-faceted **insect eyes or camera arrays**.
+The **plenoptic function** is also inspired by multi-faceted **insect eyes or lens arrays**.
 <img src="https://user-images.githubusercontent.com/74843139/135701984-e05e5277-6ea3-4230-95be-cfa3a04375cd.png" width=150><img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=550>
     
 <small><i>Source: https://en.wikipedia.org/wiki/Compound_eye, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
-<img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
+<img src="https://user-images.githubusercontent.com/74843139/135706173-d8753d03-949a-4f0e-9022-36986dc2e0d0.png" width=250>
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
     
@@ -74,14 +74,13 @@ The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that
 One type uses an array of micro-lenses placed in front of an otherwise conventional image sensor to sense intensity, color, and directional information. Multi-camera arrays are another type. Compared to a traditional photo camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
 While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#-crowdsampling-the-plenoptic-function--a-name--crowdsampling--)).
 
-<img src="https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png" width=250><img src="https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png" width=250><img src="https://user-images.githubusercontent.com/74843139/134805766-295077e7-81ef-405b-9ad7-38e8c583a55f.png" width=250><img src="https://user-images.githubusercontent.com/74843139/135706121-e3a5d78a-9dfa-4247-b504-1ba32b1d11ed.png" width=250>!
+<img src="https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png" width=250><img src="https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png" width=250><img src="https://user-images.githubusercontent.com/74843139/134805766-295077e7-81ef-405b-9ad7-38e8c583a55f.png" width=250><img src="https://user-images.githubusercontent.com/74843139/135706121-e3a5d78a-9dfa-4247-b504-1ba32b1d11ed.png" width=150>!
 
     
 <small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
-
  
-#### Novel (virtual) 2D view synthesis form plenoptic data
+#### Novel (virtual) 2D view synthesis form plenoptic samples
 With todays's techology it is not feasible to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only **sparse observations**, such as a small set of images captured from diverse viewpoints. Multiple methods for novel view synthesis exists. 
 
 View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. 
@@ -118,7 +117,8 @@ The basic design of a camera has remained unchanged for centuries. To acquire an
 Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus. 
 Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
 from the sensor measurements with the help of a computational algorithm.
-
+The simplest but inefficent lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
+pinholes.
 
 ### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
