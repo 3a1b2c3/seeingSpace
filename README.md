@@ -3,16 +3,17 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but huge progress has been made since I first became interested in the opic 20 years ago.
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
+
 - [Data-Driven Computational Imaging](#data-driven-computational-imaging)
   * [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
     + [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
-    + [4D Lightfields: capture and rendering holograms (Adelson and Bergen, 1991)](#4d-lightfields--capture-and-rendering-holograms--adelson-and-bergen--1991-)
+    + [4D Lightfields: capture and rendering (Andrey Gershun, 1936)](#4d-lightfields--capture-and-rendering--andrey-gershun--1936-)
       - [Capturing static and dynamic light fields](#capturing-static-and-dynamic-light-fields)
       - [Novel (virtual) 2D view synthesis](#novel--virtual--2d-view-synthesis)
         * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
           + [Crowdsampling the Plenoptic Function (published 2020)](#crowdsampling-the-plenoptic-function--published-2020-)
-      - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
-        * [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
+        * [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
+          + [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
       - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
     + [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging)
   * [Related fields](#related-fields)
@@ -24,7 +25,6 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
   * [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 # Data-Driven Computational Imaging
 Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
@@ -60,7 +60,7 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 * The full equation is also **time dependent**.
 * Polarization
     
-### 4D Lightfields: capture and rendering holograms (Adelson and Bergen, 1991)
+### 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
 A hologram is a photographic recording of a light field, rather than an image formed by a lens. 
 
@@ -151,7 +151,8 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org
 * https://raytrix.de Realtime Plenoptic Metrology
 * https://github.com/Arne-Petersen/Plenoptic-Simulation
-
+* https://en.wikipedia.org/wiki/Light_field 
+ 
  ## Visual Sensing Using Machine Learning
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
 * https://github.com/tensorflow/graphics
