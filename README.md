@@ -61,9 +61,10 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 * The full equation is also **time dependent**.
 * Polarization
     
-### 4D Lightfields: capture and rendering (Adelson and Bergen, 1991)
+### 4D Lightfields: capture and rendering holograms (Adelson and Bergen, 1991)
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
- 
+A hologram is a photographic recording of a light field, rather than an image formed by a lens. 
+
 The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that is captured by a plenoptic sensor.
 • the **incident light field** Li(u, v, alpha, beta) describing the **irradiance** of light incident on objects in space
 • the **radiant light field** Lr (u, v, alpha, beta) quantifying the irradiance created by an object
