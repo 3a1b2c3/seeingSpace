@@ -99,6 +99,11 @@ mask out transient objects such as people and cars during training and evaluatio
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
+#### 3d scene reconstruction and inverse and differential rendering 
+##### Inverse rendering and differential rendering: Analysis by Synthesis
+Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
+Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
+
 #### Relighting with 4D Incident Light Fields
 ### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
@@ -111,7 +116,7 @@ ToF applications create "depth maps" based on light detection, usually with a st
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
      
-## 3d scene reconstruction and inverse and differential rendering 
+## Related fields
 ### Photogrammetry (first mentioned in 1867)
 Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly. 
 
@@ -120,13 +125,9 @@ Photogrametry data is usually captured with a **single moving conventional still
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
     
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
-###  Simultaneous localization and mapping: SLAM (1986)
+###  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
 Achieving real-time perception is critical to developing a fully autonomous system that can sense, navigate, and interact with its environment. Perception tasks such as online 3D reconstruction and mapping 
  
-### Visual Sensing Using Machine Learning 
-### Inverse rendering and differential rendering: Analysis by Synthesis
-Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
-Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
 # Important concepts
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
@@ -138,12 +139,13 @@ Also called **Differentiable Rendering** it promises to close the loop between c
 
 ## Image-based rendering
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
-* *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
 * Data-Driven Computational Imaging http://ciml.media.mit.edu, CVPR 2019
 * https://cseweb.ucsd.edu/~viscomp/projects/LF/
 * EUROGRAPHICS 2006 TutorialInverse Rendering: From Concept to Applications, https://diglib.eg.org/bitstream/handle/10.2312/egt.20061062.0399-0547/0399-0547.pdf
-
+* *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org
+* https://raytrix.de Realtime Plenoptic Metrology
+* https://github.com/Arne-Petersen/Plenoptic-Simulation
 
  ## Visual Sensing Using Machine Learning
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
