@@ -57,7 +57,7 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 * The full equation is also **time dependent**.
 * Polarization
     
-### 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
+### 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
 A hologram is a photographic recording of a light field, rather than an image formed by a lens. 
 
@@ -115,7 +115,7 @@ from the sensor measurements with the help of a computational algorithm.
 The simplest but inefficent lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
 pinholes.
 
-### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
+### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
 ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
 
