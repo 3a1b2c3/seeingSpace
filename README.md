@@ -80,11 +80,11 @@ While **special cameras and cameras arrangements** have been build to capture li
  
  storing lightfields
  
-#### Novel (virtual) 2D view synthesis
-Unfortunately, it is not feasible in practice to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only sparse observations, such as a small set of images captured from diverse viewpoints. Multiple methods for novel view synthesis exists. 
+#### Novel (virtual) 2D view synthesis form plenoptic data
+With todays's techology it is not feasible to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only **sparse observations**, such as a small set of images captured from diverse viewpoints. Multiple methods for novel view synthesis exists. 
 
 View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. 
-One approach aims to explicitly reconstruct the surface geometry and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly to model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
+One approach aims to **explicitly reconstruct the surface geometry** and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly to model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
 The raw samples of a light field are saved as disks. resolution large amounts of data
  
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>![image](https://user-images.githubusercontent.com/74843139/135702022-93723d7a-fb76-4380-8150-7aaceff96757.png)
@@ -106,14 +106,18 @@ mask out transient objects such as people and cars during training and evaluatio
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
 ##### 3d scene reconstruction and inverse and differential rendering 
-###### Inverse rendering and differential rendering: Analysis by Synthesis
+###### Inverse rendering and differential rendering: explicitly reconstruct the scene
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
 #### Relighting with 4D Incident Light Fields
 
 ### Lensless cameras (mid-1990s): ptical images for a computer—not for a human
-Cathey and Dowski, Jr., realized one could intentionally design optics to produce blurry, “degraded” optical images, but degraded in such a way that special digital processing would produce a final digital image as good as, or even better than, those captured using traditional optics. Specifically, they addressed a property of all traditional cameras: limited depth of field.
+The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
+Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus. 
+Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
+from the sensor measurements with the help of a computational algorithm.
+
 
 ### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
