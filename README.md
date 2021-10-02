@@ -3,14 +3,10 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but huge progress has been made since I first became interested in the opic 20 years ago.
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
-- [Sehender Raum / Seeing Space (WIP)](#sehender-raum---seeing-space--wip-)
-  * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
 - [Data-Driven Computational Imaging](#data-driven-computational-imaging)
-- Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
-knowledge about the class of objects or scenes being imaged, deliver estimates of a specific object or scene presented to the imaging system.
   * [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
     + [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
-    + [4D Lightfields: capture and rendering (Adelson and Bergen, 1991)](#4d-lightfields--capture-and-rendering--adelson-and-bergen--1991-)
+    + [4D Lightfields: capture and rendering holograms (Adelson and Bergen, 1991)](#4d-lightfields--capture-and-rendering-holograms--adelson-and-bergen--1991-)
       - [Capturing static and dynamic light fields](#capturing-static-and-dynamic-light-fields)
       - [Novel (virtual) 2D view synthesis](#novel--virtual--2d-view-synthesis)
         * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
@@ -29,8 +25,13 @@ knowledge about the class of objects or scenes being imaged, deliver estimates o
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # Data-Driven Computational Imaging
+Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
+knowledge about the class of objects or scenes being imaged, deliver estimates of a specific object or scene presented to the imaging system.
+
 ## Image-based rendering (IBR): Plenoptic function and capture
 ### The Plenoptic function (Adelson and Bergen, 1991)
 The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene.
@@ -105,8 +106,8 @@ mask out transient objects such as people and cars during training and evaluatio
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
-#### 3d scene reconstruction and inverse and differential rendering 
-##### Inverse rendering and differential rendering: Analysis by Synthesis
+##### 3d scene reconstruction and inverse and differential rendering 
+###### Inverse rendering and differential rendering: Analysis by Synthesis
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
