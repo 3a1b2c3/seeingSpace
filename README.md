@@ -3,26 +3,27 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but huge progress has been made since I first became interested in the opic 20 years ago.
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
-
+- [Sehender Raum / Seeing Space (WIP)](#sehender-raum---seeing-space--wip-)
+  * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
 - [Data-Driven Computational Imaging](#data-driven-computational-imaging)
-  * [Image-based rendering: Plenoptic function and capture](#image-based-rendering--plenoptic-function-and-capture)
+  * [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
     + [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
     + [4D Lightfields: capture and rendering (Adelson and Bergen, 1991)](#4d-lightfields--capture-and-rendering--adelson-and-bergen--1991-)
       - [Capturing static and dynamic light fields](#capturing-static-and-dynamic-light-fields)
       - [Novel (virtual) 2D view synthesis](#novel--virtual--2d-view-synthesis)
         * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
           + [Crowdsampling the Plenoptic Function (published 2020)](#crowdsampling-the-plenoptic-function--published-2020-)
+      - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
+        * [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
       - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
     + [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging)
-  * [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
+  * [Related fields](#related-fields)
     + [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
-    + [Simultaneous localization and mapping: SLAM (1986)](#simultaneous-localization-and-mapping--slam--1986-)
-    + [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
-    + [Inverse rendering and differential rendering: Analysis by Synthesis](#inverse-rendering-and-differential-rendering--analysis-by-synthesis)
+    + [Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps](#simultaneous-localization-and-mapping--slam--1986--generating-machine-readable-near-realtime-maps)
 - [Important concepts](#important-concepts)
 - [Recommended reading](#recommended-reading)
   * [Image-based rendering](#image-based-rendering)
-  * [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning-1)
+  * [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -42,9 +43,9 @@ The **rendering equation** (published in 1986) describes physical light transpor
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
 The **plenoptic function** is also inspired by multi-faceted **insect eyes or camera arrays**.
-<img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=550>
+<img src="https://user-images.githubusercontent.com/74843139/135701984-e05e5277-6ea3-4230-95be-cfa3a04375cd.png" width=150><img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=550>
     
-<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+<small><i>Source: https://en.wikipedia.org/wiki/Compound_eye, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
 <img src="https://user-images.githubusercontent.com/74843139/134788591-e65ba01b-3dda-407b-9f91-712af9f224e8.png" width=450>
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
@@ -82,8 +83,9 @@ View synthesis can be approached by either explicit estimation of scene geometry
 One approach aims to explicitly reconstruct the surface geometry and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly to model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
 The raw samples of a light field are saved as disks. resolution large amounts of data
  
-<img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>
-<small><i>Source: A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
+<img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300>![image](https://user-images.githubusercontent.com/74843139/135702022-93723d7a-fb76-4380-8150-7aaceff96757.png)
+
+<small><i>Source: https://github.com/Arne-Petersen/Plenoptic-Simulation, A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
  
 Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most image based renering algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
 
