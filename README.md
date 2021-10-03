@@ -78,6 +78,7 @@ While **special cameras and cameras arrangements** have been build to capture li
 <small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
 ##### Multi-plane image (MPI) format and DeepMPI representation
+Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
 ##### Compression
  
 #### Novel (virtual) 2D view synthesis form plenoptic samples
@@ -96,7 +97,8 @@ Light field rendering pushes the latter strategy to an extreme by using dense st
 **Camera calibration** is often assumed to be prerequisite, while in practise, this information is rarely accessible, and requires to be pre-computed with conventional techniques, such as SfM.
  
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
-A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
+A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. Neural Rendering
+The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
 It allows real-time synthesis of photorealistic new views.
 <img src="https://storage.googleapis.com/nerf_data/website_renders/depth_reflower.mp4" width=500>
 https://dellaert.github.io/NeRF/
@@ -106,6 +108,7 @@ Given a large number of **tourist photos taken at different times of day**, this
 mask out transient objects such as people and cars during training and evaluation
 
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
+
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
 ##### 3d scene reconstruction and inverse and differential rendering 
@@ -175,6 +178,7 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 * https://raytrix.de Realtime Plenoptic Metrology
 * https://github.com/Arne-Petersen/Plenoptic-Simulation
 * https://en.wikipedia.org/wiki/Light_field 
+
  
  ## Visual Sensing Using Machine Learning
 * https://www.americanscientist.org/article/imaging-without-lenses
@@ -183,4 +187,4 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 * https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera Parameters Zirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
 * https://dellaert.github.io/NeRF,Frank Dellaert, NeRF Explosion 2020
-* https://augmentedperception.github.io/deepview/mpi/viewer.html?n=24&s=640,480&url=lores/scene_063/rgba_$$.png
+ * https://www.pauldebevec.com, their github https://augmentedperception.github.io
