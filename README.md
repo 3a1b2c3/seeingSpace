@@ -219,24 +219,19 @@ Photogrammetry is the science of **reconstructing objects and environments that 
 Photogrametry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlusion or dense vegetation can block the camera's line of sight or limit light required for good results.
  
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
-    
+<small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
+
 ### Computional imaging for machines (not human observer)
 #### Lensless cameras (mid-1990s): ptical images for a computer—not for a human
 The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
-Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus. 
+Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus.
 Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
 from the sensor measurements with the help of a computational algorithm.
-The simplest but inefficent lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
-pinholes.
- 
-The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
-Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus. 
-Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
-from the sensor measurements with the help of a computational algorithm.
-The simplest but inefficent lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
+The simplest but inefficient lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
 pinholes.
 
-<small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
+<img src="https://user-images.githubusercontent.com/74843139/135749276-a0078caa-c376-45e2-a75b-a991629991f2.png" width=400>
+
 
 ####  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
 Achieving real-time perception is critical to developing a fully autonomous system that can sense, navigate, and interact with its environment. Perception tasks such as online 3D reconstruction and mapping .
