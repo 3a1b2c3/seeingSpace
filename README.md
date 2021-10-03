@@ -84,6 +84,11 @@ The plenoptic function describes the **degrees of freedom of a light ray with th
 Light has the properties of waves. 
 
 Like ocean waves, light waves have crests and troughs.
+<img src="https://user-images.githubusercontent.com/74843139/135749914-1c2b8ff7-7e18-4146-ab1a-b2accc62c4c2.png" width=200><img src="https://user-images.githubusercontent.com/74843139/135749961-bbdba18b-46e6-486d-a296-a0a8050009d8.png" width=250>
+
+https://www.blitznotes.org/ib/physics/waves.html
+https://courses.lumenlearning.com/boundless-chemistry/chapter/the-nature-of-light/
+
 * The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. 
 * **Wave phase** is the offset of a wave from a given point. When two waves cross paths, they either cancel each other out or compliment each other, depending on their phase. 
 * **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
@@ -222,7 +227,7 @@ Photogrammetry data is usually captured with a **single moving conventional stil
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
 
 ### Computional imaging for machines (not human observer)
-#### Lensless cameras (mid-1990s): ptical images for a computer—not for a human
+#### Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)
 The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
 Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus.
 Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
@@ -230,12 +235,14 @@ from the sensor measurements with the help of a computational algorithm.
 The simplest but inefficient lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
 pinholes.
 
-<img src="https://user-images.githubusercontent.com/74843139/135749276-a0078caa-c376-45e2-a75b-a991629991f2.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/135749276-a0078caa-c376-45e2-a75b-a991629991f2.png" width=500>
  https://zeenews.india.com/india/iit-m-us-researchers-develop-algorithms-to-get-clearer-images-from-futuristic-lensless-cameras-2362619.html
+
+
 
 ####  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
 Achieving real-time perception is critical to developing a fully autonomous system that can sense, navigate, and interact with its environment. Perception tasks such as online 3D reconstruction and mapping .
- ![image](https://user-images.githubusercontent.com/74843139/135749450-762580f6-30d8-478c-b45c-0372756dba53.png)
+ ![image](https://user-images.githubusercontent.com/74843139/135749450-762580f6-30d8-478c-b45c-0372756dba53.png" width=500>
  https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95
  
 
