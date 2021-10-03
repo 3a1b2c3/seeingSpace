@@ -43,6 +43,11 @@ The world as we see it using our eyes is a continuous three-dimensional function
 A point in the scene is imaged by measuring the **emitted and reflected light** that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
 
 #### The rendering equation (published in 1986) describes physical light transport for a single camera or the human vision
+Classical computer graphics methods approximate the physical
+process of image formation in the real world: light sources emit
+photons that interact with the objects in the scene, as a function
+of their geometry and material properties, before being recorded
+by a camera. This process is known as light transport.
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
  
