@@ -231,10 +231,12 @@ The simplest but inefficient lensless imaging system is the pinhole camera, code
 pinholes.
 
 <img src="https://user-images.githubusercontent.com/74843139/135749276-a0078caa-c376-45e2-a75b-a991629991f2.png" width=400>
-
+ https://zeenews.india.com/india/iit-m-us-researchers-develop-algorithms-to-get-clearer-images-from-futuristic-lensless-cameras-2362619.html
 
 ####  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
 Achieving real-time perception is critical to developing a fully autonomous system that can sense, navigate, and interact with its environment. Perception tasks such as online 3D reconstruction and mapping .
+ ![image](https://user-images.githubusercontent.com/74843139/135749450-762580f6-30d8-478c-b45c-0372756dba53.png)
+ https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95
  
 
 # Important concepts
@@ -243,6 +245,7 @@ Achieving real-time perception is critical to developing a fully autonomous syst
  * *Radiance*<a name="radiance"> represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
  * The irradiance E of a surface is defined as the incident radiant flux density, and has units of W· m−2. Meanwhile, radiance L of a surface is emitted flux per unit of foreshortened area (from Lambert’s Law) per unit solid angle W· m−2 · sr−1.
     
+
 # Recommended reading
 
 ## Image-based rendering
