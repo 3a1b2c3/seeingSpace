@@ -187,4 +187,4 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 * https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera Parameters Zirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
 * https://dellaert.github.io/NeRF,Frank Dellaert, NeRF Explosion 2020
- * https://www.pauldebevec.com, their github https://augmentedperception.github.io
+ * https://www.pauldebevec.com reasearch and their github https://github.com/augmentedperception
