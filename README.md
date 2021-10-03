@@ -68,9 +68,12 @@ domain, sometimes in back-to-front order known as painter’s algorithm.
 Raytracing is a process in which rays are cast backwards
 from the image pixels into a virtual scene, and reflections and refractions
 are simulated by recursively casting new rays from the intersections with the geometry
+
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
  
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+ 
+ 
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
 #### The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.
@@ -79,20 +82,14 @@ While the rendering equation is a useful model for computer graphics some proble
 
 <small><i>Source: https://en.wikipedia.org/wiki/Compound_eye, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 
-<img src="https://user-images.githubusercontent.com/74843139/135736699-8ecb616b-9550-435c-b552-9825c702e7ec.png" width=350>
-
-<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+<img src="https://user-images.githubusercontent.com/74843139/135736699-8ecb616b-9550-435c-b552-9825c702e7ec.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135750276-9117a3c0-1736-44c2-85d5-697a02a38cbc.png" width=250><img src="https://user-images.githubusercontent.com/74843139/135749914-1c2b8ff7-7e18-4146-ab1a-b2accc62c4c2.png" width=250>
+<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish, https://www.blitznotes.org/ib/physics/waves.html
+https://courses.lumenlearning.com/boundless-chemistry/chapter/the-nature-of-light/</i></small>
 
 The plenoptic function describes the **degrees of freedom of a light ray with the paramters**: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
 Light has the properties of waves. 
 
 Like ocean waves, light waves have crests and troughs.
-
-<img src="https://user-images.githubusercontent.com/74843139/135749914-1c2b8ff7-7e18-4146-ab1a-b2accc62c4c2.png" width=250><img src="https://user-images.githubusercontent.com/74843139/135749961-bbdba18b-46e6-486d-a296-a0a8050009d8.png" width=350>
-
-https://www.blitznotes.org/ib/physics/waves.html
-https://courses.lumenlearning.com/boundless-chemistry/chapter/the-nature-of-light/
-
 * The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. 
 * **Wave phase** is the offset of a wave from a given point. When two waves cross paths, they either cancel each other out or compliment each other, depending on their phase. 
 * **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
