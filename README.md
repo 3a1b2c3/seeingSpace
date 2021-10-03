@@ -165,8 +165,7 @@ https://dellaert.github.io/NeRF/
 
 Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using periodic activation functions, i.e., Fourier Features. 
 the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. That being said, vanilla NeRF left many opportunities to improve upon speed for training and rendering.    It can only represent static scenes
-    It “bakes in” lighting
-    A trained NeRF representation does not generalize to other scenes/objects
+    It “bakes in” lighting.    A trained NeRF representation does not generalize to other scenes/objects.
 
 <video src="https://storage.googleapis.com/nerf_data/website_renders/depth_reflower.mp4" width=500>
 https://dellaert.github.io/NeRF/
