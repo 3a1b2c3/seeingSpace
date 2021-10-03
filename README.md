@@ -37,22 +37,11 @@ Computational imaging (CI) is a class of imaging systems that, starting from an 
 knowledge about the class of objects or scenes being imaged, deliver estimates of a specific object or scene presented to the imaging system.
 
 ## Image-based rendering (IBR): Plenoptic function and capture
-In contrast to classical rendering, which projects 3D content to
-the 2D plane, image-based rendering techniques generate novel
-images by transforming an existing set of images, typically by
-warping and compositing them together.
+In contrast to classical rendering, which projects 3D content to the 2D plane, image-based rendering techniques generate novel images by transforming an existing set of images, typically by warping and compositing them together.
 
-A typical neural rendering
-approach takes as input images corresponding to certain scene
-conditions (for example, viewpoint, lighting, layout, etc.), builds a
-“neural” scene representation from them, and “renders” this representation
-under novel scene properties to synthesize novel images.
-The learned scene representation is not restricted by simple scene
-modeling approximations and can be optimized for high quality
-novel images. At the same time, neural rendering approaches incorporate
-ideas from classical graphics—in the form of input features,
-scene representations, and network architectures—to make
-the learning task easier, and the output more controllable.
+A typical neural rendering approach takes as input images corresponding to certain scene conditions (for example, viewpoint, lighting, layout, etc.), builds a "neural” scene representation from them, and "renders” this representation under novel scene properties to synthesize novel images. The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
+
+Neural Rerendering combines classical 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views. In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details. 
 
 ### The Plenoptic function (Adelson and Bergen, 1991)
 The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene.
