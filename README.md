@@ -77,6 +77,8 @@ While **special cameras and cameras arrangements** have been build to capture li
     
 <small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
+##### Multi-plane image (MPI) format and DeepMPI representation
+##### Compression
  
 #### Novel (virtual) 2D view synthesis form plenoptic samples
 With todays's techology it is not feasible to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only **sparse observations**, such as a small set of images captured from diverse viewpoints. Multiple methods for novel view synthesis exists. 
@@ -96,7 +98,7 @@ Light field rendering pushes the latter strategy to an extreme by using dense st
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
 A popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
  
-###### Crowdsampling the Plenoptic Function (published 2020)
+###### Crowdsampling the Plenoptic Function with NeRF (published 2020)
 Given a large number of **tourist photos taken at different times of day**, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across a variety of times of day and lighting conditions.
 mask out transient objects such as people and cars during training and evaluation
 
@@ -109,6 +111,7 @@ Inverse rendering aims to estimate physical attributes of a scene, e.g., reflect
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
 #### Relighting with 4D Incident Light Fields
+It is possible to re-light and de-light real objects illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
 
 ### Lensless cameras (mid-1990s): ptical images for a computer—not for a human
 The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
