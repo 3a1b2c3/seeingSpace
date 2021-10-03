@@ -39,7 +39,9 @@ knowledge about the class of objects or scenes being imaged, deliver estimates o
 ## Image-based rendering (IBR): Plenoptic function and capture
 In contrast to classical rendering, which projects 3D content to the 2D plane, image-based rendering techniques generate novel images by transforming an existing set of images, typically by warping and compositing them together.
 
-A typical neural rendering approach takes as input images corresponding to certain scene conditions (for example, viewpoint, lighting, layout, etc.), builds a "neural” scene representation from them, and "renders” this representation under novel scene properties to synthesize novel images. The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
+A typical neural rendering approach takes as input images corresponding to certain scene conditions (for example, viewpoint, lighting, layout, etc.), builds a **"neural” scene representation** from them, and "renders” this representation under novel scene properties to synthesize novel images. 
+
+The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
 
 Neural Rerendering combines classical 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views.
 In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.  Aartifacts such as ghosting, blur, holes, or seams can arise due to view-dependent effects, imperfect proxy geometry or too few source images. To address these issues, N-IBR methods replace the heuristics often found in classical IBR methods with learned blending functions or corrections that take into account view-dependent effects.
@@ -65,8 +67,7 @@ process in which geometry is transformed into the image
 domain, sometimes in back-to-front order known as painter’s algorithm.
 Raytracing is a process in which rays are cast backwards
 from the image pixels into a virtual scene, and reflections and refractions
-are simulated by recursively casting new rays from the
-intersections with the geometry
+are simulated by recursively casting new rays from the intersections with the geometry
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
  
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
@@ -75,16 +76,19 @@ While the rendering equation is a useful model for computer graphics some proble
 #### The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.
 
 <img src="https://user-images.githubusercontent.com/74843139/135706284-64636f81-b20d-429d-ba5c-2d55c5c6df02.png" width=150><img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=550>
+
 <small><i>Source: https://en.wikipedia.org/wiki/Compound_eye, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 
 <img src="https://user-images.githubusercontent.com/74843139/135736699-8ecb616b-9550-435c-b552-9825c702e7ec.png" width=350>
+
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 
 The plenoptic function describes the **degrees of freedom of a light ray with the paramters**: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
 Light has the properties of waves. 
 
 Like ocean waves, light waves have crests and troughs.
-<img src="https://user-images.githubusercontent.com/74843139/135749914-1c2b8ff7-7e18-4146-ab1a-b2accc62c4c2.png" width=200><img src="https://user-images.githubusercontent.com/74843139/135749961-bbdba18b-46e6-486d-a296-a0a8050009d8.png" width=250>
+
+<img src="https://user-images.githubusercontent.com/74843139/135749914-1c2b8ff7-7e18-4146-ab1a-b2accc62c4c2.png" width=250><img src="https://user-images.githubusercontent.com/74843139/135749961-bbdba18b-46e6-486d-a296-a0a8050009d8.png" width=350>
 
 https://www.blitznotes.org/ib/physics/waves.html
 https://courses.lumenlearning.com/boundless-chemistry/chapter/the-nature-of-light/
