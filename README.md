@@ -118,6 +118,15 @@ Light field rendering pushes the latter strategy to an extreme by using dense st
 
 **Camera calibration** is often assumed to be prerequisite, while in practise, this information is rarely accessible, and requires to be pre-computed with conventional techniques, such as SfM.
  
+##### 3d scene reconstruction and inverse and differential rendering 
+###### Inverse rendering and differential rendering: explicitly reconstructing the scene
+ They can be classified into
+explicit and implicit representations. Explicit methods describe
+scenes as a collection of geometric primitives, such as triangles,
+point-like primitives, or higher-order parametric surfaces.
+Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
+Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
+
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
 A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
 The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
@@ -145,10 +154,6 @@ mask out transient objects such as people and cars during training and evaluatio
 
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
-##### 3d scene reconstruction and inverse and differential rendering 
-###### Inverse rendering and differential rendering: explicitly reconstructing the scene
-Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
-Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
 #### Relighting with 4D Incident Light Fields
 It is possible to re-light and de-light real objects illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
