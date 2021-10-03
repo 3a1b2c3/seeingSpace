@@ -35,7 +35,7 @@ knowledge about the class of objects or scenes being imaged, deliver estimates o
 ### The Plenoptic function (Adelson and Bergen, 1991)
 The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene.
 
-A point in the scene is imaged by measuring the emitted and reflected light that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
+A point in the scene is imaged by measuring the **emitted and reflected light** that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
 
 #### The rendering equation (published in 1986) describes physical light transport for a single camera or the human vision
 
@@ -52,8 +52,10 @@ While the rendering equation is a useful model for computer graphics some proble
 <img src="https://user-images.githubusercontent.com/74843139/135736699-8ecb616b-9550-435c-b552-9825c702e7ec.png" width=350>
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 
-The plenoptic function describes the degrees of freedom of a light ray with the paramters: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
-Light has the properties of waves. Like ocean waves, light waves have crests and troughs.
+The plenoptic function describes the **degrees of freedom of a light ray with the paramters**: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
+Light has the properties of waves. 
+
+Like ocean waves, light waves have crests and troughs.
 * The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. 
 * **Wave phase** is the offset of a wave from a given point. When two waves cross paths, they either cancel each other out or compliment each other, depending on their phase. 
 * **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
@@ -79,10 +81,20 @@ While **special cameras and cameras arrangements** have been build to capture li
  
 ##### Multi-plane image (MPI) format and DeepMPI representation
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
+MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
+
+<img src="https://user-images.githubusercontent.com/74843139/135738631-e9a72fde-c4d4-46f4-8c1e-1823c6607090.png" width=200>
+<img src="https://user-images.githubusercontent.com/74843139/135738753-1067733d-2d60-45a8-bf9d-3b2dfab83f41.png" width=400>
+
+Stereo Magnification: Learning view synthesis using multiplane images
+
+DeepMPI extends prior work on multiplane images (MPIs) to model viewing conditions that vary with time.
+
 ##### Compression
  
 #### Novel (virtual) 2D view synthesis form plenoptic samples
-With todays's techology it is not feasible to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only **sparse observations**, such as a small set of images captured from diverse viewpoints. Multiple methods for novel view synthesis exists. 
+With todays's techology it is not feasible to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only **sparse observations**, such as a small set of images captured from diverse viewpoints. 
+The study of image-based rendering is motivated by a simple question: how do we use a finite set of images to reconstruct an infinite set of views?
 
 View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. 
 One approach aims to **explicitly reconstruct the surface geometry** and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly to model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
@@ -97,9 +109,12 @@ Light field rendering pushes the latter strategy to an extreme by using dense st
 **Camera calibration** is often assumed to be prerequisite, while in practise, this information is rarely accessible, and requires to be pre-computed with conventional techniques, such as SfM.
  
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
-A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. Neural Rendering
+A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
 The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
 It allows real-time synthesis of photorealistic new views.
+
+Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image.
+
 <img src="https://storage.googleapis.com/nerf_data/website_renders/depth_reflower.mp4" width=500>
 https://dellaert.github.io/NeRF/
 
