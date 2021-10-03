@@ -118,9 +118,19 @@ A recent and popular **volumetric rendering technique** to generate images is Ne
 The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
 It allows real-time synthesis of photorealistic new views.
 
-Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image.
+<img src="https://user-images.githubusercontent.com/74843139/135739158-186170f4-ad7f-4734-aceb-24a7db7c02dd.png" width=300> <img src="https://user-images.githubusercontent.com/74843139/135739188-2b9ac37a-3105-4d7e-944c-9549e40d3c6c.png" width=300>
 
-<img src="https://storage.googleapis.com/nerf_data/website_renders/depth_reflower.mp4" width=500>
+https://dellaert.github.io/NeRF/
+
+Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using periodic activation functions, i.e., Fourier Features. 
+the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. That being said, vanilla NeRF left many opportunities to improve upon:
+
+    It is slow, both for training and rendering.
+    It can only represent static scenes
+    It “bakes in” lighting
+    A trained NeRF representation does not generalize to other scenes/objects
+
+<video src="https://storage.googleapis.com/nerf_data/website_renders/depth_reflower.mp4" width=500>
 https://dellaert.github.io/NeRF/
 
 ###### Crowdsampling the Plenoptic Function with NeRF (published 2020)
