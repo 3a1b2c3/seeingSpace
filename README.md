@@ -164,21 +164,28 @@ It allows real-time synthesis of photorealistic new views.
 https://dellaert.github.io/NeRF/
 
 Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using periodic activation functions, i.e., Fourier Features. 
-the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. That being said, vanilla NeRF left many opportunities to improve upon:
-
-    It is slow, both for training and rendering.    It can only represent static scenes
+the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. That being said, vanilla NeRF left many opportunities to improve upon speed for training and rendering.    It can only represent static scenes
     It “bakes in” lighting
     A trained NeRF representation does not generalize to other scenes/objects
 
 <video src="https://storage.googleapis.com/nerf_data/website_renders/depth_reflower.mp4" width=500>
 https://dellaert.github.io/NeRF/
+ 
+ A deeper integration of graphics knowledge into the network is possible based
+on differentiable graphics modules. Such a differentiable module
+can for example implement a complete computer graphics renderer, a 3D rotation, or an illumination model. Such components add a physically
+inspired inductive bias to the network, while still allowing
+for end-to-end training via backpropagation. This can be used to
+analytically enforce a truth about the world in the network structure,
+frees up network capacity, and leads to better generalization,
+especially if only limited training data is available.
 
 ###### Crowdsampling the Plenoptic Function with NeRF (published 2020)
 Given a large number of **tourist photos taken at different times of day**, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across a variety of times of day and lighting conditions.
 mask out transient objects such as people and cars during training and evaluation
 
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
-
+![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/coeur_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/trevi_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/rock_teaser.gif)![image]( https://research.cs.cornell.edu/crowdplenoptic/teaser/pantheon_teaser.gif)
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
 
