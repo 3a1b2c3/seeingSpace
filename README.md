@@ -273,3 +273,4 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 * https://dellaert.github.io/NeRF,Frank Dellaert, NeRF Explosion 2020
  * https://www.pauldebevec.com reasearch and their github https://github.com/augmentedperception
  *EUROGRAPHICS 2020, State of the Art on Neural Rendering
+ *https://www.matthewtancik.com/nerf
