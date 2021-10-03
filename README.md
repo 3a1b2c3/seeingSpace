@@ -96,8 +96,11 @@ Light field rendering pushes the latter strategy to an extreme by using dense st
 **Camera calibration** is often assumed to be prerequisite, while in practise, this information is rarely accessible, and requires to be pre-computed with conventional techniques, such as SfM.
  
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
-A popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
- 
+A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
+It allows real-time synthesis of photorealistic new views.
+<img src="https://storage.googleapis.com/nerf_data/website_renders/depth_reflower.mp4" width=500>
+https://dellaert.github.io/NeRF/
+
 ###### Crowdsampling the Plenoptic Function with NeRF (published 2020)
 Given a large number of **tourist photos taken at different times of day**, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across a variety of times of day and lighting conditions.
 mask out transient objects such as people and cars during training and evaluation
@@ -106,20 +109,13 @@ mask out transient objects such as people and cars during training and evaluatio
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
 ##### 3d scene reconstruction and inverse and differential rendering 
-###### Inverse rendering and differential rendering: explicitly reconstruct the scene
+###### Inverse rendering and differential rendering: explicitly reconstructing the scene
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
 #### Relighting with 4D Incident Light Fields
 It is possible to re-light and de-light real objects illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
 
-### Lensless cameras (mid-1990s): ptical images for a computer—not for a human
-The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
-Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus. 
-Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
-from the sensor measurements with the help of a computational algorithm.
-The simplest but inefficent lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
-pinholes.
 
 ### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
@@ -140,8 +136,24 @@ Photogrametry data is usually captured with a **single moving conventional still
  
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
     
+### Computional imaging for machines (not human observer)
+#### Lensless cameras (mid-1990s): ptical images for a computer—not for a human
+The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
+Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus. 
+Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
+from the sensor measurements with the help of a computational algorithm.
+The simplest but inefficent lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
+pinholes.Lensless cameras (mid-1990s): ptical images for a computer—not for a human
+The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
+Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus. 
+Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
+from the sensor measurements with the help of a computational algorithm.
+The simplest but inefficent lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
+pinholes.
+
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
-###  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
+
+####  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
 Achieving real-time perception is critical to developing a fully autonomous system that can sense, navigate, and interact with its environment. Perception tasks such as online 3D reconstruction and mapping 
  
 
@@ -158,7 +170,7 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
 * Data-Driven Computational Imaging http://ciml.media.mit.edu, CVPR 2019
 * https://cseweb.ucsd.edu/~viscomp/projects/LF/
-* EUROGRAPHICS 2006 TutorialInverse Rendering: From Concept to Applications, https://diglib.eg.org/bitstream/handle/10.2312/egt.20061062.0399-0547/0399-0547.pdf
+* EUROGRAPHICS 2006 Tutorial "Inverse Rendering: From Concept to Applications", https://diglib.eg.org/bitstream/handle/10.2312/egt.20061062.0399-0547/0399-0547.pdf
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org
 * https://raytrix.de Realtime Plenoptic Metrology
 * https://github.com/Arne-Petersen/Plenoptic-Simulation
@@ -170,5 +182,5 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 * https://github.com/tensorflow/graphics
 * https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera Parameters Zirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
-* https://dellaert.github.io/NeRF
+* https://dellaert.github.io/NeRF,Frank Dellaert, NeRF Explosion 2020
 * https://augmentedperception.github.io/deepview/mpi/viewer.html?n=24&s=640,480&url=lores/scene_063/rgba_$$.png
