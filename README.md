@@ -167,7 +167,7 @@ Neural volume rendering refers to methods that generate images or video by traci
 the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. That being said, vanilla NeRF left many opportunities to improve upon speed for training and rendering.    It can only represent static scenes
     It “bakes in” lighting.    A trained NeRF representation does not generalize to other scenes/objects.
 
-<video src="https://storage.googleapis.com/nerf_data/website_renders/depth_reflower.mp4" width=500>
+video src="https://storage.googleapis.com/nerf_data/website_renders/depth_reflower.mp4" width=500
 https://dellaert.github.io/NeRF/
  
  A deeper integration of graphics knowledge into the network is possible based
