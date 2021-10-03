@@ -14,11 +14,12 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
         * [Multi-plane image (MPI) format and DeepMPI representation](#multi-plane-image--mpi--format-and-deepmpi-representation)
         * [Compression](#compression)
       - [Novel (virtual) 2D view synthesis form plenoptic samples](#novel--virtual--2d-view-synthesis-form-plenoptic-samples)
-        * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
-          + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
         * [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
           + [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--explicitly-reconstructing-the-scene)
+        * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
+          + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
       - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
+        * [Relighting with NeRF](#relighting-with-nerf)
     + [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar)
   * [Related fields](#related-fields)
     + [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
@@ -28,7 +29,6 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 - [Important concepts](#important-concepts)
 - [Recommended reading](#recommended-reading)
   * [Image-based rendering](#image-based-rendering)
-  * [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -137,10 +137,18 @@ Light field rendering pushes the latter strategy to an extreme by using dense st
  
 ##### 3d scene reconstruction and inverse and differential rendering 
 ###### Inverse rendering and differential rendering: explicitly reconstructing the scene
- They can be classified into
+They can be classified into
 explicit and implicit representations. Explicit methods describe
 scenes as a collection of geometric primitives, such as triangles,
 point-like primitives, or higher-order parametric surfaces.
+One popular class of approaches uses mesh-based representations of scenes with either use [48] or view-dependent [2,8,49] appearance. Differentiable rasterizers [4,10,23,25] or pathtracers [22,30] can directly optimize mesh representations to reproduce a set of input images using gradient descent.
+However, gradient-based mesh optimization based on image reprojection is often
+dicult, likely because of local minima or poor conditioning of the loss land-
+scape. Furthermore, this strategy requires a template mesh with xed topology
+to be provided as an initialization before optimization [22], which is typically
+unavailable for unconstrained real-world scenes.
+Differentiable Rendering promises to close the loop between computer Vision and Graphics.
+
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
@@ -231,7 +239,7 @@ pinholes.
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
 
 ####  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
-Achieving real-time perception is critical to developing a fully autonomous system that can sense, navigate, and interact with its environment. Perception tasks such as online 3D reconstruction and mapping 
+Achieving real-time perception is critical to developing a fully autonomous system that can sense, navigate, and interact with its environment. Perception tasks such as online 3D reconstruction and mapping .
  
 
 # Important concepts
