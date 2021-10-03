@@ -49,6 +49,16 @@ photons that interact with the objects in the scene, as a function
 of their geometry and material properties, before being recorded
 by a camera. This process is known as light transport.
 
+The process of transforming a scene definition including cameras,
+lights, surface geometry and material into a simulated camera image
+is known as rendering. The two most common approaches to
+rendering are rasterization and raytracing: Rasterization is a feedforward
+process in which geometry is transformed into the image
+domain, sometimes in back-to-front order known as painter’s algorithm.
+Raytracing is a process in which rays are cast backwards
+from the image pixels into a virtual scene, and reflections and refractions
+are simulated by recursively casting new rays from the
+intersections with the geometry
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
  
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
