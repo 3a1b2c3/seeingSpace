@@ -37,17 +37,20 @@ The world as we see it using our eyes is a continuous three-dimensional function
 
 A point in the scene is imaged by measuring the emitted and reflected light that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
 
-The **rendering equation** (published in 1986) describes physical light transport for a single camera or the human vision
+#### The rendering equation (published in 1986) describes physical light transport for a single camera or the human vision
 
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
  
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
-The **plenoptic function** is also inspired by multi-faceted **insect eyes or lens arrays**.
+#### The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.
 
 <img src="https://user-images.githubusercontent.com/74843139/135706284-64636f81-b20d-429d-ba5c-2d55c5c6df02.png" width=150><img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=550>
 <small><i>Source: https://en.wikipedia.org/wiki/Compound_eye, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+
+<img src="https://user-images.githubusercontent.com/74843139/135736699-8ecb616b-9550-435c-b552-9825c702e7ec.png" width=350>
+<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 
 The plenoptic function describes the degrees of freedom of a light ray with the paramters: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
 Light has the properties of waves. Like ocean waves, light waves have crests and troughs.
