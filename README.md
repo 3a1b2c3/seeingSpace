@@ -121,8 +121,7 @@ DeepMPI extends prior work on multiplane images (MPIs) to model viewing conditio
 ##### Compression
  
 #### Novel (virtual) 2D view synthesis form plenoptic samples
-With todays's techology it is not feasible to physically measure a densely sampled plenoptic function. As an alternative, Novel View Synthesis aims to approximate such a dense light field from only **sparse observations**, such as a small set of images captured from diverse viewpoints. 
-The study of image-based rendering is motivated by a simple question: how do we use a finite set of images to reconstruct an infinite set of views?
+Given a **dense sampling** of views, photorealistic novel views can be reconstructed by simple light field sample interpolation techniques. For novel view synthesis with **sparser view** sampling, the computer vision and graphics communities have made significant progress by predicting traditional geometry and appearance representations from observed images. The study of image-based rendering is motivated by a simple question: how do we use a finite set of images to reconstruct an infinite set of views.
 
 View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. 
 One approach aims to **explicitly reconstruct the surface geometry** and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly to model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
