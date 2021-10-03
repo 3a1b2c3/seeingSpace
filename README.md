@@ -125,8 +125,7 @@ https://dellaert.github.io/NeRF/
 Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using periodic activation functions, i.e., Fourier Features. 
 the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. That being said, vanilla NeRF left many opportunities to improve upon:
 
-    It is slow, both for training and rendering.
-    It can only represent static scenes
+    It is slow, both for training and rendering.    It can only represent static scenes
     It “bakes in” lighting
     A trained NeRF representation does not generalize to other scenes/objects
 
@@ -149,6 +148,16 @@ Also called **Differentiable Rendering** it promises to close the loop between c
 #### Relighting with 4D Incident Light Fields
 It is possible to re-light and de-light real objects illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
 
+![image](https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png)
+https://en.wikipedia.org/wiki/Light_stage
+ 
+##### Relighting with NeRF
+Another dimension in which NeRF-style methods have been augmented is in how to deal with lighting, typically through latent codes that can be used to re-light a scene. 
+NeRF-W was one of the first follow-up works on NeRF, and optimizes a latent appearance code to enable learning a neural scene representation from less controlled multi-view collections.
+
+Neural Reflectance Fields improve on NeRF by adding a local reflection model in addition to density. It yields impressive relighting results, albeit from single point light sources.
+
+NeRV uses a second “visibility” MLP to support arbitrary environment lighting and “one-bounce” indirect illumination.
 
 ### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
@@ -176,7 +185,8 @@ Lenses introduce a number of limitations, specifically all traditional cameras h
 Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
 from the sensor measurements with the help of a computational algorithm.
 The simplest but inefficent lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
-pinholes.Lensless cameras (mid-1990s): ptical images for a computer—not for a human
+pinholes.
+ 
 The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
 Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus. 
 Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
