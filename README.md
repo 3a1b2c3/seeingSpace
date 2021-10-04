@@ -89,14 +89,15 @@ While the rendering equation is a useful model for computer graphics some proble
 https://courses.lumenlearning.com/boundless-chemistry/chapter/the-nature-of-light/</i></small>
 
 The plenoptic function describes the **degrees of freedom of a light ray with the paramters**: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
-Light has the properties of waves. 
 
-Like ocean waves, light waves have crests and troughs.
+Light has the properties of waves. Like ocean waves, light waves have crests and troughs.
 * The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. 
 * **Wave phase** is the offset of a wave from a given point. When two waves cross paths, they either cancel each other out or compliment each other, depending on their phase. 
-* **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio.
+* **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio. The unit of irradiance is the watt per square meter.
+* **Polarization** 
+* **Bounce** 
 * The full equation is also **time dependent**.
-* Polarization
+
     
 ### 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
