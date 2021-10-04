@@ -129,7 +129,9 @@ DeepMPI extends prior work on multiplane images (MPIs) to model viewing conditio
 
 ##### Compression
  
-#### Novel (virtual) 2D view synthesis form plenoptic samples
+#### Novel (virtual) 2D view synthesis form plenoptic samplessynthesize
+plenoptic slices that can be interpolated to recover local regions of the full
+plenoptic function.
 Given a **dense sampling** of views, photorealistic novel views can be reconstructed by simple light field sample interpolation techniques. For novel view synthesis with **sparser view** sampling, the computer vision and graphics communities have made significant progress by predicting traditional geometry and appearance representations from observed images. The study of image-based rendering is motivated by a simple question: how do we use a finite set of images to reconstruct an infinite set of views.
 
 View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. 
@@ -272,7 +274,9 @@ enabled applications that were previously intractable, such as rendering
 of digital avatars without any manual modeling. We believe
 that neural rendering will have a profound impact in making complex
 photo and video editing tasks accessible to a much broader
-audience.
+audience. 
+ In the future, we envision enabling even larger changes in
+viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
 
 # Important concepts
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
