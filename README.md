@@ -123,7 +123,7 @@ While **special cameras and cameras arrangements** have been build to capture li
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
 MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
 
-<img src="https://user-images.githubusercontent.com/74843139/135738631-e9a72fde-c4d4-46f4-8c1e-1823c6607090.png" width=200><img src="https://user-images.githubusercontent.com/74843139/135738753-1067733d-2d60-45a8-bf9d-3b2dfab83f41.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/135738631-e9a72fde-c4d4-46f4-8c1e-1823c6607090.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135738753-1067733d-2d60-45a8-bf9d-3b2dfab83f41.png" width=400>
 
 <small><i>Stereo Magnification: Learning view synthesis using multiplane images</i></small>
 
@@ -182,7 +182,7 @@ A good overview can be found here "NeRF Explosion 2020" https://dellaert.github.
 
 https://user-images.githubusercontent.com/74843139/135747420-4d91bc80-2893-44a4-8d32-16bf7024b4f2.mp4
 
-https://dellaert.github.io/NeRF/
+<small><i>https://dellaert.github.io/NeRF/</i></small>
  
  A deeper integration of graphics knowledge into the network is possible based
 on differentiable graphics modules. Such a differentiable module
@@ -203,7 +203,7 @@ mask out transient objects such as people and cars during training and evaluatio
  imagenet-vgg-verydeep-19.mat
  ![image](https://user-images.githubusercontent.com/74843139/135809964-0501661b-2cfa-4ab2-a818-0f60bd6fd152.png)
 
-Crowdsampling the Plenoptic Function, 2020
+<small><i>Crowdsampling the Plenoptic Function, 2020</i></small>
 
 unsupervised manner. Our approach takes unstructured Internet photos spanning
 some range of time-varying appearance in a scene and learns how to reconstruct a
@@ -225,25 +225,25 @@ for training DeepMPIs on sparse, unstructured crowdsampled data that is unreg-
 Crowdsampling the Plenoptic Function 3
 istered in time;
 <img src="https://user-images.githubusercontent.com/74843139/135751323-ef8582a0-575d-41fb-9a40-861fbbbd35d3.png" width=500>
-nerf in the wild
+<small><i>nerf in the wild</i></small>
 
 ![image](https://user-images.githubusercontent.com/74843139/135836081-9dacc9ba-0ddb-4665-8e54-359b1e500dfa.png)
 Unfortunately, there are two major drawbacks with VGGNet:
-
     It is painfully slow to train.
     The network architecture weights themselves are quite large (in terms of disk/bandwidth).
 
 Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG16 and 574MB for VGG19. This makes deploying VGG a tiresome task.
-
 We still use VGG in many deep learning image classification problems; however, smaller network architectures are often more desirable (such as SqueezeNet, GoogLeNet, etc.).
-https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/
+ 
+<small><i>https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/</i></small>
 
 ### Relighting with 4D Incident Light Fields
 It is possible to **re-light and de-light real objects** illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
 
 
 <img src="https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png" width=500>
-https://en.wikipedia.org/wiki/Light_stage
+
+<small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
  
 
 #### Relighting with NeRF
@@ -272,6 +272,7 @@ Photogrammetry is the science of **reconstructing objects and environments that 
 Photogrammetry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlusion or dense vegetation can block the camera's line of sight or limit light required for good result
  
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
+ 
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
 
 ## Computional imaging for machines (not human observer)
@@ -284,14 +285,16 @@ The simplest but inefficient lensless imaging system is the pinhole camera, code
 pinholes.
 
 <img src="https://user-images.githubusercontent.com/74843139/135749276-a0078caa-c376-45e2-a75b-a991629991f2.png" width=500>
- https://zeenews.india.com/india/iit-m-us-researchers-develop-algorithms-to-get-clearer-images-from-futuristic-lensless-cameras-2362619.html
+ 
+<small><i> https://zeenews.india.com/india/iit-m-us-researchers-develop-algorithms-to-get-clearer-images-from-futuristic-lensless-cameras-2362619.html</i></small>
 
 
 
 ###  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
 Achieving real-time perception is critical to developing a fully autonomous system that can sense, navigate, and interact with its environment. Perception tasks such as online 3D reconstruction and mapping .
  ![image](https://user-images.githubusercontent.com/74843139/135749450-762580f6-30d8-478c-b45c-0372756dba53.png" width=500>
- https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95
+ 
+ <small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
  
 # Conclusion
 Neural rendering has raised a lot of interest in the past few years.
