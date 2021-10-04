@@ -85,10 +85,10 @@ While the rendering equation is a useful model for computer graphics some proble
 
 <small><i>Source: https://en.wikipedia.org/wiki/Compound_eye, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 
+
 <img src="https://user-images.githubusercontent.com/74843139/135736699-8ecb616b-9550-435c-b552-9825c702e7ec.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135750276-9117a3c0-1736-44c2-85d5-697a02a38cbc.png" width=250><img src="https://user-images.githubusercontent.com/74843139/135749914-1c2b8ff7-7e18-4146-ab1a-b2accc62c4c2.png" width=250>
-<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish, https://www.blitznotes.org/ib/physics/waves.html
- 
-<small><i>Source:https://courses.lumenlearning.com/boundless-chemistry/chapter/the-nature-of-light/</i></small>
+
+<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish, https://www.blitznotes.org/ib/physics/waves.html, https://courses.lumenlearning.com/boundless-chemistry/chapter/the-nature-of-light/</i></small>
 
 The plenoptic function describes the **degrees of freedom of a light ray with the paramters**: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
 
@@ -112,7 +112,9 @@ The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that
 * time is an optional 5th dimension
 
 ### Capturing, storing and compressing static and dynamic light fields
-One type uses an array of micro-lenses placed in front of an otherwise conventional image sensor to sense intensity, color, and directional information. Multi-camera arrays are another type. Compared to a traditional photo camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
+One type uses an **array of micro-lenses** placed in front of an otherwise conventional image sensor to sense intensity, color, and directional information. Multi-camera arrays are another type. Compared to a traditional photo camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. 
+
+In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a **depth map** can be computed.
 While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#-crowdsampling-the-plenoptic-function--a-name--crowdsampling--)).
 
 <img src="https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png" width=200><img src="https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png" width=200><img src="https://user-images.githubusercontent.com/74843139/134805766-295077e7-81ef-405b-9ad7-38e8c583a55f.png" width=250><img src="https://user-images.githubusercontent.com/74843139/135706121-e3a5d78a-9dfa-4247-b504-1ba32b1d11ed.png" width=150>
@@ -154,16 +156,13 @@ They can be classified into
 explicit and implicit representations. Explicit methods describe
 scenes as a collection of geometric primitives, such as triangles,
 point-like primitives, or higher-order parametric surfaces.
-One popular class of approaches uses mesh-based representations of scenes with either use [48] or view-dependent [2,8,49] appearance. Differentiable rasterizers [4,10,23,25] or pathtracers [22,30] can directly optimize mesh representations to reproduce a set of input images using gradient descent.
-However, gradient-based mesh optimization based on image reprojection is often
-dicult, likely because of local minima or poor conditioning of the loss land-
-scape. Furthermore, this strategy requires a template mesh with xed topology
-to be provided as an initialization before optimization [22], which is typically
-unavailable for unconstrained real-world scenes.
-Differentiable Rendering promises to close the loop between computer Vision and Graphics.
+One popular class of approaches uses mesh-based representations of scenes with either use [48] or view-dependent appearance. Differentiable rasterizers or pathtracers [22,30] can directly optimize mesh representations to reproduce a set of input images using gradient descent.
+However, gradient-based mesh optimization based on image reprojection is often dicult, likely because of local minima or poor conditioning of the loss landscape. Furthermore, this strategy requires a template mesh with xed topology to be provided as an initialization before optimization [22], which is typically unavailable for unconstrained real-world scenes.
 
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
+Differentiable Rendering promises to close the loop between computer Vision and Graphics.
+
 
 #### Volume Rendering with Radiance Fields
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
