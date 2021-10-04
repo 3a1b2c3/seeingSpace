@@ -100,13 +100,14 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 
     
 ### 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
-A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The magnitude of each ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
+A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
 A hologram is a photographic recording of a light field, rather than an image formed by a lens. 
 
+The magnitude of each light ray is given by the **radiance** and the space of all possible light rays is given by the five-dimensional plenoptic function. 
 The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that is captured by a plenoptic sensor.
-• the **incident light field** Li(u, v, alpha, beta) describing the **irradiance** of light incident on objects in space
-• the **radiant light field** Lr (u, v, alpha, beta) quantifying the irradiance created by an object
-
+* the **incident light field** Li(u, v, alpha, beta) describing the **irradiance** of light incident on objects in space
+* the **radiant light field** Lr (u, v, alpha, beta) quantifying the irradiance created by an object
+* time is an optional 5th domension
 
 #### Capturing, storing and compressing static and dynamic light fields
 One type uses an array of micro-lenses placed in front of an otherwise conventional image sensor to sense intensity, color, and directional information. Multi-camera arrays are another type. Compared to a traditional photo camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
@@ -282,7 +283,8 @@ viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
  * *Light field* is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***
  * *Radiance*<a name="radiance"> represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
- * *Irradiance* is the radiant flux received by the detector area. The unit of irradiance is W/m2. The irradiance E of a surface is defined as the incident radiant flux density. Meanwhile, radiance L of a surface is **emitted flux per unit** of foreshortened area (from Lambert’s Law) per unit solid angle W· m−2 · sr−1.
+  radiance L of a surface is **emitted flux per unit** of foreshortened area (from Lambert’s Law) per unit solid angle
+ * *Irradiance* is the radiant flux received by the detector area. The unit of irradiance is W/m2. The irradiance E of a surface is defined as the incident radiant flux density
     
 
 # Recommended reading
