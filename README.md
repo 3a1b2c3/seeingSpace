@@ -74,8 +74,9 @@ are simulated by recursively casting new rays from the intersections with the ge
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
  ![image](https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png)
-https://www.mdpi.com/2072-4292/13/13/2640
  
+<small><i>Source:https://www.mdpi.com/2072-4292/13/13/2640</i></small>
+  
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
 ### The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.
@@ -87,7 +88,7 @@ While the rendering equation is a useful model for computer graphics some proble
 <img src="https://user-images.githubusercontent.com/74843139/135736699-8ecb616b-9550-435c-b552-9825c702e7ec.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135750276-9117a3c0-1736-44c2-85d5-697a02a38cbc.png" width=250><img src="https://user-images.githubusercontent.com/74843139/135749914-1c2b8ff7-7e18-4146-ab1a-b2accc62c4c2.png" width=250>
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish, https://www.blitznotes.org/ib/physics/waves.html
  
-https://courses.lumenlearning.com/boundless-chemistry/chapter/the-nature-of-light/</i></small>
+<small><i>Source:https://courses.lumenlearning.com/boundless-chemistry/chapter/the-nature-of-light/</i></small>
 
 The plenoptic function describes the **degrees of freedom of a light ray with the paramters**: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
 
@@ -108,7 +109,7 @@ The magnitude of each light ray is given by the **radiance** and the space of al
 The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that is captured by a plenoptic sensor.
 * the **incident light field** Li(u, v, alpha, beta) describing the **irradiance** of light incident on objects in space
 * the **radiant light field** Lr (u, v, alpha, beta) quantifying the irradiance created by an object
-* time is an optional 5th domension
+* time is an optional 5th dimension
 
 ### Capturing, storing and compressing static and dynamic light fields
 One type uses an array of micro-lenses placed in front of an otherwise conventional image sensor to sense intensity, color, and directional information. Multi-camera arrays are another type. Compared to a traditional photo camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
@@ -124,9 +125,9 @@ MPIs have the ability to produce high-quality novel views of complex scenes in r
 
 <img src="https://user-images.githubusercontent.com/74843139/135738631-e9a72fde-c4d4-46f4-8c1e-1823c6607090.png" width=200><img src="https://user-images.githubusercontent.com/74843139/135738753-1067733d-2d60-45a8-bf9d-3b2dfab83f41.png" width=400>
 
-Stereo Magnification: Learning view synthesis using multiplane images
+<small><i>Stereo Magnification: Learning view synthesis using multiplane images</i></small>
 
-DeepMPI extends prior work on multiplane images (MPIs) to model viewing conditions that vary with time.
+**DeepMPI** extends prior work on multiplane images (MPIs) to model viewing conditions that vary with time.
 
 #### Compression
  
