@@ -3,44 +3,40 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago.
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
-
-- [Data-Driven Computational Imaging](#data-driven-computational-imaging)
-  * [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
-    + [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
-      - [The rendering equation (published in 1986) describes physical light transport for a single camera or the human vision](#the-rendering-equation--published-in-1986--describes-physical-light-transport-for-a-single-camera-or-the-human-vision)
-      - [The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.](#the-plenoptic-function-is-also-inspired-by-multi-faceted---insect-eyes-or-lens-arrays--)
-    + [5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)](#5d-and-4d-lightfields--capture-and-rendering--andrey-gershun--1936-)
-      - [Capturing, storing and compressing static and dynamic light fields](#capturing--storing-and-compressing-static-and-dynamic-light-fields)
-        * [Multi-plane image (MPI) format and DeepMPI representation](#multi-plane-image--mpi--format-and-deepmpi-representation)
-        * [Compression](#compression)
-      - [Novel (virtual) 2D view synthesis from plenoptic samples synthesize](#novel--virtual--2d-view-synthesis-from-plenoptic-samples-synthesize)
-        * [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
-          + [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--explicitly-reconstructing-the-scene)
-        * [Volume Rendering with Radiance Fields](#volume-rendering-with-radiance-fields)
+- [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
+  * [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
+    + [The rendering equation (published in 1986) describes physical light transport for a single camera or the human vision](#the-rendering-equation--published-in-1986--describes-physical-light-transport-for-a-single-camera-or-the-human-vision)
+    + [The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.](#the-plenoptic-function-is-also-inspired-by-multi-faceted---insect-eyes-or-lens-arrays--)
+  * [5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)](#5d-and-4d-lightfields--capture-and-rendering--andrey-gershun--1936-)
+    + [Capturing, storing and compressing static and dynamic light fields](#capturing--storing-and-compressing-static-and-dynamic-light-fields)
+      - [Multi-plane image (MPI) format and DeepMPI representation](#multi-plane-image--mpi--format-and-deepmpi-representation)
+      - [Compression](#compression)
+    + [Novel (virtual) 2D view synthesis from plenoptic samples synthesize](#novel--virtual--2d-view-synthesis-from-plenoptic-samples-synthesize)
+      - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
+        * [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--explicitly-reconstructing-the-scene)
+      - [Volume Rendering with Radiance Fields](#volume-rendering-with-radiance-fields)
         * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
           + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
-      - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
-        * [Relighting with NeRF](#relighting-with-nerf)
-    + [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar)
-  * [Related fields](#related-fields)
-    + [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
-    + [Computional imaging for machines (not human observer)](#computional-imaging-for-machines--not-human-observer-)
-      - [Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)](#lensless-cameras--mid-1990s---optical-images-for-a-computer--not-for-a-human-oberserver-)
-      - [Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps](#simultaneous-localization-and-mapping--slam--1986--generating-machine-readable-near-realtime-maps)
+    + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
+      - [Relighting with NeRF](#relighting-with-nerf)
+  * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar)
+- [Related fields](#related-fields)
+  * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
+  * [Computional imaging for machines (not human observer)](#computional-imaging-for-machines--not-human-observer-)
+    + [Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)](#lensless-cameras--mid-1990s---optical-images-for-a-computer--not-for-a-human-oberserver-)
+    + [Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps](#simultaneous-localization-and-mapping--slam--1986--generating-machine-readable-near-realtime-maps)
 - [Conclusion](#conclusion)
 - [Important concepts](#important-concepts)
 - [Recommended reading](#recommended-reading)
-  * [Image-based rendering](#image-based-rendering)
-  * [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
-# Data-Driven Computational Imaging
+
+# Image-based rendering (IBR): Plenoptic function and capture
 Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
 knowledge about the class of objects or scenes being imaged, deliver estimates of a specific object or scene presented to the imaging system.
 
-## Image-based rendering (IBR): Plenoptic function and capture
 In contrast to classical rendering, which projects 3D content to the 2D plane, image-based rendering techniques generate novel images by transforming an existing set of images, typically by warping and compositing them together.
 
 A typical neural rendering approach takes as input images corresponding to certain scene conditions (for example, viewpoint, lighting, layout, etc.), builds a **"neural” scene representation** from them, and "renders” this representation under novel scene properties to synthesize novel images. 
@@ -51,12 +47,12 @@ Neural Rerendering combines classical 3D representation and renderer with deep n
 In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.  Aartifacts such as ghosting, blur, holes, or seams can arise due to view-dependent effects, imperfect proxy geometry or too few source images. To address these issues, N-IBR methods replace the heuristics often found in classical IBR methods with learned blending functions or corrections that take into account view-dependent effects.
 
 
-### The Plenoptic function (Adelson and Bergen, 1991)
+## The Plenoptic function (Adelson and Bergen, 1991)
 The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene.
 
 A point in the scene is imaged by measuring the **emitted and reflected light** that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
 
-#### The rendering equation (published in 1986) describes physical light transport for a single camera or the human vision
+### The rendering equation (published in 1986) describes physical light transport for a single camera or the human vision
 Classical computer graphics methods approximate the physical
 process of image formation in the real world: light sources emit
 photons that interact with the objects in the scene, as a function
@@ -82,7 +78,7 @@ https://www.mdpi.com/2072-4292/13/13/2640
  
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
-#### The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.
+### The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.
 
 <img src="https://user-images.githubusercontent.com/74843139/135706284-64636f81-b20d-429d-ba5c-2d55c5c6df02.png" width=150><img src="https://user-images.githubusercontent.com/74843139/134789523-accc48f7-988b-472f-8fbb-2dc7524a295a.png" width=550>
 
@@ -103,7 +99,7 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 * The full equation is also **time dependent**.
 
     
-### 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
+## 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
 A hologram is a photographic recording of a light field, rather than an image formed by a lens. 
 
@@ -113,7 +109,7 @@ The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that
 * the **radiant light field** Lr (u, v, alpha, beta) quantifying the irradiance created by an object
 * time is an optional 5th domension
 
-#### Capturing, storing and compressing static and dynamic light fields
+### Capturing, storing and compressing static and dynamic light fields
 One type uses an array of micro-lenses placed in front of an otherwise conventional image sensor to sense intensity, color, and directional information. Multi-camera arrays are another type. Compared to a traditional photo camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a depth map can be computed.
 While **special cameras and cameras arrangements** have been build to capture light fields it is also possible them with a conventional camera or smart phone under certain constraints (see [Crowdsampling the Plenoptic Function](#-crowdsampling-the-plenoptic-function--a-name--crowdsampling--)).
 
@@ -121,7 +117,7 @@ While **special cameras and cameras arrangements** have been build to capture li
     
 <small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
-##### Multi-plane image (MPI) format and DeepMPI representation
+#### Multi-plane image (MPI) format and DeepMPI representation
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
 MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
 
@@ -132,9 +128,9 @@ Stereo Magnification: Learning view synthesis using multiplane images
 
 DeepMPI extends prior work on multiplane images (MPIs) to model viewing conditions that vary with time.
 
-##### Compression
+#### Compression
  
-#### Novel (virtual) 2D view synthesis from plenoptic samples synthesize
+### Novel (virtual) 2D view synthesis from plenoptic samples synthesize
 plenoptic slices that can be interpolated to recover local regions of the full
 plenoptic function.
 Given a **dense sampling** of views, photorealistic novel views can be reconstructed by simple light field sample interpolation techniques. For novel view synthesis with **sparser view** sampling, the computer vision and graphics communities have made significant progress by predicting traditional geometry and appearance representations from observed images. The study of image-based rendering is motivated by a simple question: how do we use a finite set of images to reconstruct an infinite set of views.
@@ -155,8 +151,8 @@ Light field rendering pushes the latter strategy to an extreme by using dense st
 
 **Camera calibration** is often assumed to be prerequisite, while in practise, this information is rarely accessible, and requires to be pre-computed with conventional techniques, such as SfM.
  
-##### 3d scene reconstruction and inverse and differential rendering 
-###### Inverse rendering and differential rendering: explicitly reconstructing the scene
+#### 3d scene reconstruction and inverse and differential rendering 
+##### Inverse rendering and differential rendering: explicitly reconstructing the scene
 They can be classified into
 explicit and implicit representations. Explicit methods describe
 scenes as a collection of geometric primitives, such as triangles,
@@ -172,7 +168,7 @@ Differentiable Rendering promises to close the loop between computer Vision and 
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
-##### Volume Rendering with Radiance Fields
+#### Volume Rendering with Radiance Fields
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
 A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
 The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
@@ -247,15 +243,15 @@ Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG1
 We still use VGG in many deep learning image classification problems; however, smaller network architectures are often more desirable (such as SqueezeNet, GoogLeNet, etc.).
 https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/
 
-#### Relighting with 4D Incident Light Fields
-It is possible to re-light and de-light real objects illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
+### Relighting with 4D Incident Light Fields
+It is possible to **re-light and de-light real objects** illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
 
 
 <img src="https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png" width=500>
 https://en.wikipedia.org/wiki/Light_stage
  
 
-##### Relighting with NeRF
+#### Relighting with NeRF
 Another dimension in which NeRF-style methods have been augmented is in how to deal with lighting, typically through latent codes that can be used to re-light a scene. 
 NeRF-W was one of the first follow-up works on NeRF, and optimizes a latent appearance code to enable learning a neural scene representation from less controlled multi-view collections.
 
@@ -263,7 +259,7 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
 
 
 
-### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR
+## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
 ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
 
@@ -274,8 +270,8 @@ ToF applications create "depth maps" based on light detection, usually with a st
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
      
-## Related fields
-### Photogrammetry (first mentioned in 1867)
+# Related fields
+## Photogrammetry (first mentioned in 1867)
 Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly.
 
 Photogrammetry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlusion or dense vegetation can block the camera's line of sight or limit light required for good result
@@ -283,8 +279,8 @@ Photogrammetry data is usually captured with a **single moving conventional stil
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
 
-### Computional imaging for machines (not human observer)
-#### Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)
+## Computional imaging for machines (not human observer)
+### Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)
 The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
 Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus.
 Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
@@ -297,7 +293,7 @@ pinholes.
 
 
 
-####  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
+###  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
 Achieving real-time perception is critical to developing a fully autonomous system that can sense, navigate, and interact with its environment. Perception tasks such as online 3D reconstruction and mapping .
  ![image](https://user-images.githubusercontent.com/74843139/135749450-762580f6-30d8-478c-b45c-0372756dba53.png" width=500>
  https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95
@@ -326,7 +322,6 @@ viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
   radiance L of a surface is **emitted flux per unit** of foreshortened area (from Lambert’s Law) per unit solid angle
  * *Irradiance* is the radiant flux received by the detector area. The unit of irradiance is W/m2. The irradiance E of a surface is defined as the incident radiant flux density
     
-
 # Recommended reading
 
 ## Image-based rendering
