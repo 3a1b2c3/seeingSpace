@@ -175,11 +175,11 @@ It allows real-time synthesis of photorealistic new views.
 
 <img src="https://user-images.githubusercontent.com/74843139/135739158-186170f4-ad7f-4734-aceb-24a7db7c02dd.png" width=300> <img src="https://user-images.githubusercontent.com/74843139/135739188-2b9ac37a-3105-4d7e-944c-9549e40d3c6c.png" width=300>
 
-https://dellaert.github.io/NeRF/
 
 Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using periodic activation functions, i.e., Fourier Features. 
 the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. That being said, vanilla NeRF left many opportunities to improve upon speed for training and rendering.    It can only represent static scenes
     It “bakes in” lighting.    A trained NeRF representation does not generalize to other scenes/objects.
+A good overview can be found here "NeRF Explosion 2020" https://dellaert.github.io/NeRF/
 
 https://user-images.githubusercontent.com/74843139/135747420-4d91bc80-2893-44a4-8d32-16bf7024b4f2.mp4
 
@@ -201,10 +201,34 @@ mask out transient objects such as people and cars during training and evaluatio
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
 ![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/coeur_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/trevi_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/rock_teaser.gif)![image]( https://research.cs.cornell.edu/crowdplenoptic/teaser/pantheon_teaser.gif)
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
- 
+ imagenet-vgg-verydeep-19.mat
  ![image](https://user-images.githubusercontent.com/74843139/135809964-0501661b-2cfa-4ab2-a818-0f60bd6fd152.png)
 
 Crowdsampling the Plenoptic Function, 2020
+
+unsupervised manner. Our approach takes unstructured Internet photos spanning
+some range of time-varying appearance in a scene and learns how to reconstruct a
+plenoptic slice|a representation of the light eld that respects temporal structure
+in the plenoptic function when interpolated over time|for each of the viewing
+conditions captured in our input data. By designing our model to preserve the
+structure of real plenoptic functions, we force it to learn time-varying phenomena
+like the motion of shadows according to sun position. This lets us, for example,
+recover plenoptic slices for images taken at dierent times of day (Figure 1,
+bottom row) and interpolate between them to observe how shadows move as
+the day progresses (best seen in our supplemental video). In eect, we learn a
+representation of the scene that can produce high-quality views from a continuum
+of viewpoints and viewing conditions that vary with time.
+Our work makes three key contributions: rst, a representation, called a
+DeepMPI, for neural rendering that extends prior work on multiplane images
+(MPIs) [68] to model viewing conditions that vary with time; second, a method
+for training DeepMPIs on sparse, unstructured crowdsampled data that is unreg-
+1 [1] describes the plenoptic function as 7D, but we can reduce this to a 4D color light
+eld supplemented by time by applying the later observations of [33].
+Crowdsampling the Plenoptic Function 3
+istered in time;
+<img src="https://user-images.githubusercontent.com/74843139/135751323-ef8582a0-575d-41fb-9a40-861fbbbd35d3.png" width=500>
+nerf in the wild
+
 
 #### Relighting with 4D Incident Light Fields
 It is possible to re-light and de-light real objects illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
@@ -213,14 +237,13 @@ It is possible to re-light and de-light real objects illuminated by a 4D inciden
 <img src="https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png" width=500>
 https://en.wikipedia.org/wiki/Light_stage
  
+
 ##### Relighting with NeRF
 Another dimension in which NeRF-style methods have been augmented is in how to deal with lighting, typically through latent codes that can be used to re-light a scene. 
 NeRF-W was one of the first follow-up works on NeRF, and optimizes a latent appearance code to enable learning a neural scene representation from less controlled multi-view collections.
 
 Neural Reflectance Fields improve on NeRF by adding a local reflection model in addition to density. It yields impressive relighting results, albeit from single point light sources. NeRV uses a second “visibility” MLP to support arbitrary environment lighting and “one-bounce” indirect illumination.
 
-<img src="https://user-images.githubusercontent.com/74843139/135751323-ef8582a0-575d-41fb-9a40-861fbbbd35d3.png" width=500>
-nerf in the wild
 
 
 ### Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR
