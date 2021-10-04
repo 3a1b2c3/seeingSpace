@@ -222,13 +222,22 @@ Our work makes three key contributions: rst, a representation, called a
 DeepMPI, for neural rendering that extends prior work on multiplane images
 (MPIs) [68] to model viewing conditions that vary with time; second, a method
 for training DeepMPIs on sparse, unstructured crowdsampled data that is unreg-
-1 [1] describes the plenoptic function as 7D, but we can reduce this to a 4D color light
-eld supplemented by time by applying the later observations of [33].
+1 [1] describes the plenoptic function as 7D, but we can reduce this to a 4D color lightfield supplemented by time by applying the later observations of [33].
 Crowdsampling the Plenoptic Function 3
 istered in time;
 <img src="https://user-images.githubusercontent.com/74843139/135751323-ef8582a0-575d-41fb-9a40-861fbbbd35d3.png" width=500>
 nerf in the wild
 
+![image](https://user-images.githubusercontent.com/74843139/135836081-9dacc9ba-0ddb-4665-8e54-359b1e500dfa.png)
+Unfortunately, there are two major drawbacks with VGGNet:
+
+    It is painfully slow to train.
+    The network architecture weights themselves are quite large (in terms of disk/bandwidth).
+
+Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG16 and 574MB for VGG19. This makes deploying VGG a tiresome task.
+
+We still use VGG in many deep learning image classification problems; however, smaller network architectures are often more desirable (such as SqueezeNet, GoogLeNet, etc.).
+https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/
 
 #### Relighting with 4D Incident Light Fields
 It is possible to re-light and de-light real objects illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
