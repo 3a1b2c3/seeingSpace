@@ -13,9 +13,10 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
       - [Capturing, storing and compressing static and dynamic light fields](#capturing--storing-and-compressing-static-and-dynamic-light-fields)
         * [Multi-plane image (MPI) format and DeepMPI representation](#multi-plane-image--mpi--format-and-deepmpi-representation)
         * [Compression](#compression)
-      - [Novel (virtual) 2D view synthesis form plenoptic samples](#novel--virtual--2d-view-synthesis-form-plenoptic-samples)
+      - [Novel (virtual) 2D view synthesis from plenoptic samples synthesize](#novel--virtual--2d-view-synthesis-from-plenoptic-samples-synthesize)
         * [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
           + [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--explicitly-reconstructing-the-scene)
+        * [Volume Rendering with Radiance Fields](#volume-rendering-with-radiance-fields)
         * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
           + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
       - [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
@@ -24,13 +25,16 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
   * [Related fields](#related-fields)
     + [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
     + [Computional imaging for machines (not human observer)](#computional-imaging-for-machines--not-human-observer-)
-      - [Lensless cameras (mid-1990s): ptical images for a computer—not for a human](#lensless-cameras--mid-1990s---ptical-images-for-a-computer-not-for-a-human)
+      - [Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)](#lensless-cameras--mid-1990s---optical-images-for-a-computer--not-for-a-human-oberserver-)
       - [Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps](#simultaneous-localization-and-mapping--slam--1986--generating-machine-readable-near-realtime-maps)
+- [Conclusion](#conclusion)
 - [Important concepts](#important-concepts)
 - [Recommended reading](#recommended-reading)
   * [Image-based rendering](#image-based-rendering)
+  * [Visual Sensing Using Machine Learning](#visual-sensing-using-machine-learning)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # Data-Driven Computational Imaging
 Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
@@ -130,7 +134,7 @@ DeepMPI extends prior work on multiplane images (MPIs) to model viewing conditio
 
 ##### Compression
  
-#### Novel (virtual) 2D view synthesis form plenoptic samplessynthesize
+#### Novel (virtual) 2D view synthesis from plenoptic samples synthesize
 plenoptic slices that can be interpolated to recover local regions of the full
 plenoptic function.
 Given a **dense sampling** of views, photorealistic novel views can be reconstructed by simple light field sample interpolation techniques. For novel view synthesis with **sparser view** sampling, the computer vision and graphics communities have made significant progress by predicting traditional geometry and appearance representations from observed images. The study of image-based rendering is motivated by a simple question: how do we use a finite set of images to reconstruct an infinite set of views.
@@ -168,10 +172,14 @@ Differentiable Rendering promises to close the loop between computer Vision and 
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
 
+##### Volume Rendering with Radiance Fields
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
 A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
 The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
 It allows real-time synthesis of photorealistic new views.
+
+![image](https://user-images.githubusercontent.com/74843139/135841906-f1dbbc63-3e78-45fa-b670-ba646eb75a27.png)
+
 
 <img src="https://user-images.githubusercontent.com/74843139/135739158-186170f4-ad7f-4734-aceb-24a7db7c02dd.png" width=300> <img src="https://user-images.githubusercontent.com/74843139/135739188-2b9ac37a-3105-4d7e-944c-9549e40d3c6c.png" width=300>
 
