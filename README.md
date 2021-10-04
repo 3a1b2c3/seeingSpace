@@ -132,7 +132,11 @@ Given a **dense sampling** of views, photorealistic novel views can be reconstru
 View synthesis can be approached by either explicit estimation of scene geometry and color, or using coarser estimates of geometry to guide interpolation between captured views. 
 One approach aims to **explicitly reconstruct the surface geometry** and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly to model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
 The raw samples of a light field are saved as disks. resolution large amounts of data
- 
+
+<img src="https://user-images.githubusercontent.com/74843139/135805897-45ba61f4-2c3f-47bf-865f-8a1b52d792cf.png" width=400>
+
+State of the Art on Neural Rendering
+
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300><img src="https://user-images.githubusercontent.com/74843139/135702022-93723d7a-fb76-4380-8150-7aaceff96757.png" width=300>
 
 <small><i>Source: https://github.com/Arne-Petersen/Plenoptic-Simulation, A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
