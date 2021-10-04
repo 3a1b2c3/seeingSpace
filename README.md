@@ -73,6 +73,8 @@ are simulated by recursively casting new rays from the intersections with the ge
  
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
+ ![image](https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png)
+https://www.mdpi.com/2072-4292/13/13/2640
  
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
@@ -258,7 +260,7 @@ Achieving real-time perception is critical to developing a fully autonomous syst
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
  * *Light field* is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***
  * *Radiance*<a name="radiance"> represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
- * The irradiance E of a surface is defined as the incident radiant flux density, and has units of W· m−2. Meanwhile, radiance L of a surface is emitted flux per unit of foreshortened area (from Lambert’s Law) per unit solid angle W· m−2 · sr−1.
+ * *Irradiance* is the radiant flux received by the detector area. The unit of irradiance is W/m2. The irradiance E of a surface is defined as the incident radiant flux density. Meanwhile, radiance L of a surface is **emitted flux per unit** of foreshortened area (from Lambert’s Law) per unit solid angle W· m−2 · sr−1.
     
 
 # Recommended reading
