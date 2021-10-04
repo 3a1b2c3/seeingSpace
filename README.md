@@ -343,3 +343,4 @@ viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
  * https://www.pauldebevec.com reasearch and their github https://github.com/augmentedperception
  *EUROGRAPHICS 2020, State of the Art on Neural Rendering
  *https://www.matthewtancik.com/nerf
+ *https://paperswithcode.com/task/neural-rendering
