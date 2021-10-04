@@ -255,6 +255,20 @@ Achieving real-time perception is critical to developing a fully autonomous syst
  ![image](https://user-images.githubusercontent.com/74843139/135749450-762580f6-30d8-478c-b45c-0372756dba53.png" width=500>
  https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95
  
+# Conclusion
+Neural rendering has raised a lot of interest in the past few years.
+This state-of-the-art report reflects the immense increase of research
+in this field. It is not bound to a specific application but
+spans a variety of use-cases that range from novel-view synthesis,
+semantic image editing, free viewpoint videos, relighting, face and
+body reenactment to digital avatars. 
+
+Neural rendering has already
+enabled applications that were previously intractable, such as rendering
+of digital avatars without any manual modeling. We believe
+that neural rendering will have a profound impact in making complex
+photo and video editing tasks accessible to a much broader
+audience.
 
 # Important concepts
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
