@@ -232,8 +232,7 @@ istered in time;
 <small><i>nerf in the wild</i></small>
 
 ![image](https://user-images.githubusercontent.com/74843139/135836081-9dacc9ba-0ddb-4665-8e54-359b1e500dfa.png)
-Unfortunately, there are two major drawbacks with VGGNet:
-    It is painfully slow to train.
+Unfortunately, there are two major drawbacks with VGGNet:     It is painfully slow to train.
     The network architecture weights themselves are quite large (in terms of disk/bandwidth).
 
 Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG16 and 574MB for VGG19. This makes deploying VGG a tiresome task.
@@ -241,6 +240,8 @@ We still use VGG in many deep learning image classification problems; however, s
  
 <small><i>https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/</i></small>
 
+The autors envision enabling even larger changes in viewpoint and illumination, including 4D walkthroughs of large-scale scenes in the future.
+   
 ### Relighting with 4D Incident Light Fields
 It is possible to **re-light and de-light real objects** illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
 
@@ -269,6 +270,7 @@ ToF applications create "depth maps" based on light detection, usually with a st
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
 **LiDAR**<a name="lidar"> stands for **light detection and ranging**, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse. Time-of-flight cameras on smartphones tend to be used to improve focus accuracy and speed, in particular better low-light focus.
+It's used for self-driving cars, or assisted driving. It's used for robotics and drones. Augmented reality headsets like the HoloLens 2 have similar tech, mapping out room spaces before layering 3D virtual objects into them
  
 Lidar can be used to mesh out 3D objects and rooms and layer photo imagery on top, a technique called photogrammetry. That could be the next wave of capture tech for practical uses
      
@@ -304,7 +306,7 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 <img src="https://user-images.githubusercontent.com/74843139/135749450-762580f6-30d8-478c-b45c-0372756dba53.png" width=500>
  
  <small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
- 
+
 # Conclusion
 Neural rendering has raised a lot of interest in the past few years. It is not bound to a specific application but
 spans a variety of use-cases that range from novel-view synthesis,
@@ -317,7 +319,6 @@ that neural rendering will have a profound impact in making complex
 photo and video editing tasks accessible to a much broader
 audience. 
 
- In the future, we envision enabling even larger changes in viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
 
 # Important concepts
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
