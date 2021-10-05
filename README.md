@@ -326,7 +326,6 @@ viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
     
 # Recommended reading
 
-## Image-based rendering
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
 * Data-Driven Computational Imaging http://ciml.media.mit.edu, CVPR 2019
@@ -336,9 +335,7 @@ viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
 * https://raytrix.de Realtime Plenoptic Metrology
 * https://github.com/Arne-Petersen/Plenoptic-Simulation
 * https://en.wikipedia.org/wiki/Light_field 
-
- 
- ## Visual Sensing Using Machine Learning
+ *https://www.cnet.com/tech/mobile/lidar-is-one-of-the-iphone-ipad-coolest-tricks-its-only-getting-better/
 * https://www.americanscientist.org/article/imaging-without-lenses
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
 * https://github.com/tensorflow/graphics
@@ -349,3 +346,4 @@ viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
  *EUROGRAPHICS 2020, State of the Art on Neural Rendering
  *https://www.matthewtancik.com/nerf
  *https://paperswithcode.com/task/neural-rendering
+ 
