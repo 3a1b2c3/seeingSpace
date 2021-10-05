@@ -268,14 +268,14 @@ ToF applications create "depth maps" based on light detection, usually with a st
 <img src="(https://user-images.githubusercontent.com/74843139/134806495-5d40deff-328c-42b5-ada4-2035399abf1f.png" width=200>
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
-Lidar stands for light detection and ranging, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse.
+**LiDAR**<a name="lidar"> stands for 88light detection and ranging**, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse. Time-of-flight cameras on smartphones tend to be used to improve focus accuracy and speed, in particular better low-light focus.
      
 # Related fields
 ## Photogrammetry (first mentioned in 1867)
 Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly.
 
 Photogrammetry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlusion or dense vegetation can block the camera's line of sight or limit light required for good result
- 
+See [Lidar](#lidar) for alternatives.
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
  
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
@@ -283,7 +283,9 @@ Photogrammetry data is usually captured with a **single moving conventional stil
 ## Computional imaging for machines (not human observer)
 ### Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)
 The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
-Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus.
+Lenses introduce a number of limitations, specifically all traditional cameras have limited depth of field. 
+
+Cameras also end up being thick due to the lens complexity and the large distance required between the lens and sensor to achieve focus.
 Lensless imaging systems dispense with a lens by using other optical elements to manipulate the incoming light. The sensor records the intensity of the manipulated light, which may not appear as a focused image. However, when the system is designed correctly, the image can be recovered
 from the sensor measurements with the help of a computational algorithm.
 The simplest but inefficient lensless imaging system is the pinhole camera, coded aperture cameras improve the light efficiency using a mask with an array of
@@ -308,12 +310,12 @@ spans a variety of use-cases that range from novel-view synthesis,
 semantic image editing, free viewpoint videos, relighting, face and
 body reenactment to digital avatars. 
 
-Neural rendering has already
-enabled applications that were previously intractable, such as rendering
+Neural rendering has already enabled applications that were **previously intractable**, such as rendering
 of digital avatars without any manual modeling. We believe
 that neural rendering will have a profound impact in making complex
 photo and video editing tasks accessible to a much broader
 audience. 
+
  In the future, we envision enabling even larger changes in
 viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
 
