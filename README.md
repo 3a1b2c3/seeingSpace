@@ -268,6 +268,7 @@ ToF applications create "depth maps" based on light detection, usually with a st
 <img src="(https://user-images.githubusercontent.com/74843139/134806495-5d40deff-328c-42b5-ada4-2035399abf1f.png" width=200>
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
+Lidar stands for light detection and ranging, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse.
      
 # Related fields
 ## Photogrammetry (first mentioned in 1867)
@@ -301,9 +302,7 @@ Achieving real-time perception is critical to developing a fully autonomous syst
  <small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
  
 # Conclusion
-Neural rendering has raised a lot of interest in the past few years.
-This state-of-the-art report reflects the immense increase of research
-in this field. It is not bound to a specific application but
+Neural rendering has raised a lot of interest in the past few years. It is not bound to a specific application but
 spans a variety of use-cases that range from novel-view synthesis,
 semantic image editing, free viewpoint videos, relighting, face and
 body reenactment to digital avatars. 
