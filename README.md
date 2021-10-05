@@ -4,7 +4,7 @@ When I learned about **traditional computer graphics and photogrammetry** I miss
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
 
-![image](https://user-images.githubusercontent.com/74843139/135942032-177c6f8d-c02f-4d31-b7f9-ea8bc9c69d80.png)
+![image](https://user-images.githubusercontent.com/74843139/135942530-bfbfb451-23bd-4bfd-b0c8-64d575529a80.png)
 
 Photogrammetry 20 years ago, using simple shader blending
 
