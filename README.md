@@ -4,9 +4,9 @@ When I learned about **traditional computer graphics and photogrammetry** I miss
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
 
-![image](https://user-images.githubusercontent.com/74843139/135942530-bfbfb451-23bd-4bfd-b0c8-64d575529a80.png)
+![image](https://user-images.githubusercontent.com/74843139/135942755-dab92b08-a027-4a2d-a323-82f09290bbf0.png)
 
-Photogrammetry 20 years ago, using simple shader blending
+Photogrammetry 20 years ago, using simple shader blending and an actual film camera
 
 - [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
   * [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
