@@ -1,6 +1,6 @@
 # Sehender Raum / Seeing Space (WIP)
 ## Notes about capturing, rendering and digitally reconstruction the world
-When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago.
+When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below).
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
 
@@ -269,6 +269,8 @@ ToF applications create "depth maps" based on light detection, usually with a st
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
 **LiDAR**<a name="lidar"> stands for **light detection and ranging**, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse. Time-of-flight cameras on smartphones tend to be used to improve focus accuracy and speed, in particular better low-light focus.
+ 
+Lidar can be used to mesh out 3D objects and rooms and layer photo imagery on top, a technique called photogrammetry. That could be the next wave of capture tech for practical uses
      
 # Related fields
 ## Photogrammetry (first mentioned in 1867)
@@ -315,8 +317,7 @@ that neural rendering will have a profound impact in making complex
 photo and video editing tasks accessible to a much broader
 audience. 
 
- In the future, we envision enabling even larger changes in
-viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
+ In the future, we envision enabling even larger changes in viewpoint and illumination, including 4D walkthroughs of large-scale scenes.
 
 # Important concepts
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
