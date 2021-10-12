@@ -349,4 +349,5 @@ audience.
  *EUROGRAPHICS 2020, State of the Art on Neural Rendering
  *https://www.matthewtancik.com/nerf
  *https://paperswithcode.com/task/neural-rendering
+ *https://www.lightfieldlab.com SolidLight Surface modular video wall panels
  
