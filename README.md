@@ -350,7 +350,7 @@ audience.
  *https://www.matthewtancik.com/nerf
  *https://paperswithcode.com/task/neural-rendering
  *https://www.lightfieldlab.com Lightfield displays
-* Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152 
+* Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152  https://www.neuralrender.com/
  ** Video1 https://www.youtube.com/watch?v=otly9jcZ0Jg  2:44  
  ** Video2 https://www.youtube.com/watch?v=aboFl5ozImM
 
