@@ -36,6 +36,7 @@ Photogrammetry 20 years ago, using simple shader blending and an actual film cam
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+![image](https://user-images.githubusercontent.com/74843139/137407965-ce3adfe6-757c-48e4-9fe5-bc494a874f02.png)
 
 
 # Image-based rendering (IBR): Plenoptic function and capture
