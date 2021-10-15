@@ -24,7 +24,7 @@ Photogrammetry 20 years ago, using simple shader blending and an actual film cam
           + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
     + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
       - [Relighting with NeRF](#relighting-with-nerf)
-  * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar)
+  * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
   * [Computional imaging for machines (not human observer)](#computional-imaging-for-machines--not-human-observer-)
@@ -36,7 +36,6 @@ Photogrammetry 20 years ago, using simple shader blending and an actual film cam
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-![image](https://user-images.githubusercontent.com/74843139/137408495-4ab043d4-ddd8-420d-9d12-f768b6336b5c.png)
 
 # Image-based rendering (IBR): Plenoptic function and capture
 Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
@@ -50,8 +49,8 @@ The learned scene representation is not restricted by simple scene modeling appr
 
 Neural Rerendering combines classical 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views.
 In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.  Artifacts such as ghosting, blur, holes, or seams can arise due to view-dependent effects, imperfect proxy geometry or too few source images. To address these issues, N-IBR methods replace the heuristics often found in classical IBR methods with learned blending functions or corrections that take into account view-dependent effects.
-
-![image](https://user-images.githubusercontent.com/74843139/137405902-b86bb97a-ab23-4d3c-86d6-a447aa1aabb7.png)
+<img src="https://user-images.githubusercontent.com/74843139/137405902-b86bb97a-ab23-4d3c-86d6-a447aa1aabb7.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/137408495-4ab043d4-ddd8-420d-9d12-f768b6336b5c.png" width=300>
 
 ## The Plenoptic function (Adelson and Bergen, 1991)
 The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene.
