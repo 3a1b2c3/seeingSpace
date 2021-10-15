@@ -198,7 +198,7 @@ analytically enforce a truth about the world in the network structure,
 frees up network capacity, and leads to better generalization,
 especially if only limited training data is available.
 
-![image](https://user-images.githubusercontent.com/74843139/137443524-2ddad882-defa-47e6-8ba4-3df6878988af.png)
+![image](https://user-images.githubusercontent.com/74843139/137445499-1d2f3bae-9aab-46b5-81c2-9f4c4d3fa9e3.png)
 
 ###### Crowdsampling the Plenoptic Function with NeRF (published 2020)
 Given a large number of **tourist photos taken at different times of day**, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across a variety of times of day and lighting conditions.
