@@ -184,6 +184,7 @@ It allows real-time synthesis of photorealistic new views.
 <img src="https://user-images.githubusercontent.com/74843139/137442095-16fac449-f819-4852-b749-16185cdec895.png" width=300>
 
 <img src="https://user-images.githubusercontent.com/74843139/135739158-186170f4-ad7f-4734-aceb-24a7db7c02dd.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/137458615-ca69a159-670f-474f-ae14-2171ec577898.png" width=400>
+![image](https://user-images.githubusercontent.com/74843139/137470543-bb2af13d-b18d-49cf-bc2d-a0cdd88941a9.png)
 
 
 Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using periodic activation functions, i.e., Fourier Features. 
