@@ -322,6 +322,7 @@ that neural rendering will have a profound impact in making complex
 photo and video editing tasks accessible to a much broader
 audience. 
 
+![image](https://user-images.githubusercontent.com/74843139/137446172-b1f57e66-fed8-4e9a-bba0-6ff0e686e54a.png)
 
 # Important concepts
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
