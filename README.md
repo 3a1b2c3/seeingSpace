@@ -176,7 +176,7 @@ Also called **Differentiable Rendering** it promises to close the loop between c
 Differentiable Rendering promises to close the loop between computer Vision and Graphics.
 
 
-#### Volume Rendering with Radiance Fields
+#### Novel view synthesis with neural rendering: Volume Rendering with Radiance Fields
 ![image](https://user-images.githubusercontent.com/74843139/137447390-2134a9a9-50a6-4911-93d7-f87f7114739f.png)
 
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
@@ -225,7 +225,7 @@ mask out transient objects such as people and cars during training and evaluatio
 <small><i>Crowdsampling the Plenoptic Function, 2020</i></small>
 unsupervised manner. Our approach takes unstructured Internet photos spanning
 some range of time-varying appearance in a scene and learns how to reconstruct a
-plenoptic slice|a representation of the light eld that respects temporal structure
+plenoptic slice, a representation of the light field that respects temporal structure
 in the plenoptic function when interpolated over time|for each of the viewing
 conditions captured in our input data. By designing our model to preserve the
 structure of real plenoptic functions, we force it to learn time-varying phenomena
