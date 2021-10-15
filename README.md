@@ -127,7 +127,7 @@ While **special cameras and cameras arrangements** have been build to capture li
     
 <small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
-#### Multi-plane image (MPI) format and DeepMPI representation (2.5D)
+#### Multi-plane image (MPI) format and DeepMPI representation
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
 MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
 
@@ -148,6 +148,8 @@ View synthesis can be approached by either explicit estimation of scene geometry
 One approach aims to **explicitly reconstruct the surface geometry** and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly to model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
 The raw samples of a light field are saved as disks. resolution large amounts of data
 
+The Volume rendering technique known as ray marching. Ray marching is when you shoot out a ray from the observer (camera) through a 3D volume in space and ask a function: what is the color and opacity at this particular point in space? Neural rendering takes the next step by using a neural network to approximate this function. 
+ 
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300><img src="https://user-images.githubusercontent.com/74843139/135702022-93723d7a-fb76-4380-8150-7aaceff96757.png" width=300>
 
 <small><i>Source: https://github.com/Arne-Petersen/Plenoptic-Simulation, A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
@@ -158,10 +160,11 @@ Light field rendering pushes the latter strategy to an extreme by using dense st
  
 #### 3d scene reconstruction and inverse and differential rendering 
 ##### Inverse rendering and differential rendering: explicitly reconstructing the scene
-They can be classified into
-explicit and implicit representations. Explicit methods describe
-scenes as a collection of geometric primitives, such as triangles,
+The key concept behind neural rendering approaches is that they are differentiable. A differentiable function is one whose derivative exists at each point in the domain. This is important because machine learning is basically the chain rule with extra steps: a differentiable rendering function can be learned with data, one gradient descent step at a time. Learning a rendering function statistically through data is fundamentally different from the classic rendering methods we described above, which calculate and extrapolate from the known laws of physics.
+
+They can be classified into explicit and implicit representations. Explicit methods describe scenes as a collection of geometric primitives, such as triangles,
 point-like primitives, or higher-order parametric surfaces.
+
 One popular class of approaches uses mesh-based representations of scenes with either use [48] or view-dependent appearance. Differentiable rasterizers or pathtracers [22,30] can directly optimize mesh representations to reproduce a set of input images using gradient descent.
 However, gradient-based mesh optimization based on image reprojection is often dicult, likely because of local minima or poor conditioning of the loss landscape. Furthermore, this strategy requires a template mesh with xed topology to be provided as an initialization before optimization [22], which is typically unavailable for unconstrained real-world scenes.
 
@@ -172,7 +175,6 @@ Differentiable Rendering promises to close the loop between computer Vision and 
 
 #### Volume Rendering with Radiance Fields
 ![image](https://user-images.githubusercontent.com/74843139/137447390-2134a9a9-50a6-4911-93d7-f87f7114739f.png)
-![image](https://user-images.githubusercontent.com/74843139/137461045-41cccfdf-2a8b-4b40-bd36-c4fdaa565eaf.png)
 
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
 A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
