@@ -182,8 +182,7 @@ It allows real-time synthesis of photorealistic new views.
 
 
 Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using periodic activation functions, i.e., Fourier Features. 
-the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. That being said, vanilla NeRF left many opportunities to improve upon speed for training and rendering.    It can only represent static scenes
-    It “bakes in” lighting.    A trained NeRF representation does not generalize to other scenes/objects.
+the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. T Training and rendering is slow and it can only represent static scenes. It “bakes in” lighting.  A trained NeRF representation does not generalize to other scenes/objects.
 A good overview can be found here "NeRF Explosion 2020" https://dellaert.github.io/NeRF/
 
 https://user-images.githubusercontent.com/74843139/135747420-4d91bc80-2893-44a4-8d32-16bf7024b4f2.mp4
@@ -198,6 +197,8 @@ for end-to-end training via backpropagation. This can be used to
 analytically enforce a truth about the world in the network structure,
 frees up network capacity, and leads to better generalization,
 especially if only limited training data is available.
+
+![image](https://user-images.githubusercontent.com/74843139/137443524-2ddad882-defa-47e6-8ba4-3df6878988af.png)
 
 ###### Crowdsampling the Plenoptic Function with NeRF (published 2020)
 Given a large number of **tourist photos taken at different times of day**, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across a variety of times of day and lighting conditions.
