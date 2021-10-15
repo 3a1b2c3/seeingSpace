@@ -53,7 +53,7 @@ In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not
 <img src="https://user-images.githubusercontent.com/74843139/137408495-4ab043d4-ddd8-420d-9d12-f768b6336b5c.png" width=300>
 
 ## The Plenoptic function (Adelson and Bergen, 1991)
-The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “no of photons” that map from the three-dimensional scene.
+The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “number of photons” that map from the three-dimensional scene.
 
 A point in the scene is imaged by measuring the **emitted and reflected light** that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
 
@@ -78,8 +78,9 @@ are simulated by recursively casting new rays from the intersections with the ge
  
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
- ![image](https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png)
- 
+<img src="https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png" width=350>
+<img src="https://user-images.githubusercontent.com/74843139/137432875-74ca25c1-dcf1-4126-ac03-ad5c5c703fce.png" width=550>
+
 <small><i>Source:https://www.mdpi.com/2072-4292/13/13/2640</i></small>
   
  
