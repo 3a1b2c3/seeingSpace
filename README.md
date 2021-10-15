@@ -192,6 +192,7 @@ the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking i
 A good overview can be found here "NeRF Explosion 2020" https://dellaert.github.io/NeRF/
 
 https://user-images.githubusercontent.com/74843139/135747420-4d91bc80-2893-44a4-8d32-16bf7024b4f2.mp4
+![image](https://user-images.githubusercontent.com/74843139/137474885-432d596d-3820-4932-854e-61652dfae9a2.png)
 
 <small><i>https://dellaert.github.io/NeRF/</i></small>
  
@@ -358,4 +359,5 @@ audience.
 * Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152  https://www.neuralrender.com/
  ** Video1 https://www.youtube.com/watch?v=otly9jcZ0Jg  2:44  
  ** Video2 https://www.youtube.com/watch?v=aboFl5ozImM
+* https://bmild.github.io/
 
