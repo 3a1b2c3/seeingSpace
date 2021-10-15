@@ -127,7 +127,7 @@ While **special cameras and cameras arrangements** have been build to capture li
     
 <small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
-#### Multi-plane image (MPI) format and DeepMPI representation
+#### Multi-plane image (MPI) format and DeepMPI representation (2.5D)
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
 MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
 
@@ -172,6 +172,7 @@ Differentiable Rendering promises to close the loop between computer Vision and 
 
 #### Volume Rendering with Radiance Fields
 ![image](https://user-images.githubusercontent.com/74843139/137447390-2134a9a9-50a6-4911-93d7-f87f7114739f.png)
+![image](https://user-images.githubusercontent.com/74843139/137461045-41cccfdf-2a8b-4b40-bd36-c4fdaa565eaf.png)
 
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
 A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
