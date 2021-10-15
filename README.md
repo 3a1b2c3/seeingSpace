@@ -35,36 +35,9 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-Photogrammetry 20 years ago, using simple shader blending and an actual film camera
 
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-# Classic rendering
-# Image-based rendering (IBR): Plenoptic function and capture
-Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
-knowledge about the class of objects or scenes being imaged, deliver estimates of a specific object or scene presented to the imaging system.
-
-In contrast to classical rendering, which projects 3D content to the 2D plane, image-based rendering techniques generate novel images by transforming an existing set of images, typically by warping and compositing them together.
-
-A typical neural rendering approach takes as input images corresponding to certain scene conditions (for example, viewpoint, lighting, layout, etc.), builds a **"neural” scene representation** from them, and "renders” this representation under novel scene properties to synthesize novel images. 
-
-The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
-
-# Neural Rerendering
-Neural Rerendering combines classical 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views.
-In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.  Artifacts such as ghosting, blur, holes, or seams can arise due to view-dependent effects, imperfect proxy geometry or too few source images. To address these issues, N-IBR methods replace the heuristics often found in classical IBR methods with learned blending functions or corrections that take into account view-dependent effects.
-<img src="https://user-images.githubusercontent.com/74843139/137405902-b86bb97a-ab23-4d3c-86d6-a447aa1aabb7.png" width=300>
-<img src="https://user-images.githubusercontent.com/74843139/137408495-4ab043d4-ddd8-420d-9d12-f768b6336b5c.png" width=300>
-
-## The Plenoptic function (Adelson and Bergen, 1991)
-The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “number of photons” that map from the three-dimensional scene.
-
-A point in the scene is imaged by measuring the **emitted and reflected light** that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
-
-### The rendering equation (published in 1986) describes physical light transport for a single camera or the human vision
-Classical computer graphics methods approximate the physical
-process of image formation in the real world: light sources emit
+# Classic rendering, computer graphics
+Classical computer graphics methods approximate the physical process of image formation in the real world: light sources emit
 photons that interact with the objects in the scene, as a function
 of their geometry and material properties, before being recorded
 by a camera. This process is known as light transport.
@@ -79,15 +52,40 @@ Raytracing is a process in which rays are cast backwards
 from the image pixels into a virtual scene, and reflections and refractions
 are simulated by recursively casting new rays from the intersections with the geometry
 
+## The rendering equation<a name="requation">(published in 1986) describes physical light transport for a single camera or the human vision
+A point in the scene is imaged by measuring the **emitted and reflected light** that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
+
+
+<img src="https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png" width=350>
+
+
+<small><i>Source:https://www.mdpi.com/2072-4292/13/13/2640</i></small>
+  
+
 <img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300><img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=300>
  
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
-<img src="https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png" width=350>
-<img src="https://user-images.githubusercontent.com/74843139/137432875-74ca25c1-dcf1-4126-ac03-ad5c5c703fce.png" width=550>
+# Image-based rendering (IBR): Plenoptic function and capture
+Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
+knowledge about the class of objects or scenes being imaged, deliver estimates of a specific object or scene presented to the imaging system.
 
-<small><i>Source:https://www.mdpi.com/2072-4292/13/13/2640</i></small>
-  
+In contrast to classical rendering, which projects 3D content to the 2D plane, image-based rendering techniques generate novel images by transforming an existing set of images, typically by warping and compositing them together.
+
+A typical neural rendering approach takes as input images corresponding to certain scene conditions (for example, viewpoint, lighting, layout, etc.), builds a **"neural” scene representation** from them, and "renders” this representation under novel scene properties to synthesize novel images. 
+
+The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
+
+# Neural Rerendering
+Neural Rerendering combines classical 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views.
+In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.  <img src="https://user-images.githubusercontent.com/74843139/137432875-74ca25c1-dcf1-4126-ac03-ad5c5c703fce.png" width=550>
+Artifacts such as ghosting, blur, holes, or seams can arise due to view-dependent effects, imperfect proxy geometry or too few source images. To address these issues, N-IBR methods replace the heuristics often found in classical IBR methods with learned blending functions or corrections that take into account view-dependent effects.
+<img src="https://user-images.githubusercontent.com/74843139/137405902-b86bb97a-ab23-4d3c-86d6-a447aa1aabb7.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/137408495-4ab043d4-ddd8-420d-9d12-f768b6336b5c.png" width=300>
+
+ 
+## The Plenoptic function (Adelson and Bergen, 1991)
+The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “number of photons” that map from the three-dimensional scene.
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
 ### The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.
@@ -357,14 +355,14 @@ audience.
 * https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera Parameters Zirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
 * https://dellaert.github.io/NeRF,Frank Dellaert, NeRF Explosion 2020
- * https://www.pauldebevec.com reasearch and their github https://github.com/augmentedperception
- *EUROGRAPHICS 2020, State of the Art on Neural Rendering
- *https://www.matthewtancik.com/nerf
- *https://paperswithcode.com/task/neural-rendering
- * https://medium.com/mlearning-ai/what-is-neural-rendering-e25371afc771
- *https://www.lightfieldlab.com Lightfield displays
+* https://www.pauldebevec.com reasearch and their github https://github.com/augmentedperception
+* EUROGRAPHICS 2020, State of the Art on Neural Rendering
+* https://www.matthewtancik.com/nerf
+* https://paperswithcode.com/task/neural-rendering
+* https://medium.com/mlearning-ai/what-is-neural-rendering-e25371afc771
+* https://www.lightfieldlab.com Lightfield displays
 * Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152  https://www.neuralrender.com/
- ** Video1 https://www.youtube.com/watch?v=otly9jcZ0Jg  2:44  
- ** Video2 https://www.youtube.com/watch?v=aboFl5ozImM
+ * Video1 https://www.youtube.com/watch?v=otly9jcZ0Jg  2:44  
+ * Video2 https://www.youtube.com/watch?v=aboFl5ozImM
 * https://bmild.github.io/
 
