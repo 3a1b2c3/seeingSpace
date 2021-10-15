@@ -311,11 +311,7 @@ Achieving real-time perception is critical to developing a fully autonomous syst
  <small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
 
 # Conclusion
-Neural rendering has raised a lot of interest in the past few years. It is not bound to a specific application but
-spans a variety of use-cases that range from novel-view synthesis,
-semantic image editing, free viewpoint videos, relighting, face and
-body reenactment to digital avatars. 
-
+With neural rendering, we no longer need to physically model the scene and simulate the light transport, as this knowledge is now stored implicitly inside the weights of a neural network. With neural rendering, the compute required to render an image is also no longer tied to the complexity of the scene (the number of objects, lights, and materials), but rather the size of the neural network. 
 Neural rendering has already enabled applications that were **previously intractable**, such as rendering
 of digital avatars without any manual modeling. We believe
 that neural rendering will have a profound impact in making complex
@@ -353,6 +349,7 @@ audience.
  *EUROGRAPHICS 2020, State of the Art on Neural Rendering
  *https://www.matthewtancik.com/nerf
  *https://paperswithcode.com/task/neural-rendering
+ * https://medium.com/mlearning-ai/what-is-neural-rendering-e25371afc771
  *https://www.lightfieldlab.com Lightfield displays
 * Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152  https://www.neuralrender.com/
  ** Video1 https://www.youtube.com/watch?v=otly9jcZ0Jg  2:44  
