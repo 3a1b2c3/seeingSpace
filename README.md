@@ -4,11 +4,9 @@ When I learned about **traditional computer graphics and photogrammetry** I miss
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
 
-<img src="https://user-images.githubusercontent.com/74843139/135942755-dab92b08-a027-4a2d-a323-82f09290bbf0.png" width=300>
-
-Photogrammetry 20 years ago, using simple shader blending and an actual film camera
-
+- [Classic rendering](#classic-rendering)
 - [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
+- [Neural Rerendering](#neural-rerendering)
   * [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
     + [The rendering equation (published in 1986) describes physical light transport for a single camera or the human vision](#the-rendering-equation--published-in-1986--describes-physical-light-transport-for-a-single-camera-or-the-human-vision)
     + [The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.](#the-plenoptic-function-is-also-inspired-by-multi-faceted---insect-eyes-or-lens-arrays--)
@@ -21,6 +19,7 @@ Photogrammetry 20 years ago, using simple shader blending and an actual film cam
         * [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--explicitly-reconstructing-the-scene)
       - [Volume Rendering with Radiance Fields](#volume-rendering-with-radiance-fields)
         * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
+          + [Neural Scene representation](#neural-scene-representation)
           + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
     + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
       - [Relighting with NeRF](#relighting-with-nerf)
@@ -36,7 +35,12 @@ Photogrammetry 20 years ago, using simple shader blending and an actual film cam
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+Photogrammetry 20 years ago, using simple shader blending and an actual film camera
 
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+# Classic rendering
 # Image-based rendering (IBR): Plenoptic function and capture
 Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
 knowledge about the class of objects or scenes being imaged, deliver estimates of a specific object or scene presented to the imaging system.
@@ -47,6 +51,7 @@ A typical neural rendering approach takes as input images corresponding to certa
 
 The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
 
+# Neural Rerendering
 Neural Rerendering combines classical 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views.
 In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.  Artifacts such as ghosting, blur, holes, or seams can arise due to view-dependent effects, imperfect proxy geometry or too few source images. To address these issues, N-IBR methods replace the heuristics often found in classical IBR methods with learned blending functions or corrections that take into account view-dependent effects.
 <img src="https://user-images.githubusercontent.com/74843139/137405902-b86bb97a-ab23-4d3c-86d6-a447aa1aabb7.png" width=300>
