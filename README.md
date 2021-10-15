@@ -202,10 +202,10 @@ Given a large number of **tourist photos taken at different times of day**, this
 mask out transient objects such as people and cars during training and evaluation
 
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
-![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/coeur_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/trevi_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/rock_teaser.gif)![image]( https://research.cs.cornell.edu/crowdplenoptic/teaser/pantheon_teaser.gif)
+<img src="https://research.cs.cornell.edu/crowdplenoptic/teaser/coeur_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/trevi_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/rock_teaser.gif)![image]( https://research.cs.cornell.edu/crowdplenoptic/teaser/pantheon_teaser.gif)
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  imagenet-vgg-verydeep-19.mat
- ![image](https://user-images.githubusercontent.com/74843139/135809964-0501661b-2cfa-4ab2-a818-0f60bd6fd152.png)
+<img src="https://user-images.githubusercontent.com/74843139/135809964-0501661b-2cfa-4ab2-a818-0f60bd6fd152.png" width=500>
 
 <small><i>Crowdsampling the Plenoptic Function, 2020</i></small>
 
