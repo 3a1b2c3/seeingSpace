@@ -171,6 +171,8 @@ Differentiable Rendering promises to close the loop between computer Vision and 
 
 
 #### Volume Rendering with Radiance Fields
+![image](https://user-images.githubusercontent.com/74843139/137447390-2134a9a9-50a6-4911-93d7-f87f7114739f.png)
+
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
 A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
 The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
@@ -211,7 +213,6 @@ mask out transient objects such as people and cars during training and evaluatio
 <img src="https://user-images.githubusercontent.com/74843139/135809964-0501661b-2cfa-4ab2-a818-0f60bd6fd152.png" width=500>
 
 <small><i>Crowdsampling the Plenoptic Function, 2020</i></small>
-
 unsupervised manner. Our approach takes unstructured Internet photos spanning
 some range of time-varying appearance in a scene and learns how to reconstruct a
 plenoptic slice|a representation of the light eld that respects temporal structure
@@ -219,7 +220,7 @@ in the plenoptic function when interpolated over time|for each of the viewing
 conditions captured in our input data. By designing our model to preserve the
 structure of real plenoptic functions, we force it to learn time-varying phenomena
 like the motion of shadows according to sun position. This lets us, for example,
-recover plenoptic slices for images taken at dierent times of day (Figure 1,
+recover plenoptic slices for images taken at different times of day (Figure 1,
 bottom row) and interpolate between them to observe how shadows move as
 the day progresses (best seen in our supplemental video). In eect, we learn a
 representation of the scene that can produce high-quality views from a continuum
@@ -243,7 +244,7 @@ We still use VGG in many deep learning image classification problems; however, s
  
 <small><i>https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/</i></small>
 
-For teh future the autors envision enabling even larger changes in viewpoint and illumination, including 4D walkthroughs of large-scale scenes in the future.
+For the future the autors envision enabling even larger changes in viewpoint and illumination, including 4D walkthroughs of large-scale scenes in the future.
    
 ### Relighting with 4D Incident Light Fields
 It is possible to **re-light and de-light real objects** illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
@@ -253,7 +254,6 @@ It is possible to **re-light and de-light real objects** illuminated by a 4D inc
 
 <small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
  
-
 #### Relighting with NeRF
 Another dimension in which NeRF-style methods have been augmented is in how to deal with lighting, typically through latent codes that can be used to re-light a scene. 
 NeRF-W was one of the first follow-up works on NeRF, and optimizes a latent appearance code to enable learning a neural scene representation from less controlled multi-view collections.
