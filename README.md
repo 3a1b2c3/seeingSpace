@@ -300,7 +300,8 @@ Another dimension in which NeRF-style methods have been augmented is in how to d
 NeRF-W was one of the first follow-up works on NeRF, and optimizes a latent appearance code to enable learning a neural scene representation from less controlled multi-view collections.
 
 Neural Reflectance Fields improve on NeRF by adding a local reflection model in addition to density. It yields impressive relighting results, albeit from single point light sources. NeRV uses a second “visibility” MLP to support arbitrary environment lighting and “one-bounce” indirect illumination.
-
+![image](https://user-images.githubusercontent.com/74843139/137583603-a4d4adf6-a4e9-41d4-9e89-10cd382815e4.png)
+<small><i>/i></small>
                                                                                                                                                                                  ![image](https://user-images.githubusercontent.com/74843139/137581185-52635c88-28ce-4997-8bb6-8ac8e7dc108d.png)
                                                                                                                 
 <small><i>/i></small>
