@@ -51,7 +51,7 @@ The two most common approaches to rendering are rasterization and raytracing.
 
 ## The rendering equation<a name="requation"> (published in 1986) 
 
-The rendering equation describes physical light transport for a **single camera or the human vision**.
+The rendering equation describes **physical light transport** for a **single camera or the human vision**.
 A point in the scene is imaged by measuring the **emitted and reflected light** that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
 
 
@@ -159,6 +159,9 @@ The Volume rendering technique known as ray marching. Ray marching is when you s
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300><img src="https://user-images.githubusercontent.com/74843139/135702022-93723d7a-fb76-4380-8150-7aaceff96757.png" width=300>
 
 <small><i>Source: https://github.com/Arne-Petersen/Plenoptic-Simulation, A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
+ 
+ ![image](https://user-images.githubusercontent.com/74843139/137583408-aa016bc7-b9c3-4d4b-94bf-1f570e7923c6.png)
+
  
 ![image](https://user-images.githubusercontent.com/74843139/137581126-fbadc2ff-b2a4-438e-a671-ffa1f36509c0.png)
 <small><i>Source: </small>
