@@ -3,23 +3,22 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below).
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
-
-- [Classic rendering](#classic-rendering)
-- [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
+- [Classic rendering, computer graphics](#classic-rendering--computer-graphics)
+  * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
 - [Neural Rerendering](#neural-rerendering)
+- [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
   * [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
-    + [The rendering equation (published in 1986) describes physical light transport for a single camera or the human vision](#the-rendering-equation--published-in-1986--describes-physical-light-transport-for-a-single-camera-or-the-human-vision)
     + [The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.](#the-plenoptic-function-is-also-inspired-by-multi-faceted---insect-eyes-or-lens-arrays--)
   * [5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)](#5d-and-4d-lightfields--capture-and-rendering--andrey-gershun--1936-)
     + [Capturing, storing and compressing static and dynamic light fields](#capturing--storing-and-compressing-static-and-dynamic-light-fields)
+      - [Neural Scene representation](#neural-scene-representation)
       - [Multi-plane image (MPI) format and DeepMPI representation](#multi-plane-image--mpi--format-and-deepmpi-representation)
       - [Compression](#compression)
     + [Novel (virtual) 2D view synthesis from plenoptic samples synthesize](#novel--virtual--2d-view-synthesis-from-plenoptic-samples-synthesize)
       - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
         * [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--explicitly-reconstructing-the-scene)
-      - [Volume Rendering with Radiance Fields](#volume-rendering-with-radiance-fields)
+      - [Novel view synthesis with neural rendering: Volume Rendering with Radiance Fields](#novel-view-synthesis-with-neural-rendering--volume-rendering-with-radiance-fields)
         * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
-          + [Neural Scene representation](#neural-scene-representation)
           + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
     + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
       - [Relighting with NeRF](#relighting-with-nerf)
@@ -129,7 +128,7 @@ While **special cameras and cameras arrangements** have been build to capture li
 <small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
 
-#### Neural Scene representation
+#### Neural Scene representations
 Networks, Acorn: adaptive coordinate networks for neural scene representation.
 <img src="https://user-images.githubusercontent.com/74843139/137575482-6c542c8d-e4d0-43f9-8638-9bcf58b58ee8.pn" width=400>
  
@@ -194,9 +193,10 @@ It allows real-time synthesis of photorealistic new views.
 
 <img src="https://user-images.githubusercontent.com/74843139/137442095-16fac449-f819-4852-b749-16185cdec895.png" width=300><img src="https://user-images.githubusercontent.com/74843139/135739158-186170f4-ad7f-4734-aceb-24a7db7c02dd.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/137458615-ca69a159-670f-474f-ae14-2171ec577898.png" width=400>
 
- <small><i></i></small>
+ <small><i>Advances in Neural Rendering, 2021, ttps://www.neuralrender.com/</i></small>
 
-<img src="https://user-images.githubusercontent.com/74843139/137470543-bb2af13d-b18d-49cf-bc2d-a0cdd88941a9.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/137470543-bb2af13d-b18d-49cf-bc2d-a0cdd88941a9.png" width=400>![image](https://user-images.githubusercontent.com/74843139/137576118-dcc2167e-5809-4099-83b2-07abf1f39d61.png)
+
  
 <small><i></i></small>
 
