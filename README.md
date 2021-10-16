@@ -341,11 +341,10 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 
 # Conclusion
 With neural rendering, we no longer need to physically model the scene and simulate the light transport, as this knowledge is now stored implicitly inside the weights of a neural network. With neural rendering, the compute required to render an image is also no longer tied to the complexity of the scene (the number of objects, lights, and materials), but rather the size of the neural network. 
+                                                                                                                
 Neural rendering has already enabled applications that were **previously intractable**, such as rendering
-of digital avatars without any manual modeling. We believe
-that neural rendering will have a profound impact in making complex
-photo and video editing tasks accessible to a much broader
-audience. 
+of digital avatars without any manual modeling. Neural rendering coukld have a profound impact in making complex
+photo and video editing tasks accessible to a much broader audience. 
 
 
 <img src="https://user-images.githubusercontent.com/74843139/137446172-b1f57e66-fed8-4e9a-bba0-6ff0e686e54a.png" width=500>
@@ -383,8 +382,6 @@ audience.
 * https://paperswithcode.com/task/neural-rendering
 * https://medium.com/mlearning-ai/what-is-neural-rendering-e25371afc771
 * https://www.lightfieldlab.com Lightfield displays
-* Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152  https://www.neuralrender.com/
- * Video1 https://www.youtube.com/watch?v=otly9jcZ0Jg  2:44  
- * Video2 https://www.youtube.com/watch?v=aboFl5ozImM
+* Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152,  https://www.neuralrender.com/
 * https://bmild.github.io/
 
