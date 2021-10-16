@@ -55,7 +55,7 @@ The rendering equation describes physical light transport for a **single camera 
 A point in the scene is imaged by measuring the **emitted and reflected light** that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
 
 
-<img src="https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png" width=350><img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png" width=400><img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=400>
  
 <small><i>Source:https://www.mdpi.com/2072-4292/13/13/2640, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
@@ -111,6 +111,7 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 
     
 ## 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
+ If Vx, Vy, Vz are fixed, the plenoptic function describes a panorama at fixed viewpoint (Vx, Vy, Vz). A regular image with a limited field of view can be regarded as an incomplete plenoptic sample at a fixed viewpoint.
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
 A hologram is a photographic recording of a light field, rather than an image formed by a lens. 
 
