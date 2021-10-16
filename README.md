@@ -272,6 +272,9 @@ We still use VGG in many deep learning image classification problems; however, s
 For the future the autors envision enabling even larger changes in viewpoint and illumination, including 4D walkthroughs of large-scale scenes in the future.
                                                                                                                 
 #### Towards Instant 3D Capture (with a cell phone): Nerfies
+![image](https://user-images.githubusercontent.com/74843139/137580135-e9373469-3c76-42ff-b44c-7b11878e776c.png)
+
+<small><i></i></small>
                                                                                                                 
 ### Relighting with 4D Incident Light Fields
 It is possible to **re-light and de-light real objects** illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
