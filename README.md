@@ -61,7 +61,7 @@ A point in the scene is imaged by measuring the **emitted and reflected light** 
  
  # Neural Rerendering
  
-Neural Rerendering combines classical 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views. In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.
+Neural Rerendering is a relative new technique that combines classical 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views. In contrast to **Neural Image-based Rendering (N-IBR)**, neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.
 A typical neural rendering approach takes as input images corresponding to certain scene conditions (for example, viewpoint, lighting, layout, etc.), builds a "neural” scene representation from them, and "renders” this representation under novel scene properties to synthesize novel images.
 The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
  
@@ -81,8 +81,6 @@ In contrast to classical rendering, which projects 3D content to the 2D plane, i
 Image-based rendering is important both in the field of computer graphics and computer vision, and it is also widely used in virtual reality technology. 
 
 
- 
- 
 ## The Plenoptic function (Adelson and Bergen, 1991)
 The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “number of photons” that map from the three-dimensional scene.
  
@@ -110,7 +108,7 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 
     
 ## 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
- If Vx, Vy, Vz are fixed, the plenoptic function describes a panorama at fixed viewpoint (Vx, Vy, Vz). A regular image with a limited field of view can be regarded as an incomplete plenoptic sample at a fixed viewpoint.
+ If Vx, Vy, Vz are fixed, the plenoptic function describes a **panorama** at fixed viewpoint (Vx, Vy, Vz). A regular image with a limited field of view can be regarded as an incomplete plenoptic sample at a fixed viewpoint. As long as we stay outside the convex hull of an object or a scene, if we fix the location of the camera on a plane, we can use two parallel planes (u,v) and (s,t) to simplify the complete 5D plenoptic function to a 4D lightfield plenoptic function.
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
 A hologram is a photographic recording of a light field, rather than an image formed by a lens. 
 
@@ -199,10 +197,11 @@ It allows real-time synthesis of photorealistic new views.
  
 <small><i></i></small>
 
-Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using periodic activation functions, i.e., Fourier Features. 
-the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. T Training and rendering is slow and it can only represent static scenes. It “bakes in” lighting.  A trained NeRF representation does not generalize to other scenes/objects.
-A good overview can be found here "NeRF Explosion 2020" https://dellaert.github.io/NeRF/
-
+**Neural volume rendering** refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using **periodic activation functions, i.e., Fourier Features**. 
+The impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color yields photoreastic results.
+The inital model had limitions: Training and rendering is slow and it can only represent static scenes. It “bakes in” lighting. A trained NeRF representation does not generalize to other scenes or objects. All of these problems have since developed further, there are even realtime nerfs now.  
+A good overview can be found in "NeRF Explosion 2020", https://dellaert.github.io/NeRF.
+ 
 https://user-images.githubusercontent.com/74843139/135747420-4d91bc80-2893-44a4-8d32-16bf7024b4f2.mp4
  
 <img src="https://user-images.githubusercontent.com/74843139/137474885-432d596d-3820-4932-854e-61652dfae9a2.png" width=400>
