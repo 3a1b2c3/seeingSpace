@@ -293,6 +293,9 @@ It is possible to **re-light and de-light real objects** illuminated by a 4D inc
 
 <small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
  
+![image](https://user-images.githubusercontent.com/74843139/137584537-473c169d-bfeb-4f8e-a6ef-a5b80d7e71f1.png)
+
+                                                                                                                ![image](https://user-images.githubusercontent.com/74843139/137585106-e23fda39-222b-45ae-a3e0-f6bf6b5e6ef0.png)
 
                                                                                                                 
 #### Relighting with NeRF
@@ -300,7 +303,9 @@ Another dimension in which NeRF-style methods have been augmented is in how to d
 NeRF-W was one of the first follow-up works on NeRF, and optimizes a latent appearance code to enable learning a neural scene representation from less controlled multi-view collections.
 
 Neural Reflectance Fields improve on NeRF by adding a local reflection model in addition to density. It yields impressive relighting results, albeit from single point light sources. NeRV uses a second “visibility” MLP to support arbitrary environment lighting and “one-bounce” indirect illumination.
+![image](https://user-images.githubusercontent.com/74843139/137584259-4e0a264d-8758-4775-aa75-5ea72c18e585.png)
 
+                                                                                                                
 ![image](https://user-images.githubusercontent.com/74843139/137581185-52635c88-28ce-4997-8bb6-8ac8e7dc108d.png)
                                                                                                                 
 <small><i>/i></small>
@@ -321,6 +326,8 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
        
  #### Editing NeRF
                                                                                                                 ![image](https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png)
+
+                                                                                                                ![image](https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png)
 
                                                                                                                 
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
@@ -345,7 +352,7 @@ Lidar can be used to mesh out 3D objects and rooms and layer photo imagery on to
 Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly.
 
 Photogrammetry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlusion or dense vegetation can block the camera's line of sight or limit light required for good result
-See [Lidar](#lidar) for alternatives.
+See [Lidar](#lidar) for alternatives. Lighting is backed into these reconstructed scenes.
                         
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
  
