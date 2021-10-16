@@ -311,7 +311,12 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
 
 ![image](https://user-images.githubusercontent.com/74843139/137583652-53fa4751-18cc-45f9-a569-6d7505111c1c.png)
 
-                                                                                                                <small><i>/i></small>
+<small><i>/i></small>
+
+![image](https://user-images.githubusercontent.com/74843139/137583799-8fd93d70-1930-47b1-b313-cc77c92ec32d.png)
+
+<small><i>/i></small>
+                                                                                                                
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
 ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
