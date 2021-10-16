@@ -300,9 +300,8 @@ Another dimension in which NeRF-style methods have been augmented is in how to d
 NeRF-W was one of the first follow-up works on NeRF, and optimizes a latent appearance code to enable learning a neural scene representation from less controlled multi-view collections.
 
 Neural Reflectance Fields improve on NeRF by adding a local reflection model in addition to density. It yields impressive relighting results, albeit from single point light sources. NeRV uses a second “visibility” MLP to support arbitrary environment lighting and “one-bounce” indirect illumination.
-![image](https://user-images.githubusercontent.com/74843139/137583603-a4d4adf6-a4e9-41d4-9e89-10cd382815e4.png)
-<small><i>/i></small>
-                                                                                                                                                                                 ![image](https://user-images.githubusercontent.com/74843139/137581185-52635c88-28ce-4997-8bb6-8ac8e7dc108d.png)
+
+![image](https://user-images.githubusercontent.com/74843139/137581185-52635c88-28ce-4997-8bb6-8ac8e7dc108d.png)
                                                                                                                 
 <small><i>/i></small>
                                                                                                               
@@ -310,6 +309,9 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
 
 <small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
 
+![image](https://user-images.githubusercontent.com/74843139/137583652-53fa4751-18cc-45f9-a569-6d7505111c1c.png)
+
+                                                                                                                <small><i>/i></small>
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
 ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
@@ -362,7 +364,7 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 <small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
 
 # Conclusion
-With neural rendering, we no longer need to physically model the scene and simulate the light transport, as this knowledge is now stored implicitly inside the weights of a neural network. With neural rendering, the compute required to render an image is also no longer tied to the complexity of the scene (the number of objects, lights, and materials), but rather the size of the neural network. 
+With neural rendering we no longer need to physically model the scene and simulate the light transport, as this knowledge is now stored implicitly inside the weights of a neural network. The compute required to render an image is also no longer tied to the complexity of the scene (the number of objects, lights, and materials), but rather the size of the neural network. 
                                                                                                                 
 Neural rendering has already enabled applications that were **previously intractable**, such as rendering
 of digital avatars without any manual modeling. Neural rendering coukld have a profound impact in making complex
