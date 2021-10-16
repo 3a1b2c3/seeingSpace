@@ -16,7 +16,8 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
       - [Compression](#compression)
     + [Novel (virtual) 2D view synthesis from plenoptic samples synthesize](#novel--virtual--2d-view-synthesis-from-plenoptic-samples-synthesize)
       - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
-        * [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--explicitly-reconstructing-the-scene)
+        * [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--
+ ly-reconstructing-the-scene)
       - [Novel view synthesis with neural rendering: Volume Rendering with Radiance Fields](#novel-view-synthesis-with-neural-rendering--volume-rendering-with-radiance-fields)
         * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
           + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
@@ -173,6 +174,8 @@ The key concept behind neural rendering approaches is that they are differentiab
 They can be classified into explicit and implicit representations. Explicit methods describe scenes as a collection of geometric primitives, such as triangles,
 point-like primitives, or higher-order parametric surfaces.
 
+ ![image](https://user-images.githubusercontent.com/74843139/137583225-4c544c17-9082-43fe-812b-5ea2faef3660.png)
+<small><i>Source: </small>
 One popular class of approaches uses mesh-based representations of scenes with either use [48] or view-dependent appearance. Differentiable rasterizers or pathtracers [22,30] can directly optimize mesh representations to reproduce a set of input images using gradient descent.
 However, gradient-based mesh optimization based on image reprojection is often dicult, likely because of local minima or poor conditioning of the loss landscape. Furthermore, this strategy requires a template mesh with xed topology to be provided as an initialization before optimization [22], which is typically unavailable for unconstrained real-world scenes.
 
@@ -250,7 +253,7 @@ bottom row) and interpolate between them to observe how shadows move as
 the day progresses (best seen in our supplemental video). In eect, we learn a
 representation of the scene that can produce high-quality views from a continuum
 of viewpoints and viewing conditions that vary with time.
-Our work makes three key contributions: rst, a representation, called a
+Our work makes three key contributions: first, a representation, called a
 DeepMPI, for neural rendering that extends prior work on multiplane images
 (MPIs) [68] to model viewing conditions that vary with time; second, a method
 for training DeepMPIs on sparse, unstructured crowdsampled data that is unreg-
