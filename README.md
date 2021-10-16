@@ -287,6 +287,9 @@ It is possible to **re-light and de-light real objects** illuminated by a 4D inc
 
 <small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
  
+                                                                                                                ![image](https://user-images.githubusercontent.com/74843139/137581185-52635c88-28ce-4997-8bb6-8ac8e7dc108d.png)
+<small><i>/i></small>
+                                                                                                                
 #### Relighting with NeRF
 Another dimension in which NeRF-style methods have been augmented is in how to deal with lighting, typically through latent codes that can be used to re-light a scene. 
 NeRF-W was one of the first follow-up works on NeRF, and optimizes a latent appearance code to enable learning a neural scene representation from less controlled multi-view collections.
