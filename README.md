@@ -76,10 +76,16 @@ The learned scene representation is not restricted by simple scene modeling appr
 
 # Neural Rerendering
 Neural Rerendering combines classical 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views.
-In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.  <img src="https://user-images.githubusercontent.com/74843139/137432875-74ca25c1-dcf1-4126-ac03-ad5c5c703fce.png" width=550>
+In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.  
+ 
+<img src="https://user-images.githubusercontent.com/74843139/137432875-74ca25c1-dcf1-4126-ac03-ad5c5c703fce.png" width=550>
+<small><i></i></small>
+ 
 Artifacts such as ghosting, blur, holes, or seams can arise due to view-dependent effects, imperfect proxy geometry or too few source images. To address these issues, N-IBR methods replace the heuristics often found in classical IBR methods with learned blending functions or corrections that take into account view-dependent effects.
+ 
 <img src="https://user-images.githubusercontent.com/74843139/137405902-b86bb97a-ab23-4d3c-86d6-a447aa1aabb7.png" width=300><img src="https://user-images.githubusercontent.com/74843139/137408495-4ab043d4-ddd8-420d-9d12-f768b6336b5c.png" width=300>
-
+<small><i></i></small>
+ 
  
 ## The Plenoptic function (Adelson and Bergen, 1991)
 The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “number of photons” that map from the three-dimensional scene.
@@ -175,7 +181,9 @@ Differentiable Rendering promises to close the loop between computer Vision and 
 
 #### Novel view synthesis with neural rendering: Volume Rendering with Radiance Fields
  In this problem, a neural network learns to render a scene from an arbitrary viewpoint. Slides 3 and 4 are figures from two great papers on this topic: one from Google Research [1] and the other from Facebook Reality Labs [2]. Both of these works use a volume rendering technique known as ray marching. Ray marching is when you shoot out a ray from the observer (camera) through a 3D volume in space and ask a function: what is the color and opacity at this particular point in space? Neural rendering takes the next step by using a neural network to approximate this function.
-![image](https://user-images.githubusercontent.com/74843139/137447390-2134a9a9-50a6-4911-93d7-f87f7114739f.png)
+
+<img src="https://user-images.githubusercontent.com/74843139/137447390-2134a9a9-50a6-4911-93d7-f87f7114739f.png" width=300>
+<small><i></i></small>
 
 ###### Neural Scene representation
 Networks, Acorn: adaptive coordinate networks for neural scene representation.
@@ -186,17 +194,21 @@ A recent and popular **volumetric rendering technique** to generate images is Ne
 The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
 It allows real-time synthesis of photorealistic new views.
 
-<img src="https://user-images.githubusercontent.com/74843139/137442095-16fac449-f819-4852-b749-16185cdec895.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/137442095-16fac449-f819-4852-b749-16185cdec895.png" width=300><img src="https://user-images.githubusercontent.com/74843139/135739158-186170f4-ad7f-4734-aceb-24a7db7c02dd.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/137458615-ca69a159-670f-474f-ae14-2171ec577898.png" width=400>
 
-<img src="https://user-images.githubusercontent.com/74843139/135739158-186170f4-ad7f-4734-aceb-24a7db7c02dd.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/137458615-ca69a159-670f-474f-ae14-2171ec577898.png" width=400>
-![image](https://user-images.githubusercontent.com/74843139/137470543-bb2af13d-b18d-49cf-bc2d-a0cdd88941a9.png)
+ <small><i></i></small>
+
+<img src="https://user-images.githubusercontent.com/74843139/137470543-bb2af13d-b18d-49cf-bc2d-a0cdd88941a9.png" width=400>
+ 
+<small><i></i></small>
 
 Neural volume rendering refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using periodic activation functions, i.e., Fourier Features. 
 the impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color. There are some bells and whistles, notably the positional encoding and a stratified sampling scheme, but many researchers were taken aback (I think) that such a simple architecture could yield such impressive results. T Training and rendering is slow and it can only represent static scenes. It “bakes in” lighting.  A trained NeRF representation does not generalize to other scenes/objects.
 A good overview can be found here "NeRF Explosion 2020" https://dellaert.github.io/NeRF/
 
 https://user-images.githubusercontent.com/74843139/135747420-4d91bc80-2893-44a4-8d32-16bf7024b4f2.mp4
-![image](https://user-images.githubusercontent.com/74843139/137474885-432d596d-3820-4932-854e-61652dfae9a2.png)
+ 
+<img src="https://user-images.githubusercontent.com/74843139/137474885-432d596d-3820-4932-854e-61652dfae9a2.png" width=400>
 
 <small><i>https://dellaert.github.io/NeRF/</i></small>
  
@@ -219,9 +231,11 @@ mask out transient objects such as people and cars during training and evaluatio
 <img src="https://research.cs.cornell.edu/crowdplenoptic/teaser/coeur_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/trevi_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/rock_teaser.gif)![image]( https://research.cs.cornell.edu/crowdplenoptic/teaser/pantheon_teaser.gif)
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  imagenet-vgg-verydeep-19.mat
+          
 <img src="https://user-images.githubusercontent.com/74843139/135809964-0501661b-2cfa-4ab2-a818-0f60bd6fd152.png" width=500>
 
 <small><i>Crowdsampling the Plenoptic Function, 2020</i></small>
+                                                                                                                
 unsupervised manner. Our approach takes unstructured Internet photos spanning
 some range of time-varying appearance in a scene and learns how to reconstruct a
 plenoptic slice, a representation of the light field that respects temporal structure
@@ -239,13 +253,16 @@ DeepMPI, for neural rendering that extends prior work on multiplane images
 (MPIs) [68] to model viewing conditions that vary with time; second, a method
 for training DeepMPIs on sparse, unstructured crowdsampled data that is unreg-
 1 [1] describes the plenoptic function as 7D, but we can reduce this to a 4D color lightfield supplemented by time by applying the later observations of [33].
-Crowdsampling the Plenoptic Function 3
-istered in time;
+Crowdsampling the Plenoptic Function 3 istered in time
+                                                                                                                
 <img src="https://user-images.githubusercontent.com/74843139/135751323-ef8582a0-575d-41fb-9a40-861fbbbd35d3.png" width=500>
+                                                                                                                
 <small><i>nerf in the wild</i></small>
 
 <img src="https://user-images.githubusercontent.com/74843139/135836081-9dacc9ba-0ddb-4665-8e54-359b1e500dfa.png" width=500>
-                                                                                                               
+
+<small><i>nerf in the wild</i></small>
+                                                                                                                
 Unfortunately, there are two major drawbacks with VGGNet:     It is painfully slow to train.
 The network architecture weights themselves are quite large (in terms of disk/bandwidth).
 Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG16 and 574MB for VGG19. This makes deploying VGG a tiresome task.
@@ -276,9 +293,11 @@ ToF refers to the use of the **speed of light or even sound** to determine dista
 ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
 
 <img src="https://user-images.githubusercontent.com/74843139/134803482-e283e016-a50e-4ae9-aca7-d35128ba9554.png" width=500>
+                                                                                                                
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
     
 <img src="(https://user-images.githubusercontent.com/74843139/134806495-5d40deff-328c-42b5-ada4-2035399abf1f.png" width=200>
+                                                                                                                 
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
 **LiDAR**<a name="lidar"> stands for **light detection and ranging**, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse. Time-of-flight cameras on smartphones tend to be used to improve focus accuracy and speed, in particular better low-light focus.
@@ -292,6 +311,7 @@ Photogrammetry is the science of **reconstructing objects and environments that 
 
 Photogrammetry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlusion or dense vegetation can block the camera's line of sight or limit light required for good result
 See [Lidar](#lidar) for alternatives.
+                        
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
  
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
@@ -317,7 +337,7 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 
 <img src="https://user-images.githubusercontent.com/74843139/135749450-762580f6-30d8-478c-b45c-0372756dba53.png" width=500>
  
- <small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
+<small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
 
 # Conclusion
 With neural rendering, we no longer need to physically model the scene and simulate the light transport, as this knowledge is now stored implicitly inside the weights of a neural network. With neural rendering, the compute required to render an image is also no longer tied to the complexity of the scene (the number of objects, lights, and materials), but rather the size of the neural network. 
@@ -327,7 +347,10 @@ that neural rendering will have a profound impact in making complex
 photo and video editing tasks accessible to a much broader
 audience. 
 
-![image](https://user-images.githubusercontent.com/74843139/137446172-b1f57e66-fed8-4e9a-bba0-6ff0e686e54a.png)
+
+<img src="https://user-images.githubusercontent.com/74843139/137446172-b1f57e66-fed8-4e9a-bba0-6ff0e686e54a.png" width=500>
+ 
+<small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
 
 # Important concepts
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
