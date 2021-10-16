@@ -79,12 +79,12 @@ Neural Rerendering combines classical 3D representation and renderer with deep n
 In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.  
  
 <img src="https://user-images.githubusercontent.com/74843139/137432875-74ca25c1-dcf1-4126-ac03-ad5c5c703fce.png" width=550>
-<small><i></i></small>
+<small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
 Artifacts such as ghosting, blur, holes, or seams can arise due to view-dependent effects, imperfect proxy geometry or too few source images. To address these issues, N-IBR methods replace the heuristics often found in classical IBR methods with learned blending functions or corrections that take into account view-dependent effects.
  
 <img src="https://user-images.githubusercontent.com/74843139/137405902-b86bb97a-ab23-4d3c-86d6-a447aa1aabb7.png" width=300><img src="https://user-images.githubusercontent.com/74843139/137408495-4ab043d4-ddd8-420d-9d12-f768b6336b5c.png" width=300>
-<small><i></i></small>
+<small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
  
 ## The Plenoptic function (Adelson and Bergen, 1991)
