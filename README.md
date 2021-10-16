@@ -37,28 +37,23 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 
 
 # Classic rendering, computer graphics
-Classical computer graphics methods approximate the physical process of image formation in the real world: light sources emit
-photons that interact with the objects in the scene, as a function
-of their geometry and material properties, before being recorded
-by a camera. This process is known as light transport.
+Classical computer graphics methods approximate the physical process of image formation in the real world: light sources emit photons that interact with the objects in the scene, as a function of their geometry and material properties, before being recorded by a camera. This process is known as **light transport**.
+The process of transforming a scene definition including cameras, lights, surface geometry and material into a simulated camera image is known as **rendering**.
 
-The process of transforming a scene definition including cameras,
-lights, surface geometry and material into a simulated camera image
-is known as rendering. The two most common approaches to
-rendering are rasterization and raytracing: Rasterization is a feedforward
-process in which geometry is transformed into the image
-domain, sometimes in back-to-front order known as painter’s algorithm.
-Raytracing is a process in which rays are cast backwards
-from the image pixels into a virtual scene, and reflections and refractions
-are simulated by recursively casting new rays from the intersections with the geometry
+The two most common approaches to rendering are rasterization and raytracing.
+-**Rasterization** is a feedforward process in which geometry is transformed into the image domain, sometimes in back-to-front order known as painter’s algorithm. 
+-**Raytracing** is a process in which rays are cast backwards from the image pixels into a virtual scene, and reflections and refractions are simulated by recursively casting new rays from the intersections with the geometry.
+
 
 <img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=400>
  
 <small><i>Source: Raytracing, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 
-## The rendering equation<a name="requation">(published in 1986) 
-describes physical light transport for a single camera or the human vision.
-A point in the scene is imaged by measuring the **emitted and reflected light** that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view. 
+## The rendering equation<a name="requation"> (published in 1986) 
+
+The rendering equation describes physical light transport for a **single camera or the human vision**.
+A point in the scene is imaged by measuring the **emitted and reflected light** that converges on the sensor plane. **Radiance (L)** represents the ray strength, measuring the combined angular and spatial power densities. Radiance can be used to indicate how much of the power emitted by the light source that is reflected, transmitted or absorbed by a surface will be captured by a camera facing that surface from a specified angle of view.
+
 
 <img src="https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png" width=350><img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=300>
  
@@ -68,13 +63,15 @@ A point in the scene is imaged by measuring the **emitted and reflected light** 
 Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
 knowledge about the class of objects or scenes being imaged, deliver estimates of a specific object or scene presented to the imaging system.
 
-In contrast to classical rendering, which projects 3D content to the 2D plane, image-based rendering techniques generate novel images by transforming an existing set of images, typically by warping and compositing them together.
+In contrast to classical rendering, which projects 3D content to the 2D plane, image-based rendering techniques generate novel images by transforming an existing set of images, typically by warping and compositing them together.The essence of image-based rendering technology is to obtain all the visual information of the scene directly through images.
+Image-based rendering is important both in the field of computer graphics and computer vision, and it is also widely used in virtual reality technology. 
 
+# Neural Rerendering
+ 
 A typical neural rendering approach takes as input images corresponding to certain scene conditions (for example, viewpoint, lighting, layout, etc.), builds a **"neural” scene representation** from them, and "renders” this representation under novel scene properties to synthesize novel images. 
 
 The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
 
-# Neural Rerendering
 Neural Rerendering combines classical 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views.
 In contrast to Neural Image-based Rendering (N-IBR), neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.  
  
