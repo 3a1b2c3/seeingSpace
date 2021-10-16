@@ -238,7 +238,7 @@ mask out transient objects such as people and cars during training and evaluatio
 
 <small><i>Crowdsampling the Plenoptic Function, 2020</i></small>
                                                                                                                 
-unsupervised manner. Our approach takes unstructured Internet photos spanning
+unsupervised manner. The approach takes unstructured Internet photos spanning
 some range of time-varying appearance in a scene and learns how to reconstruct a
 plenoptic slice, a representation of the light field that respects temporal structure
 in the plenoptic function when interpolated over time|for each of the viewing
@@ -287,8 +287,7 @@ It is possible to **re-light and de-light real objects** illuminated by a 4D inc
 
 <small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
  
-                                                                                                                ![image](https://user-images.githubusercontent.com/74843139/137581185-52635c88-28ce-4997-8bb6-8ac8e7dc108d.png)
-<small><i>/i></small>
+
                                                                                                                 
 #### Relighting with NeRF
 Another dimension in which NeRF-style methods have been augmented is in how to deal with lighting, typically through latent codes that can be used to re-light a scene. 
@@ -296,7 +295,13 @@ NeRF-W was one of the first follow-up works on NeRF, and optimizes a latent appe
 
 Neural Reflectance Fields improve on NeRF by adding a local reflection model in addition to density. It yields impressive relighting results, albeit from single point light sources. NeRV uses a second “visibility” MLP to support arbitrary environment lighting and “one-bounce” indirect illumination.
 
+                                                                                                                                                                                 ![image](https://user-images.githubusercontent.com/74843139/137581185-52635c88-28ce-4997-8bb6-8ac8e7dc108d.png)
+                                                                                                                
+<small><i>/i></small>
+                                                                                                              
+![image](https://user-images.githubusercontent.com/74843139/137581670-950f5679-921c-48db-b0c1-5dff7997d4ef.png)
 
+<small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
 
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
