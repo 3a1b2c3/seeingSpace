@@ -51,9 +51,10 @@ domain, sometimes in back-to-front order known as painter’s algorithm.
 Raytracing is a process in which rays are cast backwards
 from the image pixels into a virtual scene, and reflections and refractions
 are simulated by recursively casting new rays from the intersections with the geometry
+
 <img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=400>
  
-<small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+<small><i>Source: Raytracing, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 
 ## The rendering equation<a name="requation">(published in 1986) 
 describes physical light transport for a single camera or the human vision.
