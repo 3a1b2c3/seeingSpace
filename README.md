@@ -159,6 +159,9 @@ The Volume rendering technique known as ray marching. Ray marching is when you s
 
 <small><i>Source: https://github.com/Arne-Petersen/Plenoptic-Simulation, A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
  
+![image](https://user-images.githubusercontent.com/74843139/137581083-deed6fab-b24c-4860-8bfc-a7794b05f662.png)
+<small><i>Source: </small>
+ 
 Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most image based renering algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
 
 **Camera calibration** is often assumed to be prerequisite, while in practise, this information is rarely accessible, and requires to be pre-computed with conventional techniques, such as SfM.
