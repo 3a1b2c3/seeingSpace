@@ -270,7 +270,8 @@ We still use VGG in many deep learning image classification problems; however, s
 <small><i>https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/</i></small>
 
 For the future the autors envision enabling even larger changes in viewpoint and illumination, including 4D walkthroughs of large-scale scenes in the future.
-   
+#### Towards Instant 3D Capture: Nerfies
+                                                                                                                
 ### Relighting with 4D Incident Light Fields
 It is possible to **re-light and de-light real objects** illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
 
