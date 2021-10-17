@@ -162,10 +162,10 @@ The Volume rendering technique known as ray marching. Ray marching is when you s
 
 <small><i>Source: https://github.com/Arne-Petersen/Plenoptic-Simulation, A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
  
- ![image](https://user-images.githubusercontent.com/74843139/137583408-aa016bc7-b9c3-4d4b-94bf-1f570e7923c6.png)
-
+<img src="https://user-images.githubusercontent.com/74843139/137583408-aa016bc7-b9c3-4d4b-94bf-1f570e7923c6.png" width=500>
+<small><i>Source: </small>
  
-![image](https://user-images.githubusercontent.com/74843139/137581126-fbadc2ff-b2a4-438e-a671-ffa1f36509c0.png)
+<img src="https://user-images.githubusercontent.com/74843139/137581126-fbadc2ff-b2a4-438e-a671-ffa1f36509c0.png" width=500>
 <small><i>Source: </small>
  
 Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most image based renering algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
@@ -178,9 +178,10 @@ The key concept behind neural rendering approaches is that they are differentiab
 
 They can be classified into explicit and implicit representations. Explicit methods describe scenes as a collection of geometric primitives, such as triangles,
 point-like primitives, or higher-order parametric surfaces.
-
- ![image](https://user-images.githubusercontent.com/74843139/137583225-4c544c17-9082-43fe-812b-5ea2faef3660.png)
+ 
+<img src="https://user-images.githubusercontent.com/74843139/137583225-4c544c17-9082-43fe-812b-5ea2faef3660.png" width=300>
 <small><i>Source: </small>
+ 
 One popular class of approaches uses mesh-based representations of scenes with either use [48] or view-dependent appearance. Differentiable rasterizers or pathtracers [22,30] can directly optimize mesh representations to reproduce a set of input images using gradient descent.
 However, gradient-based mesh optimization based on image reprojection is often dicult, likely because of local minima or poor conditioning of the loss landscape. Furthermore, this strategy requires a template mesh with xed topology to be provided as an initialization before optimization [22], which is typically unavailable for unconstrained real-world scenes.
 
@@ -231,7 +232,7 @@ analytically enforce a truth about the world in the network structure,
 frees up network capacity, and leads to better generalization,
 especially if only limited training data is available.
 
-![image](https://user-images.githubusercontent.com/74843139/137445499-1d2f3bae-9aab-46b5-81c2-9f4c4d3fa9e3.png)
+<img src="https://user-images.githubusercontent.com/74843139/137445499-1d2f3bae-9aab-46b5-81c2-9f4c4d3fa9e3.png" width=400>
 
 ###### Crowdsampling the Plenoptic Function with NeRF (published 2020)
 Given a large number of **tourist photos taken at different times of day**, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across a variety of times of day and lighting conditions.
