@@ -281,7 +281,7 @@ We still use VGG in many deep learning image classification problems; however, s
 For the future the autors envision enabling even larger changes in viewpoint and illumination, including 4D walkthroughs of large-scale scenes in the future.
                                                                                                                 
 #### Towards Instant 3D Capture (with a cell phone): Nerfies
-![image](https://user-images.githubusercontent.com/74843139/137580135-e9373469-3c76-42ff-b44c-7b11878e776c.png)
+<img src="https://user-images.githubusercontent.com/74843139/137580135-e9373469-3c76-42ff-b44c-7b11878e776c.png" width=500>
 
 <small><i></i></small>
                                                                                                                 
@@ -293,9 +293,9 @@ It is possible to **re-light and de-light real objects** illuminated by a 4D inc
 
 <small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
  
-![image](https://user-images.githubusercontent.com/74843139/137584537-473c169d-bfeb-4f8e-a6ef-a5b80d7e71f1.png)
+<img src="https://user-images.githubusercontent.com/74843139/137584537-473c169d-bfeb-4f8e-a6ef-a5b80d7e71f1.png" width=500>
 
-                                                                                                                ![image](https://user-images.githubusercontent.com/74843139/137585106-e23fda39-222b-45ae-a3e0-f6bf6b5e6ef0.png)
+<img src="https://user-images.githubusercontent.com/74843139/137585106-e23fda39-222b-45ae-a3e0-f6bf6b5e6ef0.png" width=500>
 
                                                                                                                 
 #### Relighting with NeRF
@@ -303,31 +303,31 @@ Another dimension in which NeRF-style methods have been augmented is in how to d
 NeRF-W was one of the first follow-up works on NeRF, and optimizes a latent appearance code to enable learning a neural scene representation from less controlled multi-view collections.
 
 Neural Reflectance Fields improve on NeRF by adding a local reflection model in addition to density. It yields impressive relighting results, albeit from single point light sources. NeRV uses a second “visibility” MLP to support arbitrary environment lighting and “one-bounce” indirect illumination.
-![image](https://user-images.githubusercontent.com/74843139/137584259-4e0a264d-8758-4775-aa75-5ea72c18e585.png)
+<img src="https://user-images.githubusercontent.com/74843139/137584259-4e0a264d-8758-4775-aa75-5ea72c18e585.png " width=500>
 
                                                                                                                 
-![image](https://user-images.githubusercontent.com/74843139/137581185-52635c88-28ce-4997-8bb6-8ac8e7dc108d.png)
+<img src="https://user-images.githubusercontent.com/74843139/137581185-52635c88-28ce-4997-8bb6-8ac8e7dc108d.png" width=500>
                                                                                                                 
 <small><i>/i></small>
                                                                                                               
-![image](https://user-images.githubusercontent.com/74843139/137581670-950f5679-921c-48db-b0c1-5dff7997d4ef.png)
+<img src="https://user-images.githubusercontent.com/74843139/137581670-950f5679-921c-48db-b0c1-5dff7997d4ef.png" width=500>
 
 <small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
 
-![image](https://user-images.githubusercontent.com/74843139/137583652-53fa4751-18cc-45f9-a569-6d7505111c1c.png)
+<img src="https://user-images.githubusercontent.com/74843139/137583652-53fa4751-18cc-45f9-a569-6d7505111c1c.png" width=500>
 
 <small><i>/i></small>
 
-![image](https://user-images.githubusercontent.com/74843139/137583799-8fd93d70-1930-47b1-b313-cc77c92ec32d.png)
+<img src="https://user-images.githubusercontent.com/74843139/137583799-8fd93d70-1930-47b1-b313-cc77c92ec32d.png" width=500>
 
 <small><i>/i></small>
                                                                                                                 
-![image](https://user-images.githubusercontent.com/74843139/137583877-47f21587-0bdb-412c-b035-1d906ae65d85.png)
+<img src="https://user-images.githubusercontent.com/74843139/137583877-47f21587-0bdb-412c-b035-1d906ae65d85.png" width=500>
        
  #### Editing NeRF
-                                                                                                                ![image](https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png)
+<img src="https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png" width=500>
 
-                                                                                                                ![image](https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png)
+<img src="https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png" width=500>
 
                                                                                                                 
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
@@ -357,7 +357,8 @@ See [Lidar](#lidar) for alternatives. Lighting is backed into these reconstructe
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
  
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
-
+A historicaloverview can be found https://alicevision.org/#history.
+                                                                                                                
 ## Computional imaging for machines (not human observer)
 ### Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)
 The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
