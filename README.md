@@ -348,7 +348,8 @@ See [Lidar](#lidar) for alternatives. Lighting is backed into these reconstructe
 <img src="https://user-images.githubusercontent.com/74843139/134804512-4c7ab394-319e-4952-895c-405799bf5073.png" width=300>
  
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
-A historicaloverview can be found https://alicevision.org/#history.
+ 
+A historical overview can be found at https://alicevision.org/#history.
                                                                                                                 
 ## Computional imaging for machines (not human observer)
 ### Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)
