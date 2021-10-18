@@ -380,6 +380,8 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 <small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
 
 # Conclusion
+ Over the past year (2020), we’ve learned how to make the rendering process differentiable, and turn it into a deep learning module. This sparks the imagination, because the deep learning motto is: “If it’s differentiable, we can learn through it”. If we know how to differentially go from 3D to 2D, it means we can use deep learning and backpropagation to go back from 2D to 3D as well.
+ 
 With neural rendering we no longer need to physically model the scene and simulate the light transport, as this knowledge is now stored implicitly inside the weights of a neural network. The compute required to render an image is also no longer tied to the complexity of the scene (the number of objects, lights, and materials), but rather the size of the neural network. 
                                                                                                                 
 Neural rendering has already enabled applications that were **previously intractable**, such as rendering
