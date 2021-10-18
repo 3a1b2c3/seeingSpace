@@ -399,7 +399,7 @@ photo and video editing tasks accessible to a much broader audience.
  * *Irradiance* is the radiant flux received by the detector area. The unit of irradiance is W/m2. The irradiance E of a surface is defined as the incident radiant flux density
     
 # Recommended reading
-
+* Great intro: "NeRF and What Happens When Graphics Becomes Differentiable", https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
 * Data-Driven Computational Imaging http://ciml.media.mit.edu, CVPR 2019
@@ -424,6 +424,5 @@ photo and video editing tasks accessible to a much broader audience.
 * https://www.lightfieldlab.com Lightfield displays
 * Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152, 5 hours video class https://www.neuralrender.com/
 * https://bmild.github.io/
-* NeRF and What Happens When Graphics Becomes Differentiable, https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d
- https://slideslive.com/38939970/a-i-for-3d-content-creation
+* https://slideslive.com/38939970/a-i-for-3d-content-creation
 
