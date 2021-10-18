@@ -16,9 +16,9 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
     + [Capturing, storing and compressing static and dynamic light fields](#capturing--storing-and-compressing-static-and-dynamic-light-fields)
       - [Neural Scene representations](#neural-scene-representations)
         * [Networks, Acorn: adaptive coordinate networks for neural scene representation.](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation)
-      - [Multi-plane image (MPI) format and DeepMPI representation](#multi-plane-image--mpi--format-and-deepmpi-representation)
+        * [Multi-plane image (MPI) format and DeepMPI representation](#multi-plane-image--mpi--format-and-deepmpi-representation)
       - [Compression](#compression)
-    + [Novel (virtual) 2D view synthesis from plenoptic samples synthesize](#novel--virtual--2d-view-synthesis-from-plenoptic-samples-synthesize)
+    + [Novel (virtual) 2D view synthesis from plenoptic samples](#novel--virtual--2d-view-synthesis-from-plenoptic-samples)
       - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
         * [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--explicitly-reconstructing-the-scene)
       - [Novel view synthesis with neural rendering: Volume Rendering with Radiance Fields](#novel-view-synthesis-with-neural-rendering--volume-rendering-with-radiance-fields)
@@ -27,7 +27,8 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
       - [Towards Instant 3D Capture (with a cell phone): Nerfies](#towards-instant-3d-capture--with-a-cell-phone---nerfies)
     + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
       - [Relighting with NeRF](#relighting-with-nerf)
-      - [Editing NeRF](#editing-nerf)
+        * [NeRD: Neural Reflectance Decomposition from Image Collections](#nerd--neural-reflectance-decomposition-from-image-collections)
+      - [Editable NeRFs](#editable-nerfs)
   * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
@@ -37,8 +38,11 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 - [Conclusion](#conclusion)
 - [Important concepts](#important-concepts)
 - [Recommended reading](#recommended-reading)
+  * [Neural Rendering and Nerf explosion](#neural-rendering-and-nerf-explosion)
+  * [Other](#other)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 # Classic rendering, computer graphics
@@ -238,6 +242,10 @@ https://user-images.githubusercontent.com/74843139/135747420-4d91bc80-2893-44a4-
 
 <small><i>https://dellaert.github.io/NeRF/</i></small>
  
+<img src="https://user-images.githubusercontent.com/74843139/137718556-57c12830-74a9-447e-adec-c65624cd21d0.png" width=400>
+
+ <small><i>https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d/i></small>
+ 
  A deeper integration of graphics knowledge into the network is possible based
 on differentiable graphics modules. Such a differentiable module
 can for example implement a complete computer graphics renderer, a 3D rotation, or an illumination model. Such components add a physically
@@ -419,6 +427,25 @@ photo and video editing tasks accessible to a much broader audience.
  * *Irradiance* is the radiant flux received by the detector area. The unit of irradiance is W/m2. The irradiance E of a surface is defined as the incident radiant flux density
     
 # Recommended reading
+## Neural Rendering and Nerf explosion
+* Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152, 5 hours video class https://www.neuralrender.com/
+* EUROGRAPHICS 2020, State of the Art on Neural Rendering
+* Great intro: "NeRF and What Happens When Graphics Becomes Differentiable", https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d
+* https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
+* https://dellaert.github.io/NeRF,Frank Dellaert, NeRF Explosion 2020
+* https://www.matthewtancik.com/nerf
+* https://paperswithcode.com/task/neural-rendering
+* https://medium.com/mlearning-ai/what-is-neural-rendering-e25371afc771
+* https://www.lightfieldlab.com Lightfield displays
+
+* Ben Mildenhall's research page, https://bmild.github.io/
+* https://slideslive.com/38939970/a-i-for-3d-content-creation
+* https://github.com/facebookresearch/pytorch3d/blob/12514463830edd007a76226301b62593f62ea279/projects/nerf/README.md
+* NeRD: Neural Reflectance Decomposition from Image Collections, https://markboss.me/publication/2021-nerd/
+* https://github.com/Kai-46/nerfplusplus
+* https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
+ 
+ ## Other
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
 * Data-Driven Computational Imaging http://ciml.media.mit.edu, CVPR 2019
@@ -426,28 +453,11 @@ photo and video editing tasks accessible to a much broader audience.
 * EUROGRAPHICS 2006 Tutorial "Inverse Rendering: From Concept to Applications", https://diglib.eg.org/bitstream/handle/10.2312/egt.20061062.0399-0547/0399-0547.pdf
 * *CVPR 2021 Tutorial on Physics-Based Differentiable Rendering*, June 20, 2021,  https://diff-render.org
 * https://raytrix.de Realtime Plenoptic Metrology
-* https://github.com/Arne-Petersen/Plenoptic-Simulation
+* https://github.com/Arne-Petersen/Plenoptic-Simulation, "Simulation of Plenoptic Cameras", 3DTV Conference, 2018. DOI: 10.1109/3DTV.2018.8478432 Preprint
 * https://en.wikipedia.org/wiki/Light_field 
  *https://www.cnet.com/tech/mobile/lidar-is-one-of-the-iphone-ipad-coolest-tricks-its-only-getting-better/
 * https://www.americanscientist.org/article/imaging-without-lenses
-* https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
 * https://github.com/tensorflow/graphics
 * https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera Parameters Zirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
-* https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
-* https://dellaert.github.io/NeRF,Frank Dellaert, NeRF Explosion 2020
-* https://www.pauldebevec.com research and their github https://github.com/augmentedperception
-* EUROGRAPHICS 2020, State of the Art on Neural Rendering
+* https://www.pauldebevec.com lots of ground breaking research and their github https://github.com/augmentedperception
  
- **Nerf explosion**
- * Great intro: "NeRF and What Happens When Graphics Becomes Differentiable", https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d
-* https://www.matthewtancik.com/nerf
-* https://paperswithcode.com/task/neural-rendering
-* https://medium.com/mlearning-ai/what-is-neural-rendering-e25371afc771
-* https://www.lightfieldlab.com Lightfield displays
-* Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152, 5 hours video class https://www.neuralrender.com/
-* Ben Mildenhall's research page, https://bmild.github.io/
-* https://slideslive.com/38939970/a-i-for-3d-content-creation
-* https://github.com/facebookresearch/pytorch3d/blob/12514463830edd007a76226301b62593f62ea279/projects/nerf/README.md
-* NeRD: Neural Reflectance Decomposition from Image Collections, https://markboss.me/publication/2021-nerd/
-* https://github.com/Kai-46/nerfplusplus
-
