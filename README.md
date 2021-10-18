@@ -138,13 +138,16 @@ While **special cameras and cameras arrangements** have been build to capture li
  
 
 #### Neural Scene representations
- <img src="https://user-images.githubusercontent.com/74843139/137575482-6c542c8d-e4d0-43f9-8638-9bcf58b58ee8.png" width=500>
+ <img src="https://user-images.githubusercontent.com/74843139/137575482-6c542c8d-e4d0-43f9-8638-9bcf58b58ee8.png" width=600>
 
-<small><i>Stereo Magnification: Learning view synthesis using multiplane images</i></small>
+<small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
 
 ##### Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)
+ACORN is a hybrid implicit-explicit neural representation that enables large-scale fitting of signals such as shapes or images. The Hybrid implicit-explicit network architecture and training strategy that adaptively allocates resources during training and inference based on the local complexity of a signal of interest. The approach uses a multiscale block-coordinate decomposition, similar to a quadtree or octree, that is optimized during training. The network architecture operates in two stages: using the bulk of the network parameters, a coordinate encoder generates a feature grid in a single forward pass. 
+Then, hundreds or thousands of samples within each block can be efficiently evaluated using a lightweight **feature decoder**. With this hybrid implicit-explicit network architecture, we demonstrate the first experiments that fit gigapixel images to nearly 40 dB peak signal-to-noise ratio. Notably this represents an increase in scale of over 1000x compared to the resolution of previously demonstrated image-fitting experiments. 
+The autors claim the approach is able to represent 3D shapes significantly faster and better than previous techniques; it reduces training times from days to hours or minutes and memory requirements by over an order of magnitude.
  <img src="https://user-images.githubusercontent.com/74843139/137810541-4cd98156-5085-4c0a-8edd-e2705605e5cc.png" width=400>
-<small><i>Stereo Magnification: Learning view synthesis using multiplane images</i></small>
+<small><i>https://www.computationalimaging.org/publications/acorn</i></small>
 
  
 ##### Multi-plane image (MPI) format and DeepMPI representation (2.5 D)
