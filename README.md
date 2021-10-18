@@ -422,6 +422,7 @@ photo and video editing tasks accessible to a much broader audience.
 * https://paperswithcode.com/task/neural-rendering
 * https://medium.com/mlearning-ai/what-is-neural-rendering-e25371afc771
 * https://www.lightfieldlab.com Lightfield displays
-* Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152,  https://www.neuralrender.com/
+* Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152, 5 hours video class https://www.neuralrender.com/
 * https://bmild.github.io/
+* NeRF and What Happens When Graphics Becomes Differentiable, https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d
 
