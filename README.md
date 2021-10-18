@@ -425,4 +425,5 @@ photo and video editing tasks accessible to a much broader audience.
 * Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152, 5 hours video class https://www.neuralrender.com/
 * https://bmild.github.io/
 * NeRF and What Happens When Graphics Becomes Differentiable, https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d
+ https://slideslive.com/38939970/a-i-for-3d-content-creation
 
