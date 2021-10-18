@@ -412,9 +412,11 @@ Achieving real-time perception is critical to developing a fully autonomous syst
 With neural rendering we no longer need to physically model the scene and simulate the light transport, as this knowledge is now stored implicitly inside the weights of a neural network. The compute required to render an image is also no longer tied to the complexity of the scene (the number of objects, lights, and materials), but rather the size of the neural network. 
                                                                                                                 
 Neural rendering has already enabled applications that were **previously intractable**, such as rendering
-of digital avatars without any manual modeling. Neural rendering coukld have a profound impact in making complex
+of digital avatars without any manual modeling. Neural rendering could have a profound impact in making complex
 photo and video editing tasks accessible to a much broader audience. 
-
+ 
+This is no longer a neural network that is predicting physics. This is physics (or optics) plugged on top of a neural network inside a PyTorch engine. We have now a differentiable simulation of the real world (harnessing the power of computer graphics) on top of a neural representation of it.
+ 
 <img src="https://user-images.githubusercontent.com/74843139/137446172-b1f57e66-fed8-4e9a-bba0-6ff0e686e54a.png" width=500>
  
 <small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
