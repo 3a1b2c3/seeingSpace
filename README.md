@@ -47,7 +47,7 @@ The process of transforming a scene definition including cameras, lights, surfac
 
 The two most common approaches to rendering are rasterization and raytracing.
 -**Rasterization** is a feedforward process in which geometry is transformed into the image domain, sometimes in back-to-front order known as painter’s algorithm. 
--**Raytracing** is a process in which rays are cast backwards from the image pixels into a virtual scene, and reflections and refractions are simulated by recursively casting new rays from the intersections with the geometry.
+-**Raytracing** is a process in which rays are cast backwards from the image pixels into a virtual scene, and reflections and refractions are simulated by recursively casting new **rays from the intersections** with the geometry.
 
 
 <img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=400>
@@ -75,9 +75,9 @@ The learned scene representation is not restricted by simple scene modeling appr
  
 <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
-
 <img src="https://user-images.githubusercontent.com/74843139/137667708-cb8541fa-5758-476a-bf5e-e4548ad5a858.png" width=550>
 
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
 Artifacts such as ghosting, blur, holes, or seams can arise due to view-dependent effects, imperfect proxy geometry or too few source images. To address these issues, N-IBR methods replace the heuristics often found in classical IBR methods with learned blending functions or corrections that take into account view-dependent effects.
  
@@ -143,9 +143,10 @@ While **special cameras and cameras arrangements** have been build to capture li
 #### Neural Scene representations
 ##### Networks, Acorn: adaptive coordinate networks for neural scene representation.
 <img src="https://user-images.githubusercontent.com/74843139/137575482-6c542c8d-e4d0-43f9-8638-9bcf58b58ee8.png" width=400>
- <small><i>Stereo Magnification: Learning view synthesis using multiplane images</i></small>
 
-#### Multi-plane image (MPI) format and DeepMPI representation
+<small><i>Stereo Magnification: Learning view synthesis using multiplane images</i></small>
+
+##### Multi-plane image (MPI) format and DeepMPI representation
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
 MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
 
@@ -156,9 +157,10 @@ MPIs have the ability to produce high-quality novel views of complex scenes in r
 **DeepMPI** extends prior work on multiplane images (MPIs) to model viewing conditions that vary with time.
 
 #### Compression
+ TODO
  
-### Novel (virtual) 2D view synthesis from plenoptic samples synthesize
-plenoptic slices that can be interpolated to recover local regions of the full
+### Novel (virtual) 2D view synthesis from plenoptic samples 
+Synthesize plenoptic slices that can be interpolated to recover local regions of the full
 plenoptic function.
 Given a **dense sampling** of views, photorealistic novel views can be reconstructed by simple light field sample interpolation techniques. For novel view synthesis with **sparser view** sampling, the computer vision and graphics communities have made significant progress by predicting traditional geometry and appearance representations from observed images. The study of image-based rendering is motivated by a simple question: how do we use a finite set of images to reconstruct an infinite set of views.
 
@@ -173,10 +175,12 @@ The Volume rendering technique known as ray marching. Ray marching is when you s
 <small><i>Source: https://github.com/Arne-Petersen/Plenoptic-Simulation, A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
  
 <img src="https://user-images.githubusercontent.com/74843139/137583408-aa016bc7-b9c3-4d4b-94bf-1f570e7923c6.png" width=500>
-<small><i>Source: </small>
+
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
 <img src="https://user-images.githubusercontent.com/74843139/137581126-fbadc2ff-b2a4-438e-a671-ffa1f36509c0.png" width=500>
-<small><i>Source: </small>
+
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
 Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most image based renering algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
 
@@ -190,7 +194,8 @@ They can be classified into explicit and implicit representations. Explicit meth
 point-like primitives, or higher-order parametric surfaces.
  
 <img src="https://user-images.githubusercontent.com/74843139/137583225-4c544c17-9082-43fe-812b-5ea2faef3660.png" width=300>
-<small><i>Source: </small>
+
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
 One popular class of approaches uses mesh-based representations of scenes with either use [48] or view-dependent appearance. Differentiable rasterizers or pathtracers [22,30] can directly optimize mesh representations to reproduce a set of input images using gradient descent.
 However, gradient-based mesh optimization based on image reprojection is often dicult, likely because of local minima or poor conditioning of the loss landscape. Furthermore, this strategy requires a template mesh with xed topology to be provided as an initialization before optimization [22], which is typically unavailable for unconstrained real-world scenes.
@@ -204,7 +209,8 @@ Differentiable Rendering promises to close the loop between computer Vision and 
  In this problem, a neural network learns to render a scene from an arbitrary viewpoint. Slides 3 and 4 are figures from two great papers on this topic: one from Google Research [1] and the other from Facebook Reality Labs [2]. Both of these works use a volume rendering technique known as ray marching. Ray marching is when you shoot out a ray from the observer (camera) through a 3D volume in space and ask a function: what is the color and opacity at this particular point in space? Neural rendering takes the next step by using a neural network to approximate this function.
 
 <img src="https://user-images.githubusercontent.com/74843139/137447390-2134a9a9-50a6-4911-93d7-f87f7114739f.png" width=300>
-<small><i></i></small>
+
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
 
 
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
@@ -219,8 +225,7 @@ It allows real-time synthesis of photorealistic new views.
 
 <img src="https://user-images.githubusercontent.com/74843139/137470543-bb2af13d-b18d-49cf-bc2d-a0cdd88941a9.png" width=400><img src="ttps://user-images.githubusercontent.com/74843139/137576118-dcc2167e-5809-4099-83b2-07abf1f39d61.png" width=400>
 
- 
-<small><i></i></small>
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
 
 **Neural volume rendering** refers to methods that generate images or video by tracing a ray into the scene and taking an integral of some sort over the length of the ray. Typically a neural network like a multi-layer perceptron encodes a function from the 3D coordinates on the ray to quantities like **density and color**, which are integrated to yield an image. One of the reasons NeRF is able to render with great detail is because it encodes a 3D point and associated view direction on a ray using **periodic activation functions, i.e., Fourier Features**. 
 The impact of the NeRF paper lies in its brutal simplicity: just an MLP taking in a 5D coordinate and outputting density and color yields photoreastic results.
@@ -244,6 +249,8 @@ especially if only limited training data is available.
 
 <img src="https://user-images.githubusercontent.com/74843139/137445499-1d2f3bae-9aab-46b5-81c2-9f4c4d3fa9e3.png" width=400>
 
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
+ 
 ###### Crowdsampling the Plenoptic Function with NeRF (published 2020)
 Given a large number of **tourist photos taken at different times of day**, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across a variety of times of day and lighting conditions.
 mask out transient objects such as people and cars during training and evaluation.
@@ -299,7 +306,8 @@ For the future the autors envision enabling even larger changes in viewpoint and
 #### Towards Instant 3D Capture (with a cell phone): Nerfies
 <img src="https://user-images.githubusercontent.com/74843139/137580135-e9373469-3c76-42ff-b44c-7b11878e776c.png" width=500>
 
-<small><i></i></small>
+
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
                                                                                                                 
 ### Relighting with 4D Incident Light Fields
 It is possible to **re-light and de-light real objects** illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
@@ -329,8 +337,14 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
 <small><i>/i></small>
                                                                                                                 
 <img src="https://user-images.githubusercontent.com/74843139/137583877-47f21587-0bdb-412c-b035-1d906ae65d85.png" width=500>
-       
- #### Editing NeRF
+ ##### NeRD: Neural Reflectance Decomposition from Image Collections
+ NeRD is a  method that can decompose image collections from multiple views taken under varying or fixed illumination conditions. The object can be rotated, or the camera can turn around the object. The result is a neural volume with an explicit representation of the appearance and illumination in the form of the BRDF and Spherical Gaussian (SG) environment illumination.
+ 
+ ![image](https://user-images.githubusercontent.com/74843139/137691538-a069ec6c-86f2-459d-b0e0-a53966399245.png)
+
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
+  
+ #### Editable NeRFs
 <img src="https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png" width=500>
 
 <small><i>/i></small>
@@ -393,7 +407,6 @@ Neural rendering has already enabled applications that were **previously intract
 of digital avatars without any manual modeling. Neural rendering coukld have a profound impact in making complex
 photo and video editing tasks accessible to a much broader audience. 
 
-
 <img src="https://user-images.githubusercontent.com/74843139/137446172-b1f57e66-fed8-4e9a-bba0-6ff0e686e54a.png" width=500>
  
 <small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
@@ -406,7 +419,6 @@ photo and video editing tasks accessible to a much broader audience.
  * *Irradiance* is the radiant flux received by the detector area. The unit of irradiance is W/m2. The irradiance E of a surface is defined as the incident radiant flux density
     
 # Recommended reading
-* Great intro: "NeRF and What Happens When Graphics Becomes Differentiable", https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling the Plenoptic Function
 * Data-Driven Computational Imaging http://ciml.media.mit.edu, CVPR 2019
@@ -423,13 +435,19 @@ photo and video editing tasks accessible to a much broader audience.
 * https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera Parameters Zirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
 * https://dellaert.github.io/NeRF,Frank Dellaert, NeRF Explosion 2020
-* https://www.pauldebevec.com reasearch and their github https://github.com/augmentedperception
+* https://www.pauldebevec.com research and their github https://github.com/augmentedperception
 * EUROGRAPHICS 2020, State of the Art on Neural Rendering
+ 
+ **Nerf explosion**
+ * Great intro: "NeRF and What Happens When Graphics Becomes Differentiable", https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d
 * https://www.matthewtancik.com/nerf
 * https://paperswithcode.com/task/neural-rendering
 * https://medium.com/mlearning-ai/what-is-neural-rendering-e25371afc771
 * https://www.lightfieldlab.com Lightfield displays
 * Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152, 5 hours video class https://www.neuralrender.com/
-* https://bmild.github.io/
+* Ben Mildenhall's research page, https://bmild.github.io/
 * https://slideslive.com/38939970/a-i-for-3d-content-creation
+* https://github.com/facebookresearch/pytorch3d/blob/12514463830edd007a76226301b62593f62ea279/projects/nerf/README.md
+* NeRD: Neural Reflectance Decomposition from Image Collections, https://markboss.me/publication/2021-nerd/
+* https://github.com/Kai-46/nerfplusplus
 
