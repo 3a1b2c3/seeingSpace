@@ -4,8 +4,6 @@ When I learned about **traditional computer graphics and photogrammetry** I miss
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
 
-- [Sehender Raum / Seeing Space (WIP)](#sehender-raum---seeing-space--wip-)
-  * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
 - [Classic rendering, computer graphics](#classic-rendering--computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
 - [Neural Rerendering](#neural-rerendering)
