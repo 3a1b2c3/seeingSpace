@@ -83,19 +83,20 @@ The learned scene representation is not restricted by simple scene modeling appr
  
 Artifacts such as ghosting, blur, holes, or seams can arise due to view-dependent effects, imperfect proxy geometry or too few source images. To address these issues, N-IBR methods replace the heuristics often found in classical IBR methods with learned blending functions or corrections that take into account view-dependent effects.
  
-<img src="https://user-images.githubusercontent.com/74843139/137405902-b86bb97a-ab23-4d3c-86d6-a447aa1aabb7.png" width=300> <img src="https://user-images.githubusercontent.com/74843139/137408495-4ab043d4-ddd8-420d-9d12-f768b6336b5c.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/137405902-b86bb97a-ab23-4d3c-86d6-a447aa1aabb7.png" width=450> <img src="https://user-images.githubusercontent.com/74843139/137408495-4ab043d4-ddd8-420d-9d12-f768b6336b5c.png" width=450>
+ 
 <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
 # Image-based rendering (IBR): Plenoptic function and capture
 Computational imaging (CI) is a class of imaging systems that, starting from an imperfect physical measurement and prior
 knowledge about the class of objects or scenes being imaged, deliver estimates of a specific object or scene presented to the imaging system.
 
-In contrast to classical rendering, which projects 3D content to the 2D plane, image-based rendering techniques generate novel images by transforming an existing set of images, typically by warping and compositing them together.The essence of image-based rendering technology is to obtain all the visual information of the scene directly through images.
-Image-based rendering is important both in the field of computer graphics and computer vision, and it is also widely used in virtual reality technology. 
+In contrast to classical rendering, which projects 3D content to the 2D plane, image-based rendering techniques generate novel images by transforming an existing set of images, typically by warping and compositing them together. The essence of image-based rendering technology is to obtain all the visual information of the scene directly through images.
+Its used in computer graphics and computer vision, and it is also widely used in virtual reality technology. 
 
 
 ## The Plenoptic function (Adelson and Bergen, 1991)
-The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex viewpoint-dependent appearance resulting of light transport phenomena. A photograph is a two-dimensional map of the “number of photons” that map from the three-dimensional scene.
+The world as we see it using our eyes is a continuous three-dimensional function of the spatial coordinates. To generate photo-realistic views of a real-world scene from any viewpoint, it not only requires to understand the 3D scene geometry, but also to model complex **viewpoint-dependent appearance resulting of light transport phenomena**. A photograph is a two-dimensional map of the “number of photons” that map from the three-dimensional scene.
  
 While the rendering equation is a useful model for computer graphics some problems are easier to solve by a more generalized light model.
 ### The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.
