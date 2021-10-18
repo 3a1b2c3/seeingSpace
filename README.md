@@ -142,16 +142,19 @@ While **special cameras and cameras arrangements** have been build to capture li
 
 <small><i>Stereo Magnification: Learning view synthesis using multiplane images</i></small>
 
-##### Networks, Acorn: adaptive coordinate networks for neural scene representation.
+##### Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)
+ <img src="https://user-images.githubusercontent.com/74843139/137810541-4cd98156-5085-4c0a-8edd-e2705605e5cc.png" width=400>
+<small><i>Stereo Magnification: Learning view synthesis using multiplane images</i></small>
 
+ 
 ##### Multi-plane image (MPI) format and DeepMPI representation (2.5 D)
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
 MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
 
-<img src="https://user-images.githubusercontent.com/74843139/135738631-e9a72fde-c4d4-46f4-8c1e-1823c6607090.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135738753-1067733d-2d60-45a8-bf9d-3b2dfab83f41.png" width=400>
+<img src="https://user-images.githubusercontent.com/74843139/135738631-e9a72fde-c4d4-46f4-8c1e-1823c6607090.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135738753-1067733d-2d60-45a8-bf9d-3b2dfab83f41.png" width=500>
 
-<small><i>Stereo Magnification: Learning view synthesis using multiplane images</i></small>
-
+<small><i>https://www.semanticscholar.org/paper/ACORN%3A-Adaptive-Coordinate-Networks-for-Neural-Martel-Lindell/2d0c07aa97b5b422c1ac512b1c184f412a19f28e/</i></small>
+ 
 **DeepMPI** extends prior work on multiplane images (MPIs) to model viewing conditions that vary with time.
 
 #### Compression
@@ -178,7 +181,7 @@ The Volume rendering technique known as ray marching. Ray marching is when you s
  
 <img src="https://user-images.githubusercontent.com/74843139/137581126-fbadc2ff-b2a4-438e-a671-ffa1f36509c0.png" width=500>
 
- <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
+<small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
 Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most image based renering algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
 
