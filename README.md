@@ -215,7 +215,7 @@ Differentiable Rendering promises to close the loop between computer Vision and 
 <img src="https://user-images.githubusercontent.com/74843139/137447390-2134a9a9-50a6-4911-93d7-f87f7114739f.png" width=300>
 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
-
+##### Point-Based Rendering
 
 ##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
 Nerf implicit function encoded by A multilayer perceptron (MLP) 
