@@ -59,6 +59,10 @@ A point in the scene is imaged by measuring the **emitted and reflected light** 
 <img src="https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png" width=400><img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=400>
  
 <small><i>Source:https://www.mdpi.com/2072-4292/13/13/2640, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+ # Differential rendering
+ 
+<img src="https://user-images.githubusercontent.com/74843139/138060980-24aefa8f-4899-48ec-991c-2fc55c142d54.png" width=400>
+http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2
  
  # Neural Rerendering
  
