@@ -461,5 +461,5 @@ This is no longer a neural network that is predicting physics. This is physics (
 * https://www.pauldebevec.com lots of ground breaking research and their github https://github.com/augmentedperception
 * https://github.com/amusi/ICCV2021-Papers-with-Code#NeRF ICCV'21 paper
 * ADOP: Approximate Differentiable One-Pixel Point Rendering, abs: https://t.co/npOqsAstAx https://t.co/LE4ZdckQPO
- *https://github.com/mitsuba-renderer/mitsuba2  A Retargetable Forward and Inverse Renderer  http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2
+ *https://github.com/mitsuba-renderer/mitsuba2  A Retargetable Forward and Inverse Renderer  http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2, https://mitsuba2.readthedocs.io/en/latest/src/inverse_rendering/diff_render.html
  
