@@ -120,7 +120,7 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 * The full equation is also **time dependent**.
 
     
-## 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
+## Static 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
  If Vx, Vy, Vz are fixed, the plenoptic function describes a **panorama** at fixed viewpoint (Vx, Vy, Vz). A regular image with a limited field of view can be regarded as an incomplete plenoptic sample at a fixed viewpoint. As long as we stay outside the convex hull of an object or a scene, if we fix the location of the camera on a plane, we can use two parallel planes (u,v) and (s,t) to simplify the complete 5D plenoptic function to a 4D lightfield plenoptic function.
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
 A hologram is a photographic recording of a light field, rather than an image formed by a lens. 
@@ -224,7 +224,7 @@ Differentiable Rendering promises to close the loop between computer Vision and 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
 ##### Point-Based Rendering
 
-##### Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
+##### Neural Radiance Fields (NeRF) rendering: Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
 Nerf implicit function encoded by A multilayer perceptron (MLP) 
 A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
 The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
@@ -355,8 +355,10 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
  ![image](https://user-images.githubusercontent.com/74843139/137691538-a069ec6c-86f2-459d-b0e0-a53966399245.png)
 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
-  
- #### Editable NeRFs
+ 
+ ##### Scene editing
+  https://factorize-a-city.github.io/weather.html
+ ##### Editable NeRFs
 <img src="https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png" width=500>
 
 <small><i>/i></small>
@@ -469,4 +471,5 @@ This is no longer a neural network that is predicting physics. This is physics (
 * https://github.com/amusi/ICCV2021-Papers-with-Code#NeRF ICCV'21 paper
 * ADOP: Approximate Differentiable One-Pixel Point Rendering, abs: https://t.co/npOqsAstAx https://t.co/LE4ZdckQPO
  *https://github.com/mitsuba-renderer/mitsuba2  A Retargetable Forward and Inverse Renderer  http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2, https://mitsuba2.readthedocs.io/en/latest/src/inverse_rendering/diff_render.html
+* https://factorize-a-city.github.io/resources/plenoptic_90_sec_V0.pdf Learning to Factorize and Relight a City
  
