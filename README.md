@@ -324,7 +324,13 @@ For the future the autors envision enabling even larger changes in viewpoint and
 ### Relighting with 4D Incident Light Fields
 It is possible to **re-light and de-light real objects** illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
 
+Learning to Factorize and Relight a City
 
+A learning-based framework for disentangling
+outdoor scenes into temporally-varying illumination and permanent scene
+factors imagery from Google Street View, where the same locations are
+captured repeatedly through time.  
+ 
 <img src="https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png" width=500>
 
 <small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
