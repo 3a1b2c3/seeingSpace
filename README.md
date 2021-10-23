@@ -1,6 +1,6 @@
 # Sehender Raum / Seeing Space (WIP)
 ## Notes about capturing, rendering and digitally reconstruction the world
-When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below).
+When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below)
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
 
@@ -330,6 +330,7 @@ A learning-based framework for disentangling
 outdoor scenes into temporally-varying illumination and permanent scene
 factors imagery from Google Street View, where the same locations are
 captured repeatedly through time.  
+<img src="https://twitter.com/i/status/1292919826726424578" width=500>
  
 <img src="https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png" width=500>
 
