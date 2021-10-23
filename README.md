@@ -332,6 +332,8 @@ factors imagery from Google Street View, where the same locations are
 captured repeatedly through time.  
 <img src="https://twitter.com/i/status/1292919826726424578" width=500>
  
+ ![image](https://user-images.githubusercontent.com/74843139/138553169-1b84b49a-0c6a-4915-a89e-d1ae4a09f803.png)
+
 <img src="https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png" width=500>
 
 <small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
