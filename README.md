@@ -63,11 +63,9 @@ A point in the scene is imaged by measuring the **emitted and reflected light** 
  # Inverse and Differential rendering
 Inverse graphics attempts to take **sensor data** and **infer 3D geometry, illumination, materials, and motions** such that a graphics renderer could realistically reproduce the observed scene. Renderers, however, are designed to solve the forward process of image synthesis. To go in the other direction, we propose an approximate differentiable renderer (DR) that explicitly models the relationship between changes in model parameters and image observations.
 
-<img src="https://user-images.githubusercontent.com/74843139/138063471-bee20562-8233-4492-8ee5-1a4327ac70f2.png" width=400>
-http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2
+<img src="https://user-images.githubusercontent.com/74843139/138063471-bee20562-8233-4492-8ee5-1a4327ac70f2.png" width=450><img src="https://user-images.githubusercontent.com/74843139/138079918-bc47baac-e49a-48d5-8dbe-558a357d3ef2.png" width=450>
+<small><i>Source: http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2</i></small>
  
-<img src="https://user-images.githubusercontent.com/74843139/138079918-bc47baac-e49a-48d5-8dbe-558a357d3ef2.png" width=400>
-
  # Neural Rerendering
  
 Neural Rerendering is a relative new technique that combines classical or other 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views. In contrast to **Neural Image-based Rendering (N-IBR)**, neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.
@@ -75,8 +73,7 @@ A typical neural rendering approach takes as input images corresponding to certa
  
 The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
  
-<img src="https://user-images.githubusercontent.com/74843139/137432875-74ca25c1-dcf1-4126-ac03-ad5c5c703fce.png" width=450> <img src="https://user-images.githubusercontent.com/74843139/137667708-cb8541fa-5758-476a-bf5e-e4548ad5a858.png" width=550>
-
+<img src="https://user-images.githubusercontent.com/74843139/137432875-74ca25c1-dcf1-4126-ac03-ad5c5c703fce.png" width=450> <img src="https://user-images.githubusercontent.com/74843139/137667708-cb8541fa-5758-476a-bf5e-e4548ad5a858.png" width=500>
   
 <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
@@ -105,19 +102,18 @@ While the rendering equation is a useful model for computer graphics some proble
 
 <small><i>Source: https://en.wikipedia.org/wiki/Compound_eye, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
 
+ 
+The plenoptic function describes the **degrees of freedom of a light ray with the paramters**: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
 
 <img src="https://user-images.githubusercontent.com/74843139/135736699-8ecb616b-9550-435c-b552-9825c702e7ec.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135750276-9117a3c0-1736-44c2-85d5-697a02a38cbc.png" width=200><img src="https://user-images.githubusercontent.com/74843139/135749914-1c2b8ff7-7e18-4146-ab1a-b2accc62c4c2.png" width=200>
 
 <small><i>Source: Rendering for Data Driven Computational Imaging, Tristan Swedish, https://www.blitznotes.org/ib/physics/waves.html, https://courses.lumenlearning.com/boundless-chemistry/chapter/the-nature-of-light/</i></small>
 
-The plenoptic function describes the **degrees of freedom of a light ray with the paramters**: Irradiance, position, wavelength, time, angle, phase, polarization, and bounce. 
-
 Light has the properties of waves. Like ocean waves, light waves have crests and troughs.
 * The distance between one crest and the next, which is the same as the distance between one trough and the next, is called the **wavelength**. 
 * **Wave phase** is the offset of a wave from a given point. When two waves cross paths, they either cancel each other out or compliment each other, depending on their phase. 
 * **Irradiance** is the amount of light energy from one thing hitting a square meter of another each second. Photons that carry this energy have wavelengths from energetic X-rays and gamma rays to visible light to the infrared and radio. The unit of irradiance is the watt per square meter.
-* **Polarization** 
-* **Bounce** 
+* **Polarization** and **Bounce** are often ommited for simplicity
 * The full equation is also **time dependent**.
 
     
@@ -140,7 +136,7 @@ While **special cameras and cameras arrangements** have been build to capture li
 
 <img src="https://user-images.githubusercontent.com/74843139/134798665-82995833-8751-4944-a3dd-0ea99a376216.png" width=200><img src="https://user-images.githubusercontent.com/74843139/134801063-d3812c40-7696-499b-b168-10b6e44f4a21.png" width=200><img src="https://user-images.githubusercontent.com/74843139/134805766-295077e7-81ef-405b-9ad7-38e8c583a55f.png" width=250><img src="https://user-images.githubusercontent.com/74843139/135706121-e3a5d78a-9dfa-4247-b504-1ba32b1d11ed.png" width=150>
     
-<small><i>Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
+<small><i>Source: Stanford light field camera; Right: Adobe (large) lens array, source https://cs.brown.edu/courses/csci1290/labs/lab_lightfields, "Lytro Illum", a discontinued commercially available light field camera</i></small>
  
 
 #### Neural Scene representations
@@ -223,6 +219,7 @@ Differentiable Rendering promises to close the loop between computer Vision and 
 <img src="https://user-images.githubusercontent.com/74843139/137447390-2134a9a9-50a6-4911-93d7-f87f7114739f.png" width=300>
 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
+ 
 ##### Point-Based Rendering
 
 ##### Neural Radiance Fields (NeRF) rendering: Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
@@ -301,11 +298,11 @@ Crowdsampling the Plenoptic Function 3 istered in time
                                                                                                                 
 <img src="https://user-images.githubusercontent.com/74843139/135751323-ef8582a0-575d-41fb-9a40-861fbbbd35d3.png" width=500>
                                                                                                                 
-<small><i>nerf in the wild</i></small>
+<small><i>Source: nerf in the wild</i></small>
 
 <img src="https://user-images.githubusercontent.com/74843139/135836081-9dacc9ba-0ddb-4665-8e54-359b1e500dfa.png" width=500>
 
-<small><i>nerf in the wild</i></small>
+<small><i> Source:nerf in the wild</i></small>
                                                                                                                 
 Unfortunately, there are two major drawbacks with VGGNet:     It is painfully slow to train.
 The network architecture weights themselves are quite large (in terms of disk/bandwidth).
@@ -354,7 +351,7 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
 
 <img src="https://user-images.githubusercontent.com/74843139/137583652-53fa4751-18cc-45f9-a569-6d7505111c1c.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137583799-8fd93d70-1930-47b1-b313-cc77c92ec32d.png" width=500>
 
-<small><i>/i></small>
+<small><i>Source:</i></small>
                                                                                                                 
 <img src="https://user-images.githubusercontent.com/74843139/137583877-47f21587-0bdb-412c-b035-1d906ae65d85.png" width=500>
   <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
@@ -370,8 +367,8 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
   https://factorize-a-city.github.io/weather.html
  ##### Editable NeRFs
 <img src="https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png" width=500>
-
-<small><i>/i></small>
+ 
+<small><i>Source:</i></small>
                                                                                                                 
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
