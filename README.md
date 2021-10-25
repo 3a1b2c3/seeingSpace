@@ -58,9 +58,10 @@ A point in the scene is imaged by measuring the **emitted and reflected light** 
 
 <img src="https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png" width=400><img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=400>
  
-<small><i>Source:https://www.mdpi.com/2072-4292/13/13/2640, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+<small><i>Source: https://www.mdpi.com/2072-4292/13/13/2640, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+ 
  # Inverse and Differential rendering
-Inverse graphics attempts to take sensor data and infer 3D geometry, illumination, materials, and motions such that a graphics renderer could realistically reproduce the observed scene. Renderers, however, are designed to solve the forward process of image synthesis. To go in the other direction, we propose an approximate differentiable renderer (DR) that explicitly models the relationship between changes in model parameters and image observations.
+Inverse graphics attempts to take **sensor data** and **infer 3D geometry, illumination, materials, and motions** such that a graphics renderer could realistically reproduce the observed scene. Renderers, however, are designed to solve the forward process of image synthesis. To go in the other direction, we propose an approximate differentiable renderer (DR) that explicitly models the relationship between changes in model parameters and image observations.
 
 <img src="https://user-images.githubusercontent.com/74843139/138063471-bee20562-8233-4492-8ee5-1a4327ac70f2.png" width=400>
 http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2
