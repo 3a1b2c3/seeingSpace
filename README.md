@@ -46,8 +46,8 @@ Classical computer graphics methods approximate the physical process of image fo
 The process of transforming a scene definition including cameras, lights, surface geometry and material into a simulated camera image is known as **rendering**.
 
 The two most common approaches to rendering are rasterization and raytracing.
--**Rasterization** is a feedforward process in which geometry is transformed into the image domain, sometimes in back-to-front order known as painter’s algorithm. 
--**Raytracing** is a process in which rays are cast backwards from the image pixels into a virtual scene, and reflections and refractions are simulated by recursively casting new **rays from the intersections** with the geometry.
+* **Rasterization** is a feedforward process in which geometry is transformed into the image domain, sometimes in back-to-front order known as painter’s algorithm. 
+* **Raytracing** is a process in which rays are cast backwards from the image pixels into a virtual scene, and reflections and refractions are simulated by recursively casting new **rays from the intersections** with the geometry.
 
 <img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=400>
  
@@ -65,7 +65,7 @@ Inverse graphics attempts to take sensor data and infer 3D geometry, illuminatio
 <img src="https://user-images.githubusercontent.com/74843139/138063471-bee20562-8233-4492-8ee5-1a4327ac70f2.png" width=400>
 http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2
  
- ![image](https://user-images.githubusercontent.com/74843139/138079918-bc47baac-e49a-48d5-8dbe-558a357d3ef2.png)
+<img src="https://user-images.githubusercontent.com/74843139/138079918-bc47baac-e49a-48d5-8dbe-558a357d3ef2.png" width=400>
 
  # Neural Rerendering
  
@@ -154,7 +154,7 @@ The autors claim the approach is able to represent 3D shapes significantly faste
  
  <img src="https://user-images.githubusercontent.com/74843139/137810541-4cd98156-5085-4c0a-8edd-e2705605e5cc.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/137811969-34734064-90b2-488e-8f0e-b096084e5d91.png" width=400
 
-<small><i>https://www.computationalimaging.org/publications/acorn</i></small>
+<small><i>Source: https://www.computationalimaging.org/publications/acorn</i></small>
 
  
 ##### Multi-plane image (MPI) format and DeepMPI representation (2.5 D)
@@ -163,7 +163,7 @@ MPIs have the ability to produce high-quality novel views of complex scenes in r
 
 <img src="https://user-images.githubusercontent.com/74843139/135738631-e9a72fde-c4d4-46f4-8c1e-1823c6607090.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135738753-1067733d-2d60-45a8-bf9d-3b2dfab83f41.png" width=500>
 
-<small><i>https://www.semanticscholar.org/paper/ACORN%3A-Adaptive-Coordinate-Networks-for-Neural-Martel-Lindell/2d0c07aa97b5b422c1ac512b1c184f412a19f28e/</i></small>
+<small><i>Source: https://www.semanticscholar.org/paper/ACORN%3A-Adaptive-Coordinate-Networks-for-Neural-Martel-Lindell/2d0c07aa97b5b422c1ac512b1c184f412a19f28e/</i></small>
  
 **DeepMPI** extends prior work on multiplane images (MPIs) to model viewing conditions that vary with time.
 
@@ -232,7 +232,7 @@ It allows real-time synthesis of photorealistic new views.
 
 <img src="https://user-images.githubusercontent.com/74843139/137442095-16fac449-f819-4852-b749-16185cdec895.png" width=300><img src="https://user-images.githubusercontent.com/74843139/135739158-186170f4-ad7f-4734-aceb-24a7db7c02dd.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/137458615-ca69a159-670f-474f-ae14-2171ec577898.png" width=400>
 
- <small><i>Advances in Neural Rendering, 2021, ttps://www.neuralrender.com/</i></small>
+ <small><i>Source: Advances in Neural Rendering, 2021, ttps://www.neuralrender.com/</i></small>
 
 <img src="https://user-images.githubusercontent.com/74843139/137470543-bb2af13d-b18d-49cf-bc2d-a0cdd88941a9.png" width=400><img src="ttps://user-images.githubusercontent.com/74843139/137576118-dcc2167e-5809-4099-83b2-07abf1f39d61.png" width=400>
 
@@ -248,7 +248,7 @@ https://user-images.githubusercontent.com/74843139/135747420-4d91bc80-2893-44a4-
 <img src="https://user-images.githubusercontent.com/74843139/137474885-432d596d-3820-4932-854e-61652dfae9a2.png" width=400><img src="https://user-images.githubusercontent.com/74843139/137718556-57c12830-74a9-447e-adec-c65624cd21d0.png" width=400>
  
 <small><i>https://dellaert.github.io/NeRF/</i></small>
- <small><i>https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d</i></small>
+ <small><i>Source: https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d</i></small>
  
  A deeper integration of graphics knowledge into the network is possible based
 on differentiable graphics modules. Such a differentiable module
@@ -277,7 +277,7 @@ mask out transient objects such as people and cars during training and evaluatio
           
 <img src="https://user-images.githubusercontent.com/74843139/135809964-0501661b-2cfa-4ab2-a818-0f60bd6fd152.png" width=500>
 
-<small><i>Crowdsampling the Plenoptic Function, 2020</i></small>
+<small><i>Source: Crowdsampling the Plenoptic Function, 2020</i></small>
                                                                                                                 
 unsupervised manner. The approach takes unstructured Internet photos spanning
 some range of time-varying appearance in a scene and learns how to reconstruct a
@@ -311,7 +311,7 @@ The network architecture weights themselves are quite large (in terms of disk/ba
 Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG16 and 574MB for VGG19. This makes deploying VGG a tiresome task.
 We still use VGG in many deep learning image classification problems; however, smaller network architectures are often more desirable (such as SqueezeNet, GoogLeNet, etc.).
  
-<small><i>https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/</i></small>
+<small><i>Source: https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/</i></small>
 
 For the future the autors envision enabling even larger changes in viewpoint and illumination, including 4D walkthroughs of large-scale scenes in the future.
                                                                                                                 
@@ -332,11 +332,9 @@ factors imagery from Google Street View, where the same locations are
 captured repeatedly through time.  
 <img src="https://twitter.com/i/status/1292919826726424578" width=500>
  
- ![image](https://user-images.githubusercontent.com/74843139/138553169-1b84b49a-0c6a-4915-a89e-d1ae4a09f803.png)
+<img src="https://user-images.githubusercontent.com/74843139/138553169-1b84b49a-0c6a-4915-a89e-d1ae4a09f803.pngg" width=400><img src="https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png" width=500>
 
-<img src="https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png" width=500>
-
-<small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
+<small><i>Source: https://en.wikipedia.org/wiki/Light_stage</i></small>
  
 <img src="https://user-images.githubusercontent.com/74843139/137584537-473c169d-bfeb-4f8e-a6ef-a5b80d7e71f1.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137585106-e23fda39-222b-45ae-a3e0-f6bf6b5e6ef0.png" width=500>
 <small><i></i></small>
@@ -351,17 +349,18 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
                                                                                                                 
 <img src="https://user-images.githubusercontent.com/74843139/137581185-52635c88-28ce-4997-8bb6-8ac8e7dc108d.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137581670-950f5679-921c-48db-b0c1-5dff7997d4ef.png" width=500>
 
-<small><i>https://en.wikipedia.org/wiki/Light_stage</i></small>
+<small><i>Source: https://en.wikipedia.org/wiki/Light_stage</i></small>
 
 <img src="https://user-images.githubusercontent.com/74843139/137583652-53fa4751-18cc-45f9-a569-6d7505111c1c.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137583799-8fd93d70-1930-47b1-b313-cc77c92ec32d.png" width=500>
 
 <small><i>/i></small>
                                                                                                                 
 <img src="https://user-images.githubusercontent.com/74843139/137583877-47f21587-0bdb-412c-b035-1d906ae65d85.png" width=500>
+  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  ##### NeRD: Neural Reflectance Decomposition from Image Collections
  NeRD is a  method that can decompose image collections from multiple views taken under varying or fixed illumination conditions. The object can be rotated, or the camera can turn around the object. The result is a neural volume with an explicit representation of the appearance and illumination in the form of the BRDF and Spherical Gaussian (SG) environment illumination.
  
- ![image](https://user-images.githubusercontent.com/74843139/137691538-a069ec6c-86f2-459d-b0e0-a53966399245.png)
+<img src="hhttps://user-images.githubusercontent.com/74843139/137691538-a069ec6c-86f2-459d-b0e0-a53966399245.png" width=500>
 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  ##### View Synthesis for Dynamic Scenes
@@ -412,7 +411,7 @@ pinholes.
 
 <img src="https://user-images.githubusercontent.com/74843139/135749276-a0078caa-c376-45e2-a75b-a991629991f2.png" width=500>
  
-<small><i> https://zeenews.india.com/india/iit-m-us-researchers-develop-algorithms-to-get-clearer-images-from-futuristic-lensless-cameras-2362619.html</i></small>
+<small><i>Source: https://zeenews.india.com/india/iit-m-us-researchers-develop-algorithms-to-get-clearer-images-from-futuristic-lensless-cameras-2362619.html</i></small>
 
 
 ###  Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps
@@ -435,7 +434,7 @@ This is no longer a neural network that is predicting physics. This is physics (
  
 <img src="https://user-images.githubusercontent.com/74843139/137446172-b1f57e66-fed8-4e9a-bba0-6ff0e686e54a.png" width=500>
  
-<small><i>https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
+<small><i>Source: https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
 
 # Important concepts
  * *DeepMPI*<a name="deepmpi"> Deep Multiplane Images
