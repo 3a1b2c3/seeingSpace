@@ -64,11 +64,12 @@ A point in the scene is imaged by measuring the **emitted and reflected light** 
 Inverse graphics attempts to take **sensor data** and **infer 3D geometry, illumination, materials, and motions** such that a graphics renderer could realistically reproduce the observed scene. Renderers, however, are designed to solve the forward process of image synthesis. To go in the other direction, we propose an approximate differentiable renderer (DR) that explicitly models the relationship between changes in model parameters and image observations.
 
 <img src="https://user-images.githubusercontent.com/74843139/138063471-bee20562-8233-4492-8ee5-1a4327ac70f2.png" width=450><img src="https://user-images.githubusercontent.com/74843139/138079918-bc47baac-e49a-48d5-8dbe-558a357d3ef2.png" width=450>
+ 
 <small><i>Source: http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2</i></small>
  
  # Neural Rerendering
  
-Neural Rerendering is a relative new technique that combines classical or other 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views. In contrast to **Neural Image-based Rendering (N-IBR)**, neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.
+Is a relative new technique that combines classical or other 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views. In contrast to **Neural Image-based Rendering (N-IBR)**, neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.
 A typical neural rendering approach takes as input images corresponding to certain scene conditions (for example, viewpoint, lighting, layout, etc.), builds a "neural” scene representation from them, and "renders” this representation under novel scene properties to synthesize novel images.
  
 The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
@@ -265,10 +266,7 @@ Given a large number of **tourist photos taken at different times of day**, this
 mask out transient objects such as people and cars during training and evaluation.
 
 <img src="https://user-images.githubusercontent.com/74843139/134799704-32fd77d0-f71e-47aa-b763-fcef4af17e9d.png" width=500>
-<img src="https://research.cs.cornell.edu/crowdplenoptic/teaser/coeur_teaser.gif)![image](https://research.cs.cornell.edu/crowdplenoptic/teaser/trevi_teaser.gif" width=500>
- 
- 
-<img src="https://research.cs.cornell.edu/crowdplenoptic/teaser/rock_teaser.gif" width=500><img src="https://research.cs.cornell.edu/crowdplenoptic/teaser/pantheon_teaser.gif" width=500>
+
 <small><i>Source: https://www.semanticscholar.org/paper/Crowdsampling-the-Plenoptic-Function-Li-Xian</i></small>
  
           
