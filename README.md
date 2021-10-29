@@ -428,6 +428,9 @@ of digital avatars without any manual modeling. Neural rendering could have a pr
 photo and video editing tasks accessible to a much broader audience. 
  
 This is no longer a neural network that is predicting physics. This is physics (or optics) plugged on top of a neural network inside a PyTorch engine. We have now a differentiable simulation of the real world (harnessing the power of computer graphics) on top of a neural representation of it.
+
+https://towardsdatascience.com/three-grand-challenges-in-machine-learning-771e1440eafc
+This is why I call the grand challenge for perception the Inverse Video Game problem: predict not only a static scene but its functional semantics and possible futures. You should be able to take a video, run it through your computer vision model, and get a representation of a scene you can not only parse, but can roll forward in time to generate plausible future behaviors, from any viewpoint, like a video game engine would. It would respect the physics (a ball shot at a goal would follow its normal trajectory), semantics (a table would be movable, a door could be opened), and agents in the scene (people, cars would have reasonable NPC behaviors).
  
 <img src="https://user-images.githubusercontent.com/74843139/137446172-b1f57e66-fed8-4e9a-bba0-6ff0e686e54a.png" width=500>
  
