@@ -482,3 +482,9 @@ This is why I call the grand challenge for perception the Inverse Video Game pro
  *https://github.com/mitsuba-renderer/mitsuba2  A Retargetable Forward and Inverse Renderer  http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2, https://mitsuba2.readthedocs.io/en/latest/src/inverse_rendering/diff_render.html
 * https://factorize-a-city.github.io/resources/plenoptic_90_sec_V0.pdf Learning to Factorize and Relight a City
  
+ ## Companies in that space
+ ### Software
+ * https://techcrunch.com/2021/10/29/luma-seed-round/
+ ### Hardware
+ * https://www.k-lens-one.com/en/home Single ens 3d camera
+ 
