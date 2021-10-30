@@ -375,8 +375,10 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
  ##### View Synthesis for Dynamic Scenes
  
  ##### Scene editing
+ Still generally a hard problem
+ 
   https://factorize-a-city.github.io/weather.html
- ##### Editable NeRFs
+ ###### Editable NeRFs
 <img src="https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png" width=500>
  
 <small><i>Source:</i></small>
