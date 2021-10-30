@@ -497,7 +497,9 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  # Companies in the space
  ## Software
  * https://techcrunch.com/2021/10/29/luma-seed-round/
- * Microsoft, Google, Facebook, some Amazon research
+ * Microsoft, Google, some Amazon research
+ * Facebook bought Articulated Neural Rendering 
+ * Tencent https://www.marktechpost.com/2021/09/21/tencent-ai-research-unveils-pirenderer-an-ai-model-to-control-the-generation-of-faces-via-semantic-neural-rendering/?amp
  * Adobe https://www.unite.ai/adobe-neural-rendering-relighting-2021/ 
  * NVIDIA https://developer.nvidia.com/blog/?search_posts_filter=neural+rendering&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l
  * https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine/ Snap 
