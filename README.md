@@ -493,4 +493,6 @@ This is why I call the grand challenge for perception the Inverse Video Game pro
  * https://techcrunch.com/2021/10/29/luma-seed-round/
  ## Hardware
  * https://www.k-lens-one.com/en/home Single lens 3d camera
+ * https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine/ Snap maybe
+ * https://www.fxguide.com/fxfeatured/pinscreens-advanced-face-ai-neural-rendering/ Pinscreen
  
