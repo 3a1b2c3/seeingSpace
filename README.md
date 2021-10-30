@@ -492,5 +492,5 @@ This is why I call the grand challenge for perception the Inverse Video Game pro
  ## Software
  * https://techcrunch.com/2021/10/29/luma-seed-round/
  ## Hardware
- * https://www.k-lens-one.com/en/home Single ens 3d camera
+ * https://www.k-lens-one.com/en/home Single lens 3d camera
  
