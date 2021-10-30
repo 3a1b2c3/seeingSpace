@@ -305,7 +305,7 @@ Crowdsampling the Plenoptic Function 3 istered in time
 
 <img src="https://user-images.githubusercontent.com/74843139/135836081-9dacc9ba-0ddb-4665-8e54-359b1e500dfa.png" width=500>
 
-<small><i> Source:nerf in the wild</i></small>
+<small><i>Source: Nerf in the wild</i></small>
                                                                                                                 
 Unfortunately, there are two major drawbacks with VGGNet:     It is painfully slow to train.
 The network architecture weights themselves are quite large (in terms of disk/bandwidth).
@@ -340,7 +340,8 @@ captured repeatedly through time.
 <small><i>Source: https://en.wikipedia.org/wiki/Light_stage</i></small>
  
 <img src="https://user-images.githubusercontent.com/74843139/137584537-473c169d-bfeb-4f8e-a6ef-a5b80d7e71f1.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137585106-e23fda39-222b-45ae-a3e0-f6bf6b5e6ef0.png" width=500>
-<small><i></i></small>
+ 
+<small><i>Source:</i></small>
                                                                                                                 
 #### Relighting with NeRF
 Another dimension in which NeRF-style methods have been augmented is in how to deal with lighting, typically through latent codes that can be used to re-light a scene. 
@@ -366,6 +367,7 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
 <img src="hhttps://user-images.githubusercontent.com/74843139/137691538-a069ec6c-86f2-459d-b0e0-a53966399245.png" width=500>
 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
+ 
  ##### View Synthesis for Dynamic Scenes
  
  ##### Scene editing
@@ -465,7 +467,6 @@ Many of such closed-form contain infinite integral that are impossible to solve.
 * https://www.matthewtancik.com/nerf
 * https://paperswithcode.com/task/neural-rendering
 * https://medium.com/mlearning-ai/what-is-neural-rendering-e25371afc771
-* https://www.lightfieldlab.com Lightfield displays
 
 * Ben Mildenhall's research page, https://bmild.github.io/
 * https://slideslive.com/38939970/a-i-for-3d-content-creation
@@ -511,5 +512,6 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  * https://embodyme.com 
  ## Hardware
  * https://www.k-lens-one.com/en/home Single lens "lightfield"camera
+ * https://www.lightfieldlab.com Lightfield displays
 
  
