@@ -494,17 +494,22 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  *https://github.com/mitsuba-renderer/mitsuba2  A Retargetable Forward and Inverse Renderer  http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2, https://mitsuba2.readthedocs.io/en/latest/src/inverse_rendering/diff_render.html
 * https://factorize-a-city.github.io/resources/plenoptic_90_sec_V0.pdf Learning to Factorize and Relight a City
  
- # Companies in the space
+ # Companies looking into the space
  ## Software
- * https://techcrunch.com/2021/10/29/luma-seed-round/
- * Microsoft, Google, some Amazon research
- * Facebook bought Articulated Neural Rendering 
+ * Microsoft https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-lab-cambridge/
+ * Google research
+ * Amazon  research
+ * Facebook bought startuop called "Articulated Neural Rendering", https://www.teslarati.com/tesla-autopilot-neural-rendering-for-autolabeling/
  * Tencent https://www.marktechpost.com/2021/09/21/tencent-ai-research-unveils-pirenderer-an-ai-model-to-control-the-generation-of-faces-via-semantic-neural-rendering/?amp
  * Adobe https://www.unite.ai/adobe-neural-rendering-relighting-2021/ 
+ * Tesla https://towardsdatascience.com/tesla-ai-day-2021-review-part-2-training-data-how-does-a-car-learn-e8863ba3f5b0
  * NVIDIA https://developer.nvidia.com/blog/?search_posts_filter=neural+rendering&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l
- * https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine/ Snap 
+ * Snap https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine/
+ 
  * https://www.fxguide.com/fxfeatured/pinscreens-advanced-face-ai-neural-rendering/ Pinscreen
+ * https://techcrunch.com/2021/10/29/luma-seed-round/ Startup called Luma ai
+ * https://embodyme.com 
  ## Hardware
- * https://www.k-lens-one.com/en/home Single lens 3d camera
+ * https://www.k-lens-one.com/en/home Single lens "lightfield"camera
 
  
