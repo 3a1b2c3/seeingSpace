@@ -503,7 +503,8 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  ## Software
  * https://techcrunch.com/2021/10/29/luma-seed-round/
  * NVIDIA https://developer.nvidia.com/blog/?search_posts_filter=neural+rendering&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l
-  * https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine/ Snap maybe
+ * Microsoft, Google, Facebook research
+ * https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine/ Snap 
  * https://www.fxguide.com/fxfeatured/pinscreens-advanced-face-ai-neural-rendering/ Pinscreen
  ## Hardware
  * https://www.k-lens-one.com/en/home Single lens 3d camera
