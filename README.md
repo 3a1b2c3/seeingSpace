@@ -125,7 +125,7 @@ Light has the properties of waves. Like ocean waves, light waves have crests and
 
     
 ## Static 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)
- If Vx, Vy, Vz are fixed, the plenoptic function describes a **panorama** at fixed viewpoint (Vx, Vy, Vz). A regular image with a limited field of view can be regarded as an incomplete plenoptic sample at a fixed viewpoint. As long as we stay outside the convex hull of an object or a scene, if we fix the location of the camera on a plane, we can use two parallel planes (u,v) and (s,t) to simplify the complete 5D plenoptic function to a 4D lightfield plenoptic function.
+If Vx, Vy, Vz are fixed, the plenoptic function describes a **panorama** at fixed viewpoint (Vx, Vy, Vz). A regular image with a limited field of view can be regarded as an incomplete plenoptic sample at a fixed viewpoint. As long as we stay outside the convex hull of an object or a scene, if we fix the location of the camera on a plane, we can use two parallel planes (u,v) and (s,t) to simplify the complete 5D plenoptic function to a 4D lightfield plenoptic function.
  
 A **Light field** is a mathematical function of one or more variables whose range is a set of multidimensional vectors that describe the **amount of light flowing in every direction through every point in space***. It restricts the information to light outside the **convex hull** of the objects of interest. The 7D plenoptic function can under certain assumptions and relaxations simplify o a **4D light field**, which is easier to sample and operate on.
 A hologram is a photographic recording of a light field, rather than an image formed by a lens. 
@@ -161,9 +161,25 @@ MPIs have the ability to produce high-quality novel views of complex scenes in r
 
 <small><i>Source: https://www.semanticscholar.org/paper/ACORN%3A-Adaptive-Coordinate-Networks-for-Neural-Martel-Lindell/2d0c07aa97b5b422c1ac512b1c184f412a19f28e/</i></small>
  
-**DeepMPI** extends prior work on multiplane images (MPIs) to model viewing conditions that vary with time.
+**DeepMPI (2020)** extends prior work on multiplane images (MPIs) to model viewing conditions that vary with time.
+Our work makes three key contributions: first, a representation, called a
+DeepMPI, for neural rendering that extends prior work on multiplane images
+(MPIs) [68] to model viewing conditions that vary with time; second, a method
+for training DeepMPIs on sparse, unstructured crowdsampled data that is unreg-
+1 [1] describes the plenoptic function as 7D, but we can reduce this to a 4D color lightfield supplemented by time by applying the later observations of [33].
+Crowdsampling the Plenoptic Function 3 istered in time
+ 
+ ##### Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)
+ACORN is a hybrid implicit-explicit neural representation that enables large-scale fitting of signals such as shapes or images. The Hybrid implicit-explicit network architecture and training strategy that adaptively allocates resources during training and inference based on the local complexity of a signal of interest. The approach uses a multiscale block-coordinate decomposition, similar to a quadtree or octree, that is optimized during training. The network architecture operates in two stages: using the bulk of the network parameters, a coordinate encoder generates a feature grid in a single forward pass. 
+ 
+Then, hundreds or thousands of samples within each block can be efficiently evaluated using a lightweight **feature decoder**. With this hybrid implicit-explicit network architecture, we demonstrate the first experiments that fit gigapixel images to nearly 40 dB peak signal-to-noise ratio. Notably this represents an increase in scale of over 1000x compared to the resolution of previously demonstrated image-fitting experiments. 
+The autors claim the approach is able to represent 3D shapes significantly faster and better than previous techniques; it reduces training times from days to hours or minutes and memory requirements by over an order of magnitude.
+ 
+ <img src="https://user-images.githubusercontent.com/74843139/137810541-4cd98156-5085-4c0a-8edd-e2705605e5cc.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/137811969-34734064-90b2-488e-8f0e-b096084e5d91.png" width=400>
 
-#### Compression
+<small><i>Source: https://www.computationalimaging.org/publications/acorn</i></small>
+
+ #### Compression
  TODO
  
 ### Novel (virtual) 2D view synthesis from plenoptic samples 
@@ -189,16 +205,6 @@ The Volume rendering technique known as ray marching. Ray marching is when you s
 <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
 Light field rendering pushes the latter strategy to an extreme by using dense structured sampling of the lightfield to make re-construction guarantees independent of specific scene geometry. Most image based renering algorithms are designed to model static appearance, DeepMPI (Deep Multiplane Images), which further captures viewing condition dependent appearance. 
-
- ##### Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)
-ACORN is a hybrid implicit-explicit neural representation that enables large-scale fitting of signals such as shapes or images. The Hybrid implicit-explicit network architecture and training strategy that adaptively allocates resources during training and inference based on the local complexity of a signal of interest. The approach uses a multiscale block-coordinate decomposition, similar to a quadtree or octree, that is optimized during training. The network architecture operates in two stages: using the bulk of the network parameters, a coordinate encoder generates a feature grid in a single forward pass. 
- 
-Then, hundreds or thousands of samples within each block can be efficiently evaluated using a lightweight **feature decoder**. With this hybrid implicit-explicit network architecture, we demonstrate the first experiments that fit gigapixel images to nearly 40 dB peak signal-to-noise ratio. Notably this represents an increase in scale of over 1000x compared to the resolution of previously demonstrated image-fitting experiments. 
-The autors claim the approach is able to represent 3D shapes significantly faster and better than previous techniques; it reduces training times from days to hours or minutes and memory requirements by over an order of magnitude.
- 
- <img src="https://user-images.githubusercontent.com/74843139/137810541-4cd98156-5085-4c0a-8edd-e2705605e5cc.png" width=400> <img src="https://user-images.githubusercontent.com/74843139/137811969-34734064-90b2-488e-8f0e-b096084e5d91.png" width=400>
-
-<small><i>Source: https://www.computationalimaging.org/publications/acorn</i></small>
 
  **Camera calibration** is often assumed to be prerequisite, while in practise, this information is rarely accessible, and requires to be pre-computed with conventional techniques, such as SfM.
  
@@ -291,17 +297,14 @@ in the plenoptic function when interpolated over time|for each of the viewing
 conditions captured in our input data. By designing our model to preserve the
 structure of real plenoptic functions, we force it to learn time-varying phenomena
 like the motion of shadows according to sun position. This lets us, for example,
-recover plenoptic slices for images taken at different times of day (Figure 1,
-bottom row) and interpolate between them to observe how shadows move as
-the day progresses (best seen in our supplemental video). In eect, we learn a
+recover plenoptic slices for images taken at different times of day and interpolate between them to observe how shadows move as
+the day progresses (best seen in our supplemental video).
+ 
+In effect, we learn a
 representation of the scene that can produce high-quality views from a continuum
 of viewpoints and viewing conditions that vary with time.
-Our work makes three key contributions: first, a representation, called a
-DeepMPI, for neural rendering that extends prior work on multiplane images
-(MPIs) [68] to model viewing conditions that vary with time; second, a method
-for training DeepMPIs on sparse, unstructured crowdsampled data that is unreg-
-1 [1] describes the plenoptic function as 7D, but we can reduce this to a 4D color lightfield supplemented by time by applying the later observations of [33].
-Crowdsampling the Plenoptic Function 3 istered in time
+ 
+
                                                                                                                 
 <img src="https://user-images.githubusercontent.com/74843139/135751323-ef8582a0-575d-41fb-9a40-861fbbbd35d3.png" width=500>
                                                                                                                 
