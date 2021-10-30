@@ -3,14 +3,14 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below)
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
-
-- [Classic rendering, computer graphics](#classic-rendering--computer-graphics)
+- ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
+- [Inverse and Differential rendering](#inverse-and-differential-rendering)
 - [Neural Rerendering](#neural-rerendering)
 - [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
   * [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
     + [The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.](#the-plenoptic-function-is-also-inspired-by-multi-faceted---insect-eyes-or-lens-arrays--)
-  * [5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)](#5d-and-4d-lightfields--capture-and-rendering--andrey-gershun--1936-)
+  * [Static 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)](#static-5d-and-4d-lightfields--capture-and-rendering--andrey-gershun--1936-)
     + [Capturing, storing and compressing static and dynamic light fields](#capturing--storing-and-compressing-static-and-dynamic-light-fields)
       - [Neural Scene representations](#neural-scene-representations)
         * [Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation--2021-)
@@ -20,13 +20,16 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
       - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
         * [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--explicitly-reconstructing-the-scene)
       - [Novel view synthesis with neural rendering: Volume Rendering with Radiance Fields](#novel-view-synthesis-with-neural-rendering--volume-rendering-with-radiance-fields)
-        * [Neural Radiance Fields (NeRF): Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf---representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
+        * [Point-Based Rendering](#point-based-rendering)
+        * [Neural Radiance Fields (NeRF) rendering: Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf--rendering--representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
           + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
       - [Towards Instant 3D Capture (with a cell phone): Nerfies](#towards-instant-3d-capture--with-a-cell-phone---nerfies)
     + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
       - [Relighting with NeRF](#relighting-with-nerf)
         * [NeRD: Neural Reflectance Decomposition from Image Collections](#nerd--neural-reflectance-decomposition-from-image-collections)
-      - [Editable NeRFs](#editable-nerfs)
+        * [View Synthesis for Dynamic Scenes](#view-synthesis-for-dynamic-scenes)
+        * [Scene editing](#scene-editing)
+        * [Editable NeRFs](#editable-nerfs)
   * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
@@ -38,10 +41,13 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 - [Recommended reading](#recommended-reading)
   * [Neural Rendering and Nerf explosion](#neural-rendering-and-nerf-explosion)
   * [Other](#other)
+- [Companies in the space](#companies-in-the-space)
+  * [Software](#software)
+  * [Hardware](#hardware)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-# Classic rendering, computer graphics
+# "Classic rendering" in computer graphics
 Classical computer graphics methods approximate the physical process of image formation in the real world: light sources emit photons that interact with the objects in the scene, as a function of their geometry and material properties, before being recorded by a camera. This process is known as **light transport**.
 The process of transforming a scene definition including cameras, lights, surface geometry and material into a simulated camera image is known as **rendering**.
 
@@ -482,9 +488,9 @@ This is why I call the grand challenge for perception the Inverse Video Game pro
  *https://github.com/mitsuba-renderer/mitsuba2  A Retargetable Forward and Inverse Renderer  http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2, https://mitsuba2.readthedocs.io/en/latest/src/inverse_rendering/diff_render.html
 * https://factorize-a-city.github.io/resources/plenoptic_90_sec_V0.pdf Learning to Factorize and Relight a City
  
- ## Companies in that space
- ### Software
+ # Companies in the space
+ ## Software
  * https://techcrunch.com/2021/10/29/luma-seed-round/
- ### Hardware
+ ## Hardware
  * https://www.k-lens-one.com/en/home Single ens 3d camera
  
