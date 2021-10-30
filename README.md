@@ -435,14 +435,9 @@ photo and video editing tasks accessible to a much broader audience.
  
 This is no longer a neural network that is predicting physics. This is physics (or optics) plugged on top of a neural network inside a PyTorch engine. We have now a differentiable simulation of the real world (harnessing the power of computer graphics) on top of a neural representation of it.
 
-https://towardsdatascience.com/three-grand-challenges-in-machine-learning-771e1440eafc
+https://towardsdatascience.com/three-grand-challenges-in-machine-learning-771e1440eafc Vincent Vanhoucke, Distinguished Scientist at Google
 This is why I call the grand challenge for perception the Inverse Video Game problem: predict not only a static scene but its functional semantics and possible futures. You should be able to take a video, run it through your computer vision model, and get a representation of a scene you can not only parse, but can roll forward in time to generate plausible future behaviors, from any viewpoint, like a video game engine would. It would respect the physics (a ball shot at a goal would follow its normal trajectory), semantics (a table would be movable, a door could be opened), and agents in the scene (people, cars would have reasonable NPC behaviors).
- 
- User avatar
-level 1
-rm_rf_slash
-·
-6m
+
 
 A lot of computer vision and graphics algorithms can be defined in a closed form solution, which therefore allows for optimizations.
 
@@ -502,8 +497,8 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  # Companies in the space
  ## Software
  * https://techcrunch.com/2021/10/29/luma-seed-round/
+* Microsoft, Google, Facebook, some Amazon research
  * NVIDIA https://developer.nvidia.com/blog/?search_posts_filter=neural+rendering&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l
- * Microsoft, Google, Facebook research
  * https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine/ Snap 
  * https://www.fxguide.com/fxfeatured/pinscreens-advanced-face-ai-neural-rendering/ Pinscreen
  ## Hardware
