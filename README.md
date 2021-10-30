@@ -438,6 +438,17 @@ This is no longer a neural network that is predicting physics. This is physics (
 https://towardsdatascience.com/three-grand-challenges-in-machine-learning-771e1440eafc
 This is why I call the grand challenge for perception the Inverse Video Game problem: predict not only a static scene but its functional semantics and possible futures. You should be able to take a video, run it through your computer vision model, and get a representation of a scene you can not only parse, but can roll forward in time to generate plausible future behaviors, from any viewpoint, like a video game engine would. It would respect the physics (a ball shot at a goal would follow its normal trajectory), semantics (a table would be movable, a door could be opened), and agents in the scene (people, cars would have reasonable NPC behaviors).
  
+ User avatar
+level 1
+rm_rf_slash
+·
+6m
+
+A lot of computer vision and graphics algorithms can be defined in a closed form solution, which therefore allows for optimizations.
+
+Neural computing is very computationally expensive in part because (by design) it can’t be reduced to a closed form solution in the same way.
+Many of such closed-form contain infinite integral that are impossible to solve. We then use approximations (like Monte Carlo Markov Chain) but they take a long time to converge. It is really worth it to use a neural network to at list prototype and find the right settings before computing the final version.
+ 
 <img src="https://user-images.githubusercontent.com/74843139/137446172-b1f57e66-fed8-4e9a-bba0-6ff0e686e54a.png" width=500>
  
 <small><i>Source: https://medium.com/@hurmh92/autonomous-driving-slam-and-3d-mapping-robot-e3cca3c52e95</i></small>
@@ -491,8 +502,10 @@ This is why I call the grand challenge for perception the Inverse Video Game pro
  # Companies in the space
  ## Software
  * https://techcrunch.com/2021/10/29/luma-seed-round/
+ * NVIDIA https://developer.nvidia.com/blog/?search_posts_filter=neural+rendering&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l
+  * https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine/ Snap maybe
+ * https://www.fxguide.com/fxfeatured/pinscreens-advanced-face-ai-neural-rendering/ Pinscreen
  ## Hardware
  * https://www.k-lens-one.com/en/home Single lens 3d camera
- * https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine/ Snap maybe
- * https://www.fxguide.com/fxfeatured/pinscreens-advanced-face-ai-neural-rendering/ Pinscreen
+
  
