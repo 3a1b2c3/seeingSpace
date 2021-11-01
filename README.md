@@ -3,6 +3,9 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below)
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
+
+- [Sehender Raum / Seeing Space (WIP)](#sehender-raum---seeing-space--wip-)
+  * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
 - ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
 - [Inverse and Differential rendering](#inverse-and-differential-rendering)
@@ -13,8 +16,8 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
   * [Static 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)](#static-5d-and-4d-lightfields--capture-and-rendering--andrey-gershun--1936-)
     + [Capturing, storing and compressing static and dynamic light fields](#capturing--storing-and-compressing-static-and-dynamic-light-fields)
       - [Neural Scene representations](#neural-scene-representations)
-        * [Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation--2021-)
         * [Multi-plane image (MPI) format and DeepMPI representation (2.5 D)](#multi-plane-image--mpi--format-and-deepmpi-representation--25-d-)
+        * [Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation--2021-)
       - [Compression](#compression)
     + [Novel (virtual) 2D view synthesis from plenoptic samples](#novel--virtual--2d-view-synthesis-from-plenoptic-samples)
       - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
@@ -29,7 +32,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
         * [NeRD: Neural Reflectance Decomposition from Image Collections](#nerd--neural-reflectance-decomposition-from-image-collections)
         * [View Synthesis for Dynamic Scenes](#view-synthesis-for-dynamic-scenes)
         * [Scene editing](#scene-editing)
-        * [Editable NeRFs](#editable-nerfs)
+          + [Editable NeRFs](#editable-nerfs)
   * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
@@ -41,11 +44,13 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 - [Recommended reading](#recommended-reading)
   * [Neural Rendering and Nerf explosion](#neural-rendering-and-nerf-explosion)
   * [Other](#other)
-- [Companies in the space](#companies-in-the-space)
+- [Companies looking into the space](#companies-looking-into-the-space)
   * [Software](#software)
   * [Hardware](#hardware)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 
 # "Classic rendering" in computer graphics
 Classical computer graphics methods approximate the physical process of image formation in the real world: light sources emit photons that interact with the objects in the scene, as a function of their geometry and material properties, before being recorded by a camera. This process is known as **light transport**.
@@ -169,7 +174,7 @@ for training DeepMPIs on sparse, unstructured crowdsampled data that is unreg-
 1 [1] describes the plenoptic function as 7D, but we can reduce this to a 4D color lightfield supplemented by time by applying the later observations of [33].
 Crowdsampling the Plenoptic Function 3 istered in time
  
- ##### Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)
+##### Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)
 ACORN is a hybrid implicit-explicit neural representation that enables large-scale fitting of signals such as shapes or images. The Hybrid implicit-explicit network architecture and training strategy that adaptively allocates resources during training and inference based on the local complexity of a signal of interest. The approach uses a multiscale block-coordinate decomposition, similar to a quadtree or octree, that is optimized during training. The network architecture operates in two stages: using the bulk of the network parameters, a coordinate encoder generates a feature grid in a single forward pass. 
  
 Then, hundreds or thousands of samples within each block can be efficiently evaluated using a lightweight **feature decoder**. With this hybrid implicit-explicit network architecture, we demonstrate the first experiments that fit gigapixel images to nearly 40 dB peak signal-to-noise ratio. Notably this represents an increase in scale of over 1000x compared to the resolution of previously demonstrated image-fitting experiments. 
