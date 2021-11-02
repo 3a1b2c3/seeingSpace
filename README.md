@@ -519,9 +519,10 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  * Adobe https://www.unite.ai/adobe-neural-rendering-relighting-2021/ 
  * Tesla https://towardsdatascience.com/tesla-ai-day-2021-review-part-2-training-data-how-does-a-car-learn-e8863ba3f5b0
  * NVIDIA https://developer.nvidia.com/blog/?search_posts_filter=neural+rendering&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l
- * Snap https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine/
+ * Snap https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine
  
- * https://www.fxguide.com/fxfeatured/pinscreens-advanced-face-ai-neural-rendering/ Pinscreen
+ * https://www.fxguide.com/fxfeatured/pinscreens-advanced-face-ai-neural-rendering/ Pinscreen Avatars
+ * https://www.synthesia.io/ Avatars
  * https://techcrunch.com/2021/10/29/luma-seed-round/ Startup called Luma ai
  * https://embodyme.com 
  ## Hardware
