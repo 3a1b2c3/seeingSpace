@@ -69,7 +69,7 @@ A point in the scene is imaged by measuring the **emitted and reflected light** 
 
 <img src="https://user-images.githubusercontent.com/74843139/135806961-3278e761-d91a-4fc7-b3bd-a58b68123fff.png" width=400><img src="https://user-images.githubusercontent.com/74843139/134788604-b920d1c9-bb65-408a-9eb1-eab3ea1d4408.png" width=400>
  
-<small><i>Source: https://www.mdpi.com/2072-4292/13/13/2640, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
+<small><i>Source: https://www.semanticscholar.org/paper/Inverse-Rendering-and-Relighting-From-Multiple-Plus-Liu-Do/da1ba94e01596d0241d7d426b071ae9731d148b3,  https://www.mdpi.com/2072-4292/13/13/2640, Rendering for Data Driven Computational Imaging, Tristan Swedish</i></small>
  
  # Inverse and Differential rendering (aka "Computervision")
 Inverse graphics attempts to take **sensor data** and **infer 3D geometry, illumination, materials, and motions** such that a graphics renderer could realistically reproduce the observed scene. Renderers, however, are designed to solve the forward process of image synthesis. To go in the other direction, we propose an approximate differentiable renderer (DR) that explicitly models the relationship between changes in model parameters and image observations.
