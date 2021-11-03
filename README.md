@@ -490,6 +490,7 @@ Many of such closed-form contain infinite integral that are impossible to solve.
 * NeRD: Neural Reflectance Decomposition from Image Collections, https://markboss.me/publication/2021-nerd/
 * https://github.com/Kai-46/nerfplusplus
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
+* https://www.analyticsvidhya.com/blog/2021/04/introduction-to-neural-radiance-field-or-nerf/
  
  ## Other
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
