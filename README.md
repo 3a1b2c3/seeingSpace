@@ -78,6 +78,11 @@ Inverse graphics attempts to take **sensor data** and **infer 3D geometry, illum
  
 <small><i>Source: http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2</i></small>
  
+ Inverse rendering and differentiable rendering have been
+a topic of research for some time. However, major breakthroughs
+have only been made in recent years due to improved
+hardware and advancements in deep learning.
+ 
  # Neural Rerendering
  
 Is a relative new technique that combines classical or other 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views. In contrast to **Neural Image-based Rendering (N-IBR)**, neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.
