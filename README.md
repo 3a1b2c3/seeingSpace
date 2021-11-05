@@ -411,6 +411,8 @@ It's used for self-driving cars, or assisted driving. It's used for robotics and
  
 Lidar can be used to mesh out 3D objects and rooms and layer photo imagery on top, a technique called photogrammetry. That could be the next wave of capture tech for practical uses
      
+ * https://motchallenge.net/workshops/bmtt2021/reports/marcuzzi2021bmtt.pdf Contrastive Instance Association for 4D Panoptic Segmentatio
+ 
 # Related fields
 ## Photogrammetry (first mentioned in 1867)
 Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly.
