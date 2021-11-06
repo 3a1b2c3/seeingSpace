@@ -520,7 +520,8 @@ Many of such closed-form contain infinite integral that are impossible to solve.
 * https://factorize-a-city.github.io/resources/plenoptic_90_sec_V0.pdf Learning to Factorize and Relight a City
  
 
- Rückert, D., Franke, L. and Stamminger, M., 2021. ADOP: Approximate Differentiable One-Pixel,https://www.louisbouchard.ai/ai-synthesizes-smooth-videos-from-a-couple-of-images/
+ Rückert, D., Franke, L. and Stamminger, M., 2021. ADOP: Approximate Differentiable One-Pixel, https://www.louisbouchard.ai/ai-synthesizes-smooth-videos-from-a-couple-of-images/
+ https://github.com/timzhang642/3D-Machine-Learning
  
  # Companies looking into the space
  ## Software
