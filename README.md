@@ -543,5 +543,7 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  * https://www.k-lens-one.com/en/home Single lens "lightfield"camera
  * https://www.lightfieldlab.com Lightfield displays
  
- ## Libraries
- https://github.com/NVIDIAGameWorks/kaolin
+ ## Academic reseach groups
+*  https://www.3dunderstanding.org/publications.html
+ ## Software Libraries
+*   https://github.com/NVIDIAGameWorks/kaolin
