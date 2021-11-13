@@ -481,6 +481,12 @@ Many of such closed-form contain infinite integral that are impossible to solve.
   radiance L of a surface is **emitted flux per unit** of foreshortened area (from Lambert’s Law) per unit solid angle
  * *Irradiance* is the radiant flux received by the detector area. The unit of irradiance is W/m2. The irradiance E of a surface is defined as the incident radiant flux density
     
+ # Historic image modelling software
+ * Micrsoft Photosynth https://medium.com/@dddexperiments/why-i-preserved-photosynth-2f670d5c8dec
+ https://ia803009.us.archive.org/29/items/photosynth_ps2_heroes/view_page_75ab592b-908c-4701-ad2c-54d666992692.html
+ * Autodesk Realviz
+ https://www.fxguide.com/quicktakes/interview-with-autodesk-over-realviz-acquisition/
+ 
 # Recommended reading
 ## Neural Rendering and Nerf explosion
 * Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152, 5 hours video class https://www.neuralrender.com/
