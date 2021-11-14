@@ -57,7 +57,7 @@ Classical computer graphics methods approximate the physical process of image fo
 The process of transforming a scene definition including cameras, lights, surface geometry and material into a simulated camera image is known as **rendering**.
 
 The two most common approaches to rendering are rasterization and raytracing.
-* **Rasterization** is a feedforward process in which geometry is transformed into the image domain, sometimes in back-to-front order known as painter’s algorithm. 
+* **Rasterization** is a **feedforward** process in which geometry is transformed into the image domain, sometimes in back-to-front order known as painter’s algorithm. 
 * **Raytracing** is a process in which rays are cast backwards from the image pixels into a virtual scene, and reflections and refractions are simulated by recursively casting new **rays from the intersections** with the geometry.
 
 <img src="https://user-images.githubusercontent.com/74843139/134789211-04ab96e8-04e5-4571-8437-8907bd98e58b.png" width=400>
@@ -315,11 +315,9 @@ like the motion of shadows according to sun position. This lets us, for example,
 recover plenoptic slices for images taken at different times of day and interpolate between them to observe how shadows move as
 the day progresses (best seen in our supplemental video).
  
-In effect, we learn a
-representation of the scene that can produce high-quality views from a continuum
+In effect, we learn a representation of the scene that can produce high-quality views from a continuum
 of viewpoints and viewing conditions that vary with time.
  
-
                                                                                                                 
 <img src="https://user-images.githubusercontent.com/74843139/135751323-ef8582a0-575d-41fb-9a40-861fbbbd35d3.png" width=500>
                                                                                                                 
@@ -400,6 +398,13 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
 <img src="https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png" width=500>
  
 <small><i>Source:</i></small>
+ 
+ ## Nerf methods in comparison
+<img src="https://user-images.githubusercontent.com/74843139/141678579-c914e43a-b5f7-48a8-b1ea-bd3e35b8e871.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/141678596-380bfa7e-495f-43e3-86d4-ec545014d368.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/141678625-f08b60c2-0c8f-4a57-a460-4faf7a3470ca.png" width=300>
+
+<small><i>Advances in Neural Rendering, https://arxiv.org/abs/2111.05849</i></small>
                                                                                                                 
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
