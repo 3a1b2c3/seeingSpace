@@ -162,6 +162,9 @@ While **special cameras and cameras arrangements** have been build to capture li
 
 <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
 
+ <img src="https://user-images.githubusercontent.com/74843139/141668497-c958ab89-63fe-4289-b49f-7f1984914986.png" width=600>
+
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
 
 ##### Multi-plane image (MPI) format and DeepMPI representation (2.5 D)
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
