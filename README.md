@@ -45,8 +45,8 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 - [Companies looking into the space](#companies-looking-into-the-space)
   * [Software](#software)
   * [Hardware](#hardware)
-  * [Academic reseach groups](#academic-reseach-groups)
-  * [Software Libraries](#software-libraries)
+- [Academic reseach groups](#academic-reseach-groups)
+- [Software Libraries](#software-libraries)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -554,9 +554,9 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  * https://www.k-lens-one.com/en/home Single lens "lightfield"camera
  * https://www.lightfieldlab.com Lightfield displays
  
- ## Academic reseach groups
+# Academic reseach groups
 *  https://www.3dunderstanding.org/publications.html
 * https://rgl.epfl.ch/publications/Nicolet2021Large RGL | Large Steps in Inverse Rendering of Geometry, Realistic Graphics Lab, Same lab as Mitsuba renderer
- ## Software Libraries
+# Software Libraries
 * https://github.com/NVIDIAGameWorks/kaolin
 * https://nvlabs.github.io/nvdiffrast
