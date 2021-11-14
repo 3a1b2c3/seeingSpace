@@ -3,12 +3,9 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below)
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
-
-- [Sehender Raum / Seeing Space (WIP)](#sehender-raum---seeing-space--wip-)
-  * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
 - ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
-- [Inverse and Differential rendering](#inverse-and-differential-rendering)
+- [Inverse and Differential rendering (aka "Computervision")](#inverse-and-differential-rendering--aka--computervision--)
 - [Neural Rerendering](#neural-rerendering)
 - [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
   * [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
@@ -41,12 +38,15 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
     + [Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps](#simultaneous-localization-and-mapping--slam--1986--generating-machine-readable-near-realtime-maps)
 - [Conclusion](#conclusion)
 - [Important concepts](#important-concepts)
+- [Historic image modelling software](#historic-image-modelling-software)
 - [Recommended reading](#recommended-reading)
   * [Neural Rendering and Nerf explosion](#neural-rendering-and-nerf-explosion)
   * [Other](#other)
 - [Companies looking into the space](#companies-looking-into-the-space)
   * [Software](#software)
   * [Hardware](#hardware)
+  * [Academic reseach groups](#academic-reseach-groups)
+  * [Software Libraries](#software-libraries)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
