@@ -556,5 +556,7 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  
  ## Academic reseach groups
 *  https://www.3dunderstanding.org/publications.html
+* https://rgl.epfl.ch/publications/Nicolet2021Large RGL | Large Steps in Inverse Rendering of Geometry, Realistic Graphics Lab, Same lab as Mitsuba renderer
  ## Software Libraries
-*   https://github.com/NVIDIAGameWorks/kaolin
+* https://github.com/NVIDIAGameWorks/kaolin
+* https://nvlabs.github.io/nvdiffrast
