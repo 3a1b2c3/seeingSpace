@@ -538,6 +538,7 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  ## Software
  * Microsoft https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-lab-cambridge/
  * Google research
+   * https://arxiv.org/abs/2111.05849  Nov 2021 Advances in Neural Rendering
  * Amazon  research
  * Facebook bought startuop called "Articulated Neural Rendering", https://www.teslarati.com/tesla-autopilot-neural-rendering-for-autolabeling/
  * Tencent https://www.marktechpost.com/2021/09/21/tencent-ai-research-unveils-pirenderer-an-ai-model-to-control-the-generation-of-faces-via-semantic-neural-rendering/?amp
