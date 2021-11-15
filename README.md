@@ -534,7 +534,7 @@ Many of such closed-form contain infinite integral that are impossible to solve.
 * ADOP: Approximate Differentiable One-Pixel Point Rendering, abs: https://t.co/npOqsAstAx https://t.co/LE4ZdckQPO
  *https://github.com/mitsuba-renderer/mitsuba2  A Retargetable Forward and Inverse Renderer  http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2, https://mitsuba2.readthedocs.io/en/latest/src/inverse_rendering/diff_render.html
 * https://factorize-a-city.github.io/resources/plenoptic_90_sec_V0.pdf Learning to Factorize and Relight a City
- 
+*  GNeRF a framework to marry Generative Adversarial Networks (GAN) with Neural Radiance Field (#NeRF) reconstruction for the complex scenarios with unknown and even randomly initialized camera poses.  https://lnkd.in/dVUAW2Q3
 
  Rückert, D., Franke, L. and Stamminger, M., 2021. ADOP: Approximate Differentiable One-Pixel, https://www.louisbouchard.ai/ai-synthesizes-smooth-videos-from-a-couple-of-images/
  https://github.com/timzhang642/3D-Machine-Learning
@@ -561,8 +561,9 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  * https://www.lightfieldlab.com Lightfield displays
  
 # Academic reseach groups
-*  https://www.3dunderstanding.org/publications.html
+* TUM Munich https://www.3dunderstanding.org/publications.html
 * https://rgl.epfl.ch/publications/Nicolet2021Large RGL | Large Steps in Inverse Rendering of Geometry, Realistic Graphics Lab, Same lab as Mitsuba renderer
+ 
 # Software Libraries
 * https://github.com/NVIDIAGameWorks/kaolin
 * https://nvlabs.github.io/nvdiffrast
