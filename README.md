@@ -315,6 +315,10 @@ like the motion of shadows according to sun position. This lets us, for example,
 recover plenoptic slices for images taken at different times of day and interpolate between them to observe how shadows move as
 the day progresses (best seen in our supplemental video).
  
+ ![image](https://user-images.githubusercontent.com/74843139/142287041-711bee64-63fe-49b5-922b-f1046733b430.png)
+https://www.pyimagesearch.com/2021/11/17/computer-graphics-and-deep-learning-with-nerf-using-tensorflow-and-keras-part-2/
+ 
+Optimize for **Photometric Loss**: The difference between the predicted color of the pixel (shown in Figure 9) and the actual color of the pixel makes the photometric loss. This eventually allows us to perform backpropagation on the MLP and minimize the loss.
 In effect, we learn a representation of the scene that can produce high-quality views from a continuum
 of viewpoints and viewing conditions that vary with time.
  
