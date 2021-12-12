@@ -500,8 +500,9 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  https://www.fxguide.com/quicktakes/interview-with-autodesk-over-realviz-acquisition/
  
 # Recommended reading
-## Neural Rendering and Nerf explosion
-* Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152, 5 hours video class https://www.neuralrender.com/
+## Nerf and Neural Implicit Surfaces
+* https://lioryariv.github.io/volsdf/ Volume Rendering of Neural Implicit Surfaces
+ Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152, 5 hours video class https://www.neuralrender.com/
 * EUROGRAPHICS 2020, State of the Art on Neural Rendering
 * Great intro: "NeRF and What Happens When Graphics Becomes Differentiable", https://towardsdatascience.com/nerf-and-what-happens-when-graphics-becomes-differentiable-88a617561b5d
 * https://www.techeblog.com/google-nerf-in-the-wild-2d-photo-3d-model/
