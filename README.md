@@ -540,7 +540,8 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  *https://github.com/mitsuba-renderer/mitsuba2  A Retargetable Forward and Inverse Renderer  http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2, https://mitsuba2.readthedocs.io/en/latest/src/inverse_rendering/diff_render.html
 * https://factorize-a-city.github.io/resources/plenoptic_90_sec_V0.pdf Learning to Factorize and Relight a City
 *  GNeRF a framework to marry Generative Adversarial Networks (GAN) with Neural Radiance Field (#NeRF) reconstruction for the complex scenarios with unknown and even randomly initialized camera poses.  https://lnkd.in/dVUAW2Q3
-
+* Plenoxels: Radiance Fields without Neural Network, https://arxiv.org/pdf/2112.05131.pdf, https://github.com/sxyu/svox2.git
+ 
  Rückert, D., Franke, L. and Stamminger, M., 2021. ADOP: Approximate Differentiable One-Pixel, https://www.louisbouchard.ai/ai-synthesizes-smooth-videos-from-a-couple-of-images/
  https://github.com/timzhang642/3D-Machine-Learning
  
