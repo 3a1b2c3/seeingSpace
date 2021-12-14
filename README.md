@@ -51,7 +51,6 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
-
 # "Classic rendering" in computer graphics
 Classical computer graphics methods approximate the physical process of image formation in the real world: light sources emit photons that interact with the objects in the scene, as a function of their geometry and material properties, before being recorded by a camera. This process is known as **light transport**.
 The process of transforming a scene definition including cameras, lights, surface geometry and material into a simulated camera image is known as **rendering**.
@@ -250,8 +249,9 @@ Differentiable Rendering promises to close the loop between computer Vision and 
 ##### Point-Based Rendering
 
 ##### Neural Radiance Fields (NeRF) rendering: Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
-Nerf implicit function encoded by A multilayer perceptron (MLP) 
-A recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
+NeRF  uses a differentiable volume rendering formula to train a coordinate-based multilayer perceptron
+(MLP) to directly predict color and opacity from 3D position and 2D viewing direction.
+It is a recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
  
 The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
 It allows real-time synthesis of photorealistic new views.
