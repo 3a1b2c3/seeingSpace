@@ -1,4 +1,4 @@
-# Sehender Raum / Seeing Space (WIP)
+# Sehender Raum / Seeing Space
 ## Notes about capturing, rendering and digitally reconstruction the world
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below)
 
