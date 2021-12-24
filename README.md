@@ -508,6 +508,8 @@ Many of such closed-form contain infinite integral that are impossible to solve.
 * A collection of resources on neural rendering.https://pythonrepo.com/repo/weihaox-awesome-neural-rendering
 ## Nerf and Neural Implicit Surfaces
 * https://github.com/kwea123/nerf_pl Neural Scene Flow Fields using pytorch-lightning
+  https://github.com/kwea123/nsff_pl.git and flow fields
+ 
 * https://lioryariv.github.io/volsdf/ Volume Rendering of Neural Implicit Surfaces
  Advances in Neural Rendering https://s2021.siggraph.org/presentation/?id=gensub_303&sess=sess152, 5 hours video class https://www.neuralrender.com/
 * EUROGRAPHICS 2020, State of the Art on Neural Rendering
