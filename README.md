@@ -418,6 +418,10 @@ ToF applications create "depth maps" based on light detection, usually with a st
                                                                                                                  
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
+ ## Building NeRF at City Scale 
+ https://city-super.github.io/citynerf/img/video3.mp4
+ https://city-super.github.io/citynerf/ 
+ 
  ## Plenoxels: Radiance Fields without Neural Networks
 Proposes a view-dependent sparse voxel model, Plenoxel (plenoptic volume element), that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
  ![image](https://user-images.githubusercontent.com/74843139/145987706-63c6d595-e8d2-47bb-bd8d-dfdf2a4674b8.png)
@@ -529,6 +533,7 @@ Many of such closed-form contain infinite integral that are impossible to solve.
 * https://arxiv.org/pdf/2007.15194.pdf Crowdsampling Plenoptic Function
 * https://www.analyticsvidhya.com/blog/2021/04/introduction-to-neural-radiance-field-or-nerf/
 * https://www.pyimagesearch.com/2021/11/10/computer-graphics-and-deep-learning-with-nerf-using-tensorflow-and-keras-part-1/
+* https://city-super.github.io/citynerf/ CityNeRF: Building NeRF at City Scale 
  
  ## Other
 * *Computational Imaging* By Ayush Bhandari, Achuta Kadambi and Ramesh Raskar, A comprehensive and up-to-date textbook and reference for computational imaging, which combines vision, graphics, signal processing, and optics, http://compimagingbook.com
