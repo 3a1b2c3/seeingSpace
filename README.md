@@ -3,6 +3,7 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below)
 
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
+
 - ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
 - [Inverse and Differential rendering (aka "Computervision")](#inverse-and-differential-rendering--aka--computervision--)
@@ -30,7 +31,10 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
         * [View Synthesis for Dynamic Scenes](#view-synthesis-for-dynamic-scenes)
         * [Scene editing](#scene-editing)
           + [Editable NeRFs](#editable-nerfs)
+  * [Nerf methods in comparison](#nerf-methods-in-comparison)
   * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
+  * [Building NeRF at City Scale](#building-nerf-at-city-scale)
+  * [Plenoxels: Radiance Fields without Neural Networks](#plenoxels--radiance-fields-without-neural-networks)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
   * [Computional imaging for machines (not human observer)](#computional-imaging-for-machines--not-human-observer-)
@@ -40,13 +44,16 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 - [Important concepts](#important-concepts)
 - [Historic image modelling software](#historic-image-modelling-software)
 - [Recommended reading](#recommended-reading)
-  * [Neural Rendering and Nerf explosion](#neural-rendering-and-nerf-explosion)
+  * [Nerf and Neural Implicit Surfaces](#nerf-and-neural-implicit-surfaces)
   * [Other](#other)
 - [Companies looking into the space](#companies-looking-into-the-space)
   * [Software](#software)
   * [Hardware](#hardware)
 - [Academic reseach groups](#academic-reseach-groups)
 - [Software Libraries](#software-libraries)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -419,10 +426,14 @@ ToF applications create "depth maps" based on light detection, usually with a st
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
  ## Building NeRF at City Scale 
+CityNeRF is capable of packing city-scale 3D scenes into a unified model, which preserves high-quality details across scales
+varying from satellite-level to ground-level.
+ 
  https://city-super.github.io/citynerf/img/video3.mp4
  https://city-super.github.io/citynerf/ 
  
  ## Plenoxels: Radiance Fields without Neural Networks
+ 
 Proposes a view-dependent sparse voxel model, Plenoxel (plenoptic volume element), that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
  ![image](https://user-images.githubusercontent.com/74843139/145987706-63c6d595-e8d2-47bb-bd8d-dfdf2a4674b8.png)
  https://github.com/sxyu/svox2
