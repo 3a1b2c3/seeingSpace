@@ -31,9 +31,10 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
         * [View Synthesis for Dynamic Scenes](#view-synthesis-for-dynamic-scenes)
         * [Scene editing](#scene-editing)
           + [Editable NeRFs](#editable-nerfs)
+  * [Building NeRF at City Scale](#building-nerf-at-city-scale)
   * [Nerf methods in comparison](#nerf-methods-in-comparison)
   * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
-  * [Building NeRF at City Scale](#building-nerf-at-city-scale)
+
   * [Plenoxels: Radiance Fields without Neural Networks](#plenoxels--radiance-fields-without-neural-networks)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
@@ -416,7 +417,21 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
 <img src="https://user-images.githubusercontent.com/74843139/141678625-f08b60c2-0c8f-4a57-a460-4faf7a3470ca.png" width=300>
 
 <small><i>Advances in Neural Rendering, https://arxiv.org/abs/2111.05849</i></small>
-                                                                                                                
+## Building NeRF at City Scale 
+CityNeRF is capable of packing city-scale 3D scenes into a unified model, which preserves high-quality details across scales
+varying from satellite-level to ground-level.
+ 
+ https://city-super.github.io/citynerf/img/video3.mp4
+ https://city-super.github.io/citynerf/ 
+
+ 
+ ## Plenoxels: Radiance Fields without Neural Networks
+ 
+Proposes a view-dependent sparse voxel model, Plenoxel (plenoptic volume element), that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
+ ![image](https://user-images.githubusercontent.com/74843139/145987706-63c6d595-e8d2-47bb-bd8d-dfdf2a4674b8.png)
+ https://github.com/sxyu/svox2
+ 
+ 
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
 ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
@@ -425,18 +440,7 @@ ToF applications create "depth maps" based on light detection, usually with a st
                                                                                                                  
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
- ## Building NeRF at City Scale 
-CityNeRF is capable of packing city-scale 3D scenes into a unified model, which preserves high-quality details across scales
-varying from satellite-level to ground-level.
- 
- https://city-super.github.io/citynerf/img/video3.mp4
- https://city-super.github.io/citynerf/ 
- 
- ## Plenoxels: Radiance Fields without Neural Networks
- 
-Proposes a view-dependent sparse voxel model, Plenoxel (plenoptic volume element), that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
- ![image](https://user-images.githubusercontent.com/74843139/145987706-63c6d595-e8d2-47bb-bd8d-dfdf2a4674b8.png)
- https://github.com/sxyu/svox2
+
  
 **LiDAR**<a name="lidar"> stands for **light detection and ranging**, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse. Time-of-flight cameras on smartphones tend to be used to improve focus accuracy and speed, in particular better low-light focus.
 It's used for self-driving cars, or assisted driving. It's used for robotics and drones. Augmented reality headsets like the HoloLens 2 have similar tech, mapping out room spaces before layering 3D virtual objects into them
