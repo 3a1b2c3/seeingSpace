@@ -407,21 +407,21 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
  
 <small><i>Source:</i></small>
  
- ## Nerf methods in comparison
-<img src="https://user-images.githubusercontent.com/74843139/141678579-c914e43a-b5f7-48a8-b1ea-bd3e35b8e871.png" width=300>
-<img src="https://user-images.githubusercontent.com/74843139/141678596-380bfa7e-495f-43e3-86d4-ec545014d368.png" width=300>
-<img src="https://user-images.githubusercontent.com/74843139/141678625-f08b60c2-0c8f-4a57-a460-4faf7a3470ca.png" width=300>
 
-<small><i>Advances in Neural Rendering, https://arxiv.org/abs/2111.05849</i></small>
-## Building NeRF at City Scale 
+###  Building NeRF at City Scale 
 CityNeRF is capable of packing city-scale 3D scenes into a unified model, which preserves high-quality details across scales
 varying from satellite-level to ground-level.
  
  https://city-super.github.io/citynerf/img/video3.mp4
  https://city-super.github.io/citynerf/ 
 
- 
- ## Plenoxels: Radiance Fields without Neural Networks
+  ###  Nerf methods in comparison
+<img src="https://user-images.githubusercontent.com/74843139/141678579-c914e43a-b5f7-48a8-b1ea-bd3e35b8e871.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/141678596-380bfa7e-495f-43e3-86d4-ec545014d368.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/141678625-f08b60c2-0c8f-4a57-a460-4faf7a3470ca.png" width=300>
+
+<small><i>Advances in Neural Rendering, https://arxiv.org/abs/2111.05849</i></small>
+ ### Plenoxels: Radiance Fields without Neural Networks
  
 Proposes a view-dependent sparse voxel model, Plenoxel (plenoptic volume element), that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
  ![image](https://user-images.githubusercontent.com/74843139/145987706-63c6d595-e8d2-47bb-bd8d-dfdf2a4674b8.png)
@@ -436,7 +436,6 @@ ToF applications create "depth maps" based on light detection, usually with a st
                                                                                                                  
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
-
  
 **LiDAR**<a name="lidar"> stands for **light detection and ranging**, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse. Time-of-flight cameras on smartphones tend to be used to improve focus accuracy and speed, in particular better low-light focus.
 It's used for self-driving cars, or assisted driving. It's used for robotics and drones. Augmented reality headsets like the HoloLens 2 have similar tech, mapping out room spaces before layering 3D virtual objects into them
@@ -521,6 +520,8 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  
 # Recommended reading
 * A collection of resources on neural rendering.https://pythonrepo.com/repo/weihaox-awesome-neural-rendering
+* https://github.com/natowi/3D-Reconstruction-with-Deep-Learning-Methods
+ 
 ## Nerf and Neural Implicit Surfaces
 * https://github.com/kwea123/nerf_pl Neural Scene Flow Fields using pytorch-lightning
   https://github.com/kwea123/nsff_pl.git and flow fields
