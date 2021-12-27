@@ -2,7 +2,7 @@
 ## Notes about capturing, rendering and digitally reconstruction the world
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below)
 
-Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics fits with computer vision, machine learning and capture hardware.
+Catching up with newer research in image based rendering: A TLDR on how traditional **computer graphics fits with computer vision, machine learning and capture hardware**.
 
 - ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
@@ -31,11 +31,10 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
         * [View Synthesis for Dynamic Scenes](#view-synthesis-for-dynamic-scenes)
         * [Scene editing](#scene-editing)
           + [Editable NeRFs](#editable-nerfs)
-  * [Building NeRF at City Scale](#building-nerf-at-city-scale)
   * [Nerf methods in comparison](#nerf-methods-in-comparison)
-  * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
-
+  * [Building NeRF at City Scale](#building-nerf-at-city-scale)
   * [Plenoxels: Radiance Fields without Neural Networks](#plenoxels--radiance-fields-without-neural-networks)
+  * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
   * [Computional imaging for machines (not human observer)](#computional-imaging-for-machines--not-human-observer-)
@@ -52,9 +51,6 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
   * [Hardware](#hardware)
 - [Academic reseach groups](#academic-reseach-groups)
 - [Software Libraries](#software-libraries)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
