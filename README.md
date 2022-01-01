@@ -340,6 +340,7 @@ The network architecture weights themselves are quite large (in terms of disk/ba
 Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG16 and 574MB for VGG19. This makes deploying VGG a tiresome task.
 We still use VGG in many deep learning image classification problems; however, smaller network architectures are often more desirable (such as SqueezeNet, GoogLeNet, etc.).
  
+####  Unconstrained Images: NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections, Martin-Brualla et al., CVPR 2021
 <small><i>Source: https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/</i></small>
 
 * Reference implemenation (nerf and nerf in the wild) https://github.com/kwea123/nerf_pl
