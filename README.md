@@ -326,15 +326,16 @@ Optimize for **Photometric Loss**: The difference between the predicted color of
 In effect, we learn a representation of the scene that can produce high-quality views from a continuum
 of viewpoints and viewing conditions that vary with time.
  
-                                                                                                                
+ <img src="https://user-images.githubusercontent.com/74843139/135836081-9dacc9ba-0ddb-4665-8e54-359b1e500dfa.png" width=500>
+
+        
+ <small><i>Source: NeRF-W Nerf in the wild</i></small>
+NeRF-W disentangles lighting from the underlying 3D scene geometry. The latter remains consistent even as the former changes.                                                                                                                                                          
 <img src="https://user-images.githubusercontent.com/74843139/135751323-ef8582a0-575d-41fb-9a40-861fbbbd35d3.png" width=500>
                                                                                                                 
 <small><i>Source: nerf in the wild</i></small>
 
-<img src="https://user-images.githubusercontent.com/74843139/135836081-9dacc9ba-0ddb-4665-8e54-359b1e500dfa.png" width=500>
-
-<small><i>Source: Nerf in the wild</i></small>
-                                                                                                                
+                                                        
 Unfortunately, there are two major drawbacks with VGGNet: It is painfully slow to train.
 The network architecture weights themselves are quite large (in terms of disk/bandwidth).
 Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG16 and 574MB for VGG19. This makes deploying VGG a tiresome task.
