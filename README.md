@@ -425,9 +425,14 @@ varying from satellite-level to ground-level.
 <small><i>Advances in Neural Rendering, https://arxiv.org/abs/2111.05849</i></small>
  ### Plenoxels: Radiance Fields without Neural Networks
  
-Proposes a view-dependent sparse voxel model, Plenoxel (plenoptic volume element), that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
+Proposes a **view-dependent sparse voxel model, Plenoxel (plenoptic volume element)**, that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
  ![image](https://user-images.githubusercontent.com/74843139/145987706-63c6d595-e8d2-47bb-bd8d-dfdf2a4674b8.png)
  https://github.com/sxyu/svox2
+ 
+ ### In-Place Scene Labelling and Understanding with Implicit Scene Representation
+Shuaifeng Zhi, Tristan Laidlow, Stefan Leutenegger, Andrew J. Davison
+Dyson Robotics Laboratory at Imperial College
+Department of Computing, Imperial College London, UK
  
  
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
