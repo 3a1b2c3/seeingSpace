@@ -335,14 +335,14 @@ of viewpoints and viewing conditions that vary with time.
 
 <small><i>Source: Nerf in the wild</i></small>
                                                                                                                 
-Unfortunately, there are two major drawbacks with VGGNet:     It is painfully slow to train.
+Unfortunately, there are two major drawbacks with VGGNet: It is painfully slow to train.
 The network architecture weights themselves are quite large (in terms of disk/bandwidth).
 Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG16 and 574MB for VGG19. This makes deploying VGG a tiresome task.
 We still use VGG in many deep learning image classification problems; however, smaller network architectures are often more desirable (such as SqueezeNet, GoogLeNet, etc.).
  
 <small><i>Source: https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/</i></small>
 
-For the future the autors envision enabling even larger changes in viewpoint and illumination, including 4D walkthroughs of large-scale scenes in the future.
+* Reference implemenation (nerf and nerf in the wild) https://github.com/kwea123/nerf_pl
                                                                                                                 
 #### Towards Instant 3D Capture (with a cell phone): Nerfies
 <img src="https://user-images.githubusercontent.com/74843139/137580135-e9373469-3c76-42ff-b44c-7b11878e776c.png" width=500>
@@ -519,7 +519,7 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  https://www.fxguide.com/quicktakes/interview-with-autodesk-over-realviz-acquisition/
  
 # Recommended reading
-* A collection of resources on neural rendering.https://pythonrepo.com/repo/weihaox-awesome-neural-rendering
+* A collection of resources on neural rendering: https://pythonrepo.com/repo/weihaox-awesome-neural-rendering
 * https://github.com/natowi/3D-Reconstruction-with-Deep-Learning-Methods
  
 ## Nerf and Neural Implicit Surfaces
