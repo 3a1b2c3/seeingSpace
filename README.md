@@ -18,7 +18,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
       - [Neural Scene representations](#neural-scene-representations)
         * [Multi-plane image (MPI) format and DeepMPI representation (2.5 D)](#multi-plane-image--mpi--format-and-deepmpi-representation--25-d-)
         * [Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation--2021-)
-    + [Plenoxels: Radiance Fields without Neural Networks](#plenoxels--radiance-fields-without-neural-networks)
+        *[Plenoxels: Radiance Fields without Neural Networks](#plenoxels--radiance-fields-without-neural-networks)
       - [Compression](#compression)
     + [Novel (virtual) 2D view synthesis from plenoptic samples](#novel--virtual--2d-view-synthesis-from-plenoptic-samples)
       - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
@@ -198,7 +198,7 @@ The autors claim the approach is able to represent 3D shapes significantly faste
 
 <small><i>Source: https://www.computationalimaging.org/publications/acorn</i></small>
 
-  ### Plenoxels: Radiance Fields without Neural Networks
+##### Plenoxels: Radiance Fields without Neural Networks, 2021
  
 Proposes a **view-dependent sparse voxel model, Plenoxel (plenoptic volume element)**, that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
  ![image](https://user-images.githubusercontent.com/74843139/145987706-63c6d595-e8d2-47bb-bd8d-dfdf2a4674b8.png)
