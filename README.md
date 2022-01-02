@@ -4,6 +4,8 @@ When I learned about **traditional computer graphics and photogrammetry** I miss
 
 Catching up with newer research in image based rendering: A TLDR on how traditional **computer graphics fits with computer vision, machine learning and capture hardware**.
 
+- [Sehender Raum / Seeing Space](#sehender-raum---seeing-space)
+  * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
 - ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
 - [Inverse and Differential rendering (aka "Computervision")](#inverse-and-differential-rendering--aka--computervision--)
@@ -16,6 +18,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
       - [Neural Scene representations](#neural-scene-representations)
         * [Multi-plane image (MPI) format and DeepMPI representation (2.5 D)](#multi-plane-image--mpi--format-and-deepmpi-representation--25-d-)
         * [Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation--2021-)
+    + [Plenoxels: Radiance Fields without Neural Networks](#plenoxels--radiance-fields-without-neural-networks)
       - [Compression](#compression)
     + [Novel (virtual) 2D view synthesis from plenoptic samples](#novel--virtual--2d-view-synthesis-from-plenoptic-samples)
       - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
@@ -24,6 +27,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
         * [Point-Based Rendering](#point-based-rendering)
         * [Neural Radiance Fields (NeRF) rendering: Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf--rendering--representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
           + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
+      - [Unconstrained Images: NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections, Martin-Brualla et al., CVPR 2021](#unconstrained-images--nerf-in-the-wild--neural-radiance-fields-for-unconstrained-photo-collections--martin-brualla-et-al--cvpr-2021)
       - [Towards Instant 3D Capture (with a cell phone): Nerfies](#towards-instant-3d-capture--with-a-cell-phone---nerfies)
     + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
       - [Relighting with NeRF](#relighting-with-nerf)
@@ -31,9 +35,9 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
         * [View Synthesis for Dynamic Scenes](#view-synthesis-for-dynamic-scenes)
         * [Scene editing](#scene-editing)
           + [Editable NeRFs](#editable-nerfs)
-  * [Nerf methods in comparison](#nerf-methods-in-comparison)
-  * [Building NeRF at City Scale](#building-nerf-at-city-scale)
-  * [Plenoxels: Radiance Fields without Neural Networks](#plenoxels--radiance-fields-without-neural-networks)
+    + [Building NeRF at City Scale](#building-nerf-at-city-scale)
+    + [Nerf methods in comparison](#nerf-methods-in-comparison)
+    + [In-Place Scene Labelling and Understanding with Implicit Scene Representation](#in-place-scene-labelling-and-understanding-with-implicit-scene-representation)
   * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
@@ -53,7 +57,6 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 - [Software Libraries](#software-libraries)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 # "Classic rendering" in computer graphics
 Classical computer graphics methods approximate the physical process of image formation in the real world: light sources emit photons that interact with the objects in the scene, as a function of their geometry and material properties, before being recorded by a camera. This process is known as **light transport**.
@@ -195,6 +198,12 @@ The autors claim the approach is able to represent 3D shapes significantly faste
 
 <small><i>Source: https://www.computationalimaging.org/publications/acorn</i></small>
 
+  ### Plenoxels: Radiance Fields without Neural Networks
+ 
+Proposes a **view-dependent sparse voxel model, Plenoxel (plenoptic volume element)**, that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
+ ![image](https://user-images.githubusercontent.com/74843139/145987706-63c6d595-e8d2-47bb-bd8d-dfdf2a4674b8.png)
+ https://github.com/sxyu/svox2
+ 
  #### Compression
  TODO
  
@@ -423,12 +432,7 @@ varying from satellite-level to ground-level.
 <img src="https://user-images.githubusercontent.com/74843139/141678625-f08b60c2-0c8f-4a57-a460-4faf7a3470ca.png" width=300>
 
 <small><i>Advances in Neural Rendering, https://arxiv.org/abs/2111.05849</i></small>
- ### Plenoxels: Radiance Fields without Neural Networks
- 
-Proposes a **view-dependent sparse voxel model, Plenoxel (plenoptic volume element)**, that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
- ![image](https://user-images.githubusercontent.com/74843139/145987706-63c6d595-e8d2-47bb-bd8d-dfdf2a4674b8.png)
- https://github.com/sxyu/svox2
- 
+
  ### In-Place Scene Labelling and Understanding with Implicit Scene Representation
 Shuaifeng Zhi, Tristan Laidlow, Stefan Leutenegger, Andrew J. Davison
 Dyson Robotics Laboratory at Imperial College
