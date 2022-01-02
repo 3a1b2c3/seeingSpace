@@ -435,7 +435,8 @@ varying from satellite-level to ground-level.
 
  ### Nerf for computer vision task : In-Place Scene Labelling and Understanding with Implicit Scene Representation, 2021
 The intrinsic multi-view consistency and smoothness of NeRF benefit semantics by enabling sparse labels to efficiently propagate.
- 
+<img src="https://user-images.githubusercontent.com/74843139/147872350-0553ba7c-5700-4a74-bfc3-22f140b31eeb.pngg" width=400>
+
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
 ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
