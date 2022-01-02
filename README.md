@@ -37,7 +37,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
           + [Editable NeRFs](#editable-nerfs)
     + [Building NeRF at City Scale](#building-nerf-at-city-scale)
     + [Nerf methods in comparison](#nerf-methods-in-comparison)
-    + [In-Place Scene Labelling and Understanding with Implicit Scene Representation](#in-place-scene-labelling-and-understanding-with-implicit-scene-representation)
+    + [ Labelling and Understanding with Implicit Scene Representation](#in-place-scene-labelling-and-understanding-with-implicit-scene-representation)
   * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
@@ -433,11 +433,8 @@ varying from satellite-level to ground-level.
 
 <small><i>Advances in Neural Rendering, https://arxiv.org/abs/2111.05849</i></small>
 
- ### In-Place Scene Labelling and Understanding with Implicit Scene Representation
-Shuaifeng Zhi, Tristan Laidlow, Stefan Leutenegger, Andrew J. Davison
-Dyson Robotics Laboratory at Imperial College
-Department of Computing, Imperial College London, UK
- 
+ ### Nerf for computer vision task : In-Place Scene Labelling and Understanding with Implicit Scene Representation, 2021
+The intrinsic multi-view consistency and smoothness of NeRF benefit semantics by enabling sparse labels to efficiently propagate.
  
 ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
