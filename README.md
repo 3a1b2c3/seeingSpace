@@ -3,7 +3,6 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below)
 
 Catching up with newer research in image based rendering: A TLDR on how traditional **computer graphics fits with computer vision, machine learning and capture hardware**.
-
 - [Sehender Raum / Seeing Space](#sehender-raum---seeing-space)
   * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
 - ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
@@ -18,7 +17,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
       - [Neural Scene representations](#neural-scene-representations)
         * [Multi-plane image (MPI) format and DeepMPI representation (2.5 D)](#multi-plane-image--mpi--format-and-deepmpi-representation--25-d-)
         * [Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation--2021-)
-        *[Plenoxels: Radiance Fields without Neural Networks](#plenoxels--radiance-fields-without-neural-networks)
+        * [Plenoxels: Radiance Fields without Neural Networks, 2021](#plenoxels--radiance-fields-without-neural-networks--2021)
       - [Compression](#compression)
     + [Novel (virtual) 2D view synthesis from plenoptic samples](#novel--virtual--2d-view-synthesis-from-plenoptic-samples)
       - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
@@ -37,7 +36,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
           + [Editable NeRFs](#editable-nerfs)
     + [Building NeRF at City Scale](#building-nerf-at-city-scale)
     + [Nerf methods in comparison](#nerf-methods-in-comparison)
-    + [ Labelling and Understanding with Implicit Scene Representation](#in-place-scene-labelling-and-understanding-with-implicit-scene-representation)
+    + [Nerf for computer vision task : In-Place Scene Labelling and Understanding with Implicit Scene Representation, 2021](#nerf-for-computer-vision-task---in-place-scene-labelling-and-understanding-with-implicit-scene-representation--2021)
   * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
