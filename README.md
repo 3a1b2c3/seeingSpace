@@ -365,14 +365,13 @@ NeRF-W disentangles lighting from the underlying 3D scene geometry. The latter r
 <img src="https://user-images.githubusercontent.com/74843139/135751323-ef8582a0-575d-41fb-9a40-861fbbbd35d3.png" width=500>
                                                                                                                 
 <small><i>Source: nerf in the wild</i></small>
-
                                                         
 Unfortunately, there are two major drawbacks with VGGNet: It is painfully slow to train.
 The network architecture weights themselves are quite large (in terms of disk/bandwidth).
 Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG16 and 574MB for VGG19. This makes deploying VGG a tiresome task.
 We still use VGG in many deep learning image classification problems; however, smaller network architectures are often more desirable (such as SqueezeNet, GoogLeNet, etc.).
 
-* Reference implemenation (nerf and nerf in the wild) https://github.com/kwea123/nerf_pl
+* Reference implemenation (nerf and nerf in the wild using pytorch) https://github.com/kwea123/nerf_pl
                                                                                                                 
 #### Towards Instant 3D Capture (with a cell phone): Nerfies
 <img src="https://user-images.githubusercontent.com/74843139/137580135-e9373469-3c76-42ff-b44c-7b11878e776c.png" width=500>
@@ -380,13 +379,13 @@ We still use VGG in many deep learning image classification problems; however, s
 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
-###  Multiresolution Nerfs
+###  Multi-resolution Nerfs<a name="multiscale">
 #### MipNerf (uses [LLFF](#llff)), 2021
-The rendering procedure used by neural radiance fields (NeRF) samples a scene with a single ray per pixel and may therefore produce renderings that are excessively blurred or aliased when training or testing images observe scene content at different resolutions. The straightforward solution of supersampling by rendering with multiple rays per pixel is impractical for NeRF, because rendering each ray requires querying a multilayer perceptron hundreds of times. 
+The rendering procedure used by neural radiance fields (NeRF) samples a scene with a single ray per pixel and may therefore produce renderings that are excessively blurred or aliased when training or testing images observe scene content at different resolutions. The straightforward solution of **supersampling** by rendering with multiple rays per pixel is impractical for NeRF, because rendering each ray requires querying a multilayer perceptron hundreds of times. 
 https://github.com/google/mipnerf
 
 #### Building NeRF at City Scale, 2021
-Instead of having different pictures a few centimeters apart, they have pictures from thousands of kilometers apart, ranging from satellites to pictures taken on the road. As you can see, NeRF alone fails to use such drastically different pictures to reconstruct the scenes. 
+Instead of having different pictures a few centimeters apart this approach can handle have pictures from **thousands of kilometers** apart, ranging from satellites to pictures taken on the road. As you can see, NeRF alone fails to use such drastically different pictures to reconstruct the scenes. 
 CityNeRF is capable of packing city-scale 3D scenes into a unified model, which preserves high-quality details across scales
 varying from satellite-level to ground-level.
  
