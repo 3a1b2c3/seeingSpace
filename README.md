@@ -4,6 +4,7 @@ When I learned about **traditional computer graphics and photogrammetry** I miss
 
 Catching up with newer research in image based rendering: A TLDR on how traditional **computer graphics fits with computer vision, machine learning and capture hardware**.
 
+
 - ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
 - [Inverse and Differential rendering (aka "Computervision")](#inverse-and-differential-rendering--aka--computervision--)
@@ -14,9 +15,9 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
   * [Static 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)](#static-5d-and-4d-lightfields--capture-and-rendering--andrey-gershun--1936-)
     + [Capturing, storing and compressing static and dynamic light fields](#capturing--storing-and-compressing-static-and-dynamic-light-fields)
       - [Neural Scene representations](#neural-scene-representations)
-        * [Local Light Field Fusion (LLFF), 2019<a name="llff">](#local-light-field-fusion--llff---2019-a-name--llff--)
-        * [Multi-plane image (MPI) format and DeepMPI representation (2.5 D), 2020<a name="mpi">](#multi-plane-image--mpi--format-and-deepmpi-representation--25-d---2020-a-name--mpi--)
-        * [Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation--2021-)
+        * [Local Light Field Fusion (LLFF)<a name="llff">, 2019](#local-light-field-fusion--llff--a-name--llff----2019)
+        * [Multi-plane image (MPI)<a name="mpi"> format and DeepMPI representation (2.5 D), 2020](#multi-plane-image--mpi--a-name--mpi---format-and-deepmpi-representation--25-d---2020)
+        * [Networks, Acorn: Adaptive coordinate networks for neural scene representation, 2021](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation--2021)
         * [Plenoxels: Radiance Fields without Neural Networks, 2021<a name="plenoxel">](#plenoxels--radiance-fields-without-neural-networks--2021-a-name--plenoxel--)
       - [Compression](#compression)
     + [Novel (virtual) 2D view synthesis from plenoptic samples](#novel--virtual--2d-view-synthesis-from-plenoptic-samples)
@@ -24,24 +25,25 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
         * [Inverse rendering and differential rendering: explicitly reconstructing the scene](#inverse-rendering-and-differential-rendering--explicitly-reconstructing-the-scene)
       - [Novel view synthesis with neural rendering: Volume Rendering with Radiance Fields](#novel-view-synthesis-with-neural-rendering--volume-rendering-with-radiance-fields)
         * [Point-Based Rendering](#point-based-rendering)
-        * [Neural Radiance Fields (NeRF) rendering: Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf--rendering--representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
+        * [Neural Radiance Fields (NeRF)<a name="nerf"> rendering: Representing Scenes as Neural Radiance Fields for View Synthesis, published 2020 Mildenhall](#neural-radiance-fields--nerf--a-name--nerf---rendering--representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall)
       - [Unconstrained Images: NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections, Martin-Brualla et al., CVPR 2021](#unconstrained-images--nerf-in-the-wild--neural-radiance-fields-for-unconstrained-photo-collections--martin-brualla-et-al--cvpr-2021)
           + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
       - [Towards Instant 3D Capture (with a cell phone): Nerfies](#towards-instant-3d-capture--with-a-cell-phone---nerfies)
-    + [Multiresolution Nerfs](#multiresolution-nerfs)
-      - [MipNerf (uses [
+    + [Multi-resolution Nerfs<a name="multiscale">](#multi-resolution-nerfs-a-name--multiscale--)
+      - [MipNerf (uses [LLFF](#llff)), 2021](#mipnerf--uses--llff---llff----2021)
       - [Building NeRF at City Scale, 2021](#building-nerf-at-city-scale--2021)
     + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
-      - [Learning to Factorize and Relight a City](#learning-to-factorize-and-relight-a-city)
       - [Relighting with NeRF](#relighting-with-nerf)
+        * [Learning to Factorize and Relight a City](#learning-to-factorize-and-relight-a-city)
         * [NeRD: Neural Reflectance Decomposition from Image Collections](#nerd--neural-reflectance-decomposition-from-image-collections)
-    + [Nerf for computer vision task : Scene Labelling and Understanding with Implicit Scene Representation, 2021](#nerf-for-computer-vision-task---scene-labelling-and-understanding-with-implicit-scene-representation--2021)
+    + [Nerf for computer vision task : Scene Labelling<a name="labelling"> and Understanding with Implicit Scene Representation, 2021](#nerf-for-computer-vision-task---scene-labelling-a-name--labelling---and-understanding-with-implicit-scene-representation--2021)
       - [Pose Estimation](#pose-estimation)
     + [Nerf methods in comparison](#nerf-methods-in-comparison)
         * [Open problems / research topics](#open-problems---research-topics)
 - [Related fields](#related-fields)
-  * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
-  * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
+  * [Photogrammetry (first mentioned in 1867)<a name="photogrammetry">](#photogrammetry--first-mentioned-in-1867--a-name--photogrammetry--)
+  * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)<a name="tof">](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961--a-name--tof--)
+    + [LIDAR, ca 1960](#lidar--ca-1960)
   * [Computional imaging for machines (not human observer)](#computional-imaging-for-machines--not-human-observer-)
     + [Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)](#lensless-cameras--mid-1990s---optical-images-for-a-computer--not-for-a-human-oberserver-)
     + [Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps](#simultaneous-localization-and-mapping--slam--1986--generating-machine-readable-near-realtime-maps)
@@ -51,17 +53,15 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 - [Recommended reading](#recommended-reading)
   * [Nerf and Neural Implicit Surfaces](#nerf-and-neural-implicit-surfaces)
   * [Other](#other)
+- [Academic research groups](#academic-research-groups)
 - [Companies looking into the space](#companies-looking-into-the-space)
   * [Software](#software)
   * [Hardware](#hardware)
-- [Academic reseach groups](#academic-reseach-groups)
 - [Software Libraries](#software-libraries)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
+ 
 # "Classic rendering" in computer graphics
 Classical computer graphics methods approximate the physical process of image formation in the real world: light sources emit photons that interact with the objects in the scene, as a function of their geometry and material properties, before being recorded by a camera. This process is known as **light transport**.
 The process of transforming a scene definition including cameras, lights, surface geometry and material into a simulated camera image is known as **rendering**.
