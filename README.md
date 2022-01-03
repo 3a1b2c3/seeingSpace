@@ -29,7 +29,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
           + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
       - [Towards Instant 3D Capture (with a cell phone): Nerfies](#towards-instant-3d-capture--with-a-cell-phone---nerfies)
     + [Multiresolution Nerfs](#multiresolution-nerfs)
-      - [MipNerf (uses [LLFF(#llff)), 2021](#mipnerf--uses--llff--llff----2021)
+      - [MipNerf (uses [
       - [Building NeRF at City Scale, 2021](#building-nerf-at-city-scale--2021)
     + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
       - [Learning to Factorize and Relight a City](#learning-to-factorize-and-relight-a-city)
@@ -177,18 +177,23 @@ While **special cameras and cameras arrangements** have been build to capture li
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
  
-#####  Local Light Field Fusion (LLFF), 2019<a name="llff">
- Used in original Nerf paper.
+#####  Local Light Field Fusion (LLFF)<a name="llff">, 2019
+ Used in original [Nerf paper](#nerf).
+ 
+  So this pose recentering needs to be applied on real data where the camera poses are arbitrary, is that correct? Leave aside rendering, does it have impact on training: train on llff (real data with arbitrary camera poses) without rencenter_poses and with NDC? Intuitively it depends on how much the default world coordinate differs from the poses_avg, in practice when using COLMAP, do they differ much?
+
+NDC makes very specific assumptions, that the camera is facing along -z and is entirely behind the z=-near plane. So if the rotation is wrong it will fail (in its current implementation). This is analogous to how a regular graphics pipeline like OpenGL 
  Pose_bounds.npy contains 3x5 pose matrices and 2 depth bounds for each image. Each pose has [R T] as the left 3x4 matrix and [H W F] as the right 3x1 matrix.
  https://github.com/Fyusion/LLFF
  
  
-##### Multi-plane image (MPI) format and DeepMPI representation (2.5 D), 2020<a name="mpi">
+##### Multi-plane image (MPI)<a name="mpi"> format and DeepMPI representation (2.5 D), 2020
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
 MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
 
 <img src="https://user-images.githubusercontent.com/74843139/135738631-e9a72fde-c4d4-46f4-8c1e-1823c6607090.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135738753-1067733d-2d60-45a8-bf9d-3b2dfab83f41.png" width=500>
-
+Its depth-wise resolution is limited by the number of discrete planes, and thus the MPIs cannot be converted to other 3D representations such as mesh, point cloud, etc. I
+ 
 <small><i>Source: https://www.semanticscholar.org/paper/ACORN%3A-Adaptive-Coordinate-Networks-for-Neural-Martel-Lindell/2d0c07aa97b5b422c1ac512b1c184f412a19f28e/</i></small>
  
 **DeepMPI (2020)** extends prior work on multiplane images (MPIs) to model viewing conditions that vary with time.
@@ -199,7 +204,7 @@ for training DeepMPIs on sparse, unstructured crowdsampled data that is unreg-
 1 [1] describes the plenoptic function as 7D, but we can reduce this to a 4D color lightfield supplemented by time by applying the later observations of [33].
 Crowdsampling the Plenoptic Function 3 istered in time
  
-##### Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)
+##### Networks, Acorn: Adaptive coordinate networks for neural scene representation, 2021
 ACORN is a hybrid implicit-explicit neural representation that enables large-scale fitting of signals such as shapes or images. The Hybrid implicit-explicit network architecture and training strategy that adaptively allocates resources during training and inference based on the local complexity of a signal of interest. The approach uses a multiscale block-coordinate decomposition, similar to a quadtree or octree, that is optimized during training. The network architecture operates in two stages: using the bulk of the network parameters, a coordinate encoder generates a feature grid in a single forward pass. 
  
 Then, hundreds or thousands of samples within each block can be efficiently evaluated using a lightweight **feature decoder**. With this hybrid implicit-explicit network architecture, we demonstrate the first experiments that fit gigapixel images to nearly 40 dB peak signal-to-noise ratio. Notably this represents an increase in scale of over 1000x compared to the resolution of previously demonstrated image-fitting experiments. 
@@ -229,7 +234,7 @@ View synthesis can be approached by either **explicit estimation of scene geomet
 One approach aims to **explicitly reconstruct the surface geometry** and the appearance on the surface from the observed sparse views, other approaches adopt volume-based representations to directly to model the appearance of the entire space and use volumetric rendering techniques to generate images for 2D displays. 
 The raw samples of a light field are saved as disks. resolution large amounts of data
 
-The Volume rendering technique known as ray marching. Ray marching is when you shoot out a ray from the observer (camera) through a 3D volume in space and ask a function: what is the color and opacity at this particular point in space? Neural rendering takes the next step by using a neural network to approximate this function. 
+The Volume rendering technique known as **ray marching**<a name="raymaeching">. Ray marching is when you shoot out a ray from the observer (camera) through a 3D volume in space and ask a function: what is the color and opacity at this particular point in space? Neural rendering takes the next step by using a neural network to approximate this function. 
  
  <img src="https://user-images.githubusercontent.com/74843139/137583408-aa016bc7-b9c3-4d4b-94bf-1f570e7923c6.png" width=500>
 
@@ -258,7 +263,7 @@ point-like primitives, or higher-order parametric surfaces.
 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
-One popular class of approaches uses mesh-based representations of scenes with either use [48] or view-dependent appearance. Differentiable rasterizers or pathtracers [22,30] can directly optimize mesh representations to reproduce a set of input images using gradient descent.
+One popular class of approaches uses mesh-based representations of scenes with either use or view-dependent appearance. Differentiable rasterizers or pathtracers can directly optimize mesh representations to reproduce a set of input images using gradient descent.
 However, gradient-based mesh optimization based on image reprojection is often dicult, likely because of local minima or poor conditioning of the loss landscape. Furthermore, this strategy requires a template mesh with xed topology to be provided as an initialization before optimization [22], which is typically unavailable for unconstrained real-world scenes.
 
 Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
@@ -275,9 +280,8 @@ Differentiable Rendering promises to close the loop between computer Vision and 
  
 ##### Point-Based Rendering
 
-##### Neural Radiance Fields (NeRF) rendering: Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.) 
-NeRF  uses a differentiable volume rendering formula to train a coordinate-based multilayer perceptron
-(MLP) to directly predict color and opacity from 3D position and 2D viewing direction.
+##### Neural Radiance Fields (NeRF)<a name="nerf"> rendering: Representing Scenes as Neural Radiance Fields for View Synthesis, published 2020 Mildenhall
+NeRF  uses a **differentiable volume rendering** formula to train a coordinate-based multilayer perceptron (MLP)<a name="mlp"> to directly predict color and opacity from 3D position and 2D viewing direction.
 It is a recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
  
 The key idea in NeRF is to represent the entire volume space with a continuous function, parameterised by a **multi-layer perceptron (MLP)**, bypassing the need to discretise the space into voxel grids, which usually suffers from resolution constraints.
@@ -377,7 +381,7 @@ We still use VGG in many deep learning image classification problems; however, s
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
 ###  Multiresolution Nerfs
-#### MipNerf (uses [LLFF(#llff)), 2021
+#### MipNerf (uses [LLFF](#llff)), 2021
 The rendering procedure used by neural radiance fields (NeRF) samples a scene with a single ray per pixel and may therefore produce renderings that are excessively blurred or aliased when training or testing images observe scene content at different resolutions. The straightforward solution of supersampling by rendering with multiple rays per pixel is impractical for NeRF, because rendering each ray requires querying a multilayer perceptron hundreds of times. 
 https://github.com/google/mipnerf
 
@@ -393,8 +397,7 @@ First trains the neural network successively from distant viewpoints to close-up
 
  The next trick was to modify the neural network itself at each level. The way this is done is by adding what they call a "block". A block has two separate information flows, one for the more distant and one for the more close up level being trained at that moment. It's designed in such a way that a set of information called "base" information is determined for the more distant level, and then "residual" information (in the form of colors and densities) that modifies the "base" and adds detail is calculated from there.
 
- 
- 
+  
  https://city-super.github.io/citynerf/img/video3.mp4
  https://city-super.github.io/citynerf/ 
 
@@ -402,21 +405,7 @@ First trains the neural network successively from distant viewpoints to close-up
 ### Relighting with 4D Incident Light Fields
 It is possible to **re-light and de-light real objects** illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
 
-#### Learning to Factorize and Relight a City
-A learning-based framework for disentangling
-outdoor scenes into temporally-varying illumination and permanent scene
-factors imagery from Google Street View, where the same locations are
-captured repeatedly through time.  
-<img src="https://twitter.com/i/status/1292919826726424578" width=500>
- 
- ![image](https://user-images.githubusercontent.com/74843139/139244166-ba465b77-425b-4767-8e76-003046ca24de.png)
 
-<img src="https://user-images.githubusercontent.com/74843139/138553169-1b84b49a-0c6a-4915-a89e-d1ae4a09f803.pngg" width=400><img src="https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png" width=500>
-
-<small><i>Source: https://en.wikipedia.org/wiki/Light_stage</i></small>
- 
-<img src="https://user-images.githubusercontent.com/74843139/137584537-473c169d-bfeb-4f8e-a6ef-a5b80d7e71f1.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137585106-e23fda39-222b-45ae-a3e0-f6bf6b5e6ef0.png" width=500>
- 
 <small><i>Source:</i></small>
                                                                                                                 
 #### Relighting with NeRF
@@ -437,11 +426,26 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
                                                                                                                 
 <img src="https://user-images.githubusercontent.com/74843139/137583877-47f21587-0bdb-412c-b035-1d906ae65d85.png" width=500>
   <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
+ 
+ ##### Learning to Factorize and Relight a City
+A learning-based framework for disentangling
+outdoor scenes into temporally-varying illumination and permanent scene
+factors imagery from Google Street View, where the same locations are
+captured repeatedly through time.  
+<img src="https://twitter.com/i/status/1292919826726424578" width=500>
+ 
+ ![image](https://user-images.githubusercontent.com/74843139/139244166-ba465b77-425b-4767-8e76-003046ca24de.png)
+
+<img src="https://user-images.githubusercontent.com/74843139/138553169-1b84b49a-0c6a-4915-a89e-d1ae4a09f803.pngg" width=400><img src="https://user-images.githubusercontent.com/74843139/135739588-00789dba-9ddc-45a8-bc44-5a9f5c0fc7da.png" width=500>
+
+<small><i>Source: https://en.wikipedia.org/wiki/Light_stage</i></small>
+ 
+<img src="https://user-images.githubusercontent.com/74843139/137584537-473c169d-bfeb-4f8e-a6ef-a5b80d7e71f1.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137585106-e23fda39-222b-45ae-a3e0-f6bf6b5e6ef0.png" width=500>
+ 
  ##### NeRD: Neural Reflectance Decomposition from Image Collections
  NeRD is a  method that can decompose image collections from multiple views taken under varying or fixed illumination conditions. The object can be rotated, or the camera can turn around the object. The result is a neural volume with an explicit representation of the appearance and illumination in the form of the BRDF and Spherical Gaussian (SG) environment illumination.
  
 <img src="hhttps://user-images.githubusercontent.com/74843139/137691538-a069ec6c-86f2-459d-b0e0-a53966399245.png" width=500>
-
 
 
   
@@ -466,20 +470,24 @@ The intrinsic multi-view consistency and smoothness of NeRF benefit semantics by
 
 <small><i>Advances in Neural Rendering, https://arxiv.org/abs/2111.05849</i></small>
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
+ 
   ##### Open problems / research topics
 * Faster Inference
 * Faster Training
 * View Synthesis for Dynamic Scenes/ Video
-* Deformable/Animation
+* [Deformable](#deformable)/Animation 
+* Editing / Editable NeRFs
 * Generalization
   https://factorize-a-city.github.io/weather.html
-* Unconstrained Images
+* [Unconstrained Images](#unconstraint)
 * Compositionality
 * Object Category Modeling
-* Multi-scale
+* [Multi-scalea nd multi-resolution](#multiscale)
 * Model Reconstruction
-* Depth Estimation
-* Editing / Editable NeRFs
+* [Labelling](#labelling) and Depth Estimation
+
+ 
+ 
 <img src="https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png" width=500>
  
 <small><i>Source:</i></small>
