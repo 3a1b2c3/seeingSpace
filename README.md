@@ -449,7 +449,7 @@ captured repeatedly through time.
 
 
   
- ### Nerf for computer vision task : Scene Labelling and Understanding with Implicit Scene Representation, 2021
+ ### Nerf for computer vision task : Scene Labelling<a name="labelling"> and Understanding with Implicit Scene Representation, 2021
 The intrinsic multi-view consistency and smoothness of NeRF benefit semantics by enabling sparse labels to efficiently propagate.
 <img src="https://user-images.githubusercontent.com/74843139/147872350-0553ba7c-5700-4a74-bfc3-22f140b31eeb.pngg" width=400>
  #### Pose Estimation
@@ -486,23 +486,16 @@ The intrinsic multi-view consistency and smoothness of NeRF benefit semantics by
 * Model Reconstruction
 * [Labelling](#labelling) and Depth Estimation
 
+  
+
  
  
 <img src="https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png" width=500>
  
 <small><i>Source:</i></small>
  
-**LiDAR**<a name="lidar"> stands for **light detection and ranging**, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse. Time-of-flight cameras on smartphones tend to be used to improve focus accuracy and speed, in particular better low-light focus.
-It's used for self-driving cars, or assisted driving. It's used for robotics and drones. Augmented reality headsets like the HoloLens 2 have similar tech, mapping out room spaces before layering 3D virtual objects into them
- 
-Lidar can be used to mesh out 3D objects and rooms and layer photo imagery on top, a technique called photogrammetry. That could be the next wave of capture tech for practical uses
-     
- * https://www.neonscience.org/resources/learning-hub/tutorials/lidar-basics
- * https://motchallenge.net/workshops/bmtt2021/reports/marcuzzi2021bmtt.pdf Contrastive Instance Association for 4D Panoptic Segmentation
- 
-# Related fields
- 
-## Photogrammetry (first mentioned in 1867)
+# Related fields 
+## Photogrammetry (first mentioned in 1867)<a name="photogrammetry"> 
 Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly.
 
 Photogrammetry data is usually captured with a **single moving conventional still frame camera** or uses **aerial data**. Sometimes it is combined with LIDAR data for depth information. Visibility constraints such as rain, occlusion or dense vegetation can block the camera's line of sight or limit light required for good result
@@ -514,7 +507,7 @@ See [Lidar](#lidar) for alternatives. Lighting is backed into these reconstructe
  
 A historical overview can be found at https://alicevision.org/#history.
  
- ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
+ ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)<a name="tof"> 
 ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
 ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
 
@@ -522,6 +515,16 @@ ToF applications create "depth maps" based on light detection, usually with a st
                                                                                                                  
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
+ ### LIDAR, ca 1960
+ 
+**LiDAR**<a name="lidar"> stands for **light detection and ranging**, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse. Time-of-flight cameras on smartphones tend to be used to improve focus accuracy and speed, in particular better low-light focus.
+It's used for self-driving cars, or assisted driving. It's used for robotics and drones. Augmented reality headsets like the HoloLens 2 have similar tech, mapping out room spaces before layering 3D virtual objects into them
+ 
+Lidar can be used to mesh out 3D objects and rooms and layer photo imagery on top, a technique called photogrammetry. That could be the next wave of capture tech for practical uses
+     
+ * https://www.neonscience.org/resources/learning-hub/tutorials/lidar-basics
+ * https://motchallenge.net/workshops/bmtt2021/reports/marcuzzi2021bmtt.pdf Contrastive Instance Association for 4D Panoptic Segmentation
+
  
 ## Computional imaging for machines (not human observer)
 ### Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)
