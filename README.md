@@ -14,7 +14,8 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
   * [Static 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)](#static-5d-and-4d-lightfields--capture-and-rendering--andrey-gershun--1936-)
     + [Capturing, storing and compressing static and dynamic light fields](#capturing--storing-and-compressing-static-and-dynamic-light-fields)
       - [Neural Scene representations](#neural-scene-representations)
-        * [Multi-plane image (MPI) format and DeepMPI representation (2.5 D)](#multi-plane-image--mpi--format-and-deepmpi-representation--25-d-)
+        * [Local Light Field Fusion (LLFF), 2019](#local-light-field-fusion--llff---2019)
+        * [Multi-plane image (MPI) format and DeepMPI representation (2.5 D), 2020](#multi-plane-image--mpi--format-and-deepmpi-representation--25-d---2020)
         * [Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation--2021-)
         * [Plenoxels: Radiance Fields without Neural Networks, 2021](#plenoxels--radiance-fields-without-neural-networks--2021)
       - [Compression](#compression)
@@ -168,8 +169,11 @@ While **special cameras and cameras arrangements** have been build to capture li
  <img src="https://user-images.githubusercontent.com/74843139/141668497-c958ab89-63fe-4289-b49f-7f1984914986.png" width=600>
 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
-
-##### Multi-plane image (MPI) format and DeepMPI representation (2.5 D)
+#####  Local Light Field Fusion (LLFF), 2019
+ Pose_bounds.npy contains 3x5 pose matrices and 2 depth bounds for each image. Each pose has [R T] as the left 3x4 matrix and [H W F] as the right 3x1 matrix.
+ https://github.com/Fyusion/LLFF
+ 
+##### Multi-plane image (MPI) format and DeepMPI representation (2.5 D), 2020
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
 MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
 
