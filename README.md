@@ -203,6 +203,8 @@ Proposes a **view-dependent sparse voxel model, Plenoxel (plenoptic volume eleme
  ![image](https://user-images.githubusercontent.com/74843139/145987706-63c6d595-e8d2-47bb-bd8d-dfdf2a4674b8.png)
  https://github.com/sxyu/svox2
  
+ Also https://github.com/naruya/VaxNeRF
+ 
  #### Compression
  TODO
  
@@ -404,18 +406,7 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
  
 <img src="hhttps://user-images.githubusercontent.com/74843139/137691538-a069ec6c-86f2-459d-b0e0-a53966399245.png" width=500>
 
- <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
- 
- ##### View Synthesis for Dynamic Scenes
- 
- ##### Scene editing
- Still generally a hard problem
- 
-  https://factorize-a-city.github.io/weather.html
- ###### Editable NeRFs
-<img src="https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png" width=500>
- 
-<small><i>Source:</i></small>
+
  
 
 ###  Building NeRF at City Scale 
@@ -425,14 +416,8 @@ varying from satellite-level to ground-level.
  https://city-super.github.io/citynerf/img/video3.mp4
  https://city-super.github.io/citynerf/ 
 
-  ###  Nerf methods in comparison
-<img src="https://user-images.githubusercontent.com/74843139/141678579-c914e43a-b5f7-48a8-b1ea-bd3e35b8e871.png" width=300>
-<img src="https://user-images.githubusercontent.com/74843139/141678596-380bfa7e-495f-43e3-86d4-ec545014d368.png" width=300>
-<img src="https://user-images.githubusercontent.com/74843139/141678625-f08b60c2-0c8f-4a57-a460-4faf7a3470ca.png" width=300>
-
-<small><i>Advances in Neural Rendering, https://arxiv.org/abs/2111.05849</i></small>
-
- ### Nerf for computer vision task : In-Place Scene Labelling and Understanding with Implicit Scene Representation, 2021
+  
+ ### Nerf for computer vision task : Scene Labelling and Understanding with Implicit Scene Representation, 2021
 The intrinsic multi-view consistency and smoothness of NeRF benefit semantics by enabling sparse labels to efficiently propagate.
 <img src="https://user-images.githubusercontent.com/74843139/147872350-0553ba7c-5700-4a74-bfc3-22f140b31eeb.pngg" width=400>
 
@@ -444,6 +429,32 @@ ToF applications create "depth maps" based on light detection, usually with a st
                                                                                                                  
 <small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
  
+ 
+###  Nerf methods in comparison
+<img src="https://user-images.githubusercontent.com/74843139/141678579-c914e43a-b5f7-48a8-b1ea-bd3e35b8e871.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/141678596-380bfa7e-495f-43e3-86d4-ec545014d368.png" width=300>
+<img src="https://user-images.githubusercontent.com/74843139/141678625-f08b60c2-0c8f-4a57-a460-4faf7a3470ca.png" width=300>
+
+<small><i>Advances in Neural Rendering, https://arxiv.org/abs/2111.05849</i></small>
+ <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
+  ##### Open problems / research topics
+* Faster Inference
+* Faster Training
+* Unconstrained Images
+* View Synthesis for Dynamic Scenes/ Video
+* Deformable/Animation
+* Generalization
+  https://factorize-a-city.github.io/weather.html
+* Pose Estimation
+* Compositionality
+* Object Category Modeling
+* Multi-scale
+* Model Reconstruction
+* Depth Estimation
+* Editing / Editable NeRFs
+<img src="https://user-images.githubusercontent.com/74843139/137584064-9dc8bd13-8c82-48b2-9733-bc72f8cf11cc.png" width=500><img src="https://user-images.githubusercontent.com/74843139/137584284-dd443eb8-82c3-4628-a518-ab133c5d8a69.png" width=500>
+ 
+<small><i>Source:</i></small>
  
 **LiDAR**<a name="lidar"> stands for **light detection and ranging**, and has been around since 1961. It uses lasers to ping off objects and return to the source of the laser, measuring distance by timing the travel, or flight, of the light pulse. Time-of-flight cameras on smartphones tend to be used to improve focus accuracy and speed, in particular better low-light focus.
 It's used for self-driving cars, or assisted driving. It's used for robotics and drones. Augmented reality headsets like the HoloLens 2 have similar tech, mapping out room spaces before layering 3D virtual objects into them
