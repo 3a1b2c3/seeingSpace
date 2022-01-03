@@ -3,8 +3,7 @@
 When I learned about **traditional computer graphics and photogrammetry** I missed the big picture about how all the pieces connect: with hardware, physics and machine learning aspects. It made it harder to understand recent research and its meaning for the field. Rendering 3D models from 2D images remains a challenging problem but incredible progress has been made since I first became interested in the topic 20 years ago (see below)
 
 Catching up with newer research in image based rendering: A TLDR on how traditional **computer graphics fits with computer vision, machine learning and capture hardware**.
-- [Sehender Raum / Seeing Space](#sehender-raum---seeing-space)
-  * [Notes about capturing, rendering and digitally reconstruction the world](#notes-about-capturing--rendering-and-digitally-reconstruction-the-world)
+
 - ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
 - [Inverse and Differential rendering (aka "Computervision")](#inverse-and-differential-rendering--aka--computervision--)
@@ -31,15 +30,14 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
     + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
       - [Relighting with NeRF](#relighting-with-nerf)
         * [NeRD: Neural Reflectance Decomposition from Image Collections](#nerd--neural-reflectance-decomposition-from-image-collections)
-        * [View Synthesis for Dynamic Scenes](#view-synthesis-for-dynamic-scenes)
-        * [Scene editing](#scene-editing)
-          + [Editable NeRFs](#editable-nerfs)
     + [Building NeRF at City Scale](#building-nerf-at-city-scale)
+    + [Nerf for computer vision task : Scene Labelling and Understanding with Implicit Scene Representation, 2021](#nerf-for-computer-vision-task---scene-labelling-and-understanding-with-implicit-scene-representation--2021)
+      - [Pose Estimation](#pose-estimation)
     + [Nerf methods in comparison](#nerf-methods-in-comparison)
-    + [Nerf for computer vision task : In-Place Scene Labelling and Understanding with Implicit Scene Representation, 2021](#nerf-for-computer-vision-task---in-place-scene-labelling-and-understanding-with-implicit-scene-representation--2021)
-  * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
+        * [Open problems / research topics](#open-problems---research-topics)
 - [Related fields](#related-fields)
   * [Photogrammetry (first mentioned in 1867)](#photogrammetry--first-mentioned-in-1867-)
+  * [Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)](#temporally-coded-imaging--time-resolved-imaging--tri--or-time-of-flight--tof--imaging-and-lidar--1961-)
   * [Computional imaging for machines (not human observer)](#computional-imaging-for-machines--not-human-observer-)
     + [Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)](#lensless-cameras--mid-1990s---optical-images-for-a-computer--not-for-a-human-oberserver-)
     + [Simultaneous localization and mapping: SLAM (1986). Generating machine readable near realtime maps](#simultaneous-localization-and-mapping--slam--1986--generating-machine-readable-near-realtime-maps)
@@ -420,16 +418,17 @@ varying from satellite-level to ground-level.
  ### Nerf for computer vision task : Scene Labelling and Understanding with Implicit Scene Representation, 2021
 The intrinsic multi-view consistency and smoothness of NeRF benefit semantics by enabling sparse labels to efficiently propagate.
 <img src="https://user-images.githubusercontent.com/74843139/147872350-0553ba7c-5700-4a74-bfc3-22f140b31eeb.pngg" width=400>
-
-## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
-ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
-ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
-
-<img src="https://user-images.githubusercontent.com/74843139/134803482-e283e016-a50e-4ae9-aca7-d35128ba9554.png" width=500><img src="(https://user-images.githubusercontent.com/74843139/134806495-5d40deff-328c-42b5-ada4-2035399abf1f.png" width=200>
-                                                                                                                 
-<small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
+ #### Pose Estimation
  
- 
+    iNeRF: Inverting Neural Radiance Fields for Pose Estimation, Yen-Chen et al. IROS 2021 | bibtex
+    A-NeRF: Surface-free Human 3D Pose Refinement via Neural Rendering, Su et al. Arxiv 2021 | bibtex
+    NeRF--: Neural Radiance Fields Without Known Camera Parameters, Wang et al., Arxiv 2021 | github | bibtex
+    iMAP: Implicit Mapping and Positioning in Real-Time, Sucar et al., Arxiv 2021 | bibtex
+    GNeRF: GAN-based Neural Radiance Field without Posed Camera, Meng et al., Arxiv 2021 | bibtex
+    BARF: Bundle-Adjusting Neural Radiance Fields, Lin et al., ICCV 2021 | bibtex
+    Self-Calibrating Neural Radiance Fields, Park et al., ICCV 2021 | github | bibtex
+
+
 ###  Nerf methods in comparison
 <img src="https://user-images.githubusercontent.com/74843139/141678579-c914e43a-b5f7-48a8-b1ea-bd3e35b8e871.png" width=300>
 <img src="https://user-images.githubusercontent.com/74843139/141678596-380bfa7e-495f-43e3-86d4-ec545014d368.png" width=300>
@@ -440,12 +439,11 @@ ToF applications create "depth maps" based on light detection, usually with a st
   ##### Open problems / research topics
 * Faster Inference
 * Faster Training
-* Unconstrained Images
 * View Synthesis for Dynamic Scenes/ Video
 * Deformable/Animation
 * Generalization
   https://factorize-a-city.github.io/weather.html
-* Pose Estimation
+* Unconstrained Images
 * Compositionality
 * Object Category Modeling
 * Multi-scale
@@ -465,6 +463,7 @@ Lidar can be used to mesh out 3D objects and rooms and layer photo imagery on to
  * https://motchallenge.net/workshops/bmtt2021/reports/marcuzzi2021bmtt.pdf Contrastive Instance Association for 4D Panoptic Segmentation
  
 # Related fields
+ 
 ## Photogrammetry (first mentioned in 1867)
 Photogrammetry is the science of **reconstructing objects and environments that exist in the physical world** through photographs. The technique involves stitching together large collections of overlapping photographs to create **topographical maps, point clouds** and may also produce **2D and 3D digital models**. First mentioned in 1867 it predates digital photography significantly.
 
@@ -476,7 +475,16 @@ See [Lidar](#lidar) for alternatives. Lighting is backed into these reconstructe
 <small><i>Source: http://www.aamspi.com/services/aerial-photogrammetry/</i></small>
  
 A historical overview can be found at https://alicevision.org/#history.
-                                                                                                                
+ 
+ ## Temporally Coded Imaging: Time Resolved Imaging (TRI) or Time-of-Flight (ToF) Imaging and LIDAR (1961)
+ToF refers to the use of the **speed of light or even sound** to determine distance, as it measures the time it takes light to leave a device, bounce off an object or plane, and return to the device, all divided by two reveals The distance from the device to the object or plane.
+ToF applications create "depth maps" based on light detection, usually with a standard RGB camera, and the advantage that ToF offers compared to LiDAR is that ToF requires less specialized equipment so that it can be used with smaller, cheaper devices.
+
+<img src="https://user-images.githubusercontent.com/74843139/134803482-e283e016-a50e-4ae9-aca7-d35128ba9554.png" width=500><img src="(https://user-images.githubusercontent.com/74843139/134806495-5d40deff-328c-42b5-ada4-2035399abf1f.png" width=200>
+                                                                                                                 
+<small><i>Source: CVPR 2019 Data-Driven Computational Imaging</i></small>
+ 
+ 
 ## Computional imaging for machines (not human observer)
 ### Lensless cameras (mid-1990s): Optical images for a computer (not for a human oberserver)
 The basic design of a camera has remained unchanged for centuries. To acquire an image, light from the scene under view is focused onto a photosensitive surface using a lens. The primary task of a lens in a camera is to shape the incoming light wavefront so that it creates a focused
