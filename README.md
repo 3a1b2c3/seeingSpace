@@ -604,8 +604,6 @@ Many of such closed-form contain infinite integral that are impossible to solve.
 * https://www.matthewtancik.com/nerf
 * https://paperswithcode.com/task/neural-rendering
 * https://medium.com/mlearning-ai/what-is-neural-rendering-e25371afc771
-
-* Ben Mildenhall's research page, https://bmild.github.io/
 * https://slideslive.com/38939970/a-i-for-3d-content-creation
 * https://github.com/facebookresearch/pytorch3d/blob/12514463830edd007a76226301b62593f62ea279/projects/nerf/README.md
 * NeRD: Neural Reflectance Decomposition from Image Collections, https://markboss.me/publication/2021-nerd/
@@ -640,13 +638,19 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  Rückert, D., Franke, L. and Stamminger, M., 2021. ADOP: Approximate Differentiable One-Pixel, https://www.louisbouchard.ai/ai-synthesizes-smooth-videos-from-a-couple-of-images/
  https://github.com/timzhang642/3D-Machine-Learning
  
+  
+# Academic research groups
+* TUM Munich https://www.3dunderstanding.org/publications.html
+* https://rgl.epfl.ch/publications/Nicolet2021Large RGL | Large Steps in Inverse Rendering of Geometry, Realistic Graphics Lab, Same lab as Mitsuba renderer
+ 
  # Companies looking into the space
  ## Software
  * Microsoft https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-lab-cambridge/
  * Google research
+   * **Ben Mildenhall's** research page, https://bmild.github.io/
    * https://arxiv.org/abs/2111.05849  Nov 2021 Advances in Neural Rendering
  * Amazon  research
- * Facebook bought startuop called "Articulated Neural Rendering", https://www.teslarati.com/tesla-autopilot-neural-rendering-for-autolabeling/
+ * Facebook bought startup called "Articulated Neural Rendering", https://www.teslarati.com/tesla-autopilot-neural-rendering-for-autolabeling/
  * Tencent https://www.marktechpost.com/2021/09/21/tencent-ai-research-unveils-pirenderer-an-ai-model-to-control-the-generation-of-faces-via-semantic-neural-rendering/?amp
  * Adobe https://www.unite.ai/adobe-neural-rendering-relighting-2021/ 
  * Tesla https://towardsdatascience.com/tesla-ai-day-2021-review-part-2-training-data-how-does-a-car-learn-e8863ba3f5b0
@@ -657,14 +661,11 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  * https://www.synthesia.io/ Avatars
  * https://techcrunch.com/2021/10/29/luma-seed-round/ Startup called Luma ai
  * https://embodyme.com 
+ 
  ## Hardware
  * https://www.k-lens-one.com/en/home Single lens "lightfield"camera
  * https://www.lightfieldlab.com Lightfield displays
- 
-# Academic reseach groups
-* TUM Munich https://www.3dunderstanding.org/publications.html
-* https://rgl.epfl.ch/publications/Nicolet2021Large RGL | Large Steps in Inverse Rendering of Geometry, Realistic Graphics Lab, Same lab as Mitsuba renderer
- 
+
 # Software Libraries
 * https://github.com/NVIDIAGameWorks/kaolin
 * https://nvlabs.github.io/nvdiffrast
