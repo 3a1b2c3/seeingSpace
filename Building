@@ -169,9 +169,13 @@ While **special cameras and cameras arrangements** have been build to capture li
  <img src="https://user-images.githubusercontent.com/74843139/141668497-c958ab89-63fe-4289-b49f-7f1984914986.png" width=600>
 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
+ 
+ 
 #####  Local Light Field Fusion (LLFF), 2019
+ Used in original Nerf paper.
  Pose_bounds.npy contains 3x5 pose matrices and 2 depth bounds for each image. Each pose has [R T] as the left 3x4 matrix and [H W F] as the right 3x1 matrix.
  https://github.com/Fyusion/LLFF
+ 
  
 ##### Multi-plane image (MPI) format and DeepMPI representation (2.5 D), 2020
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
@@ -367,8 +371,7 @@ We still use VGG in many deep learning image classification problems; however, s
 ### Relighting with 4D Incident Light Fields
 It is possible to **re-light and de-light real objects** illuminated by a 4D incident light field, representing the illumination of an environment. By exploiting the richness in angular and spatial variation of the light field, objects can be relit with a high degree of realism.
 
-Learning to Factorize and Relight a City
-
+#### Learning to Factorize and Relight a City
 A learning-based framework for disentangling
 outdoor scenes into temporally-varying illumination and permanent scene
 factors imagery from Google Street View, where the same locations are
@@ -409,12 +412,19 @@ Neural Reflectance Fields improve on NeRF by adding a local reflection model in 
 <img src="hhttps://user-images.githubusercontent.com/74843139/137691538-a069ec6c-86f2-459d-b0e0-a53966399245.png" width=500>
 
 
- 
+###  Multiresolution Nerfs
+#### MipNerf
+The rendering procedure used by neural radiance fields (NeRF) samples a scene with a single ray per pixel and may therefore produce renderings that are excessively blurred or aliased when training or testing images observe scene content at different resolutions. The straightforward solution of supersampling by rendering with multiple rays per pixel is impractical for NeRF, because rendering each ray requires querying a multilayer perceptron hundreds of times. 
+https://github.com/google/mipnerf
 
-###  Building NeRF at City Scale 
+#### Building NeRF at City Scale 
 CityNeRF is capable of packing city-scale 3D scenes into a unified model, which preserves high-quality details across scales
 varying from satellite-level to ground-level.
  
+First trains the neural network successively from distant viewpoints to close-up viewpoints -- and to train the neural network on transitions in between these "levels". This was inspired by "level of detail" systems currently in use by traditional 3D computer rendering systems. "Joint training on all scales results in blurry texture in close views and incomplete geometry in remote views. Separate training on each scale yields inconsistent geometries and textures between successive scales." So the system starts at the most distant level and incorporates more and more information from the next closer level as it progresses from level to level.
+
+The next trick was to modify the neural network itself at each level. The way this is done is by adding what they call a "block". A block has two separate information flows, one for the more distant and one for the more close up level being trained at that moment. It's designed in such a way that a set of information called "base" information is determined for the more distant level, and then "residual" information (in the form of colors and densities) that modifies the "base" and adds detail is calculated from there.
+
  https://city-super.github.io/citynerf/img/video3.mp4
  https://city-super.github.io/citynerf/ 
 
