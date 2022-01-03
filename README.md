@@ -386,10 +386,15 @@ Instead of having different pictures a few centimeters apart, they have pictures
 CityNeRF is capable of packing city-scale 3D scenes into a unified model, which preserves high-quality details across scales
 varying from satellite-level to ground-level.
  
+<img src="https://user-images.githubusercontent.com/74843139/147981762-5fb3f861-0876-4823-badd-1fe0d9197667.png" width=400>
+ <small><i>Source:</i></small>
+ 
 First trains the neural network successively from distant viewpoints to close-up viewpoints -- and to train the neural network on transitions in between these "levels". This was inspired by "level of detail" systems currently in use by traditional 3D computer rendering systems. "Joint training on all scales results in blurry texture in close views and incomplete geometry in remote views. Separate training on each scale yields inconsistent geometries and textures between successive scales." So the system starts at the most distant level and incorporates more and more information from the next closer level as it progresses from level to level.
 
  The next trick was to modify the neural network itself at each level. The way this is done is by adding what they call a "block". A block has two separate information flows, one for the more distant and one for the more close up level being trained at that moment. It's designed in such a way that a set of information called "base" information is determined for the more distant level, and then "residual" information (in the form of colors and densities) that modifies the "base" and adds detail is calculated from there.
 
+ 
+ 
  https://city-super.github.io/citynerf/img/video3.mp4
  https://city-super.github.io/citynerf/ 
 
