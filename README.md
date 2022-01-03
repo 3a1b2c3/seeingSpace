@@ -4,7 +4,6 @@ When I learned about **traditional computer graphics and photogrammetry** I miss
 
 Catching up with newer research in image based rendering: A TLDR on how traditional **computer graphics fits with computer vision, machine learning and capture hardware**.
 
-
 - ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
 - [Inverse and Differential rendering (aka "Computervision")](#inverse-and-differential-rendering--aka--computervision--)
