@@ -14,10 +14,10 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
   * [Static 5D and 4D Lightfields: capture and rendering (Andrey Gershun, 1936)](#static-5d-and-4d-lightfields--capture-and-rendering--andrey-gershun--1936-)
     + [Capturing, storing and compressing static and dynamic light fields](#capturing--storing-and-compressing-static-and-dynamic-light-fields)
       - [Neural Scene representations](#neural-scene-representations)
-        * [Local Light Field Fusion (LLFF), 2019](#local-light-field-fusion--llff---2019)
-        * [Multi-plane image (MPI) format and DeepMPI representation (2.5 D), 2020](#multi-plane-image--mpi--format-and-deepmpi-representation--25-d---2020)
+        * [Local Light Field Fusion (LLFF), 2019<a name="llff">](#local-light-field-fusion--llff---2019-a-name--llff--)
+        * [Multi-plane image (MPI) format and DeepMPI representation (2.5 D), 2020<a name="mpi">](#multi-plane-image--mpi--format-and-deepmpi-representation--25-d---2020-a-name--mpi--)
         * [Networks, Acorn: Adaptive coordinate networks for neural scene representation (2021)](#networks--acorn--adaptive-coordinate-networks-for-neural-scene-representation--2021-)
-        * [Plenoxels: Radiance Fields without Neural Networks, 2021](#plenoxels--radiance-fields-without-neural-networks--2021)
+        * [Plenoxels: Radiance Fields without Neural Networks, 2021<a name="plenoxel">](#plenoxels--radiance-fields-without-neural-networks--2021-a-name--plenoxel--)
       - [Compression](#compression)
     + [Novel (virtual) 2D view synthesis from plenoptic samples](#novel--virtual--2d-view-synthesis-from-plenoptic-samples)
       - [3d scene reconstruction and inverse and differential rendering](#3d-scene-reconstruction-and-inverse-and-differential-rendering)
@@ -25,13 +25,16 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
       - [Novel view synthesis with neural rendering: Volume Rendering with Radiance Fields](#novel-view-synthesis-with-neural-rendering--volume-rendering-with-radiance-fields)
         * [Point-Based Rendering](#point-based-rendering)
         * [Neural Radiance Fields (NeRF) rendering: Representing Scenes as Neural Radiance Fields for View Synthesis (published 2020 Mildenhall et al.)](#neural-radiance-fields--nerf--rendering--representing-scenes-as-neural-radiance-fields-for-view-synthesis--published-2020-mildenhall-et-al-)
-          + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
       - [Unconstrained Images: NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections, Martin-Brualla et al., CVPR 2021](#unconstrained-images--nerf-in-the-wild--neural-radiance-fields-for-unconstrained-photo-collections--martin-brualla-et-al--cvpr-2021)
+          + [Crowdsampling the Plenoptic Function with NeRF (published 2020)](#crowdsampling-the-plenoptic-function-with-nerf--published-2020-)
       - [Towards Instant 3D Capture (with a cell phone): Nerfies](#towards-instant-3d-capture--with-a-cell-phone---nerfies)
+    + [Multiresolution Nerfs](#multiresolution-nerfs)
+      - [MipNerf (uses [LLFF(#llff)), 2021](#mipnerf--uses--llff--llff----2021)
+      - [Building NeRF at City Scale, 2021](#building-nerf-at-city-scale--2021)
     + [Relighting with 4D Incident Light Fields](#relighting-with-4d-incident-light-fields)
+      - [Learning to Factorize and Relight a City](#learning-to-factorize-and-relight-a-city)
       - [Relighting with NeRF](#relighting-with-nerf)
         * [NeRD: Neural Reflectance Decomposition from Image Collections](#nerd--neural-reflectance-decomposition-from-image-collections)
-    + [Building NeRF at City Scale](#building-nerf-at-city-scale)
     + [Nerf for computer vision task : Scene Labelling and Understanding with Implicit Scene Representation, 2021](#nerf-for-computer-vision-task---scene-labelling-and-understanding-with-implicit-scene-representation--2021)
       - [Pose Estimation](#pose-estimation)
     + [Nerf methods in comparison](#nerf-methods-in-comparison)
@@ -53,6 +56,9 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
   * [Hardware](#hardware)
 - [Academic reseach groups](#academic-reseach-groups)
 - [Software Libraries](#software-libraries)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
