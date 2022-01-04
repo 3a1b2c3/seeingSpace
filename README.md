@@ -177,19 +177,25 @@ While **special cameras and cameras arrangements** have been build to capture li
  
  
 #####  Local Light Field Fusion (LLFF)<a name="llff">, 2019
- Used in original [Nerf paper](#nerf).
+Used in original [Nerf paper](#nerf). Usually you have files 
+
+COLMAP is a general-purpose **Structure-from-Motion (SfM) and Multi-View Stereo (MVS)** pipeline with a graphical and command-line interface. It offers a wide range of features for reconstruction of ordered and unordered image collections. The software is licensed under the new BSD license. If you use this project for your research, please cite:
  
-  So this pose recentering needs to be applied on real data where the camera poses are arbitrary, is that correct? Leave aside rendering, does it have impact on training: train on llff (real data with arbitrary camera poses) without rencenter_poses and with NDC? Intuitively it depends on how much the default world coordinate differs from the poses_avg, in practice when using COLMAP, do they differ much?
+So this pose recentering needs to be applied on real data where the camera poses are arbitrary, is that correct? Leave aside rendering, does it have impact on training: train on llff (real data with arbitrary camera poses) without rencenter_poses and with NDC? Intuitively it depends on how much the default world coordinate differs from the poses_avg, in practice when using COLMAP, do they differ much?
 
 NDC makes very specific assumptions, that the camera is facing along -z and is entirely behind the z=-near plane. So if the rotation is wrong it will fail (in its current implementation). This is analogous to how a regular graphics pipeline like OpenGL 
  Pose_bounds.npy contains 3x5 pose matrices and 2 depth bounds for each image. Each pose has [R T] as the left 3x4 matrix and [H W F] as the right 3x1 matrix.
  https://github.com/Fyusion/LLFF
  
  
-##### Multi-plane image (MPI)<a name="mpi"> format and DeepMPI representation (2.5 D), 2020
+##### Multi-plane image (MPI)<a name="mpi">, local layered representation format and DeepMPI representation (2.5 D), 2020
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
 MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
 
+Our method takes in a set of images of a static scene, promotes each image to a local layered representation (MPI), and blends local light fields rendered from these MPIs to render novel views. Please see our paper for more details.
+As a rule of thumb, you should use images where the maximum disparity between views is no more than about 64 pixels (watch the closest thing to the camera and don't let it move more than ~1/8 the horizontal field of view between images). Our datasets usually consist of 20-30 images captured handheld in a rough grid pattern.
+ https://github.com/Fyusion/LLFF
+ 
 <img src="https://user-images.githubusercontent.com/74843139/135738631-e9a72fde-c4d4-46f4-8c1e-1823c6607090.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135738753-1067733d-2d60-45a8-bf9d-3b2dfab83f41.png" width=500>
 Its depth-wise resolution is limited by the number of discrete planes, and thus the MPIs cannot be converted to other 3D representations such as mesh, point cloud, etc. I
  
