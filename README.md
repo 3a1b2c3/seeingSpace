@@ -7,7 +7,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 - ["Classic rendering" in computer graphics](#-classic-rendering--in-computer-graphics)
   * [The rendering equation<a name="requation"> (published in 1986)](#the-rendering-equation-a-name--requation----published-in-1986-)
 - [Inverse and Differential rendering (aka "Computervision")](#inverse-and-differential-rendering--aka--computervision--)
-- [Neural Rerendering](#neural-rerendering)
+- [Neural Rendering](#neuralrendering)
 - [Image-based rendering (IBR): Plenoptic function and capture](#image-based-rendering--ibr---plenoptic-function-and-capture)
   * [The Plenoptic function (Adelson and Bergen, 1991)](#the-plenoptic-function--adelson-and-bergen--1991-)
     + [The plenoptic function is also inspired by multi-faceted **insect eyes or lens arrays**.](#the-plenoptic-function-is-also-inspired-by-multi-faceted---insect-eyes-or-lens-arrays--)
@@ -92,9 +92,11 @@ a topic of research for some time. However, major breakthroughs
 have only been made in recent years due to improved
 hardware and advancements in deep learning.
  
- # Neural Rerendering
+ # Neural Rendering, ca 1990s
+Is a relative new technique that combines **classical or other 3D representation and renderer with deep neural networks** that rerender the classical render into a more complete and realistic views. In contrast to **Neural Image-based Rendering (N-IBR)**, neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.
+**Deepfakes** are an early neural rendering technique in which a person in an existing image or video is replaced with someone else's likeness.
+The original approach is believed to be based on **Korshunova et al (2016)**, which used a convolutional neural network (CNN).
  
-Is a relative new technique that combines classical or other 3D representation and renderer with deep neural networks that rerender the classical render into a more complete and realistic views. In contrast to **Neural Image-based Rendering (N-IBR)**, neural rerendering does not use input views at runtime, and instead relies on the deep neural network to recover the missing details.
 A typical neural rendering approach takes as input images corresponding to certain scene conditions (for example, viewpoint, lighting, layout, etc.), builds a "neural” scene representation from them, and "renders” this representation under novel scene properties to synthesize novel images.
  
 The learned scene representation is not restricted by simple scene modeling approximations and can be optimized for high quality novel images. At the same time, neural rendering approaches incorporate ideas from classical graphics—in the form of input features, scene representations, and network architectures—to make the learning task easier, and the output more controllable. Neural rendering has many important use cases such as semantic photo manipulation, novel view synthesis, relighting, free viewpoint video, as well as facial and body reenactment.
@@ -700,7 +702,7 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  * Tesla https://towardsdatascience.com/tesla-ai-day-2021-review-part-2-training-data-how-does-a-car-learn-e8863ba3f5b0
  * NVIDIA https://developer.nvidia.com/blog/?search_posts_filter=neural+rendering&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l&prxvGOjsY=%5BARE5KNSm9G%5D&kXmAuQ=8RvgHyP1AL2l
  * Snap https://www.zdnet.com/article/how-snap-aims-to-turn-augmented-reality-into-a-monetization-machine
- 
+ * Synthesia https://www.fxguide.com/quicktakes/deep-neural-rendering-comes-of-age/
  * https://www.fxguide.com/fxfeatured/pinscreens-advanced-face-ai-neural-rendering/ Pinscreen Avatars
  * https://www.synthesia.io/ Avatars
  * https://techcrunch.com/2021/10/29/luma-seed-round/ Startup called Luma ai
@@ -709,6 +711,7 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  ## DYI
  * https://roblesnotes.com/blog/
  
+
  ## Hardware
  * https://www.k-lens-one.com/en/home Single lens "lightfield"camera
  * https://www.lightfieldlab.com Lightfield displays
