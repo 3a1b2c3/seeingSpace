@@ -352,10 +352,16 @@ especially if only limited training data is available.
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
   
-####  Unconstrained Images: NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections, Martin-Brualla et al., CVPR 2021
-<small><i>Source: https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/</i></small>
+####  Unconstrained Images
+###### NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections, Martin-Brualla, 2021
+Can handle inages with variable illumination (not photometrically static) cars and people may move, construction
+may begin or end, seasons and weather may change,
+ 
+ <img src="https://user-images.githubusercontent.com/74843139/148044100-8da1c23b-8b8d-4f6b-9686-2d4520de094f.pngg" width=400>
 
-###### Crowdsampling the Plenoptic Function with NeRF (published 2020)
+ <small><i>Source: NeRF in the Wild:</i></small>
+
+###### Crowdsampling the Plenoptic Function with NeRF, published 2020
 Given a large number of **tourist photos taken at different times of day**, this machine learning based approach learns to construct a continuous set of light fields and to synthesize novel views capturing all-times-of-day scene appearance. achieve convincing changes across a variety of times of day and lighting conditions.
 mask out transient objects such as people and cars during training and evaluation.
 
@@ -394,11 +400,6 @@ NeRF-W disentangles lighting from the underlying 3D scene geometry. The latter r
                                                                                                                 
 <small><i>Source: nerf in the wild</i></small>
                                                         
-Unfortunately, there are two major drawbacks with VGGNet: It is painfully slow to train.
-The network architecture weights themselves are quite large (in terms of disk/bandwidth).
-Due to its depth and number of fully-connected nodes, VGG is over 533MB for VGG16 and 574MB for VGG19. This makes deploying VGG a tiresome task.
-We still use VGG in many deep learning image classification problems; however, smaller network architectures are often more desirable (such as SqueezeNet, GoogLeNet, etc.).
-
 * Reference implemenation (nerf and nerf in the wild using pytorch) https://github.com/kwea123/nerf_pl
                                                                                                                 
 #### Towards Instant 3D Capture (with a cell phone): Nerfies
