@@ -185,7 +185,7 @@ So this pose recentering needs to be applied on real data where the camera poses
 
 NDC makes very specific assumptions, that the camera is facing along -z and is entirely behind the z=-near plane. So if the rotation is wrong it will fail (in its current implementation). This is analogous to how a regular graphics pipeline like OpenGL 
  Pose_bounds.npy contains 3x5 pose matrices and 2 depth bounds for each image. Each pose has [R T] as the left 3x4 matrix and [H W F] as the right 3x1 matrix.
- https://github.com/Fyusion/LLFF
+ https://github.com/Fyusion/LLFF, https://bmild.github.io/llff/
  
  
 ##### Multi-plane image (MPI)<a name="mpi">, local layered representation format and DeepMPI representation (2.5 D), 2020
