@@ -247,6 +247,7 @@ The autors claim the approach is able to represent 3D shapes significantly faste
 <small><i>Source: https://www.computationalimaging.org/publications/acorn</i></small>
 
 ##### Point-Based Rendering
+ADOP: Approximate Differentiable One-Pixel Point Rendering, abs: https://t.co/npOqsAstAx https://t.co/LE4ZdckQPO
  
 ##### Plenoxels: Radiance Fields without Neural Networks, 2021<a name="plenoxel">
  
@@ -677,19 +678,21 @@ Many of such closed-form contain infinite integral that are impossible to solve.
 * https://arxiv.org/abs/2102.07064, 2021 NeRF--: Neural Radiance Fields Without Known Camera Parameters Zirui Wang, Shangzhe Wu, Weidi Xie, Min Chen, Victor Adrian Prisacariu
 * https://www.pauldebevec.com lots of ground breaking research and their github https://github.com/augmentedperception
 * https://github.com/amusi/ICCV2021-Papers-with-Code#NeRF ICCV'21 paper
-* ADOP: Approximate Differentiable One-Pixel Point Rendering, abs: https://t.co/npOqsAstAx https://t.co/LE4ZdckQPO
- *https://github.com/mitsuba-renderer/mitsuba2  A Retargetable Forward and Inverse Renderer  http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2, https://mitsuba2.readthedocs.io/en/latest/src/inverse_rendering/diff_render.html
+
 * https://factorize-a-city.github.io/resources/plenoptic_90_sec_V0.pdf Learning to Factorize and Relight a City
 *  GNeRF a framework to marry Generative Adversarial Networks (GAN) with Neural Radiance Field (#NeRF) reconstruction for the complex scenarios with unknown and even randomly initialized camera poses.  https://lnkd.in/dVUAW2Q3
 * Plenoxels: Radiance Fields without Neural Network, https://arxiv.org/pdf/2112.05131.pdf, https://github.com/sxyu/svox2.git
- 
- Rückert, D., Franke, L. and Stamminger, M., 2021. ADOP: Approximate Differentiable One-Pixel, https://www.louisbouchard.ai/ai-synthesizes-smooth-videos-from-a-couple-of-images/
+*  Rückert, D., Franke, L. and Stamminger, M., 2021. ADOP: Approximate Differentiable One-Pixel, https://www.louisbouchard.ai/ai-synthesizes-smooth-videos-from-a-couple-of-images/
  https://github.com/timzhang642/3D-Machine-Learning
- 
+ * ADOP: Approximate Differentiable One-Pixel Point Rendering, abs: https://t.co/npOqsAstAx https://t.co/LE4ZdckQPO
+ *https://github.com/mitsuba-renderer/mitsuba2  A Retargetable Forward and Inverse Renderer  http://rgl.epfl.ch/publications/NimierDavidVicini2019Mitsuba2, https://mitsuba2.readthedocs.io/en/latest/src/inverse_rendering/diff_render.html
   
 # Academic research groups
 * TUM Munich https://www.3dunderstanding.org/publications.html
 * https://rgl.epfl.ch/publications/Nicolet2021Large RGL | Large Steps in Inverse Rendering of Geometry, Realistic Graphics Lab, Same lab as Mitsuba renderer
+ 
+ # DYI
+ * https://roblesnotes.com/blog/
  
  # Companies looking into the space
  ## Software
@@ -709,9 +712,6 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  * https://www.synthesia.io/ Avatars
  * https://techcrunch.com/2021/10/29/luma-seed-round/ Startup called Luma ai
  * https://embodyme.com 
- 
- ## DYI
- * https://roblesnotes.com/blog/
  
 
  ## Hardware
