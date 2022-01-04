@@ -155,7 +155,27 @@ The 4D lightfield has **2D spatial (x,y) and 2D angular (u,v)** information that
 * the **radiant light field** Lr (u, v, alpha, beta) quantifying the irradiance created by an object
 * time is an optional 5th dimension
 
+ 
+ 
 ### Capturing, storing and compressing static and dynamic light fields
+  
+Light field rendering [Levoy and Hanrahan 1996] eschews any geometric
+reasoning and simply samples images on a regular grid so
+that new views can be rendered as slices of the sampled light field.
+Lumigraph rendering [Gortler et al. 1996] showed that using approximate
+scene geometry can ameliorate artifacts due to undersampled
+or irregularly sampled views.
+The plenoptic sampling framework [Chai et al. 2000] analyzes
+light field rendering using signal processing techniques and shows
+that the Nyquist view sampling rate for light fields depends on the
+minimum and maximum scene depths. Furthermore, they discuss
+how the Nyquist view sampling rate can be lowered with more
+knowledge of scene geometry. Zhang and Chen [2003] extend this
+analysis to show how non-Lambertian and occlusion effects increase
+the spectral support of a light field, and also propose more general
+view sampling lattice patterns.
+Rendering algorithms based
+ 
 One type uses an **array of micro-lenses** placed in front of an otherwise conventional image sensor to sense intensity, color, and directional information. Multi-camera arrays are another type. Compared to a traditional photo camera that only captures the intensity of the incident light, a light-field camera provides **angular information** for each pixel. 
 
 In principle, this additional information allows 2D images to be reconstructed at a given focal plane, and hence a **depth map** can be computed.
@@ -177,28 +197,26 @@ While **special cameras and cameras arrangements** have been build to capture li
  
  
 #####  Local Light Field Fusion (LLFF)<a name="llff">, 2019
-Used in original [Nerf paper](#nerf). Usually you have files 
-
-COLMAP is a general-purpose **Structure-from-Motion (SfM) and Multi-View Stereo (MVS)** pipeline with a graphical and command-line interface. It offers a wide range of features for reconstruction of ordered and unordered image collections. The software is licensed under the new BSD license. If you use this project for your research, please cite:
+Used in original [Nerf paper](#nerf) for still images, can get light-fields to the nyquist frequency limit.. 
  
+LLFF uses <a href="https://colmap.github.io/">Colmap</a> to calculate the **position of each of the camera*** (poses files), then uses a trained AI to calculate the distance map and from there it generates the MPI, which is the output we'll use to create the MPI videos (and the metadata).
 So this pose recentering needs to be applied on real data where the camera poses are arbitrary, is that correct? Leave aside rendering, does it have impact on training: train on llff (real data with arbitrary camera poses) without rencenter_poses and with NDC? Intuitively it depends on how much the default world coordinate differs from the poses_avg, in practice when using COLMAP, do they differ much?
 
 NDC makes very specific assumptions, that the camera is facing along -z and is entirely behind the z=-near plane. So if the rotation is wrong it will fail (in its current implementation). This is analogous to how a regular graphics pipeline like OpenGL 
  Pose_bounds.npy contains 3x5 pose matrices and 2 depth bounds for each image. Each pose has [R T] as the left 3x4 matrix and [H W F] as the right 3x1 matrix.
  
- https://github.com/Fyusion/LLFF,
- https://bmild.github.io/llff/
- https://www.youtube.com/watch?v=LY6MgDUzS3M 
+ * https://github.com/Fyusion/LLFF,
+ * https://bmild.github.io/llff/
+ * https://www.youtube.com/watch?v=LY6MgDUzS3M 
 
 Can also be converted to mesh in certain circumstances
 https://github.com/bmild/nerf/blob/master/extract_mesh.ipynb), we need to first infer which locations are occupied by the object. This is done by first create a grid volume in the form of a cuboid covering the whole object, then use the nerf model to predict whether a cell is occupied or not. This is the main reason why mesh construction is only available for 360 inward-facing scenes as forward facing scenes
  
 ##### Multi-plane image (MPI)<a name="mpi">, local layered representation format and DeepMPI representation (2.5 D), 2020
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
-MPIs have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
+MPIs (rgba) have the ability to produce high-quality novel views of complex scenes in real time and the view consistency that arises from a 3D scene representation (in contrast to neural rendering approaches that decode a separate view for each desired viewpoint).
 
-Our method takes in a set of images of a static scene, promotes each image to a local layered representation (MPI), and blends local light fields rendered from these MPIs to render novel views. Please see our paper for more details.
-As a rule of thumb, you should use images where the maximum disparity between views is no more than about 64 pixels (watch the closest thing to the camera and don't let it move more than ~1/8 the horizontal field of view between images). Our datasets usually consist of 20-30 images captured handheld in a rough grid pattern.
+Our method takes in a set of images of a static scene, promotes each image to a local layered representation (MPI), and blends local light fields rendered from these MPIs to render novel views. As a rule of thumb, you should use images where the **maximum disparity between views is no more than about 64 pixels (watch the closest thing to the camera and don't let it move more than ~1/8 the horizontal field of view between images). Our datasets usually consist of 20-30 images captured handheld in a rough grid pattern.
  https://github.com/Fyusion/LLFF
  
 <img src="https://user-images.githubusercontent.com/74843139/135738631-e9a72fde-c4d4-46f4-8c1e-1823c6607090.png" width=350><img src="https://user-images.githubusercontent.com/74843139/135738753-1067733d-2d60-45a8-bf9d-3b2dfab83f41.png" width=500>
@@ -252,7 +270,7 @@ The Volume rendering technique known as **ray marching**<a name="raymaeching">. 
  
 <img src="https://user-images.githubusercontent.com/74843139/134803822-801b99d7-5bd7-4ab3-8f12-0eba63eedcd5.png" width=300><img src="https://user-images.githubusercontent.com/74843139/135702022-93723d7a-fb76-4380-8150-7aaceff96757.png" width=300>
 
-<small><i>Source: https://github.com/Arne-Petersen/Plenoptic-Simulation, A System for Acquiring, Processing, and Rendering Panoramic Light Field Stills for Virtual Reality</i></small>
+<small><i>Source: https://github.com/Arne-Petersen/Plenoptic-Simulation, A System for Acquiring, Processing, and Rendering Panoramic Light Field sStills for Virtual Reality</i></small>
  
 <img src="https://user-images.githubusercontent.com/74843139/137581126-fbadc2ff-b2a4-438e-a671-ffa1f36509c0.png" width=500>
 
@@ -686,6 +704,9 @@ Many of such closed-form contain infinite integral that are impossible to solve.
  * https://www.synthesia.io/ Avatars
  * https://techcrunch.com/2021/10/29/luma-seed-round/ Startup called Luma ai
  * https://embodyme.com 
+ 
+ ## DYI
+ * https://roblesnotes.com/blog/
  
  ## Hardware
  * https://www.k-lens-one.com/en/home Single lens "lightfield"camera
