@@ -185,8 +185,13 @@ So this pose recentering needs to be applied on real data where the camera poses
 
 NDC makes very specific assumptions, that the camera is facing along -z and is entirely behind the z=-near plane. So if the rotation is wrong it will fail (in its current implementation). This is analogous to how a regular graphics pipeline like OpenGL 
  Pose_bounds.npy contains 3x5 pose matrices and 2 depth bounds for each image. Each pose has [R T] as the left 3x4 matrix and [H W F] as the right 3x1 matrix.
- https://github.com/Fyusion/LLFF, https://bmild.github.io/llff/
  
+ https://github.com/Fyusion/LLFF,
+ https://bmild.github.io/llff/
+ https://www.youtube.com/watch?v=LY6MgDUzS3M 
+
+Can also be converted to mesh in certain circumstances
+https://github.com/bmild/nerf/blob/master/extract_mesh.ipynb), we need to first infer which locations are occupied by the object. This is done by first create a grid volume in the form of a cuboid covering the whole object, then use the nerf model to predict whether a cell is occupied or not. This is the main reason why mesh construction is only available for 360 inward-facing scenes as forward facing scenes
  
 ##### Multi-plane image (MPI)<a name="mpi">, local layered representation format and DeepMPI representation (2.5 D), 2020
 Deep image or video generation approaches that enable explicit or implicit control of scene properties such as illumination, camera parameters, pose, geometry, appearance, and semantic structure.
