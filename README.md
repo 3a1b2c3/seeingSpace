@@ -244,6 +244,8 @@ The autors claim the approach is able to represent 3D shapes significantly faste
 
 <small><i>Source: https://www.computationalimaging.org/publications/acorn</i></small>
 
+##### Point-Based Rendering
+ 
 ##### Plenoxels: Radiance Fields without Neural Networks, 2021<a name="plenoxel">
  
 Proposes a **view-dependent sparse voxel model, Plenoxel (plenoptic volume element)**, that can optimize to the same fidelity as Neural Radiance Fields (NeRFs) without any neural networks. Our typical optimization time is 11 minutes on a single GPU, a speedup of two orders of magnitude compared to NeRF. 
@@ -296,21 +298,19 @@ point-like primitives, or higher-order parametric surfaces.
 One popular class of approaches uses mesh-based representations of scenes with either use or view-dependent appearance. Differentiable rasterizers or pathtracers can directly optimize mesh representations to reproduce a set of input images using gradient descent.
 However, gradient-based mesh optimization based on image reprojection is often dicult, likely because of local minima or poor conditioning of the loss landscape. Furthermore, this strategy requires a template mesh with xed topology to be provided as an initialization before optimization [22], which is typically unavailable for unconstrained real-world scenes.
 
-Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s).
+Inverse rendering aims to estimate physical attributes of a scene, e.g., **reflectance, geometry, and lighting** from image(s).
 Also called **Differentiable Rendering** it promises to close the loop between computer vision and graphics.
-Differentiable Rendering promises to close the loop between computer Vision and Graphics.
 
 
 #### Novel view synthesis with neural rendering: Volume Rendering with Radiance Fields
- In this problem, a neural network learns to render a scene from an arbitrary viewpoint. Slides 3 and 4 are figures from two great papers on this topic: one from Google Research [1] and the other from Facebook Reality Labs [2]. Both of these works use a volume rendering technique known as ray marching. Ray marching is when you shoot out a ray from the observer (camera) through a 3D volume in space and ask a function: what is the color and opacity at this particular point in space? Neural rendering takes the next step by using a neural network to approximate this function.
+ In this problem, a neural network learns to **render a scene from an arbitrary viewpoint**. Both of these works use a volume rendering technique known as ray marching. Ray marching is when you shoot out a ray from the observer (camera) through a 3D volume in space and ask a function: what is the color and opacity at this particular point in space? Neural rendering takes the next step by using a neural network to approximate this function.
 
 <img src="https://user-images.githubusercontent.com/74843139/137447390-2134a9a9-50a6-4911-93d7-f87f7114739f.png" width=300>
 
  <small><i>Source: Advances in Neural Rendering, https://www.neuralrender.com/</i></small>
  
-##### Point-Based Rendering
 
-##### Neural Radiance Fields (NeRF)<a name="nerf"> rendering: Representing Scenes as Neural Radiance Fields for View Synthesis, published 2020 Mildenhall
+##### Neural Radiance Fields (NeRF)<a name="nerf"> rendering: Representing Scenes as Neural Radiance Fields, published 2020 Mildenhall
 NeRF  uses a **differentiable volume rendering** formula to train a coordinate-based multilayer perceptron (MLP)<a name="mlp"> to directly predict color and opacity from 3D position and 2D viewing direction.
 It is a recent and popular **volumetric rendering technique** to generate images is Neural Radiance Fields (NeRF) due to its exceptional simplicity and performance for synthesising high-quality images of complex real-world scenes. 
  
