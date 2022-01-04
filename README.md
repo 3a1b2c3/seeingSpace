@@ -399,8 +399,24 @@ varying from satellite-level to ground-level.
  
 First trains the neural network successively from distant viewpoints to close-up viewpoints -- and to train the neural network on transitions in between these "levels". This was inspired by "level of detail" systems currently in use by traditional 3D computer rendering systems. "Joint training on all scales results in blurry texture in close views and incomplete geometry in remote views. Separate training on each scale yields inconsistent geometries and textures between successive scales." So the system starts at the most distant level and incorporates more and more information from the next closer level as it progresses from level to level.
 
- The next trick was to modify the neural network itself at each level. The way this is done is by adding what they call a "block". A block has two separate information flows, one for the more distant and one for the more close up level being trained at that moment. It's designed in such a way that a set of information called "base" information is determined for the more distant level, and then "residual" information (in the form of colors and densities) that modifies the "base" and adds detail is calculated from there.
+Modifies the neural network itself at each level by adding what they call a **"block"**. A block has two separate information flows, one for the more distant and one for the more close up level being trained at that moment. It's designed in such a way that a set of information called "base" information is determined for the more distant level, and then "residual" information (in the form of colors and densities) that modifies the "base" and adds detail is calculated from there.
 
+As current CityNeRF is
+built upon static scenes, it **cannot handle inconsistency in
+the training data**. We observed that, in Google Earth Studio
+[1], objects with slender geometry, such as a lightning
+rod, flicker as the camera pulls away. Artifacts like flickering
+moir patterns in the windows of skyscrapers, and differences
+in detail manifested as distinct square regions on the
+globe are also observed in the rendered images served as
+the ground truths2. Such defects lead to unstable rendering
+results around certain regions and bring about inconsistencies.
+A potential remedy is to treat it as a dynamic scene and
+associate each view with an appearance code that is jointly
+optimized as suggested in [6, 10]. Another potential limitation
+is on computation. The progressive strategy naturally
+takes longer training time, hence requires more computational
+resources.
   
  https://city-super.github.io/citynerf/img/video3.mp4
  https://city-super.github.io/citynerf/ 
