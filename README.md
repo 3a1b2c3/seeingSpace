@@ -4,4 +4,5 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 Moved to wiki
 https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space
 
-Because my graphics card is a bit too old to train locally I am working on a google colab setup for *NVIDIA Instant Nerf*, WIP
+Because my graphics card is a bit too old to train locally I am working on a google colab setup for *NVIDIA Instant Nerf*, 
+https://github.com/3a1b2c3/seeingSpace/tree/main/instantNerf
