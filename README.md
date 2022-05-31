@@ -5,4 +5,4 @@ Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-
 
 
 Because my graphics card is a bit too old to train locally I am working on a google colab setup for **NVIDIA Instant Nerf**, 
-so you can  try before buying a new one <a href="https://github.com/3a1b2c3/seeingSpace/wiki/NVIDIA-instant-Nerf-on-google-colab,-train-a-nerf-without-a-massive-gpu">WIP</a>
+so you can  try before buying a new one <a href="https://github.com/3a1b2c3/seeingSpace/wiki/NVIDIA-instant-Nerf-on-google-colab,-train-a-nerf-without-a-massive-gpu">WStep by step</a>
