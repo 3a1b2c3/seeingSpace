@@ -9,6 +9,10 @@ Minimal Nerf implementations
 
 ## Hashing
 Speed up using hashes
+* Original commercial licenced implementation https://github.com/NVlabs/instant-ngp
+* https://github.com/LDYang694/awesome-ngp
+* https://github.com/ashawkey/torch-ngp
+* https://github.com/NVlabs/tiny-cuda-nn/blob/master/LICENSE.txt
 
 ## Time
 Time varying nerfs
