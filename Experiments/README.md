@@ -13,5 +13,10 @@ Speed up using hashes
 * https://github.com/ashawkey/torch-ngp
 * https://github.com/NVlabs/tiny-cuda-nn/blob/master/LICENSE.txt
 
+## Rendering
+* Raymaching
+* https://microsoft.github.io/FastNeRF/
+* https://github.com/sxyu/svox2.git
+
 ## Time
 Time varying nerfs
