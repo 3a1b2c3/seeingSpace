@@ -3,7 +3,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 
 Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space">WIKI</a> of this repo.
 
-Why does it matter? **We can now render lightfields** the holy grail of graphics.
+Why does it matter? **We can now render lightfields**, the holy grail of graphics.
 We know about lightfields since 1936 but until 2.5 years ago it was just to expensive and impractical.
 You needed the camera on the picture at least, now you need 30 frames of compressed mp4 from youtube ...
 
