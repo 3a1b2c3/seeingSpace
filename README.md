@@ -3,7 +3,7 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 
 Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space">WIKI</a> of this repo.
 
-Why does it matter? Hold on for the biggest change to graphics since the mid 80ies: We can now **render lightfields**, the holy grail of graphics. We know about light fields since **1936** but until 2.5 years ago they were just too expensive and impractical to create and render. You needed the camera on the picture below at least, now you render one from **30 frames of compressed video** from youtube and a gaming machine or the cloud...
+Why does it matter? It might be the biggest change change to graphics since the mid 80ies: We can now **render lightfields**, the holy grail of graphics. We know about light fields since **1936** but until 2.5 years ago they were just too expensive and impractical to create and render. You needed the camera on the picture below at least, now you render one from **30 frames of compressed video** from youtube and a gaming machine or the cloud...
 ![image](https://user-images.githubusercontent.com/74843139/173516914-cc56b3d4-8fff-49d3-968a-2ea47e259de9.png)
 
 
