@@ -2,7 +2,7 @@
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics will change with neural rendering. And how it fits with computer vision, machine learning and capture hardware.
 
 Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space">WIKI</a> of this repo.
-* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space">Sehender Raum : Seeing Space. Understanding Neural rendering (START HERE)</a>
+* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space-(START-READING-HERE)">Sehender Raum : Seeing Space. Understanding Neural rendering (START HERE)</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Related-fields-(Photogrametry,-LIDAR,-SLAM-etc">Related fields (Photogrametry, LIDAR, SLAM etc)</a>
 
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Important-concepts">Important concepts</a>
