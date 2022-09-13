@@ -10,9 +10,8 @@ Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around">Nerf for 3d mapping: aka Google live view and Apple Fly around</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Related-fields-(Photogrametry,-LIDAR,-SLAM-etc">Related fields (Photogrametry, LIDAR, SLAM etc)</a>
 
-* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Important-concepts">Important concepts</a>
-* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Recommended-resources-and-reading">Recommended resources and reading </a>
-
+* https://github.com/3a1b2c3/seeingSpace/wiki/Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around
+* https://github.com/3a1b2c3/seeingSpace/wiki/Instant-ngp,-nvdiffrec-and-Kaolin-wisp-library
 
 Why does it matter? It might be the biggest change change to graphics since the mid 80ies: We can now **render lightfields**, the holy grail of graphics. We know about light fields since **1936** but until 2.5 years ago they were just too expensive and impractical to create and render. You needed the camera on the picture below at least, now you render one from **30 frames of compressed video** from youtube and a gaming machine or the cloud...
 ![image](https://user-images.githubusercontent.com/74843139/173516914-cc56b3d4-8fff-49d3-968a-2ea47e259de9.png)
