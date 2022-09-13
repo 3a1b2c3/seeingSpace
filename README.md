@@ -3,6 +3,8 @@ Catching up with newer research in image based rendering: A TLDR on how traditio
 
 In the next years computer graphics will be disrupted by neural rendering on every level. Graphics/vision research has probably barley started, exciting times ...
 
+ * TLDR: Nerf in 10 slides https://docs.google.com/presentation/d/1hnLXteodgoYD5awQpj_6VCiGHh8c5EyJx5-ia629Chs/edit?usp=sharing
+ 
 Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space">WIKI</a> of this repo.
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space-(START-READING-HERE)">Sehender Raum : Seeing Space. Understanding Neural rendering (START HERE)</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around">Nerf for 3d mapping: aka Google live view and Apple Fly around</a>
