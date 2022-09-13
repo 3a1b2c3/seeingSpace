@@ -5,7 +5,7 @@ In the next years computer graphics will be disrupted by neural rendering on eve
 
  * TLDR: <a href="https://docs.google.com/presentation/d/1eXI6p4hGbzW6OoX3S7gc-nZbHLf5bjqtqY36pFTXLOc/edit?usp=sharing">Nerf in 10 slides</a>
  
-Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space">WIKI</a> of this repo.
+Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki">WIKI</a> of this repo.
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space-(START-READING-HERE)">Sehender Raum : Seeing Space. Understanding Neural rendering (START HERE)</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around">Nerf for 3d mapping: aka Google live view and Apple Fly around</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Related-fields-(Photogrametry,-LIDAR,-SLAM-etc">Related fields (Photogrametry, LIDAR, SLAM etc)</a>
