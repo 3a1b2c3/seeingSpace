@@ -1,7 +1,7 @@
 # Sehender Raum / Seeing Space
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics will change with neural rendering. And how it fits with computer vision, machine learning and capture hardware.
 
-In the next years computer graphics will be disrupted by neural rendering on every level. Graphics/vision research has probably barley started, exciting times ...
+Computer graphics and vision might be heading for its "Charles Darwin" moment where we can see and remove some limiting assumptions about what it can do. Some disjoint pieces may just fall into place: Computer graphics and vision now have a shared framework. Exciting times.
 
  * TLDR: <a href="https://docs.google.com/presentation/d/1eXI6p4hGbzW6OoX3S7gc-nZbHLf5bjqtqY36pFTXLOc/edit?usp=sharing">Nerf in 10 slides</a>
  
