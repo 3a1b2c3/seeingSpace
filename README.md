@@ -1,9 +1,9 @@
 # Sehender Raum / Seeing Space
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics will change with neural rendering. And how it fits with computer vision, machine learning and capture hardware.
 
-Computer graphics and vision might be heading for its "Charles Darwin" moment where we can see and remove some limiting assumptions about what it is about. Some disjoint pieces may just fall into place: Computer graphics and vision now have a shared framework. Exciting times.
+With neural rendering computer graphics and vision might be heading for its "Charles Darwin" moment where we can see and remove some limiting assumptions about what it is about. Some disjoint pieces may just fall into place: Computer graphics and vision now have a shared framework.
 
- * TLDR: <a href="https://docs.google.com/presentation/d/1eXI6p4hGbzW6OoX3S7gc-nZbHLf5bjqtqY36pFTXLOc/edit?usp=sharing">Nerf in 10 slides</a>
+* TLDR: <a href="https://docs.google.com/presentation/d/1eXI6p4hGbzW6OoX3S7gc-nZbHLf5bjqtqY36pFTXLOc/edit?usp=sharing">Nerf in 10 slides</a>
  
 Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki">WIKI</a> of this repo.
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Sehender-Raum-:-Seeing-Space-(START-READING-HERE)">Sehender Raum : Seeing Space. Understanding Neural rendering (START HERE)</a>
