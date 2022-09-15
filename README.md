@@ -17,11 +17,9 @@ Why does it matter? It might be the biggest change change to graphics since the 
 
 
 
+Getting hands on: Google colab setup for **NVIDIA Instant Nerf**, 
+so you can  try before buying a new gpu <a href="https://github.com/3a1b2c3/seeingSpace/wiki/NVIDIA-instant-Nerf-on-google-colab,-train-a-nerf-without-a-massive-gpu">Step by step</a>
 
-Because my graphics card is a bit too old to train locally I am working on a google colab setup for **NVIDIA Instant Nerf**, 
-so you can  try before buying a new one <a href="https://github.com/3a1b2c3/seeingSpace/wiki/NVIDIA-instant-Nerf-on-google-colab,-train-a-nerf-without-a-massive-gpu">Step by step</a>
-
-I am very interested in "neural rendering" and love to hear from anybody in the field (https://www.linkedin.com/in/katrinschmid/)
 
 <img src="https://user-images.githubusercontent.com/74843139/172032036-f33a63f2-6a88-4ae5-b8df-fbbb72463592.png" width=450>
 
