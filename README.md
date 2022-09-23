@@ -6,9 +6,13 @@ With neural rendering computer graphics and vision might be heading for its "Cha
 * TLDR: <a href="https://docs.google.com/presentation/d/1eXI6p4hGbzW6OoX3S7gc-nZbHLf5bjqtqY36pFTXLOc/edit?usp=sharing">Nerf in 10 slides</a>
  
 Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki">WIKI</a> of this repo.
+
+Theory and a papers:
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/1)-Sehender-Raum-:-Seeing-Space">1) Understanding Neural rendering (START HERE)</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around">Nerf for 3d mapping: aka Google live view and Apple Fly around</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Related-fields-(Photogrametry,-LIDAR,-SLAM-etc">Related fields (Photogrametry, LIDAR, SLAM etc)</a>
+
+Hands on:
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Instant-ngp,-nvdiffrec-and-Kaolin-wisp-library">NVIDIA research libraries and papers</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Hands-on:-Representing-plants-as-Nerf">Hands on: Representing plants as Nerf</a>
 
