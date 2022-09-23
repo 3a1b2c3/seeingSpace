@@ -9,7 +9,7 @@ Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki">WIKI</a> of t
 
 Overview and papers:
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/1)-Sehender-Raum-:-Seeing-Space">1) Understanding Neural rendering (START HERE)</a>
-* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/2)-Related-fields-(Photogrametry,-LIDAR,-SLAM-etc">2) Related fields (Photogrametry, LIDAR, SLAM etc)</a>
+* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/2)-Related-fields-(Photogrametry,-LIDAR,-SLAM-etc)">2) Related fields (Photogrametry, LIDAR, SLAM etc)</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around">Nerf for 3d mapping: aka Google live view and Apple Fly around</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Related-fields-(Photogrametry,-LIDAR,-SLAM-etc">Related fields (Photogrametry, LIDAR, SLAM etc)</a>
 
