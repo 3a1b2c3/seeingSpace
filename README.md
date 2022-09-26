@@ -12,7 +12,7 @@ Overview and papers:
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/2)-Nerf-(radiance-fields)-basics-and-encodings">2) Nerf (radiance fields) basics and encodings</a>
 
-<a href="https://github.com/3a1b2c3/seeingSpace/wiki/3)-Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around)">3) Nerf for 3d mapping: aka Google live view and Apple Fly around</a>
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/3)-Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around">3) Nerf for 3d mapping: aka Google live view and Apple Fly around</a>
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/4)-Nerf-for-relighting,-mesh-extraction,-scene-segmentation)">4) Nerf for relighting, mesh extraction, scene segmentation</a>
 
