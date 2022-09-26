@@ -8,9 +8,15 @@ With neural rendering computer graphics and vision might be heading for its "Cha
 Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki">WIKI</a> of this repo.
 
 Overview and papers:
-* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/1)-Sehender-Raum-:-Seeing-Space">1) Understanding Neural rendering (START HERE)</a>
-* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/2)-Related-fields-(Photogrametry,-LIDAR,-SLAM-etc)">2) Related fields (Photogrametry, LIDAR, SLAM etc)</a>
-* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/3)-Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around">3) Nerf for 3d mapping: aka Google live view and Apple Fly around</a>
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/1)-Sehender-Raum-:-Seeing-Space">1) Understanding Neural rendering (START HERE)</a>
+
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/2)-Nerf-(radiance-fields)-basics-and-encodings">2) Nerf (radiance fields) basics and encodings</a>
+
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/3)-Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around)">3) Nerf for 3d mapping: aka Google live view and Apple Fly around</a>
+
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/4)-Nerf-for-relighting,-mesh-extraction,-scene-segmentation)">4) Nerf for relighting, mesh extraction, scene segmentation</a>
+
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/5)-Related-fields-(Photogrametry,-LIDAR,-SLAM-etc)">5) Related fields (Photogrametry, LIDAR, SLAM etc)</a>
 
 Hands on:
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Instant-ngp,-nvdiffrec-and-Kaolin-wisp-library">NVIDIA research libraries and papers</a>
