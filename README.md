@@ -8,6 +8,7 @@ With neural rendering computer graphics and vision might be heading for its "Cha
 Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki">WIKI</a> of this repo.
 
 Overview and papers:
+
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/1)-Sehender-Raum-:-Seeing-Space">1) Understanding Neural rendering (START HERE)</a>
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/2)-Nerf-(radiance-fields)-basics,-encodings-and-frameworks">2) Nerf (radiance fields) basics and encodings</a>
