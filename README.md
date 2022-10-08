@@ -20,7 +20,7 @@ Overview and papers:
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/5)-Related-fields-(Photogrametry,-LIDAR,-SLAM-etc)">5) Related fields (Photogrametry, LIDAR, SLAM etc)</a>
 
 Hands on:
-* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Instant-ngp,-nvdiffrec-and-Kaolin-wisp-library">NVIDIA research libraries and papers</a>
+* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Code-Experiments:-Nerf-frameworks">Hands on: Nerf-frameworks</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Hands-on:-Representing-plants-as-Nerf">Hands on: Representing plants as Nerf</a>
 
 
