@@ -11,7 +11,7 @@ Overview and papers:
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/1)-Sehender-Raum-:-Seeing-Space">1) Understanding Neural rendering (START HERE)</a>
 
-<a href="https://github.com/3a1b2c3/seeingSpace/wiki/2)-Nerf-(radiance-fields)-basics,-encodings-and-frameworks">2) Nerf (radiance fields) basics and encodings</a>
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/2)-Nerf-(radiance-fields)-basics,-frameworks-and-real-world-uses">2) Nerf (radiance fields) basics, frameworks and real world uses</a>
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/3)-Nerf-for-3d-mapping:-aka-Google-live-view-and-Apple-Fly-around">3) Nerf for 3d mapping: aka Google live view and Apple Fly around</a>
 
