@@ -2,6 +2,7 @@
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics will change with neural rendering. And how it fits with computer vision, machine learning and capture hardware.
 
 With neural rendering computer graphics and vision might be heading for its "Charles Darwin" moment where we can see and remove some limiting assumptions about what it is about. Some disjoint pieces may just fall into place: Computer graphics and vision now have a shared framework rather than being in nther own little boxes. We got things wrong and the possibilitis are exciting.
+I spent enternity on tools for generating photoreal 3d environments, now its easy as snap chat. We can have realtime google earth. I am allowed to be damned excited.
 
 * TLDR: <a href="https://docs.google.com/presentation/d/1eXI6p4hGbzW6OoX3S7gc-nZbHLf5bjqtqY36pFTXLOc/edit?usp=sharing">Nerf in 10 slides</a>
  
