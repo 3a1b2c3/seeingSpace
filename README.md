@@ -1,7 +1,7 @@
 # Sehender Raum / Seeing Space
 Catching up with newer research in image based rendering: A TLDR on how traditional computer graphics will change with neural rendering. And how it fits with computer vision, machine learning and capture hardware.
 
-With neural rendering computer graphics and vision might be heading for its "Charles Darwin" moment where we can see and remove some limiting assumptions about what it is about. Some disjoint pieces may just fall into place: Computer graphics and vision now have a shared framework rather than being in nther own little boxes. We got things wrong and the possibilitis are exciting.
+With neural rendering computer graphics and vision might be heading for a moment where we can see and remove some limiting assumptions about what it is about. Some disjoint pieces may just fall into place: Computer graphics and vision now have a shared framework rather than being in nther own little boxes. We got things wrong and the possibilitis are exciting.
 I spent enternity on tools for generating photoreal 3d environments, now its easy as snap chat. We can have realtime google earth. I am allowed to be damned excited.
 
 * TLDR: <a href="https://docs.google.com/presentation/d/1eXI6p4hGbzW6OoX3S7gc-nZbHLf5bjqtqY36pFTXLOc/edit?usp=sharing">Nerf in 10 slides</a>
@@ -25,7 +25,7 @@ Hands on:
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Hands-on:-Representing-plants-as-Nerf">Hands on: Representing plants as Nerf</a>
 
 
-Why does it matter? It might be the biggest change change to graphics since the mid 80ies: We can now **render lightfields**, the holy grail of graphics. We know about light fields since **1936** but until 2.5 years ago they were just too expensive and impractical to create and render. You needed the camera on the picture below at least, now you render one from **30 frames of compressed video** from youtube and a gaming machine or the cloud...
+Why does it matter? It might be the biggest change change to graphics since the mid 80ies: We can now **render lightfields**, the holy grail of graphics. We know about light fields since **1908** but until 3 years ago they were just too expensive and impractical to create and render. You needed the camera on the picture below at least, now you render one from **30 frames of compressed video** from youtube and a gaming machine or the cloud...
 <img src="https://user-images.githubusercontent.com/74843139/173516914-cc56b3d4-8fff-49d3-968a-2ea47e259de9.png" width=450>
 
 
