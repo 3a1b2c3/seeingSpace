@@ -22,7 +22,7 @@ Overview and papers:
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/6)-Nerf-rendering,-composting-and-web-viewing">6) Nerf rendering, composting and web viewing</a>
 
-<a href="https://github.com/3a1b2c3/seeingSpace/wiki/6)-Related-fields-(Photogrametry,-LIDAR,-SLAM-etc)">7) Related fields (Photogrametry, LIDAR, SLAM etc)</a>
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/7)-Related-fields-(Photogrametry,-LIDAR,-SLAM-etc)">7) Related fields (Photogrametry, LIDAR, SLAM etc)</a>
 
 Hands on:
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Code-Experiments:-Nerf-frameworks">Hands on: Nerf-frameworks</a>
