@@ -18,7 +18,7 @@ Overview and papers:
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/4)-Nerf-Editing:-Relighting,-mesh-extraction-and-scene-segmentation">4) Nerf for relighting, mesh extraction, scene segmentation</a>
 
-<a href="https://github.com/3a1b2c3/seeingSpace/wiki/5)-Dynamic-and-generative-Nerfs-(Text-to-nerf)>5) Dynamic annd generative Nerfs: Text to nerf</a>
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/5)-Dynamic-and-generative-Nerfs-(Text-to-nerf)">5) Dynamic annd generative Nerfs: Text to nerf</a>
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/6)-Nerf-rendering,-compositing-and-web-viewing">6) Nerf rendering, compositing and web viewing</a>
 
