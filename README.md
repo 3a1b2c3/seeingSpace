@@ -25,7 +25,7 @@ Overview and papers:
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/7)-Related-fields-(Photogrametry,-LIDAR,-SLAM-etc)">7) Related fields (Photogrametry, LIDAR, SLAM etc)</a>
 
 Hands on:
-* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Hands-on%3A-Getting-started-and-Nerf-frameworks/_edit">Hands on: Getting started and Nerf-frameworks</a>
+* <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Hands-on%3A-Getting-started-and-Nerf-frameworks">Hands on: Getting started and Nerf-frameworks</a>
 * <a href="https://github.com/3a1b2c3/seeingSpace/wiki/Hands-on:-Representing-plants-as-Nerf">Hands on: Representing plants as Nerf</a>
 
 Join **Nerf discord** at https://discord.gg/bRCMhXBg
