@@ -8,7 +8,8 @@ I spent enternity on tools for generating photoreal 3d environments, now its eas
  
 Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki">WIKI</a> of this repo.
 
-Dont feel like reading but just want to try Nerfs: https://github.com/3a1b2c3/seeingSpace/wiki/Hands-on:-Getting-started-and-Nerf-frameworks
+Dont feel like reading but just want to try Nerfs yourself: 
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/Hands-on:-Getting-started-and-Nerf-frameworks">Getting started-and Nerf frameworks</a>
 
 
 Overview and papers:
