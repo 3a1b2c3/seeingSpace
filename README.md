@@ -24,7 +24,7 @@ Overview and papers:
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/5)-Dynamic-and-generative-Nerfs-(Text-to-nerf)">5) Dynamic annd generative Nerfs: Text to nerf</a>
 
-<a href="https://github.com/3a1b2c3/seeingSpace/wiki/6)-Nerf-rendering,-compositing-and-web-viewing>6) Nerf rendering, compositing and web viewing</a>
+<a href="https://github.com/3a1b2c3/seeingSpace/wiki/6)-Nerf-rendering,-compositing-and-web-viewing">6) Nerf rendering, compositing and web viewing</a>
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/7)-Related-fields-(Photogrametry,-LIDAR,-SLAM-etc)">7) Related fields (Photogrametry, LIDAR, SLAM etc)</a>
 
