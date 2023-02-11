@@ -49,3 +49,9 @@ so you can  try before buying a new gpu <a href="https://github.com/3a1b2c3/seei
 
 <img src="https://user-images.githubusercontent.com/74843139/172032036-f33a63f2-6a88-4ae5-b8df-fbbb72463592.png" width=450>
 
+  <img
+        height="36"
+        src="https://storage.ko-fi.com/cdn/kofi2.png?v=3"
+        border="0"
+        alt="Buy Me a Coffee at ko-fi.com"
+      />
