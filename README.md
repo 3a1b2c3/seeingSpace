@@ -35,12 +35,14 @@ Hands on:
 Join **Nerf discord** at https://discord.com/invite/atzsCcAXEh
 or the **Nerfstudio discord** at https://discord.gg/jKBErnzw and build the future with us
 
-  <img
-        height="36"
-        src="https://storage.ko-fi.com/cdn/kofi2.png?v=3"
-        border="0"
-        alt="Buy Me a Coffee at ko-fi.com"
-      />
+      <a href="https://ko-fi.com/G2G3IGW5P" target="_blank">
+        <img
+          height="36"
+          src="https://storage.ko-fi.com/cdn/kofi2.png?v=3"
+          border="0"
+          alt="Buy Me a Coffee at ko-fi.com"
+        />
+      </a>
 
 Why does it matter? It might be the biggest change change to graphics since the mid 80ies: We can now **render lightfields**, the holy grail of graphics. We know about light fields since <a href="https://github.com/3a1b2c3/seeingSpace/wiki/1)-Sehender-Raum-:-Seeing-Space#the-plenoptic-function-8d--gabriel-lippmann--1908">**1908**</a> but until 3 years ago they were just too expensive and impractical to create and render ("flying cars", possible but why do it?). You needed the camera on the picture below at least, now you render one from **30 frames of compressed video** from youtube and a gaming machine or the cloud...
 
