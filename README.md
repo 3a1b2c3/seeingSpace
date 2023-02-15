@@ -35,7 +35,7 @@ Hands on:
 Join **Nerf discord** at https://discord.com/invite/atzsCcAXEh
 or the **Nerfstudio discord** at https://discord.gg/jKBErnzw and build the future with us
 
-<a href="https://ko-fi.com/G2G3IGW5P" target="_blank"> <img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" />  </a>
+<a href="https://ko-fi.com/G2G3IGW5P" target="_blank"> <img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" height"36" />  </a>
 
 
 
