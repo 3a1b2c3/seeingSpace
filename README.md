@@ -5,6 +5,7 @@ With neural rendering computer graphics and vision might be heading for a moment
 I spent enternity on tools for generating photoreal 3d environments, now its easy as snap chat. We can have realtime google earth. I am allowed to be damned excited.
 
 * TLDR: <a href="https://docs.google.com/presentation/d/1eXI6p4hGbzW6OoX3S7gc-nZbHLf5bjqtqY36pFTXLOc/edit?usp=sharing">Nerf in 10 slides</a>
+or my blog bost on the topic https://neuralradiancefields.io/history-of-neural-radiance-fields/
  
 Moved to the <a href="https://github.com/3a1b2c3/seeingSpace/wiki">WIKI</a> of this repo.
 
