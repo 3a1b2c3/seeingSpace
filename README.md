@@ -14,6 +14,7 @@ Dont feel like reading but just want to try Nerfs yourself:
 
 
 Overview and papers:
+Nice intro video https://www.youtube.com/watch?v=isKbsNKArJU
 
 <a href="https://github.com/3a1b2c3/seeingSpace/wiki/1)-Sehender-Raum-:-Seeing-Space">1) Understanding Neural rendering (START HERE)</a>
 
